@@ -1,6 +1,6 @@
 # SCIADRO: adaptive exploration of a UAVs swarm for distributed targets detection and tracking
 
-![snapshot](https://github.com/mariocimino/sciadro/blob/master/snapshot.jpg)
+![snapshot](https://github.com/mlpi-unipi/drones-swarm/blob/master/snapshot.jpg)
 
 This research focuses on the problem of coordinating multiple UAVs for distributed targets detection and tracking, in different technological and environmental settings. The proposed approach is founded on the concept of swarm behavior in multi-agent systems, i.e., a self-formed and self-coordinated team of UAVs which adapts itself to mission-specific environmental layouts. The swarm formation and coordination are inspired by biological mechanisms of flocking and stigmergy, respectively. These mechanisms, suitably combined, make it possible to strike the right balance between global search (exploration) and local search (exploitation) in the environment. The swarm adaptation is based on an evolutionary algorithm with the objective of maximizing the number of tracked targets during a mission or minimizing the time for target discovery. The simulation testbed publicly released.
 
