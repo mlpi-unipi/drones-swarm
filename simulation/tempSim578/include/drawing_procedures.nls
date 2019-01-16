@@ -1,0 +1,168 @@
+globals [
+  
+  mouse-was-down?
+  
+]
+
+to draw
+  
+  if (selectElement = "drone") [
+    drawDrone
+  ]
+  if (selectElement = "obstacle") [
+    drawObstacle
+  ]
+  if (selectElement = "target") [
+    drawTarget
+  ]
+  
+end
+
+to delete
+  
+  if (selectElement = "drone") [
+    deleteDrone
+  ]
+  if (selectElement = "obstacle") [
+    deleteObstacle
+  ]
+  if (selectElement = "target") [
+    deleteTarget
+  ]
+  
+end
+
+;;=================================== DISEGNA DRONE=============================================
+
+;; La procedura permette di disegnare un drone con un click del mouse
+to drawDrone
+  
+  if (mouse-down? and mouse-was-down? = false) [
+    addDrone
+    ;; Altre procedure che dovrebbero essere eseguite al click del mouse
+    set mouse-was-down? true
+  ]
+  if (not mouse-down?) [
+    set mouse-was-down? false
+  ]
+  
+end
+
+to addDrone
+  
+   create-drones 1 [
+     ifelse (who = 0) [
+       die
+     ]
+     [
+       set color green
+       set size sizeDrone
+       setxy round mouse-xcor round mouse-ycor
+       stop
+     ]
+   ]
+   
+end
+
+to addOneDrone [ coord_x coord_y ]
+  
+  create-drones 1 [
+    ifelse (who = 0) [
+      die
+    ]
+    [
+      set color green
+      set size sizeDrone
+      setxy coord_x coord_y
+      stop
+    ]
+  ]
+  
+end
+
+;;=================================== DISEGNA OSTACOLO ==========================================
+
+;; La procedura permette di disegnare un ostacolo con un click del mouse
+to drawObstacle
+  
+  let x 0
+  let y 0
+  if mouse-down? [
+    set x round mouse-xcor
+    set y round mouse-ycor
+    ask patches with [ pxcor = x and pycor = y ] [
+      set pcolor grey
+      set obstacle true
+    ]
+  ]
+  
+end
+
+;===================================== DISEGNA TARGET ===========================================
+
+;; La procedura permette di disegnare un target con un click del mouse
+to drawTarget
+  
+  if mouse-down? [
+    ask patch mouse-xcor mouse-ycor [
+      set pcolor red
+      set target true
+    ]
+  ]
+  
+end
+
+;;==================================== CANCELLA DRONE ===========================================
+
+;; La procedura permette di cancellare un drone con un click del mouse
+to deleteDrone
+  
+  let x 0
+  let y 0
+  if mouse-down? [
+    while [ mouse-down? ] [
+      set x round mouse-xcor
+      set y round mouse-ycor
+      ask drones [
+        if (pxcor = x and pycor = y) [
+          print "delete drone"
+          die
+        ]
+      ]
+      display
+    ]
+  ]
+  
+end
+
+;;=================================== CANCELLA OSTACOLO ==========================================
+
+;; La procedura permette di cancellare un ostacolo con un click del mouse
+to deleteObstacle
+  
+  let x 0
+  let y 0
+  if mouse-down? [
+    set x round mouse-xcor
+    set y round mouse-ycor
+    ask patches with [ pxcor = x and pycor = y ] [
+      set pcolor black
+      set obstacle false
+    ]
+  ]
+  
+end
+
+;;==================================== CANCELLA TARGET ============================================
+
+;; La procedura permette di cancellare un target con un click del mouse
+to deleteTarget
+  
+  if mouse-down? [
+    ask patches with[ pcolor = red and distancexy mouse-xcor mouse-ycor < 1 ] [
+      set pcolor black
+      set target false
+    ]
+  ]
+  
+end

@@ -1,0 +1,67 @@
+to check_fireEvolution
+  
+  if (samplingTime 45 and ticks <= 180) [
+    save_frame
+  ]
+  if (ticks = 180) [
+    show "stop"
+  ]
+  
+end
+
+to-report samplingTime [ period ]
+  
+  let time ticks
+  ifelse (remainder time period = 0) [
+    report true
+  ]
+  [
+    report false
+  ]
+  
+end
+
+to save_frame
+  
+  let frameNumber word "" ticks
+  let frameName word "incendio_" frameNumber
+  set frameName word frameName ".png"
+  let framePath word "video/" frameName
+  export-view framePath
+  
+end
+
+to create_frames_with_target_coordinates
+  
+  let path_frame_file ""
+  let frame_file_name ""
+  let frame_number 0
+  let time 0
+  while [ time <= 180 ] [
+    set frame_file_name word "incendio_" time
+    set path_frame_file word "video/" frame_file_name
+    set path_frame_file word path_frame_file ".png"
+    if (file-exists? path_frame_file) [
+      import-pcolors path_frame_file
+      save_target_coordinates frame_number
+      set frame_number frame_number + 1
+    ]
+    set time time + 1
+  ]
+  show "stop"
+  
+end
+
+to save_target_coordinates [frame_number]
+  
+  let frame_file_name word "frame_" frame_number
+  let path_frame_file word "frames/" frame_file_name
+  file-open path_frame_file
+  ask patches with [pcolor > 13 and pcolor <= 15] [
+    file-write pxcor
+    file-write pycor
+    file-print " "
+  ]
+  file-close-all
+  
+end

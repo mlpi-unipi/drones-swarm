@@ -1,0 +1,198 @@
+globals [
+  
+  dronesOverlap
+  drone.reachable.radius
+  drone.reachable.angle
+  
+]
+
+;;======================================== PRENOTAZIONE PATCHES ===========================================
+
+;; Ciascun drone prenota le patches presenti nel suo cono di raggiungibilità.
+
+to lockFreePatches
+  
+  let patchesUnderDrone getPatchesUnderDrone
+  let patchesToBeLocked nobody
+  let patchesLockedInConeScheduling nobody
+  
+  let dronesInConeScheduling other drones in-cone drone.reachable.radius drone.reachable.angle
+  set patchesLockedInConeScheduling patches in-cone drone.reachable.radius drone.reachable.angle with [ locked != 0 ]
+  
+  ifelse (any? patchesLockedInConeScheduling = false) [
+    set patchesToBeLocked patches in-cone drone.reachable.radius drone.reachable.angle
+    ;print patchesToBeLocked ;;DEBUG
+  ]
+  [
+    set patchesToBeLocked patches in-cone drone.reachable.radius drone.reachable.angle with [ locked = 0 ]
+    if (any? dronesInConeScheduling = true) [
+      ;type "drone(s) ahead: " print DronesInConeScheduling ;;DEBUG
+      let nearest_drone min-one-of dronesInConeScheduling [ distance myself ]
+      let distanceFromNearestDrone distance nearest_drone
+      let reachableRadius distanceFromNearestDrone / 2
+      let myId who
+      let otherPatchesToBeLocked patches in-cone reachableRadius drone.reachable.angle with [ locked != myId ]
+      set patchesToBeLocked (patch-set patchesToBeLocked otherPatchesToBeLocked)
+    ]
+  ]
+  
+  set patchesToBeLocked (patch-set patchesUnderDrone patchesToBeLocked)
+  ;ask patchesToBeLocked [ set pcolor violet ] ;;DEBUG
+  lockPatches patchesToBeLocked
+  
+end
+
+to-report getPatchesUnderDrone
+  
+  let halfDiagonal sqrt 2 / 2
+  let patchesUnderDrone patches in-radius halfDiagonal
+  
+  report patchesUnderDrone
+  
+end
+
+to lockPatches [ patchesToBeLocked ]
+  
+  let idDrone who
+  ask patchesToBeLocked [
+    set locked idDrone
+  ]
+  
+  ;print patchesToBeLocked ;;DEBUG
+  set drone.lockedPatches patchesToBeLocked
+  
+end
+
+;;========================================= RILASCIO PATCHES ==============================================
+
+to unlockPatches
+  
+  if (drone.lockedPatches != 0 or drone.lockedPatches = who) [
+    ask drone.lockedPatches [
+      set locked 0
+      ;set pcolor black ;;DEBUG
+    ]
+    ;set drone.lockedPatches 0
+  ]
+  
+end
+
+;;=============================== LISTA PATCHES PRENOTABILI ============================================
+
+to-report getFreePatches [ patchesToBeChecked ]
+  
+  let droneId who
+  let lockedPatches patchesToBeChecked with [ locked != 0 and locked != droneId ]
+  let freePatches patchesToBeChecked  with [ locked = 0 ]
+  
+  report freePatches
+  
+end
+
+;;=============================== LISTA PATCHES DA PRENOTARE ===========================================
+
+to-report getPatchesToBeLocked
+  
+  let patchesToBeLocked nobody
+  
+  let halfDiagonal sqrt 2 / 2
+  let patchesUnderDrone patches in-radius halfDiagonal
+  
+  let DronesInConeScheduling drones in-cone drone.reachable.radius drone.reachable.angle
+  
+  ifelse (any? other DronesInConeScheduling = false) [
+    set patchesToBeLocked patches in-cone drone.reachable.radius drone.reachable.angle
+  ]
+  [
+    let radius drone.reachable.radius
+    
+    while [any? other DronesInConeScheduling] [
+      set radius radius - 1
+      if (radius < 0) [ set radius 0 ]
+      set DronesInConeScheduling drones in-cone radius drone.reachable.angle
+    ]
+    
+    set patchesToBeLocked patches in-cone radius drone.reachable.angle
+  ]
+  
+  set patchesToBeLocked (patch-set patchesUnderDrone patchesToBeLocked)
+  
+  report patchesToBeLocked
+  
+end
+
+;;============================= CONTROLLA COLLISIONI TRA DRONI ======================================
+
+;; Questa procedura incrementa il numero di collisioni tra droni ogni volta che due droni risultano
+;; sovrapposti nello spazio bidimensionale.
+
+to checkDronesOverlap
+  
+  setNearestDrone
+  if (isDroneOverlapped) [
+    set dronesOverlap dronesOverlap + 1
+    ;captureDroneOverlap
+  ]
+  
+end
+
+;;================================ IMPOSTA DRONE PIù VICINO ==========================================
+
+to setNearestDrone
+  
+  let xTmp 0
+  let yTmp 0
+  
+  set nearestDrone min-one-of other drones [ distance myself ]
+  
+  if (nearestDrone != nobody) [
+    ask nearestDrone [
+      set xTmp xcor
+      set yTmp ycor
+    ]
+    set distanceNearestDrone distancexy xTmp yTmp
+  ]
+  
+end
+
+;;=========================== VERIFICA SOVRAPPOSIZIONE TRA DRONI ======================================
+
+;; Questa procedura restituisce true se si è verificata una sovrapposizione tra due droni, altrimenti
+;; restituisce false.
+
+to-report isDroneOverlapped
+  
+  let overlapDistance drone.radius * 2
+  
+  ifelse (distanceNearestDrone < overlapDistance) [
+    ;type "At tick: " type ticks type " -> crash between " type who type " and " type nearestDrone type " " print distanceNearestDrone ;;DEBUG
+    
+    let idTmp 0
+    ask nearestDrone [
+      set idTmp who
+    ]
+    if (nearestDrone = droneOverlappedWith) [
+      ;type "At tick: " type ticks type " -> again the same crash between drone " type who type " and drone " print idTmp ;;DEBUG
+      report false ;; Una collisione che coinvolge gli stessi droni in due ticks consecutivi non viene conteggiata.
+    ]
+    
+    set droneOverlappedWith nearestDrone
+    report true
+  ]
+  [
+    set droneOverlappedWith nobody
+    report false
+  ]
+  
+end
+
+;;================================= STAMPA POSIZIONE ==================================================
+
+;; Questa procedura stampa la posizione attuale del drone.
+;; PROCEDURA DI DEBUG
+
+to printPosition
+  
+  type who type " " type xcor type " " type ycor print ""
+  
+end

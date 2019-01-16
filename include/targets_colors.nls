@@ -1,0 +1,147 @@
+globals [
+  
+  ;; Valore massimo tra tutte le informazioni di misura associate ai targets di uno scenario
+  targets.measurement.max
+  ;; Valore minimo tra tutte le informazioni di misura associate ai targets di uno scenario
+  targets.measurement.min
+  
+]
+
+patches-own [
+  
+ ;; Informazione associata ad un target che rappresenta una misura di intesità o concentrazione di qualche agente
+ target.measurement
+ ;; Lista contenente le informazioni di misura associate ai targets di ogni configurazione
+ targets.measurement.list 
+  
+]
+
+to setup_targetsColors
+  
+  ;; Impostazioni default per scenari senza informazioni di misura associate ai targets
+  set targets.measurement.max 0
+  set targets.measurement.min 0
+  
+  ;; Impostazioni per scenari con informazioni di misura associate ai targets
+  setup_measurement_range
+  update_targets_colors
+  
+end
+
+to setup_measurement_range
+  
+  let targets_with_measurement patches with [ target.measurement > 0 ]
+  if (any? targets_with_measurement) [
+    ask max-one-of targets_with_measurement [ target.measurement ] [
+      set targets.measurement.max target.measurement
+    ]
+    ask min-one-of targets_with_measurement [ target.measurement ] [
+      set targets.measurement.min target.measurement
+    ]
+  ]
+  ask patches [
+    if (is-list? targets.measurement.list) [
+      let measurement_max max targets.measurement.list
+      if (measurement_max > targets.measurement.max) [
+        set targets.measurement.max measurement_max
+        set targets.measurement.min measurement_max
+      ]
+      let index 1
+      while [ index < length targets.measurement.list ] [
+        let measurement item index targets.measurement.list
+        if ((measurement > 0) and (measurement < targets.measurement.min)) [
+          set targets.measurement.min measurement
+        ]
+        set index index + 1
+      ]
+    ]
+  ]
+  
+end
+
+to update_targets_colors
+  
+  ask patches with [ target.measurement > 0 ] [
+    set pcolor calculate_color target.measurement red
+  ]
+  
+end
+
+to-report calculate_color [measurement basic_color]
+  
+  let range targets.measurement.max - targets.measurement.min
+  let standardized_measurement measurement - targets.measurement.min
+  let offset standardized_measurement * 2.9
+  set offset offset / range
+  set offset 2.9 - offset
+  let target_color basic_color + offset
+  report target_color
+  
+end
+
+to prepare_scenario_with_measurements [scenario_name]
+  
+  let file_to_prepare get_path_file_to_prepare scenario_name
+  ifelse (file-exists? file_to_prepare) [
+    import-world file_to_prepare
+  ]
+  [
+    createWorld
+  ]
+  ask patches [
+    ;; Uno scenario con targets in movimento e informazioni di misura associate deve prevedere almeno due configurazioni di targets
+    set targets.list list false false
+    set targets.measurement.list list 0 0
+  ]
+  let path_frames get_path_frames scenario_name
+  load_frames_with_measurements path_frames
+  
+  export-world file_to_prepare
+  file-close-all
+  
+end
+
+to load_frames_with_measurements [path_frames]
+  
+  let path_frame_file ""
+  let frame_file_name ""
+  let frame_number 0
+  loop [
+    set frame_file_name word "frame_" frame_number
+    set path_frame_file word path_frames frame_file_name
+    ifelse (file-exists? path_frame_file) [
+      if (frame_number > 1) [
+        ;; Se lo scenario prevede più di due configurazioni di targets si deve incrementare la dimensione degli array
+        ask patches [
+          set targets.list lput false targets.list
+          set targets.measurement.list lput 0 targets.measurement.list
+        ]
+      ]
+      load_frame_targets_with_measurements path_frame_file frame_number
+    ]
+    [
+      stop
+    ]
+    set frame_number frame_number + 1
+  ]
+  
+end
+
+to load_frame_targets_with_measurements [path_frame_file frame_number]
+  
+  file-open path_frame_file
+  while [not file-at-end?] [
+    let target_x file-read
+    let target_y file-read
+    let measurement_xy file-read
+    if (measurement_xy > 0) [
+      ask patch target_x target_y [
+        ;; Il file in lettura contiene le coordinate dei targets e le informazioni di misura associate
+        set targets.list replace-item frame_number targets.list true
+        set targets.measurement.list replace-item frame_number targets.measurement.list measurement_xy
+      ]
+    ]
+  ]
+  file-close-all
+  
+end

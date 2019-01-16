@@ -1,0 +1,285 @@
+;;====================================== VARIABILI GLOBALI ==============================================
+
+globals [
+  
+  ;; Variabili relative alla stigmergia attrattiva. L'impronta di feromone ha la forma di
+  ;; un tronco di cono. Impronte diverse in prossimità spazio-temporale si aggregano in
+  ;; una traccia di feromone.
+  mark.radiusTop ;; Raggio della base superiore del tronco di cono.
+  mark.radiusDown ;; Raggio della base inferiore del tronco di cono.
+  
+  ;; Intensità iniziale dell'impronta di feromone (interna al mark.radiusTop). Questa
+  ;; deve essere sempre uguale ad 1.
+  mark.startIntensity
+  
+  ;; Ad ogni ciclo di aggiornamento il feromone evapora con una velocità che dipende
+  ;; dal valore del tasso di evaporazione.
+  track.evapRate ;; Tasso di evaporazione della traccia di feromone.
+  
+  ;; Numero di cicli di aggiornamento entro cui il drone diventa assuefatto al 
+  ;; feromone attrattivo.
+  olfactoryHabituation
+  
+  
+  ;; Variabile introdotta durante l'attività di debugging
+  phTmp
+  
+]
+
+;;====================================== VARIABILI LOCALI DI PATCH ========================================
+
+patches-own [
+  
+  mark.phInit ;; Quantità di feromone rilasciata nella cella dall'ultima impronta stigmergica.
+  track.intensity ;; Quantità di feromone presente nella cella.
+  track.deltaEvap ;; Quantità di feromone che evapora dalla cella ad ogni ciclo di aggiornamento.
+  
+  target ;; Se la variabile vale true, allora la cella contiene un target.
+  status ;; Se il target eventualmente presente nella cella è stato rilevato, allora la variabile vale "found". Altrimenti vale "notFound".
+  obstacle ;; Se la variabile vale true, allora la cella contiene un ostacolo.
+  
+  visited ;; Variabile usata per capire se la cella è stata visitata o meno.
+  locked ;; Variabile usata dai droni nel meccanismo di overlap avoidance. Se vale zero, allora la patch non è stata bloccata da nessuno.
+  
+]
+
+;;================================ AGGIORNAMENTO DEL COLORE DELLA PATCH ====================================
+
+;; L'intensità di feromone presente nella cella determina il colore della stessa.
+to updateColorPatches
+  
+  let tmpColor 0
+  if ((pcolor < red or pcolor >= red + 3) and (pcolor < yellow or pcolor >= yellow + 3) and pcolor != green) [
+    
+    let Imax 5 ;; Intensità della traccia di feromone in corrispondenza della quale il colore assume luminosità massima.
+    
+    ifelse (track.intensity / mark.startIntensity > Imax) [
+      set tmpColor 9.9 ;; Il colore è completamente bianco
+    ]
+    [
+      set tmpColor (9.9 / Imax) * (track.intensity / mark.startIntensity)
+    ]
+    
+    set pcolor tmpColor
+  ]
+end
+
+;;===================================== PENDENZA DELL'IMPRONTA DI FEROMONE ==================================
+
+;; La pendenza dell'impronta di feromone è usata per calcolare la quantità di feromone rilasciata in ogni cella.
+to-report getPheromoneSlope
+  
+  report ((-1) * mark.startIntensity) / (mark.radiusTop - mark.radiusDown)
+  
+end
+
+;;==================================== INTENSITA' DELL'IMPRONTA DI FEROMONE ==================================
+
+;; L'intensità di feromone dipende dalla distanza dal punto di rilascio (identificata dal parametro dist).
+
+to-report computePhIntensity [ dist ]
+  
+  if (dist < mark.radiusTop) [
+    set dist mark.radiusTop
+  ]
+  
+  report mark.startIntensity * (dist - mark.radiusDown) / (mark.radiusTop - mark.radiusDown)
+  
+end
+
+;;===================================== RILASCIO DEL FEROMONE DIFFUSO ========================================
+
+;; La seguente procedura costruisce l'impronta di feromone come un tronco di cono.
+to releasePheromone
+  
+  if (stigmergy?) [
+    
+    let tmpRadius mark.radiusDown - 1
+    
+    while [ tmpRadius >= mark.radiusTop ] [
+      ask  patches in-radius tmpRadius with [ obstacle != true ] [
+        set mark.phInit computePhIntensity tmpRadius
+        set track.intensity track.intensity + getPheromoneSlope
+        set track.deltaEvap track.intensity * track.evapRate
+        updateColorPatches
+      ]
+      set tmpRadius tmpRadius - 1
+    ]
+  ]
+  
+end
+
+;;======================= RILASCIO DELL'IMPRONTA DI FEROMONE NELLA PATCH SELEZIONATA ===========================
+
+;; Le coordinate della patch passata come parametro rappresentano il centro dell'impronta di feromone.
+
+to releasePheromoneInPatch [ selectedPatch ]
+  ;print selectedPatch
+  ;type "Coordinate del drone: xcor ycor " type xcor type " " print ycor ;; DEBUG
+  
+  ask selectedPatch [
+    
+    ;type "Coordinate della patch selezionata: xcor ycor " type xcor type " " print ycor ;; DEBUG
+    
+    releasePheromone
+    set status "found"
+    ;ifelse (target.measurement > 0) [
+    ;  set pcolor calculate_color target.measurement yellow
+    ;]
+    ;[
+      set pcolor yellow
+    ;]
+    set tgt.checked tgt.checked + 1
+  ]
+  
+end
+
+;;==================================== EVAPORAZIONE LINEARE ====================================================
+
+;; L'evaporazione è lineare perché (ad ogni ciclo di aggiornamento) viene sottratta una quantità costante (deltaEvap)
+;; dalla traccia di feromone.
+
+to evaporate
+  
+  ask patches with [ track.intensity > 0 ] [
+    ifelse (track.intensity - track.deltaEvap >= 0) [
+      set track.intensity track.intensity - track.deltaEvap
+    ]
+    [
+      set track.intensity 0
+    ]
+    updateColorPatches
+  ]
+  
+end
+
+;;========================== COMPORTAMENTO IN PRESENZA DI STIGMERGIA ATTRATTIVA ===============================
+
+;; In presenza di feromone attrattivo e in assenza di assuefazione olfattiva,
+;; questa procedura restituisce l'angolo di rotazione verso la massima intensità di feromone.
+
+to-report smellPheromone
+  
+  let tmpPhMax 0
+  let tmpX 0
+  let tmpY 0
+  let headingToPh 0
+  let maxRot 0
+  
+  ifelse (isTherePheromone = true and olfactoryHabituation? = false and stigmergy? = true) [
+    
+    set nTicksSmellingPh nTicksSmellingPh + 1
+    
+    ask neighbors [
+      if (tmpPhMax < track.intensity) [
+        set tmpX pxcor
+        set tmpY pycor
+        set tmpPhMax track.intensity
+      ]
+    ]
+  ]
+  [
+    if (isTherePheromone = false) [
+      set nTicksSmellingPh 0
+    ]
+    report false
+  ]
+  
+  set headingToPh subtract-headings towardsxy tmpX tmpY heading
+  set maxRot get_final_pos_rotation
+  if (abs headingToPh > maxRot) [
+    ifelse (getSign headingToPh = "-") [
+      report -1 * maxRot
+    ]
+    [
+      report maxRot
+    ]
+  ]
+  
+  report headingToPh
+  
+end
+
+;;======================================= VERIFICA PRESENZA DEL FEROMONE =========================================
+
+to-report isTherePheromone
+  
+  let res false
+  ask patch-here [
+    if (track.intensity > 0) [
+      set res true
+    ]
+  ]
+  report res
+  
+end
+
+;;===================================== VERIFICA ASSUEFAZIONE OLFATTIVA ==========================================
+
+to-report olfactoryHabituation?
+  
+  ifelse (nTicksSmellingPh >= olfactoryHabituation) [
+    report true
+  ]
+  [
+    report false
+  ]
+  
+end
+
+;;========================================== ATTRAZIONE DEL FEROMONE ==============================================
+
+;; Se il drone rileva la presenza di feromone attrattivo, allora ruota (e si dirige) verso la sua massima intensità.
+;; Se il drone non rileva la presenza di feromone attrattivo, allora la procedura riporta "false".
+
+to-report pheromoneAttraction
+  
+  let result false
+  let headingReleasingPhCenter smellPheromone
+  
+  if (headingReleasingPhCenter != false) [
+    rt headingReleasingPhCenter
+    set result true
+  ]
+  
+  report result
+  
+end
+
+;;========================= RILASCIO DELL'IMPRONTA DI FEROMONE SUL TARGET PIU' VICINO =============================
+
+;; Se il drone rileva uno o più target, allora l'impronta di feromone viene rilasciata sul target più vicino.
+
+to releasePheromoneNearestTgt
+  
+  let nearest_target getNearestTarget
+  
+  if (nearest_target != nobody) [
+    if (obsInFrontNearestTgt = false) [
+      set discoveredTarget true
+      releasePheromoneInPatch nearest_target
+      ;captureTgtFound
+    ]
+  ]
+  
+end
+
+;;=================================================================================================================
+
+;; PROCEDURA DI DEBUG
+;; Stampa, per la cella passata come argomento, la quantità iniziale di feromone rilasciata dall'ultima impronta,
+;; l'intensità della traccia di feromone e la quantità di feromone che evapora ad ogni ciclo di aggiornamento.
+
+to inspectPheromoneOnPatch [ patchToBeInspected ]
+  
+  ask patchToBeInspected [
+    set phTmp track.intensity
+    print ""
+    print ticks
+    
+    type "mark_ph_init" print precision mark.phInit 3
+    type "track_ph_curr" print precision track.intensity 3
+    type "delta_evaporate" print precision track.deltaEvap 3
+  ]
+  
+end

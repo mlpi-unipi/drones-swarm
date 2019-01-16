@@ -1,0 +1,192 @@
+;;===================================================== SETUP =====================================================
+
+;; Predisposizione generale dell'ambiente di elaborazione:
+;; 1. Importa il World salvato nel file "scenario";
+;; 2. Inizializza i droni e le patches;
+;; 3. Importa la configurazione dal file "configuration.txt";
+;; 4. Configura la direzione dei droni a seconda della loro posizione nello scenario.
+
+to setup [ randomNumber ]
+  
+  clear-all
+  ;show randomNumber
+  
+  importWorld
+  setupVariables randomNumber
+  setup_movingTargets
+  setup_targetsColors
+  
+  ;;Il random-seed viene configurato al valore dei millisecondi dell'orario attuale
+  random-seed randomNumber
+  
+  reset-ticks
+  
+end
+
+to setupVariables [ randomNumber ]
+  
+  set mark.startIntensity 1
+  import_configuration
+  setupStrategy
+  setupPatches
+  setupDrones
+  set sourceToFind 95
+  set tgt.numSources countSources
+  set maxTicks endurance2ticks
+  ;print_imported_params ;DEBUG
+  
+  set shapeRecognitionScenario false
+  ;; Configura la variabile shapeRecognitionScenario a true solo nel caso dello scenario "shapeScenario"
+  if (selectScenario = "shapeScenario") [
+    set shapeRecognitionScenario true;
+  ]
+  
+  set flockElements 20
+  
+end
+
+;;============================================= CONFIGURA STRATEGIA ===============================================
+
+;; La procedura configura la strategia di coordinamento:
+;; 0) solo volo casuale (nè flocking, nè stigmergia);
+;; 1) solo flocking;
+;; 2) solo stigmergia;
+;; 3) sia flocking che stigmergia.
+
+to setupStrategy
+  
+  if (strategy? = 0) [
+    set flock? false
+    set stigmergy? false
+  ]
+  
+  if (strategy? = 1) [
+    set flock? true
+    set stigmergy? false
+  ]
+  
+  if (strategy? = 2) [
+    set flock? false
+    set stigmergy? true
+  ]
+  
+  if (strategy? = 3) [
+    set flock? true
+    set stigmergy? true
+  ]
+  
+end
+
+;;============================================== CONFIGURA PATCHES ================================================
+
+to setupPatches
+  
+  ask patches [
+    if (pcolor = red or pcolor = blue) [
+      set target true
+    ]
+    ifelse (pcolor = grey) [
+      set obstacle true
+    ]
+    [
+      set obstacle false
+    ]
+    set visited 0
+    set locked 0
+    set status "notFound"
+  ]
+  
+end
+
+;;=============================================== CONFIGURA DRONI ==================================================
+
+to setupDrones
+  ;; NetLogo misura la distanza dal drone al centro della patch. Il valore 0.707 (ovvero sqrt(0.5^2 + 0.5^2))
+  ;; viene aggiunto al raggio del drone al fine di considerare anche metà diagonale di una patch.
+  let collisionDistance drone.radius + 0.707
+  ask drones [
+    if (any? patches in-radius collisionDistance with [ obstacle = true ]) [
+      ;; Il drone che si sovrappone ad un ostacolo viene eliminato
+      die
+      ;type "The drone " type who print " is dead"
+    ]
+    ask (other drones in-radius drone.radius) [
+      ;; I droni che si sovrappongono al drone vengono eliminati
+      die
+    ]
+    
+    set color green
+    set sizeDrone 3
+    set size sizeDrone
+    if (shapeRecognitionScenario = false) [
+      setHeading
+    ]
+  ]
+  
+end
+
+;=============================================== CONFIGURA DIREZIONE ==================================================
+
+to setHeading
+  
+  let randomness 5
+  ask drones [
+    if (xcor < 0 and ycor > 0) [
+      set heading 135 + random randomness
+    ]
+    if (xcor > 0 and ycor > 0) [
+      set heading 225 + random randomness
+    ]
+    if (xcor > 0 and ycor < 0) [
+      set heading 315 + random randomness
+    ]
+    if (xcor < 0 and ycor < 0) [
+      set heading 45 + random randomness
+    ]
+  ]
+  
+end
+
+;=========================================== CONFIGURA COLORE PENNA GRAFICO =============================================
+
+;; La penna che traccia il grafico può assumere il colore:
+;; Rosso: solo stigmergia;
+;; Giallo: solo flocking;
+;; Arancio: stigmergia + flocking;
+;; Nero: nè flocking nè stigmergia.
+
+to setPenColor
+  
+  ifelse (stigmergy?) and (flock?) [
+    set-plot-pen-color orange
+  ]
+  [
+    set-plot-pen-color black
+    if stigmergy? [
+      set-plot-pen-color red
+    ]
+    if flock? [
+      set-plot-pen-color yellow
+    ]
+  ]
+  
+end
+
+;;====================================== AUTONOMIA - CONVERTITORE DI TICKS ===========================================
+
+;; Si assume che un tick corrisponda ad un secondo, dunque si calcola l'autonomia in termini di ticks
+
+to-report endurance2ticks
+  
+  let secs_endurance drone.endurance * 60
+  report secs_endurance
+  
+end
+
+;;============================================= DRONI NELLO SCIAME ===================================================
+
+to-report dronesInSwarm
+  
+  report count drones
+  
+end

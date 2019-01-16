@@ -1,0 +1,810 @@
+;;======================================= IMPORT WORLD ================================================
+
+to importWorld
+  
+  let file_to_open get_path_file "scenario"
+  ifelse (file-exists? file_to_open) [
+    import-world  file_to_open
+  ]
+  [
+    createWorld
+  ]
+  
+end
+
+;;======================================== CREATE-WORLD ================================================
+
+;; Questa procedura inizializza il world con tutti gli attributi di patch impostati a 0 e false.
+
+to createWorld
+  
+  ask patches [
+    set target false
+    set visited 0
+  ]
+  
+end
+
+;;=========================================== SAVE =====================================================
+
+;; In base all'opzione selezionata, questa procedura salva su file solo i droni, solo gli ostacoli,
+;; solo i target oppure tutti e tre i tipi di oggetto.
+
+to save
+  
+  if (selectElements = "drones") [
+    save_drones
+  ]
+  if (selectElements = "obstacles") [
+    save_obstacles
+  ]
+  if (selectElements = "targets") [
+    saveTargets
+  ]
+  if (selectElements = "all") [
+    let opened-file user-new-file
+    if (is-string? opened-file) [
+      export-world opened-file
+    ]
+  ]
+  
+end
+
+;;========================================= SAVE DRONES =================================================
+
+;; Questa procedura salva su file i droni.
+
+to save_drones
+  
+  let opened-file ""
+  set opened-file user-new-file
+  if (is-string? opened-file) [
+    if (file-exists? opened-file) [
+      file-delete opened-file
+    ]
+    file-open opened-file
+    ask drones [
+      file-write xcor
+      file-write ycor
+      file-write heading
+    ]
+    file-close-all
+  ]
+  
+end
+
+;;======================================= SAVE OBSTACLES ================================================
+
+;; Questa procedura salva su file gli ostacoli.
+
+to save_obstacles
+  
+  let opened-file user-new-file ;;Scelto manualmente dall'utente
+  if (is-string? opened-file) [
+    file-open opened-file
+    ask patches with [ pcolor = "grey" ] [
+      file-write pxcor
+      file-write pycor
+    ]
+    file-close-all
+  ]
+  
+end
+
+;;======================================== SAVE TARGET ===================================================
+
+;; Questa procedura salva su file i target.
+
+to saveTargets
+  
+  let opened-file user-new-file
+  if (is-string? opened-file) [
+    file-open opened-file
+    ask patches with [ target = true ] [
+      file-write pxcor
+      file-write pycor
+    ]
+    file-close-all
+  ]
+  
+end
+
+;;======================================== DRONES BACKUP =================================================
+
+;; Questa procedura salva su file un backup dei droni.
+
+to drones_backup
+  
+  let file_to_open get_path_file "drones_backup"
+  if (not file-exists? file_to_open) [
+    file-open file_to_open
+    ask drones [
+      file-write xcor
+      file-write ycor
+      file-write heading
+    ]
+    file-close-all
+  ]
+  
+end
+
+;;============================================= LOAD =====================================================
+
+;; In base all'opzione selezionata, questa procedura carica da file solo i droni, solo gli ostacoli,
+;; solo i target oppure tutti e tre i tipi di oggetto.
+
+to load
+  
+  if (selectElements = "drones") [
+    load-drones
+  ]
+  if (selectElements = "obstacles") [
+    load_obstacles
+  ]
+  if (selectElements = "targets") [
+    load_sources
+  ]
+  if (selectElements = "all") [
+    let opened-file user-file
+    if (is-string? opened-file) [
+      import-world opened-file
+      setupVariables read-from-string substring date-and-time 9 12
+    ]
+  ]
+  
+end
+
+;;========================================== LOAD DRONES ==================================================
+
+;; Questa procedura carica da file i droni.
+
+to load-drones
+  
+  let opened_file ""
+  set opened_file user-file
+  if (is-string? opened_file) [
+    file-open opened_file
+    while [ not file-at-end? ] [
+      let x_in file-read
+      let y_in file-read
+      let head file-read
+      create-drones 1 [
+        set xcor x_in
+        set ycor y_in
+        set heading head
+        setupDrones
+      ]
+    ]
+    file-close-all
+  ]
+  
+end
+
+;;========================================= LOAD OBSTACLES ================================================
+
+;; Questa procedura carica da file gli ostacoli.
+
+to load_obstacles
+  
+  let opened_file user-file
+  if (is-string? opened_file) [
+    file-open opened_file
+    while [ not file-at-end? ] [
+      let x_in file-read
+      let y_in file-read
+      ask patch x_in y_in [
+        set pcolor grey
+      ]
+    ]
+    file-close-all
+  ]
+  
+end
+
+;;=========================================== LOAD TARGET ==================================================
+
+;; Questa procedura carica da file i target.
+
+to load_sources
+  
+  let opened_file user-file
+  if (is-string? opened_file) [
+    file-open opened_file
+    while [ not file-at-end? ] [
+      let x_in file-read
+      let y_in file-read
+      ask patch x_in y_in [
+        set pcolor red
+        set target true
+      ]
+      set tgt.numSources (tgt.numSources + 1)
+    ]
+    file-close-all
+  ]
+  
+end
+
+;;===================================== EXPORT SIMULATION PARAMETERS =======================================
+
+to export_simulation_pars
+  
+  file-print "simulation_parameters"
+  
+  let str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma "maxTick"
+  set str_tmp word str_tmp concatenate_string_with_comma "simulationTimeTicks"
+  set str_tmp word str_tmp concatenate_string_with_comma "strategy"
+  set str_tmp word str_tmp concatenate_string_with_comma "sources-to-find"
+  set str_tmp word str_tmp concatenate_string_with_comma "number of drones"
+  file-print str_tmp
+  
+  set str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma maxTicks
+  set str_tmp word str_tmp concatenate_string_with_comma targets.simulationTime
+  set str_tmp word str_tmp concatenate_string_with_comma strategy?
+  set str_tmp word str_tmp concatenate_string_with_comma sourceToFind
+  set str_tmp word str_tmp concatenate_string_with_comma count drones
+  file-print str_tmp
+  
+end
+
+;;======================================== EXPORT DRONE PARAMETERS ==========================================
+
+to export_drone_params
+  
+  file-print "drone_parameters"
+  
+  let str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma "radius"
+  set str_tmp word str_tmp concatenate_string_with_comma "sight.angle"
+  set str_tmp word str_tmp concatenate_string_with_comma "cruising speed"
+  set str_tmp word str_tmp concatenate_string_with_comma "acceleration"
+  set str_tmp word str_tmp concatenate_string_with_comma "deceleration"
+  set str_tmp word str_tmp concatenate_string_with_comma "angular_vel_max"
+  set str_tmp word str_tmp concatenate_string_with_comma "angular_acc"
+  set str_tmp word str_tmp concatenate_string_with_comma "angular_dec"
+  set str_tmp word str_tmp concatenate_string_with_comma "endurance"
+  set str_tmp word str_tmp concatenate_string_with_comma "sensing.radius"
+  set str_tmp word str_tmp concatenate_string_with_comma "sensing.angle"
+  file-print str_tmp
+  
+  set str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma drone.radius
+  set str_tmp word str_tmp concatenate_string_with_comma drone.sight.angleMax
+  set str_tmp word str_tmp concatenate_string_with_comma drone.cruisingSpeed
+  set str_tmp word str_tmp concatenate_string_with_comma drone.acceleration
+  set str_tmp word str_tmp concatenate_string_with_comma drone.deceleration
+  set str_tmp word str_tmp concatenate_string_with_comma drone.velocityAngularMax
+  set str_tmp word str_tmp concatenate_string_with_comma drone.accelerationAng
+  set str_tmp word str_tmp concatenate_string_with_comma drone.decelerationAng
+  set str_tmp word str_tmp concatenate_string_with_comma drone.endurance
+  set str_tmp word str_tmp concatenate_string_with_comma sensing.radius
+  set str_tmp word str_tmp concatenate_string_with_comma sensing.angle
+  file-print str_tmp
+  
+end
+
+;;================================= EXPORT OVERLAP AVOIDANCE PARAMETERS =====================================
+
+to export_overlap_avoidance_params
+  
+  file-print "collision avoidance parameters"
+  
+  let str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma "other_drones_vision"
+  set str_tmp word str_tmp concatenate_string_with_comma "obstacle_vision"
+  set str_tmp word str_tmp concatenate_string_with_comma "gap_size"
+  file-print str_tmp
+  
+  set str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma drone.reachable.radius
+  set str_tmp word str_tmp concatenate_string_with_comma drone.collision.vision
+  set str_tmp word str_tmp concatenate_string_with_comma drone.collision.gapAngle
+  file-print str_tmp
+  
+end
+
+;;===================================== EXPORT PHEROMONE PARAMETERS =========================================
+
+to export_pheromone_params
+  
+  file-print "pheromone parameters"
+  
+  let str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma "radius_top"
+  set str_tmp word str_tmp concatenate_string_with_comma "radius_down"
+  set str_tmp word str_tmp concatenate_string_with_comma "evap_rate"
+  set str_tmp word str_tmp concatenate_string_with_comma "olfaction"
+  file-print str_tmp
+  
+  set str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma mark.radiusTop
+  set str_tmp word str_tmp concatenate_string_with_comma mark.radiusDown
+  set str_tmp word str_tmp concatenate_string_with_comma track.evapRate
+  set str_tmp word str_tmp concatenate_string_with_comma olfactoryHabituation
+  file-print str_tmp
+  
+end
+
+;;====================================== EXPORT FLOCKING PARAMETERS =========================================
+
+to export_flocking_params
+  
+  file-print "flocking parameters"
+  
+  let str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma "flock-angle"
+  set str_tmp word str_tmp concatenate_string_with_comma "radius-separate"
+  set str_tmp word str_tmp concatenate_string_with_comma "max-separate-turn"
+  set str_tmp word str_tmp concatenate_string_with_comma "radius-align"
+  set str_tmp word str_tmp concatenate_string_with_comma "max-align-turn"
+  set str_tmp word str_tmp concatenate_string_with_comma "radius-cohere"
+  set str_tmp word str_tmp concatenate_string_with_comma "max-cohere-turn"
+  set str_tmp word str_tmp concatenate_string_with_comma "wiggleVar"
+  file-print str_tmp
+  
+  set str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.angle
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.radiusSeparate
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.maxSeparateTurn
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.radiusAlign
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.maxAlignTurn
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.radiusCohere
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.maxCohereTurn
+  set str_tmp word str_tmp concatenate_string_with_comma drone.flocking.wiggleVar
+  file-print str_tmp
+  
+end
+
+;;========================================== EXPORT RESULTS =================================================
+
+to export_params
+  
+  let filename "results.csv"
+  let file_to_open get_path_file filename
+  file-open file_to_open
+  
+  ;; Esporta tutti i parametri
+  export_simulation_pars
+  file-print ""
+  export_drone_params
+  file-print ""
+  export_overlap_avoidance_params
+  file-print ""
+  export_pheromone_params
+  file-print ""
+  export_flocking_params
+  file-print ""
+  
+  file-close
+  
+end
+
+to write_header_results
+  
+  let filename "results.csv"
+  let file_to_open get_path_file filename
+  file-open file_to_open
+  
+  file-print "results"
+  
+  let str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma "iteration"
+  set str_tmp word str_tmp concatenate_string_with_comma "ticks"
+  set str_tmp word str_tmp concatenate_string_with_comma "percentage targets found"
+  set str_tmp word str_tmp concatenate_string_with_comma "percentage exploration"
+  set str_tmp word str_tmp concatenate_string_with_comma "number of overlap among drones"
+  set str_tmp word str_tmp concatenate_string_with_comma "number of obstacles collisions"
+  set str_tmp word str_tmp concatenate_string_with_comma "number of drones involved into the target discovering"
+  file-print str_tmp
+  
+  file-close
+  
+end
+
+to export_results_iteration
+  
+  let filename "results.csv"
+  let file_to_open get_path_file filename
+  file-open file_to_open
+  
+  let str_tmp ""
+  set str_tmp word str_tmp concatenate_string_with_comma iterator
+  set str_tmp word str_tmp concatenate_string_with_comma ticks
+  set str_tmp word str_tmp concatenate_string_with_comma precision targetExp 4
+  set str_tmp word str_tmp concatenate_string_with_comma precision expSpace 4
+  set dronesOverlap dronesOverlap / 2 ;; Si divide per 2 perché ciascuna sovrapposizione è conteggiata due volte.
+  set str_tmp word str_tmp concatenate_string_with_comma dronesOverlap
+  set str_tmp word str_tmp concatenate_string_with_comma nObstaclesCollisions
+  set str_tmp word str_tmp concatenate_string_with_comma nDronesDiscoverTgts
+  file-print str_tmp
+  
+  file-close
+  
+end
+
+;;==================================== CONCATENATE STRING WITH COMMA ===========================================
+
+to-report concatenate_string_with_comma [ string ]
+  
+  report word string ", "
+  
+end
+
+;;=========================================== GET PATH FILE ====================================================
+
+;; Questa procedura restituisce il percorso completo del file contenente la codifica dello scenario.
+;; Il percorso dipende dal nome dello scenario.
+;; e.g. /scenarios/dump/
+
+to-report get_path_file [ name_file_to_open ]
+  
+  let file_to_open word "scenarios/" selectScenario
+  set file_to_open word file_to_open "/"
+  set file_to_open word file_to_open name_file_to_open
+  
+  report file_to_open
+  
+end
+
+;;======================================== IMPORT CONFIGURATION ================================================
+
+to import_configuration
+  
+  let file_to_open get_path_file "configuration.txt"
+  file-open file_to_open
+  
+  let cycle 0
+  let var 0
+  let str_tmp ""
+  while [ not file-at-end? ] [
+    set str_tmp file-read-line
+    if (is_a_comment? str_tmp = false and is_a_section? str_tmp = false and empty? str_tmp = false) [
+      let var_name_tmp get_variable_name str_tmp
+      let value_tmp get_value str_tmp
+      
+      if (var_name_tmp = "simulationTime") [
+        set targets.simulationTime minutes2ticks value_tmp
+      ]
+      if (var_name_tmp = "strategy") [
+        set strategy? value_tmp
+      ]
+      if (var_name_tmp = "droneRadius") [
+        set drone.radius value_tmp
+      ]
+      if (var_name_tmp = "sightAngleMax") [
+        set drone.sight.angleMax value_tmp
+      ]
+      if (var_name_tmp = "maxSpeed") [
+        set drone.speedMax value_tmp
+      ]
+      if (var_name_tmp = "cruisingSpeed") [
+        set drone.cruisingSpeed value_tmp
+      ]
+      if (var_name_tmp = "acceleration") [
+        set drone.acceleration value_tmp
+      ]
+      if (var_name_tmp = "deceleration") [
+        set drone.deceleration value_tmp
+      ]
+      if (var_name_tmp = "angularVelMax") [
+        set drone.velocityAngularMax value_tmp
+      ]
+      if (var_name_tmp = "angularAcc") [
+        set drone.accelerationAng value_tmp
+      ]
+      if (var_name_tmp = "angularDec") [
+        set drone.decelerationAng value_tmp
+      ]
+      if (var_name_tmp = "endurance") [
+        set drone.endurance value_tmp
+      ]
+      if (var_name_tmp = "sensingRadius") [
+        set sensing.radius  value_tmp
+      ]
+      if (var_name_tmp = "sensingAngle") [
+        set sensing.angle value_tmp
+      ]
+      if (var_name_tmp = "sensingBase") [
+        set rectangleBase value_tmp
+      ]
+      if (var_name_tmp = "sensingHeight") [
+        set rectangleHeight value_tmp
+      ]
+      if (var_name_tmp = "reachableRadius") [
+        set drone.reachable.radius value_tmp
+      ]
+      if (var_name_tmp = "reachableAngle") [
+        set drone.reachable.angle value_tmp
+      ]
+      if (var_name_tmp = "collisionVision") [
+        set drone.collision.vision value_tmp
+      ]
+      if (var_name_tmp = "gapAngle") [
+        set drone.collision.gapAngle value_tmp
+      ]
+      if (var_name_tmp = "radiusTop") [
+        set mark.radiusTop value_tmp
+      ]
+      if (var_name_tmp = "radiusDown") [
+        set mark.radiusDown value_tmp
+      ]
+      if (var_name_tmp = "evapRate") [
+        set track.evapRate value_tmp
+      ]
+      if (var_name_tmp = "olfaction") [
+        set olfactoryHabituation value_tmp
+      ]
+      if (var_name_tmp = "flockAngle") [
+        set drone.flocking.angle value_tmp
+      ]
+      if (var_name_tmp = "wiggleVar") [
+        set drone.flocking.wiggleVar value_tmp
+      ]
+      if (var_name_tmp = "radiusSeparate") [
+        set drone.flocking.radiusSeparate value_tmp
+      ]
+      if (var_name_tmp = "maxSeparateTurn") [
+        set drone.flocking.maxSeparateTurn value_tmp
+      ]
+      if (var_name_tmp = "radiusAlign") [
+        set drone.flocking.radiusAlign value_tmp
+      ]
+      if (var_name_tmp = "maxAlignTurn") [
+        set drone.flocking.maxAlignTurn  value_tmp
+      ]
+      if (var_name_tmp = "radiusCohere") [
+        set drone.flocking.radiusCohere value_tmp
+      ]
+      if (var_name_tmp = "maxCohereTurn") [
+        set drone.flocking.maxCohereTurn value_tmp
+      ]
+    ]
+  ]
+  
+  file-close
+  
+end
+
+;;====================================== GET VAR NAME ============================================
+
+to-report get_variable_name [ string ]
+  
+  let str_length length string
+  let idx 0
+  let var_name ""
+  
+  while [ idx < str_length ] [
+    let str_tmp item idx string
+    ;type "str_tmp: " print str_tmp ;;DEBUG
+    if (str_tmp = "=") [
+      set idx str_length
+    ]
+    if (str_tmp != "=" and str_tmp != " ") [
+      set var_name word var_name str_tmp
+      ;type "var tmp: " print var_name ;;DEBUG
+    ]
+    set idx idx + 1
+  ]
+  
+  report var_name
+  
+end
+
+;;======================================== GET VALUE ==============================================
+
+to-report get_value [ string ]
+  
+  let str_length length string
+  let idx 0
+  let found_delimiter false
+  let to_be_converted ""
+  
+  repeat str_length [
+    let str_tmp item idx string
+    if (found_delimiter = true and str_tmp != " ") [
+      set to_be_converted word to_be_converted str_tmp
+      ;type "concatenation: " print to_be_converted ;;DEBUG
+    ]
+    if (str_tmp = "=" and found_delimiter = false) [
+      set found_delimiter true
+    ]
+    set idx idx + 1
+  ]
+  
+  report read-from-string to_be_converted
+  
+end
+
+;;====================================== IS A COMMENT? ============================================
+
+to-report is_a_comment? [ line_read ]
+  
+  let res false
+  if (empty? line_read = false) [
+    if (first line_read = "#") [
+      set res true
+    ]
+  ]
+  
+  report res
+  
+end
+
+;;====================================== IS A SECTION? ============================================
+
+to-report is_a_section? [ line_read ]
+  
+  let res false
+  if (empty? line_read = false) [
+    if (first line_read = "[") [
+      set res true
+    ]
+  ]
+  
+  report res
+  
+end
+
+;;================================= PRINT IMPORTED PARAMS ========================================
+
+to print_imported_params
+  
+  print "SIMULATION PARAMETERS"
+  type "simulationTime: " print targets.simulationTime
+  type "startegy: " print strategy?
+  type "number of drones: " print dronesInSwarm
+  type "number of sources: " print countSources
+  print ""
+  
+  print "DRONES PARAMETERS"
+  type "radius: " print drone.radius
+  type "maximum speed: " print drone.speedMax
+  type "cruising speed: " print drone.cruisingSpeed
+  type "acceleration: " print drone.acceleration
+  type "deceleration: " print drone.deceleration
+  type "angular_vel_max: " print drone.velocityAngularMax
+  type "drone.acc_ang: " print drone.accelerationAng
+  type "drone.dec_ang: " print drone.decelerationAng
+  type "endurance: " type drone.endurance type " maxTicks: " print maxTicks
+  print ""
+  
+  print "SENSING PARAMETERS"
+  type "sensing.radius: " print sensing.radius
+  type "sensing.angle: " print sensing.angle
+  print ""
+  
+  print "OBSTACLE AVOIDANCE PARAMETERS"
+  type "drone reachable radius: " print drone.reachable.radius
+  type "drone reachable angle: " print drone.reachable.angle
+  type "drone obstacle vision: " print drone.collision.vision
+  type "sight.angle: " print drone.sight.angleMax
+  type "gap angle: " print drone.collision.gapAngle
+  print ""
+  
+  print "SIGMERGY PARAMETERS"
+  type "radius_top: " print mark.radiusTop
+  type "radius_down: " print mark.radiusDown
+  type "evap_rate: " print track.evapRate
+  type "olfactory habituation: " print olfactoryHabituation
+  print ""
+  
+  print "FLOCKING PARAMETERS"
+  type "flockAngle: " print drone.flocking.angle
+  type "wiggle-var: " print drone.flocking.wiggleVar print ""
+  
+  type "separate radius: " print drone.flocking.radiusSeparate
+  type "max-separate-turn: " print drone.flocking.maxSeparateTurn print ""
+  
+  type "align radius: " print drone.flocking.radiusAlign
+  type "max-align-turn: " print drone.flocking.maxAlignTurn print ""
+  
+  type "cohere radius: " print drone.flocking.radiusCohere
+  type "max-cohere-turn: " print drone.flocking.maxCohereTurn
+  
+end
+
+;;============================== IMPORT TARGET FROM COORDINATES ===================================
+
+to importFromFile[ nameFile ]
+  
+  file-open nameFile
+  let str_tmp ""
+  let reading95Shape false
+  let reading50Shape false
+  let readDrones false
+  
+  while [ not file-at-end? ] [
+    set str_tmp file-read-line
+    if (str_tmp = "#Shape95%") [
+      set reading95Shape true
+      set reading50Shape false
+      set readDrones false
+    ]
+    if (str_tmp = "#Shape50%") [
+      set reading95Shape false
+      set reading50Shape true
+      set readDrones false
+    ]
+    if (str_tmp = "#Drones") [
+      set reading95Shape false
+      set reading50Shape false
+      set readDrones true
+    ]
+    if (item 0 str_tmp != "#") [
+      if (reading95Shape ) [
+        let coordinates getCoordinates str_tmp
+        let xTmp read-from-string item 0 coordinates
+        let yTmp read-from-string item 1 coordinates
+        ask patch xTmp yTmp [
+          set pcolor red
+          set target true
+          set status "notFound"
+        ]
+      ]
+      if (reading50Shape) [
+        let coordinates getCoordinates str_tmp
+        let xTmp read-from-string item 0 coordinates
+        let yTmp read-from-string item 1 coordinates
+        ask patch xTmp yTmp [
+          set pcolor green
+          set target true
+          set status "notFound"
+        ]
+      ]
+      if (readDrones) [
+        let coordinates getCoordinates str_tmp
+        let xTmp read-from-string item 0 coordinates
+        let yTmp read-from-string item 1 coordinates
+        create-drones 1 [
+          set xcor xTmp
+          set ycor yTmp
+          set color white
+          set size 3
+        ]
+      ]
+    ]
+  ]
+  
+  file-close
+  
+  ask patch -5 32 [
+    set pcolor black
+    set target false
+  ]
+  
+end
+
+;;====================================== GET COORDS ===============================================
+
+to-report getCoordinates [ string ]
+  
+  let str_length length string
+  let idx 0
+  let found_delimiter false
+  let xTmp ""
+  let yTmp ""
+  
+  repeat str_length [
+    
+    let char_tmp item idx string
+    
+    if (found_delimiter = false and char_tmp != ",") [
+      set xTmp word xTmp char_tmp
+    ]
+    if (char_tmp = "," and found_delimiter = false) [
+      set found_delimiter true
+    ]
+    if (found_delimiter = true and char_tmp != " ") [
+      set yTmp word yTmp char_tmp
+    ]
+    
+    set idx idx + 1
+  ]
+  
+  ;type "x: " type xTmp type " y: " print yTmp ;;DEBUG
+  let coordsXY list xTmp yTmp
+  
+  report coordsXY
+  
+end

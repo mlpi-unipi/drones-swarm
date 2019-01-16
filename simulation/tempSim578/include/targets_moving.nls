@@ -1,0 +1,321 @@
+globals [
+
+  ;; Periodo di transizione delle configurazioni dei targets, valido in scenari con targets in movimento
+  targets.transitionPeriod
+  ;; Numero di configurazioni di targets dello scenario con targets in movimento
+  targets.configurations
+  ;; Indice della finestra temporale associata alla configurazione dei targets corrente
+  targets.timeSlot
+  ;; Intervallo temporale su cui valutare la performance media dell'algoritmo di coordinamento
+  targets.simulationTime
+  ;; Performance media dell'algoritmo di coordinamento
+  targets.averagePercentage
+  ;; Intervallo temporale su cui viene eseguita la simulazione
+  environment.simulationTime
+  ;; Intervallo temporale necessario per distribuire i droni sul territorio
+  environment.deploymentTime
+  ;; Tempo di rilevamento del primo target
+  targets.detectionTime
+  ;; Valore booleano che stabilisce se valutare la performance come tempo di rilevamento del primo target
+  performance.detectionTime
+  
+]
+
+patches-own [
+
+  ;; Lista contenente tanti elementi quante sono le configurazioni dei targets nello scenario
+  targets.list
+
+]
+
+to setup_movingTargets
+
+  ;; Impostazioni default per scenari con targets statici
+  set targets.transitionPeriod 0
+  set targets.configurations 1
+  set targets.timeSlot -1
+  set targets.averagePercentage 0
+  set targets.detectionTime 0
+  set environment.simulationTime targets.simulationTime
+  set environment.deploymentTime 0
+  set performance.detectionTime false
+  
+  ;; Impostazioni per scenari con targets in movimento
+  if (selectScenario = "fireTracking") [
+    set environment.deploymentTime minutes2ticks 4
+  ]
+  if (selectScenario = "fireDetection") [
+    set environment.deploymentTime minutes2ticks 10
+  ]
+  if (selectScenario = "h2sLeak") [
+    set environment.deploymentTime minutes2ticks 12
+  ]
+  if (selectScenario = "viareggioLPG") [
+    set environment.deploymentTime minutes2ticks 4
+  ]
+  
+  ask patch 0 0 [
+    if (is-list? targets.list) [
+      set targets.configurations length targets.list
+    ]
+  ]
+  
+  if (targets.simulationTime > 0) [
+    let period targets.simulationTime / targets.configurations
+    set period round period
+    if (period != targets.simulationTime) [
+      set targets.transitionPeriod period
+      if (targets.transitionPeriod > 0) [
+        let time targets.transitionPeriod * targets.configurations
+        if (targets.simulationTime != time) [
+          set targets.simulationTime time
+        ]
+        let deploymentTimeSlots environment.deploymentTime / targets.transitionPeriod
+        set deploymentTimeSlots round deploymentTimeSlots
+        ;; show deploymentTimeSlots
+        set time targets.transitionPeriod * deploymentTimeSlots
+        if (environment.deploymentTime != time) [
+          set environment.deploymentTime time
+        ]
+        set environment.simulationTime environment.deploymentTime + targets.simulationTime
+      ]
+    ]
+  ]
+  
+  if ((environment.deploymentTime = 0) and (targets.configurations > 1)) [
+    set targets.timeSlot 0
+    update_targets
+  ]
+
+end
+
+to check_movingTargets
+  
+  if ((ticks >= environment.deploymentTime) and (targets.transitionPeriod > 0)) [
+    if ((ticks > 0) and (remainder ticks targets.transitionPeriod = 0)) [
+      let topTimeSlot targets.configurations - 1
+      if (targets.timeSlot < topTimeSlot) [
+        set targets.timeSlot targets.timeSlot + 1
+        update_targets
+        update_targets_colors
+        update_plot
+      ]
+    ]
+  ]
+  
+end
+
+to check_performance
+  
+  ifelse (targets.simulationTime > 0) [
+    ifelse (targets.transitionPeriod = 0) [
+      set targets.averagePercentage percentageTgtsFound
+    ]
+    [
+      if ((ticks > environment.deploymentTime) and (endTimeSlot?)) [
+        set targets.averagePercentage calculate_averagePercentage
+        print_timeSlot_results
+      ]
+    ]
+  ]
+  [
+    set targets.averagePercentage percentageTgtsFound
+  ]
+  if ((performance.detectionTime) and (ticks > 0) and (targets.detectionTime = 0) and (percentageTgtsFound > 0)) [
+    set targets.detectionTime ticks - environment.deploymentTime
+    set targets.detectionTime targets.detectionTime + 1
+  ]
+  
+end
+
+to update_targets
+  
+  ask patches with [ obstacle = false ] [
+    ifelse (item targets.timeSlot targets.list = true) [
+      ifelse (is-list? targets.measurement.list) [
+        set target.measurement item targets.timeSlot targets.measurement.list
+      ]
+      [
+        set pcolor red
+      ]
+      set target true
+      set status "notFound"
+    ]
+    [
+      if (is-list? targets.measurement.list) [
+        set target.measurement item targets.timeSlot targets.measurement.list
+      ]
+      set pcolor black
+      set target false
+      set status "notFound"
+    ]
+  ]
+  
+end
+
+to update_plot
+  
+  clear-plot
+  set-plot-x-range ticks ticks + 1000
+  
+end
+
+to-report endTimeSlot?
+  
+  let previousCheckPoint targets.transitionPeriod * targets.timeSlot
+  set previousCheckPoint previousCheckPoint + environment.deploymentTime
+  let nextCheckPoint targets.transitionPeriod - 1
+  set nextCheckPoint previousCheckPoint + nextCheckPoint
+  report ((nextCheckPoint <= environment.simulationTime) and (ticks = nextCheckPoint))
+  
+end
+
+to-report calculate_averagePercentage
+  
+  let percentage targets.averagePercentage
+  let configurations targets.timeSlot + 1
+  set percentage percentage * targets.timeSlot
+  set percentage percentage + percentageTgtsFound
+  set percentage percentage / configurations
+  report percentage
+  
+end
+
+to print_timeSlot_results
+  
+  let targets.amount count patches with [ target = true ]
+  let targets.found count patches with [ target = true and status = "found" ]
+  
+  let path_name_file_to_print get_path_name_file_to_print
+  file-open path_name_file_to_print
+  file-print word "Time Slot: " targets.timeSlot
+  file-print word "Targets Amount: " targets.amount
+  file-print word "Found: " targets.found
+  file-print word "Percentage: " percentageTgtsFound
+  file-print word "Average Percentage: " targets.averagePercentage 
+  file-close-all
+  
+end
+
+to-report get_path_name_file_to_print
+  
+  let path_file_to_print word "scenarios/" selectScenario
+  set path_file_to_print word path_file_to_print "/results/"
+  set path_file_to_print word path_file_to_print "simResults_"
+  let num 1
+  let path_name_file_to_print word path_file_to_print num
+  set path_name_file_to_print word path_name_file_to_print ".txt"
+  while [file-exists? path_name_file_to_print] [
+    set num num + 1
+    set path_name_file_to_print word path_file_to_print num
+    set path_name_file_to_print word path_name_file_to_print ".txt"
+  ]
+  if (targets.timeSlot > 0) [
+    set num num - 1
+    set path_name_file_to_print word path_file_to_print num
+    set path_name_file_to_print word path_name_file_to_print ".txt"
+  ]
+  report path_name_file_to_print
+  
+end
+
+to prepare_scenario [scenario_name]
+
+  let file_to_prepare get_path_file_to_prepare scenario_name
+  ifelse (file-exists? file_to_prepare) [
+    import-world file_to_prepare
+  ]
+  [
+    createWorld
+  ]
+  ask patches [
+    ;; Uno scenario con targets in movimento deve prevedere almeno due configurazioni di targets
+    set targets.list list false false
+  ]
+  let path_frames get_path_frames scenario_name
+  load_frames path_frames
+  
+  export-world file_to_prepare
+  file-close-all
+  
+end
+
+to load_frames [path_frames]
+  
+  let path_frame_file ""
+  let frame_file_name ""
+  let frame_number 0
+  loop [
+    set frame_file_name word "frame_" frame_number
+    set path_frame_file word path_frames frame_file_name
+    ifelse (file-exists? path_frame_file) [
+      ;; Se lo scenario prevede più di due configurazioni di targets si deve incrementare la dimensione dell'array
+      if (frame_number > 1) [
+        ask patches [
+          set targets.list lput false targets.list
+        ]
+      ]
+      load_frame_targets path_frame_file frame_number
+    ]
+    [
+      stop
+    ]
+    set frame_number frame_number + 1
+    ;; show path_frame_file
+    ;; show frame_number
+  ]
+  
+end
+
+to load_frame_targets [path_frame_file frame_number]
+  
+  file-open path_frame_file
+  while [not file-at-end?] [
+    let target_x file-read
+    let target_y file-read
+    ask patch target_x target_y [
+      ;; Il file in lettura contiene solo le coordinate dei targets
+      set targets.list replace-item frame_number targets.list true
+      ;; show targets.list
+    ]
+  ]
+  file-close-all
+  
+end
+
+to-report get_path_file_to_prepare [scenario_name]
+
+  let file_to_prepare word "scenarios/" scenario_name
+  set file_to_prepare word file_to_prepare "/"
+  set file_to_prepare word file_to_prepare "scenario"
+  report file_to_prepare
+
+end
+
+to-report get_path_frames [scenario_name]
+  
+  let path_frames word "scenarios/" scenario_name
+  set path_frames word path_frames "/"
+  set path_frames word path_frames "frames"
+  set path_frames word path_frames "/"
+  report path_frames
+  
+end
+
+to-report minutes2ticks [minutes]
+  
+  let timeInTicks minutes * 60
+  report timeInTicks
+  
+end
+
+to create_drone [x_cor y_cor] 
+  
+  create-drones 1 [
+   set color green
+   set size sizeDrone
+   setxy round x_cor round y_cor
+   stop 
+  ]
+  
+end

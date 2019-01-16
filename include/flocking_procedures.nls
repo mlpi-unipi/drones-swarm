@@ -1,0 +1,220 @@
+globals [
+  
+  ;; Variabili di flocking
+  drone.flocking.wiggleVar
+  drone.flocking.angle
+  
+  ;; Parametri di coesione (Cohere)
+  drone.flocking.radiusCohere ;; Raggio entro cui sono individuati i compagni di flock
+  drone.flocking.maxCohereTurn
+  
+  ;; Parametri di allineamento (Align)
+  drone.flocking.radiusAlign
+  drone.flocking.maxAlignTurn
+  
+  ;; Parametri di separazione (Separate)
+  drone.flocking.radiusSeparate ;; Distanza minima di separazione tra compagni di flock
+  drone.flocking.maxSeparateTurn
+  
+]
+
+;;============================================ NUOVO FLOCK ===========================================================
+
+to-report flock
+  
+  findFlockmates
+  
+  if any? (drone.flockmates in-cone drone.flocking.radiusSeparate drone.flocking.angle) [
+    ;type who type ": separate"
+    ;set color red
+    separate
+    report "separate"
+  ]
+  
+  if any? (drone.flockmates in-cone drone.flocking.radiusAlign drone.flocking.angle) [
+    ;type who type ": align"
+    ;set color blue
+    align
+    report "align"
+  ]
+  
+  if any? (drone.flockmates in-cone drone.flocking.radiusCohere drone.flocking.angle) [
+    ;type who type ": cohere"
+    ;set color yellow
+    cohere
+    report "cohere"
+  ]
+  
+  ;set color white
+  ;print "No flockmate in the flock radius"
+  report -1
+  
+end
+
+;;======================================== MECCANISMO DI FLOCKING =====================================================
+
+to-report flockingMechanism
+  
+ if (flock? = false) [
+   wiggle
+   report false
+ ]
+ 
+ let flockCase flock
+ if (flockCase = "separate") [
+   report true
+ ]
+ if (flockCase = "align") [
+   report true
+ ]
+ if (flockCase = "cohere") [
+   report true
+ ]
+ report false
+ 
+end
+
+;;================================= TROVA I COMPAGNI DI FLOCK (FLOCKMATES) =============================================
+
+;; I compagni di flock di un drone sono quei droni entro il raggio di coesione che hanno una direzione simile a quella del drone
+
+to findFlockmates
+  
+  let myHeading heading
+  set drone.flockmates other drones in-radius drone.flocking.radiusCohere with [abs (subtract-headings myHeading heading) < 90]
+  
+end
+
+;;========================================== SEPARAZIONE (SEPARATE) ====================================================
+
+to separate
+  
+  let tooCloseFlockmates (drone.flockmates in-cone drone.flocking.radiusSeparate drone.flocking.angle)
+  let flockmates-to-separate-from (turtle-set tooCloseFlockmates)
+
+  if any? flockmates-to-separate-from [
+    turn_away (averageHeadingTowards flockmates-to-separate-from) drone.flocking.maxSeparateTurn
+    wiggle
+  ]
+  
+end
+
+to-report averageHeadingTowards [ drones_set ]
+  ;; la primitiva "towards myself" restituisce la direzione del vettore che inizia dal drone del drones_set e termina al drone 
+  ;; che ha chiamato la procedura. Tuttavia, la direzione di interesse è quella opposta, quindi si aggiunge 180
+  
+  let x_component 0
+  let y_component 0
+  
+  if not any? drones_set with [ xcor = [xcor] of myself and ycor = [ycor] of myself ] [
+    set x_component mean [sin (towards myself + 180)] of drones_set
+    set y_component mean [cos (towards myself + 180)] of drones_set
+  ]
+  
+  ifelse (x_component = 0 and y_component = 0) [
+    report heading
+  ]
+  [
+    report atan x_component y_component
+  ]
+  
+end
+
+;;========================================== ALLINEAMENTO (ALIGN) =======================================================
+
+;; La procedura di allineamento calcola la direzione media dei compagni di flock
+to align
+  
+  turn_towards average_flockmate_heading drone.flocking.maxAlignTurn
+  wiggle
+  
+end
+
+;;====================================== DIREZIONE MEDIA DEI COMPAGNI DI FLOCK ==========================================
+
+;; Questa procedura restituisce la direzione media dei compagni di flock presenti nel cono di allineamento
+
+to-report average_flockmate_heading
+  ;; Per calcolare la direzione media dei compagni di flock, non si possono semplicemente mediare le direzioni.
+  ;; Infatti, la media tra 1 e 359 dovrebbe essere 0 e non 180. Di conseguenza, si usa la trigonometria, 
+  ;; calcolando la direzione del vettore somma dei vettori che rappresentano le singole direzioni
+  
+  let x_comp sum [dx] of drone.flockmates in-cone drone.flocking.radiusAlign drone.flocking.angle
+  let y_comp sum [dy] of drone.flockmates in-cone drone.flocking.radiusAlign drone.flocking.angle
+  
+  ifelse (x_comp = 0 and y_comp = 0) [
+    report heading
+  ]
+  [
+    report atan x_comp y_comp
+  ]
+  
+end
+
+;;============================================== COESIONE (COHERE) =======================================================
+
+to cohere
+  
+  turn_towards average-heading-towards-flockmates drone.flocking.maxCohereTurn
+  wiggle
+  
+end
+
+to-report average-heading-towards-flockmates
+  
+  let x-component mean [sin (towards myself + 180)] of drone.flockmates in-cone drone.flocking.radiusCohere drone.flocking.angle
+  let y-component mean [cos (towards myself + 180)] of drone.flockmates in-cone drone.flocking.radiusCohere drone.flocking.angle
+  ifelse (x-component = 0 and y-component = 0) [
+    report heading
+  ]
+  [
+    report atan x-component y-component
+  ]
+  
+end
+
+;;=========================================== PROCEDURE DI UTILITA' =====================================================
+
+;; La procedura "turn_away" passa come primo parametro alla procedura "turn_at_most" il doppio della differenza tra le direzioni;
+;; questo viene fatto per evitare che, nella procedura di separazione, la direzione calcolata sia uguale a quella del drone
+;; da cui il chiamante deve separarsi
+
+to turn_away [new-heading max_turn]
+  
+  turn_at_most ((subtract-headings new-heading heading) * 2) max_turn
+  
+end
+
+to turn_towards [new-heading max_turn]
+  
+  turn_at_most (subtract-headings new-heading heading) max_turn
+  
+end
+
+;; Il drone ruota verso destra di una quantità pari a "turn" gradi (oppure verso sinistra se la quantità è negativa),
+;; ma non ruota mai di una quantità maggiore di "max-turn" gradi
+
+to turn_at_most [turn max_turn]
+  
+  ifelse abs turn > max_turn [
+    ifelse turn > 0 [
+      rt max_turn
+    ]
+    [
+      lt max_turn
+    ]
+  ]
+  [
+    rt turn
+  ]
+  
+end
+
+;;========================================== PROCEDURA WIGGLE ============================================================
+
+to wiggle
+  
+  rt random (drone.flocking.wiggleVar)
+  lt random (drone.flocking.wiggleVar)
+  
+end

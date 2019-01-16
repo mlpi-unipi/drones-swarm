@@ -1,0 +1,154 @@
+globals [
+  
+  flockElements
+  
+]
+
+;;============================================== VARIABILI STATISTICHE ====================================================
+
+to check_statistics
+  
+  ifelse (targets.simulationTime = 0) [
+    set totalTargets count patches with [ target = true ]
+    set foundTargets count patches with [ status = "found" ]
+    set targetExp foundTargets / totalTargets
+    set targetExp targetExp * 100
+  ]
+  [
+    set targetExp targets.averagePercentage
+  ]
+  ;show targetExp ;;DEBUG
+  
+  let total_patches count patches with [ obstacle = false ]
+  let vistedPatchesSet patches with [ visited > 0 and obstacle = false ]
+  let visitedPatchesNumber count patches with [ visited > 0 and obstacle = false ]
+  set expSpace visitedPatchesNumber / total_patches
+  set expSpace expSpace * 100
+  ;show expSpace ;;DEBUG
+  
+  set nDronesDiscoverTgts count drones with [ discoveredTarget = true ]
+  set percentageDronesForDiscovering nDronesDiscoverTgts / count drones
+  set percentageDronesForDiscovering percentageDronesForDiscovering * 100
+  ;show percentageDronesForDiscovering ;;DEBUG
+  
+end
+
+to final_commands
+  
+  printStatistics ;;DEBUG
+  
+end
+
+;;================================================== STAMPA STATISTICHE ====================================================
+
+to printStatistics
+
+  print " "
+  type "Ticks " print ticks
+  type "Drones overlappings: " print dronesOverlap / 2
+  type "Obstacles overlappings: " print nObstaclesCollisions
+  type "Explored target percentage: " print targetExp
+  type "Explored area percentage: " print expSpace
+  type "Drones for discovering percentage: " print percentageDronesForDiscovering
+
+end
+
+
+
+;;======================================================== TEST =============================================================
+
+;; Procedura per testare l'intero progetto.
+;; A list of seeds is hardcoded in order to see how the behaviour changes with different random seed.
+;; Al termine del test la procedura stampa:
+;; il numero di sovrapposizioni tra droni;
+;; il numero di collisioni con ostacoli;
+;; la percentuale di area esplorata.
+
+to test
+  
+  let seed_list [ 1 2 3 4 5 6 7 8 9 10 ] ;; Hardcoded
+  ;export_params
+  ;write_header_results
+  
+  (foreach seed_list [
+      
+      setup ?1
+      print "--------------------------------------"
+      type "Test with seed " print ?1
+      
+      ;;Esegue la simulazione fino al raggiungimento della condizione di terminazione
+      while [ endSimulationCondition = false ] [
+        go
+      ]
+      
+      final_commands
+      print "--------------------------------------"
+      
+      let filenameTmp word "visit" ?1
+      set filenameTmp word filenameTmp ".csv"
+      exportVisitedPattern filenameTmp ;; esporta i percorsi visitati su un file csv
+      ;export_results_iteration
+  ])
+  
+end
+
+;;============================================== EXPORT VISITED PATTERN =====================================================
+
+to exportVisitedPattern [ filename ]
+  
+  file-open filename
+  
+  let minX min-pxcor
+  let maxX max-pxcor
+  
+  let minY min-pycor
+  let maxY max-pycor
+  
+  let xTmp minX
+  let yTmp maxY
+  
+  while [ yTmp > minY ] [
+    set xTmp minX
+    while [ xTmp < maxX or xTmp = maxX ] [
+      ask patch xTmp yTmp [
+        file-type visited
+        ifelse (xTmp = maxX) [
+          file-print ","
+        ]
+        [
+          file-type ","
+        ]
+      ]
+      set xTmp xTmp + 1
+      ;print xTmp ;;DEBUG
+    ]
+    set yTmp yTmp - 1
+    ;print yTmp ;;DEBUG
+  ]
+  file-close
+  
+end
+
+;;============================================ CATTURA STATO SIMULAZIONE ===================================================
+
+to captureTgtFound
+  
+  if (count drone.flockmates = flockElements - 1) [
+    export-view (word "images/cattura[flockElements " flockElements "] - tick " ticks ".png")
+  ]
+  
+end
+
+
+to captureDroneOverlap
+  
+  export-view (word "images/cattura[droneOverlap# " dronesOverlap "] - tick" ticks ".png")
+  
+end
+
+
+to captureObstacleCollision
+  
+  export-view (word "images/cattura[obstacleOverlap# " dronesOverlap "] - tick" ticks ".png")
+  
+end

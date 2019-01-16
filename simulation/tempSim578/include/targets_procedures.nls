@@ -1,0 +1,280 @@
+;;======================================== TARGET NEL CONO DI SENSING ======================================
+
+to-report targetInSensingCone
+  
+  let sensed_target patches in-cone sensing.radius sensing.angle with [ (pcolor >= red and pcolor < red + 3) or pcolor = green ]
+  ifelse (any? sensed_target = true) [
+    report sensed_target
+  ]
+  [
+    report false
+  ]
+  
+end
+
+;;========================================== SENSING RETTANGOLARE ===========================================
+
+;; Controlla se la patch di coordinate (xp, yp) giace all'interno del rettangolo avente centro in (xd, yd) (coordinate attuali del drone),
+;; base pari a "base" e altezza pari a "height", nel momento in cui il drone punta nella direzione "direction".
+
+to-report in-rectangle [ xp yp xd yd base height direction ]
+
+  ;; Crea le variabili xpr e ypr che indicano le coordinate della patch in questione ruotata di un angolo con ampiezza pari a "direction" gradi.
+  let xpr ((xp - xd) * cos (direction)) - ((yp - yd) * sin (direction)) + xd
+  let ypr ((xp - xd) * sin (direction)) + ((yp - yd) * cos (direction)) + yd
+
+  ;; Grazie alle nuove coordinate ottenute dalla rotazione effettuata in precedenza, e' possibile controllare la giacenza all'interno
+  ;; del rettangolo con i vincoli che si usano quando esso ha i lati paralleli agli assi.
+  ifelse xpr < round(xd + (base / 2)) and xpr > round(xd - (base / 2)) and ypr < round(yd  + (height / 2)) and ypr > round(yd  - (height / 2)) [
+    report true
+  ]
+  [
+    report false
+  ]
+  
+end
+
+
+to-report targetInSensingArea
+  
+  set rectangleDiagonal (sqrt (rectangleBase ^ 2 + rectangleHeight ^ 2))
+  
+  let sensed_target no-patches
+  let x xcor
+  let y ycor
+  let direction heading
+  
+  ask patches in-radius (rectangleDiagonal / 2) [
+    if ((in-rectangle pxcor pycor x y rectangleBase rectangleHeight direction) and ((pcolor >= red and pcolor < red + 3) or pcolor = green)) [
+      set sensed_target (patch-set sensed_target patch pxcor pycor)
+    ]
+  ]
+  
+  ifelse (any? sensed_target = true) [
+    report sensed_target
+  ]
+  [
+    report false
+  ]
+  
+end
+
+;;========================================== TARGET PIU' VICINO ============================================
+
+;; Se nel cono di sensing è presente almeno un target, allora la procedura restituisce quello più vicino.
+
+to-report getNearestTarget
+  
+  let targets no-patches
+  
+  ifelse (sensing.angle = 0) [
+    set targets targetInSensingArea
+  ]
+  [
+    set targets targetInSensingCone
+  ]
+    
+  let nearest_target nobody
+  
+  if (targets != false) [
+    set nearest_target min-one-of targets [ distance myself ]
+  ]
+  
+  report nearest_target
+  
+end
+
+;; La procedura restituisce la distanza dal target più vicino e l'angolo di rotazione minimo verso il target stesso.
+
+to-report getDistAndHeadingNearestTgt [ nearest_target ]
+  
+  let dist_nearest_tgt 0
+  let heading_nearest_tgt 0
+  let res []
+  let x_tmp 0
+  let y_tmp 0
+  
+  if (nearest_target != nobody) [
+    ;type "nearest target " print nearest_target ;;DEBUG
+    ask nearest_target [
+      set x_tmp pxcor
+      set y_tmp pycor
+    ]
+  ]
+  
+  set dist_nearest_tgt distancexy x_tmp y_tmp
+  set res lput dist_nearest_tgt res
+  
+  ifelse (xcor = x_tmp and ycor = y_tmp) [
+    set heading_nearest_tgt heading
+  ]
+  [
+    set heading_nearest_tgt subtract-headings towardsxy x_tmp y_tmp heading
+  ]
+  
+  set res lput heading_nearest_tgt res
+  
+  report res
+  
+end
+
+;;================================ OSTACOLI NEL CONO DI VISIONE DEL TARGET ==================================
+
+;; La procedura tiene conto di eventuali ostacoli frapposti tra il drone e il target, che ne possono impedire
+;; il corretto rilevamento.
+;; La procedura restituisce true se un ostacolo o parte di esso ricade nel cono di visione del target.
+
+to-report obsInFrontNearestTgt
+  
+  let nearestTgt getNearestTarget
+  let res getDistAndHeadingNearestTgt nearestTgt
+  
+  let dist_nearest_tgt item 0 res
+  let heading_nearest_tgt item 1 res
+  
+  let light_cone_tgt getLightCone nearestTgt
+  
+  let cone_obs []
+  let cone_obs_list []
+  let obs_tmp 0
+  let obs patches in-cone dist_nearest_tgt sensing.angle with [ obstacle = true ]
+  ask obs [
+    set obs_tmp self
+    ask myself [
+      set cone_obs getLightCone obs_tmp
+      set cone_obs_list lput item 0 cone_obs cone_obs_list
+      set cone_obs_list lput item 1 cone_obs cone_obs_list
+    ]
+  ]
+  
+  set cone_obs_list sort cone_obs_list
+  
+  foreach cone_obs_list [
+    if (? > item 0 light_cone_tgt and ? < item 1 light_cone_tgt) [
+      report true
+    ]
+  ]
+  
+  report false
+  
+end
+
+;; La procedura restituisce i due angoli di rotazione del drone verso gli estremi dell'elemento
+;; passato come argomento attuale.
+
+to-report getLightCone [ element ]
+  
+  let res []
+  let coords []
+  let heading_tmp 0
+  
+  if (element != nobody) [
+    set coords getCoords element
+  ]
+  
+  set heading_tmp subtract-headings towardsxy item 0 coords item 1 coords heading
+  set res lput heading_tmp res
+  set heading_tmp subtract-headings towardsxy item 2 coords item 3 coords heading
+  set res lput heading_tmp res
+  
+  set res sort res
+  
+  report res
+  
+end
+
+;; La procedura restituisce le coordinate dei punti estremi dell'elemento passato come argomento attuale,
+;; nella prospettiva di visione del drone.
+
+to-report getCoords [ element ]
+  
+  let res []
+  let x_tmp 0
+  let y_tmp 0
+  let x_coord 0
+  let y_coord 0
+  
+  ask element [
+    set x_tmp pxcor
+    set y_tmp pycor
+  ]
+  
+  ifelse (xcor = x_tmp and ycor = y_tmp) [
+    if ((heading >= 0 and heading < 90) or (heading >= 180 and heading < 270)) [
+      set x_coord xcor - 0.5
+      set y_coord ycor + 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+      set x_coord xcor + 0.5
+      set y_coord ycor - 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+    ]
+    
+    if ((heading >= 90 and heading < 180) or (heading >= 270 and heading < 360)) [
+      set x_coord xcor + 0.5
+      set y_coord ycor + 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+      set x_coord xcor - 0.5
+      set y_coord ycor - 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+    ]
+    
+    report res
+    
+  ]
+  [
+    let heading_element towardsxy x_tmp y_tmp
+    
+    if ((heading_element >= 0 and heading_element < 90) or (heading_element >= 180 and heading_element < 270)) [
+      set x_coord x_tmp - 0.5
+      set y_coord y_tmp + 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+      set x_coord x_tmp + 0.5
+      set y_coord y_tmp - 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+    ]
+    
+    if ((heading_element >= 90 and heading_element < 180) or (heading_element >= 270 and heading_element < 360)) [
+      set x_coord x_tmp + 0.5
+      set y_coord y_tmp + 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+      set x_coord x_tmp - 0.5
+      set y_coord y_tmp - 0.5
+      set res lput x_coord res
+      set res lput y_coord res
+    ]
+    
+    report res
+    
+  ]
+  
+end
+
+;;========================================== CONTEGGIO TARGET ==============================================
+
+to-report countSources
+  
+  let sources count patches with [ target = true ]
+  ifelse (sources > 0) [
+    report sources
+  ]
+  [
+     report 1
+  ]
+  
+end
+
+to-report percentageTgtsFound
+  
+  let found count patches with [ target = true and status = "found" ]
+  let notFound count patches with [ target = true and status = "notFound" ]
+  
+  report (found / countSources ) * 100
+  
+end

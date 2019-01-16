@@ -1,0 +1,359 @@
+globals [
+  
+  drone.sight.angleMax ;; Angolo di visione degli ostacoli.
+  drone.collision.vision ;; Raggio di visione degli ostacoli.
+  
+  drone.collision.gapAngle
+  
+  nObstaclesCollisions
+  obstaclesAngleList
+  
+]
+
+;;=============================== LISTA DEGLI OSTACOLI RILEVATI ========================================
+
+;; Il drone considera come ostacoli le patches di colore grigio (dove la variabile obstacle vale "true")
+;; e le patches prenotate da altri droni.
+
+to-report getVisibleObs
+  
+  let obsInCone patches in-cone drone.collision.vision drone.sight.angleMax with [ obstacle = true ]
+  
+  let lockedPatches getLockedPatchesByOther
+  ;ask lockedPatches [ ;; DEBUG
+  ;  set pcolor magenta
+  ;]
+  ;print lockedPatches
+  ;print ""
+  
+  set obsInCone (patch-set obsInCone lockedPatches)
+  
+  report obsInCone
+  
+end
+
+;;================================= PATCHES BLOCCATE DA ALTRI ==========================================
+
+to-report getLockedPatchesByOther
+  
+  let droneId who
+  let lockedPatchesByOther patches in-cone drone.collision.vision drone.sight.angleMax with [ obstacle = false and locked != 0 and locked != droneId ]
+  
+  report lockedPatchesByOther
+  
+end
+
+;;============================== STAMPA LE PATCHES BLOCCATE (DEBUG) =====================================
+
+to printLockedPatches [ lockedPatches droneId ]
+  
+  if (any? lockedPatches) [
+    
+    type "Patches seen locked by " type droneId type ": "
+    ask lockedPatches [
+      type pxcor type " " type pycor type " locked by " type locked type " | "
+    ]
+    
+    print ""
+  ]
+  
+end
+
+;;============================== POSIZIONE DEGLI OSTACOLI ================================================
+
+;; ATTENZIONE: la procedura inserisce i valori delle coordinate x e y degli ostacoli rilevati dal drone
+;; all'interno di variabili globali.
+
+to setObstaclesPosition
+  
+  if (is-agentset? drone.obstaclesSeen) [
+    set nearestObstacle min-one-of drone.obstaclesSeen [ distance myself ]
+  ]
+  
+  let xCorListTmp []
+  let yCorListTmp []
+  ask drone.obstaclesSeen [
+    set xCorListTmp lput pxcor xCorListTmp
+    set yCorListTmp lput pycor yCorListTmp
+  ]
+  
+  set drone.xcorObsSeen xCorListTmp
+  set drone.ycorObsSeen yCorListTmp
+  
+end
+
+;;========================= LISTA DEGLI ANGOLI CON GLI OSTACOLI ===========================================
+
+;; Data la posizione degli ostacoli rilevati dal drone, questa procedura restituisce la lista degli angoli
+;; compresi tra la direzione del drone e gli ostacoli. ATTENZIONE: memorizza la lista degli angoli in una
+;; variabile globale.
+
+to-report getObstacleAngleList
+  
+  let angle_tmp 0
+  let max_left_angle (-1) * drone.sight.angleMax / 2
+  let max_right_angle drone.sight.angleMax / 2
+  
+  set obstaclesAngleList []
+  
+  (foreach drone.xcorObsSeen drone.ycorObsSeen [
+      if (?1 != xcor or ?2 != ycor) [
+        set angle_tmp subtract-headings towardsxy ?1 ?2 heading ;; Angolo del drone rispetto all'ostacolo nella posizione ?1 ?2
+        ;type "Obstacle position: " type ?1 type " " type ?2 type " at: " type angle_tmp print " degrees"
+        
+        set obstaclesAngleList lput angle_tmp obstaclesAngleList
+      ]
+  ])
+  
+  set obstaclesAngleList lput max_left_angle obstaclesAngleList
+  set obstaclesAngleList lput max_right_angle obstaclesAngleList
+  
+  report obstaclesAngleList
+  
+end
+
+;;=========================== RICERCA DEL VARCO TRA GLI OSTACOLI ========================================
+
+;; In dettaglio:
+;; 1. Ordina in modo crescente la lista degli angoli con gli ostacoli;
+;; 2. Per ciascuna coppia consecutiva di angoli all'interno della lista ordinata,
+;; controlla la presenza di un varco di ampiezza almeno pari al "gapAngle";
+;; 3. Se rileva la presenza di un varco, calcola l'angolo di rotazione verso il centro del varco;
+;; 4. Seleziona la rotazione con valore assoluto minore.
+
+to-report getHeadingThroughObs
+  
+  let tmpGap -1
+  let headingTmp 0
+  let minHeading 361
+  
+  set obstaclesAngleList sort obstaclesAngleList
+  ;print obstaclesAngleList
+  
+  let index 0
+  while [ item index obstaclesAngleList != last obstaclesAngleList ] [
+    set tmpGap abs ((item index obstaclesAngleList) - (item (index + 1) obstaclesAngleList))
+    
+    if (tmpGap > drone.collision.gapAngle) [
+      ;type "Find gap between " type item index obstaclesAngleList type " and " print item index + 1 obstaclesAngleList
+      set headingTmp ((item index obstaclesAngleList) + (item (index + 1) obstaclesAngleList)) / 2
+      if (abs headingTmp < abs minHeading) [
+        set minHeading headingTmp
+      ]
+    ]
+    set index index + 1
+  ]
+  
+  ;; Se il drone non trova un varco sufficientemente ampio, allora prosegue nella stessa direzione (fino a fermarsi).
+  if (minHeading = 361) [
+    ;type who print ": no gap found" ;DEBUG
+    set minHeading 0
+  ]
+  
+  report minHeading
+  
+end
+
+;;================================= ROTAZIONE VERSO IL VARCO =============================================
+
+to-report headingThroughObstacle
+  
+  let obsAnglesList []
+  
+  set drone.obstaclesSeen getVisibleObs
+  setObstaclesPosition
+  set obsAnglesList getObstacleAngleList
+  
+  report getHeadingThroughObs
+  
+end
+
+;;=================================== VERIFICA BLOCCO DRONE ==============================================
+
+;; La procedura restituisce "true" se il drone risulta bolccato sulla stessa patch per nTimes cicli
+;; di aggiornamento. Altrimenti restituisce "false".
+
+to-report isStuck [ nTimes ]
+  
+  ifelse (patch-here = drone.currentPatch) [
+    set nTimesSamePatch nTimesSamePatch + 1
+  ]
+  [
+    set nTimesSamePatch 0
+    set drone.currentPatch patch-here
+  ]
+  
+  ifelse (nTimesSamePatch >= nTimes) [
+    report true
+  ]
+  [
+    report false
+  ]
+  
+end
+
+;;================================ AZIONI DI OBSTACLE AVOIDANCE ========================================
+
+;; Se il drone resta bloccato, allora ruota di un angolo casuale; altrimenti, controlla la presenza di un varco.
+;; Se il drone non trova nessun varco, allora prosegue nella stessa direzione (rallentando fino a fermarsi).
+;; La procedura restituisce "false" se il drone non trova un varco.
+;; La procedura restituisce "true" se il drone trova un varco libero oppure non ci sono ostacoli.
+
+to-report obstacleAvoidanceActions [ minHeading ]
+  
+  let turnBackAngle get_final_pos_rotation
+  let nTimesStuck 5
+  
+  ifelse (isStuck nTimesStuck) [
+    ;type "Max rotation: " print turnBackAngle
+    let direction randomDirection
+    let turnAngle random turnBackAngle
+    set turnAngle direction * turnAngle
+    rotate turnAngle
+    set nTimesSamePatch 0
+    
+    report false
+  ]
+  [
+    ;; minHeading vale 0 quando il drone non trova un varco oppure se non vede ostacoli.
+    ifelse (minHeading = 0) [
+      if (any? drone.obstaclesSeen) [
+        report false
+      ]
+      report true
+    ]
+    [
+      rotate minHeading
+      report true
+    ]
+  ]
+  
+end
+
+;;================================== SEGNO CASUALE DELLA DIREZIONE =====================================
+
+;; La procedura restituisce casualmente -1 o 1 al fine di scegliere casualmente una direzione.
+
+to-report randomDirection
+  
+  let randomNumber random 2
+  let tmpNum 0
+  
+  if (randomNumber = 0) [
+    set tmpNum -1
+  ]
+  if (randomNumber = 1) [
+    set tmpNum 1
+  ]
+  
+  report tmpNum
+  
+end
+
+;;================================= VERIFICA COLLISIONE CON OSTACOLO =====================================
+
+;; Se viene rilevata la collisione con un ostacolo, allora la procedura restituisce il valore "true",
+;; altrimenti restituisce il valore "false".
+
+to-report obstacleCollision
+  
+  ;; Il valore 0.707 rappresenta la lunghezza di metà diagonale di una patch, ovvero sqrt(0.5^2 + 0.5^2), e
+  ;; viene usato per identificare l'ostacolo con cui il drone è andato a collidere.
+  
+  let overlapDistance drone.radius ;+ 0.707
+  let nearestObs min-one-of (patches in-radius overlapDistance with [ obstacle = true ]) [ distance myself ]
+  
+  ifelse (nearestObs != nobody) [
+    ;type "The drone " type who type " has collided with the obstacle in position " print nearestObs ;DEBUG
+    
+    ;; Se viene rilevata la collisione con lo stesso ostacolo per due cicli di aggiornamento consecutivi, allora questa non viene conteggiata.
+    if (nearestObs = obstacleOverlappedWith) [
+      report false
+    ]
+    
+    set obstacleOverlappedWith nearestObs
+    report true
+  ]
+  [
+    set obstacleOverlappedWith nobody
+    report false
+  ]
+  
+end
+
+;;====================================== COLLISIONE CON OSTACOLO =========================================
+
+;; Questa procedura, dopo aver verificato la collisione con un ostacolo, incrementa il numero totale di collisioni.
+
+to checkObstacleCollision
+  
+  if (obstacleCollision) [
+    set nObstaclesCollisions nObstaclesCollisions + 1
+    ;captureObstacleCollision
+  ]
+  
+end
+
+;;======================================= OBSTACLE AVOIDANCE ============================================
+
+;; Obstacle avoidance: consiste nell'eseguire la rotazione minima verso un varco disponibile.
+
+to-report obstacleAvoidance
+  
+  let result false
+  
+  let headingRotationThroughObs headingThroughObstacle
+  set result obstacleAvoidanceActions headingRotationThroughObs
+  
+  checkObstacleCollision
+  
+  report result
+  
+end
+
+;;=================================== DISEGNA IL CONO DI VISIONE =========================================
+
+;; La procedura disegna il cono di visione del drone. ;DEBUG
+
+to drawConeSight
+  
+  let obsVision patches in-cone drone.collision.vision drone.sight.angleMax
+  
+  ask obsVision [
+    set pcolor violet
+  ]
+  
+end
+
+;;PROCEDURE DI UTILITA'
+
+;;=============================================================================================
+
+to-report angleBetweenPoints [ x1 y1 x2 y2 ]
+  
+  let deltaX x1 - x2
+  let deltaY y1 - y2
+  report (atan deltaY deltaX + 180) mod 360
+ 
+ end
+
+;;=============================================================================================
+
+to-report arctan [ x ]
+  
+  report atan x 1
+  
+end
+
+;;=============================================================================================
+
+to-report getSign [ variable ]
+  
+  if (variable >= 0) [
+    report "+"
+  ]
+  if (variable < 0) [
+    report "-"
+  ]
+
+end

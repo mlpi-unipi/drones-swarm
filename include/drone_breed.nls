@@ -1,0 +1,250 @@
+;; Definizione della specie drone.
+breed [ drones drone ]
+
+;; I parametri relativi al modello di drone sono definiti come variabili globali,
+;; perchè sono uguali per tutti i droni dello sciame.
+
+globals [
+  
+  drone.radius
+  drone.endurance
+  
+  ;;Parametri che caratterizzano la tecnologia di rilevamento
+  sensing.radius
+  sensing.angle
+  
+  ;;Parametri per il sensing rettangolare
+  rectangleDiagonal
+  rectangleBase
+  rectangleHeight
+  
+  ;;Parametri che modellizzano il moto longitudinale
+  drone.speedMax
+  drone.cruisingSpeed
+  drone.acceleration
+  drone.deceleration
+  
+  ;;Parametri che modellizzano il moto circolare
+  drone.velocityAngularMax
+  drone.accelerationAng
+  drone.decelerationAng
+  
+  ;;Variabili utilizzate dal meccanismo di obstacle avoidance
+  drone.xcorObsSeen ;;Lista delle coordinate x degli ostacoli
+  drone.ycorObsSeen ;;Lista delle coordinate y degli ostacoli
+  
+  sizeDrone ;; Dimensione grafica del drone
+  
+]
+
+drones-own [
+  
+  drone.flockmates ;; Agenset dei compagni di flock (flockmates)
+  drone.nearestNeighbor ;; Il compagno di flock più vicino (variabile non usata)
+  
+  nTicksSmellingPh
+  
+  ;;Variabili utilizzate dal meccanismo di obstacle avoidance
+  nearObstacles ;; variabile non usata
+  nearestObstacle
+  headingNearestObs
+  drone.obstaclesSeen
+  obstacleOverlappedWith
+  
+  drone.currentPatch
+  nTimesSamePatch
+  
+  ;;Variabili usate dal meccanismo di overlap avoidance
+  nearestDrone
+  distanceNearestDrone
+  drone.lockedPatches
+  droneOverlappedWith
+  
+  ;;Variabili di movimento
+  drone.speed
+  drone.AngularSpeed
+  
+  
+  discoveredTarget
+  
+]
+
+;;======== ACCELERAZIONE E DECELERAZIONE UNIFORME ============
+
+;;Moto rettilineo uniformemente accelerato
+to accelerate
+  
+  let tmp drone.speed + drone.acceleration * 1
+  ifelse (tmp <= drone.cruisingSpeed) [
+    set drone.speed tmp
+  ]
+  [
+    set drone.speed drone.cruisingSpeed
+  ]
+  
+end
+
+;;Decrementa la velocità longitudinale del drone
+to decelerate
+  
+  let tmp drone.speed + drone.deceleration * 1
+  ifelse (tmp >= 0) [
+    set drone.speed tmp
+  ]
+  [
+    set drone.speed 0
+  ]
+  
+end
+
+;;========= ACCELERAZIONE E DECELERAZIONE ANGOLARE ===========
+
+;;Moto circolare uniformemente accelerato
+to accelerateAng [ delta_t ]
+  
+  let tmp drone.AngularSpeed + drone.accelerationAng * delta_t
+  ifelse (tmp <= drone.velocityAngularMax) [
+    set drone.AngularSpeed tmp
+  ]
+  [
+    set drone.AngularSpeed drone.velocityAngularMax
+  ]
+  
+end
+
+;;Decrementa la velocità angolare del drone
+to decelerateAng [ delta_t ]
+  
+  let tmp drone.AngularSpeed + drone.decelerationAng * delta_t 
+  ifelse (tmp >= 0) [
+    set drone.AngularSpeed tmp
+  ]
+  [
+    set drone.AngularSpeed 0
+  ]
+  
+end
+
+;;========================= POSIZIONE FINALE DI UNA ROTAZIONE ====================================
+
+;; La procedura restituisce la posizione finale del drone dopo una rotazione.
+;; In una finestra temporale di un secondo il moto circolare del drone è diviso in due fasi:
+;; 1) nei primi 0.5 secondi il drone ruota su se stesso con accelerazione angolare uniforme;
+;; 2) negli ultimi 0.5 secondi il drone continua a ruotare su se stesso con decelerazione angolare uniforme.
+;; La procedura calcola l'ampiezza complessiva dell'angolo di rotazione e la trasforma in gradi sessadecimali.
+
+to-report get_final_pos_rotation
+  
+  let delta_t 0.5
+  let theta_0 0
+  
+  ;print " "
+  ;print "After 0 sec"
+  ;type "vel ang: " print drone.AngularSpeed
+  ;type "theta f: " print 0
+  
+  let theta_f compute_final_position_rotation theta_0 delta_t drone.accelerationAng
+  accelerateAng delta_t
+  ;print "After 0.5 sec"
+  ;type "vel ang: " print drone.AngularSpeed
+  ;type "theta f: " print theta_f
+  
+  let theta_f2 compute_final_position_rotation theta_f delta_t drone.decelerationAng
+  decelerateAng delta_t
+  ;print "After 1 sec"
+  ;type "vel ang: " print drone.AngularSpeed
+  ;type "theta f2: " print theta_f2
+  
+  report rad2deg theta_f2
+  
+end
+
+to-report compute_final_position_rotation [ starting_position delta_t acceleration ]
+  
+  ;; Formula per calcolare l'angolo di rotazione nel moto circolare uniformemente accelerato
+  report starting_position + 1 / 2 * acceleration * delta_t * delta_t + drone.AngularSpeed * delta_t
+    
+end
+
+;;====================================== ROTATE ===================================================
+
+to rotate [ rotationAngle ]
+  
+  let maxRot get_final_pos_rotation
+  let signRotationAngle getSign rotationAngle
+  ifelse ((abs rotationAngle) <= maxRot) [
+    rt rotationAngle
+  ]
+  [
+    ifelse (signRotationAngle = "-") [
+      lt maxRot
+    ]
+    [
+      rt maxRot
+    ]
+  ]
+  
+end
+
+;;============================= CONVERSIONE DA RADIANTI A GRADI ===================================
+
+to-report rad2deg [ rad ]
+  
+  report rad * 180 / pi
+  
+end
+
+;;=========================== PROCEDURE DI DEBUG (STATO DEL DRONE) ================================
+
+;;Questa procedura stampa l'informazione statica del drone
+to getStaticInfoDrn
+  
+  type "drone.radius: " print drone.radius
+  type "endurance: " print drone.endurance
+  
+  type "sensing.radius: " print sensing.radius
+  type "sensing.angle: " print sensing.angle
+  
+  type "drone.maxSpeed: " print drone.speedMax
+  type "drone.cruisingSpeed: " print drone.cruisingSpeed
+  type "drone.acc: " print drone.acceleration
+  type "drone.dec: " print drone.deceleration
+  
+  type "drone.vel_ang_max: " print drone.velocityAngularMax
+  type "drone.acc_ang: " print drone.accelerationAng
+  type "drone.dec_ang: " print drone.decelerationAng
+  
+  type "sight.ObsAngleMax: " print drone.sight.angleMax
+  type "collision.ObsVision: " print drone.collision.vision
+  
+end
+
+;;Questa procedura stampa l'informazione dinamica del drone
+to getDynamicInfoDrn
+  
+  type who type " current vel: " type drone.speed type " m/s "
+  ifelse (drone.speed = drone.cruisingSpeed) [
+    print "Cruising speed reached"
+  ]
+  [
+    print ""
+  ]
+  type who type " current vel_ang: " type drone.AngularSpeed type " rad/s "
+  ifelse (drone.AngularSpeed = drone.velocityAngularMax) [
+    print "Max vel ang reached"
+  ]
+  [
+    print ""
+  ]
+  
+end
+
+;;============================== IMPOSTA PATCH COME VISITATA =====================================
+
+to setCurrentPatchVisited
+  
+  ask patch-here [
+    set visited visited + 1
+  ]
+  
+end
