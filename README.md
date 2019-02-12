@@ -4,7 +4,7 @@
 
 This research focuses on the problem of coordinating multiple UAVs for distributed targets detection and tracking, in different technological and environmental settings. The proposed approach is founded on the concept of swarm behavior in multi-agent systems, i.e., a self-formed and self-coordinated team of UAVs which adapts itself to mission-specific environmental layouts. The swarm formation and coordination are inspired by biological mechanisms of flocking and stigmergy, respectively. These mechanisms, suitably combined, make it possible to strike the right balance between global search (exploration) and local search (exploitation) in the environment. The swarm adaptation is based on an evolutionary algorithm with the objective of maximizing the number of tracked targets during a mission or minimizing the time for target discovery. The simulation testbed publicly released.
 
-## Cite as "M.G.C.A. Cimino, M. Monaco, P. Piscione, A.L. Alfeo, Sciadro simulator, 2018. https://github.com/mariocimino/sciadro."
+## Cite as "M.G.C.A. Cimino, M. Monaco, P. Piscione, A.L. Alfeo, Sciadro simulator, 2018. https://github.com/mlpi-unipi/drones-swarm."
 
 ### Publications
 1. M. Avvenuti, M.G.C.A. Cimino, G. Cola, G. Vaglini, "Detection and mapping of a toxic cloud using UAVs and emergent techniques", in Proc. MIKE The Sixth International Conference on Mining Intelligence and Knowledge Exploration (MIKE 2018), Vol -, pp. 1-10, Cluj-Napoca, Romania, 20-22 December, 2018.
