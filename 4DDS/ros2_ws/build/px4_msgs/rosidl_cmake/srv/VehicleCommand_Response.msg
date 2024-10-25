@@ -1,2 +1,0 @@
-
-VehicleCommandAck reply

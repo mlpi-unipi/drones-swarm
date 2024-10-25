@@ -1,2 +1,0 @@
-gazebo_msgs/EntityState state   # Entity state to set to.
-                                # Be sure to fill all fields, values of zero have meaning.
