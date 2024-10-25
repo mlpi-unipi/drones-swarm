@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/ParameterSetValueRequest.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module ParameterSetValueRequest_Constants {
+      const uint8 ORB_QUEUE_LENGTH = 32;
+    };
+    @verbatim (language="comment", text=
+      "ParameterSetValueRequest : Used by a remote or primary to update the value for a parameter at the other end")
+    struct ParameterSetValueRequest {
+      uint64 timestamp;
+
+      uint16 parameter_index;
+
+      @verbatim (language="comment", text=
+        "Optional value for an integer parameter")
+      int32 int_value;
+
+      @verbatim (language="comment", text=
+        "Optional value for a float parameter")
+      float float_value;
+    };
+  };
+};

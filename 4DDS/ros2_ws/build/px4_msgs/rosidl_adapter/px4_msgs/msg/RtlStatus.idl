@@ -1,0 +1,51 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/RtlStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module RtlStatus_Constants {
+      @verbatim (language="comment", text=
+        "RTL type is pending if evaluation can't pe performed currently e.g. when it is still loading the safe points")
+      const uint8 RTL_STATUS_TYPE_NONE = 0;
+      @verbatim (language="comment", text=
+        "RTL type is chosen to directly go to a safe point or home position")
+      const uint8 RTL_STATUS_TYPE_DIRECT_SAFE_POINT = 1;
+      @verbatim (language="comment", text=
+        "RTL type is going straight to the beginning of the mission landing")
+      const uint8 RTL_STATUS_TYPE_DIRECT_MISSION_LAND = 2;
+      @verbatim (language="comment", text=
+        "RTL type is following the mission from closest point to mission landing")
+      const uint8 RTL_STATUS_TYPE_FOLLOW_MISSION = 3;
+      @verbatim (language="comment", text=
+        "RTL type is following the mission in reverse to the start position")
+      const uint8 RTL_STATUS_TYPE_FOLLOW_MISSION_REVERSE = 4;
+    };
+    struct RtlStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "unique ID of active set of safe_point_items")
+      uint32 safe_points_id;
+
+      @verbatim (language="comment", text=
+        "flag if the RTL point needs reevaluation (e.g. new safe points available, but need loading).")
+      boolean is_evaluation_pending;
+
+      @verbatim (language="comment", text=
+        "flag if approaches are defined for current RTL_TYPE parameter setting")
+      boolean has_vtol_approach;
+
+      @verbatim (language="comment", text=
+        "Type of RTL chosen")
+      uint8 rtl_type;
+
+      @verbatim (language="comment", text=
+        "index of the chosen safe point, if in RTL_STATUS_TYPE_DIRECT_SAFE_POINT mode")
+      uint8 safe_point_index;
+    };
+  };
+};

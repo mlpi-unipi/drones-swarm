@@ -1,0 +1,175 @@
+[0.011s] Invoking command in '/home/fourdds/ros2_ws/build/boids': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24
+[0.063s] [  2%] Built target boids__cpp
+[0.064s] [ 11%] Built target boids__rosidl_generator_c
+[0.065s] [35m[1mConsolidate compiler generated dependencies of target swarm_spawner[0m
+[0.066s] [ 15%] Built target frame_transforms
+[0.074s] [ 15%] Built target ament_cmake_python_copy_boids
+[0.077s] [ 17%] [32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o[0m
+[0.077s] [ 20%] [32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/base_station.cpp.o[0m
+[0.077s] [ 28%] Built target boids__rosidl_typesupport_introspection_c
+[0.077s] [ 31%] [32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/main.cpp.o[0m
+[0.078s] [ 40%] Built target boids__rosidl_typesupport_fastrtps_c
+[0.078s] [ 48%] Built target boids__rosidl_typesupport_introspection_cpp
+[0.079s] [ 57%] Built target boids__rosidl_typesupport_cpp
+[0.079s] [ 66%] Built target boids__rosidl_typesupport_c
+[0.082s] [ 75%] Built target boids__rosidl_typesupport_fastrtps_cpp
+[0.092s] [ 75%] Built target boids
+[0.103s] [ 77%] Built target boids__py
+[0.115s] [ 84%] Built target boids__rosidl_generator_py
+[0.126s] [ 93%] Built target boids__rosidl_typesupport_fastrtps_c__pyext
+[0.126s] [ 93%] Built target boids__rosidl_typesupport_introspection_c__pyext
+[0.127s] [ 97%] Built target boids__rosidl_typesupport_c__pyext
+[0.177s] running egg_info
+[0.184s] writing boids.egg-info/PKG-INFO
+[0.184s] writing dependency_links to boids.egg-info/dependency_links.txt
+[0.185s] writing top-level names to boids.egg-info/top_level.txt
+[0.204s] reading manifest file 'boids.egg-info/SOURCES.txt'
+[0.205s] writing manifest file 'boids.egg-info/SOURCES.txt'
+[0.219s] [ 97%] Built target ament_cmake_python_build_boids_egg
+[16.017s] [100%] [32m[1mLinking CXX executable swarm_spawner[0m
+[16.042s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/base_station.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[16.042s] base_station.cpp:(.text+0x8d0): multiple definition of `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'; CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x1a00): first defined here
+[16.042s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/main.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[16.043s] main.cpp:(.text+0x410): multiple definition of `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'; CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x1a00): first defined here
+[16.225s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: warning: relocation against `_ZTVN4YAML9ExceptionE' in read-only section `.text._ZN4YAML11InvalidNodeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML11InvalidNodeC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]'
+[16.233s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[16.233s] uav_node.cpp:(.text+0x1a54): undefined reference to `YAML::LoadFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[16.234s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::TypedBadConversion<double>::~TypedBadConversion()':
+[16.234s] uav_node.cpp:(.text._ZN4YAML18TypedBadConversionIdED2Ev[_ZN4YAML18TypedBadConversionIdED5Ev]+0xf): undefined reference to `YAML::BadConversion::~BadConversion()'
+[16.234s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::TypedBadConversion<double>::~TypedBadConversion()':
+[16.234s] uav_node.cpp:(.text._ZN4YAML18TypedBadConversionIdED0Ev[_ZN4YAML18TypedBadConversionIdED5Ev]+0x13): undefined reference to `YAML::BadConversion::~BadConversion()'
+[16.234s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::TypedBadConversion<int>::~TypedBadConversion()':
+[16.234s] uav_node.cpp:(.text._ZN4YAML18TypedBadConversionIiED2Ev[_ZN4YAML18TypedBadConversionIiED5Ev]+0xf): undefined reference to `YAML::BadConversion::~BadConversion()'
+[16.234s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::TypedBadConversion<int>::~TypedBadConversion()':
+[16.234s] uav_node.cpp:(.text._ZN4YAML18TypedBadConversionIiED0Ev[_ZN4YAML18TypedBadConversionIiED5Ev]+0x13): undefined reference to `YAML::BadConversion::~BadConversion()'
+[16.235s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [clone .cold]':
+[16.235s] uav_node.cpp:(.text.unlikely+0x1ec): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x1f3): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x2bc): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x2c3): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x373): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x37a): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x46d): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x474): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x5e9): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.235s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x5f0): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.236s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x67d): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.236s] /usr/bin/ld: uav_node.cpp:(.text.unlikely+0x684): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.236s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::detail::node::mark_defined()':
+[16.236s] uav_node.cpp:(.text._ZN4YAML6detail4node12mark_definedEv[_ZN4YAML6detail4node12mark_definedEv]+0x3e): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.237s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail4node12mark_definedEv[_ZN4YAML6detail4node12mark_definedEv]+0x8a): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.237s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail4node12mark_definedEv[_ZN4YAML6detail4node12mark_definedEv]+0xd0): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.237s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail4node12mark_definedEv[_ZN4YAML6detail4node12mark_definedEv]+0x110): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.237s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail4node12mark_definedEv[_ZN4YAML6detail4node12mark_definedEv]+0x150): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.237s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text._ZN4YAML6detail4node12mark_definedEv[_ZN4YAML6detail4node12mark_definedEv]+0x190): more undefined references to `YAML::detail::node_data::mark_defined()' follow
+[16.237s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Exception::Exception(YAML::Mark const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[16.237s] uav_node.cpp:(.text._ZN4YAML9ExceptionC2ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML9ExceptionC5ERKNS_4MarkERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x5c): undefined reference to `vtable for YAML::Exception'
+[16.238s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::BadConversion::BadConversion(YAML::Mark const&)':
+[16.238s] uav_node.cpp:(.text._ZN4YAML13BadConversionC2ERKNS_4MarkE[_ZN4YAML13BadConversionC5ERKNS_4MarkE]+0x9c): undefined reference to `vtable for YAML::Exception'
+[16.238s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML13BadConversionC2ERKNS_4MarkE[_ZN4YAML13BadConversionC5ERKNS_4MarkE]+0xef): undefined reference to `vtable for YAML::RepresentationException'
+[16.238s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML13BadConversionC2ERKNS_4MarkE[_ZN4YAML13BadConversionC5ERKNS_4MarkE]+0x115): undefined reference to `vtable for YAML::BadConversion'
+[16.238s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::InvalidNode::InvalidNode(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[16.238s] uav_node.cpp:(.text._ZN4YAML11InvalidNodeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML11InvalidNodeC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x316): undefined reference to `vtable for YAML::Exception'
+[16.238s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML11InvalidNodeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML11InvalidNodeC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x371): undefined reference to `vtable for YAML::RepresentationException'
+[16.238s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML11InvalidNodeC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE[_ZN4YAML11InvalidNodeC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE]+0x3a1): undefined reference to `vtable for YAML::InvalidNode'
+[16.238s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Node::Mark() const':
+[16.238s] uav_node.cpp:(.text._ZNK4YAML4Node4MarkEv[_ZNK4YAML4Node4MarkEv]+0x77): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.238s] /usr/bin/ld: uav_node.cpp:(.text._ZNK4YAML4Node4MarkEv[_ZNK4YAML4Node4MarkEv]+0x7e): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.238s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Node::EnsureNodeExists() const':
+[16.238s] uav_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0xe0): undefined reference to `YAML::detail::memory::create_node()'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0xf7): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0x1a3): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0x1aa): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZNK4YAML4Node16EnsureNodeExistsEv[_ZNK4YAML4Node16EnsureNodeExistsEv]+0x17a): undefined reference to `YAML::detail::node_data::set_null()'
+[16.239s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Node::Node<char const*>(char const* const&)':
+[16.239s] uav_node.cpp:(.text._ZN4YAML4NodeC2IPKcEERKT_[_ZN4YAML4NodeC5IPKcEERKT_]+0xe6): undefined reference to `YAML::detail::memory::create_node()'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML4NodeC2IPKcEERKT_[_ZN4YAML4NodeC5IPKcEERKT_]+0x11c): undefined reference to `YAML::detail::node_data::set_scalar(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML4NodeC2IPKcEERKT_[_ZN4YAML4NodeC5IPKcEERKT_]+0x161): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.239s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::detail::node::equals(char const*, std::shared_ptr<YAML::detail::memory_holder>)':
+[16.239s] uav_node.cpp:(.text._ZN4YAML6detail4node6equalsEPKcSt10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail4node6equalsEPKcSt10shared_ptrINS0_13memory_holderEE]+0x1be): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail4node6equalsEPKcSt10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail4node6equalsEPKcSt10shared_ptrINS0_13memory_holderEE]+0x1c5): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.239s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::convert<double>::decode(YAML::Node const&, double&)':
+[16.239s] uav_node.cpp:(.text._ZN4YAML7convertIdE6decodeERKNS_4NodeERd[_ZN4YAML7convertIdE6decodeERKNS_4NodeERd]+0x51d): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.239s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML7convertIdE6decodeERKNS_4NodeERd[_ZN4YAML7convertIdE6decodeERKNS_4NodeERd]+0x524): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.240s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::detail::node& YAML::detail::node_data::get<char [18]>(char const (&) [18], std::shared_ptr<YAML::detail::memory_holder>)':
+[16.240s] uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x6d): undefined reference to `YAML::detail::node_data::convert_to_map(std::shared_ptr<YAML::detail::memory_holder> const&)'
+[16.240s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x386): undefined reference to `YAML::detail::memory_holder::merge(YAML::detail::memory_holder&)'
+[16.240s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3d4): undefined reference to `YAML::detail::memory::create_node()'
+[16.240s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3e5): undefined reference to `YAML::detail::node_data::insert_map_pair(YAML::detail::node&, YAML::detail::node&)'
+[16.240s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4d2): undefined reference to `vtable for YAML::RepresentationException'
+[16.240s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4e5): undefined reference to `vtable for YAML::BadSubscript'
+[16.240s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4ec): undefined reference to `YAML::BadSubscript::~BadSubscript()'
+[16.240s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA18_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4fa): undefined reference to `typeinfo for YAML::BadSubscript'
+[16.240s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Node YAML::Node::operator[]<char [18]>(char const (&) [18])':
+[16.240s] uav_node.cpp:(.text._ZN4YAML4NodeixIA18_cEES0_RKT_[_ZN4YAML4NodeixIA18_cEES0_RKT_]+0xb9): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.240s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::detail::node& YAML::detail::node_data::get<char [9]>(char const (&) [9], std::shared_ptr<YAML::detail::memory_holder>)':
+[16.240s] uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x6d): undefined reference to `YAML::detail::node_data::convert_to_map(std::shared_ptr<YAML::detail::memory_holder> const&)'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x386): undefined reference to `YAML::detail::memory_holder::merge(YAML::detail::memory_holder&)'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3d4): undefined reference to `YAML::detail::memory::create_node()'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3e5): undefined reference to `YAML::detail::node_data::insert_map_pair(YAML::detail::node&, YAML::detail::node&)'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4d2): undefined reference to `vtable for YAML::RepresentationException'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4e5): undefined reference to `vtable for YAML::BadSubscript'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4ec): undefined reference to `YAML::BadSubscript::~BadSubscript()'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA9_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4fa): undefined reference to `typeinfo for YAML::BadSubscript'
+[16.241s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Node YAML::Node::operator[]<char [9]>(char const (&) [9])':
+[16.241s] uav_node.cpp:(.text._ZN4YAML4NodeixIA9_cEES0_RKT_[_ZN4YAML4NodeixIA9_cEES0_RKT_]+0xb9): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.241s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::detail::node& YAML::detail::node_data::get<char [16]>(char const (&) [16], std::shared_ptr<YAML::detail::memory_holder>)':
+[16.241s] uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x6d): undefined reference to `YAML::detail::node_data::convert_to_map(std::shared_ptr<YAML::detail::memory_holder> const&)'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x386): undefined reference to `YAML::detail::memory_holder::merge(YAML::detail::memory_holder&)'
+[16.241s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3d4): undefined reference to `YAML::detail::memory::create_node()'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3e5): undefined reference to `YAML::detail::node_data::insert_map_pair(YAML::detail::node&, YAML::detail::node&)'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4d2): undefined reference to `vtable for YAML::RepresentationException'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4e5): undefined reference to `vtable for YAML::BadSubscript'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4ec): undefined reference to `YAML::BadSubscript::~BadSubscript()'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA16_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4fa): undefined reference to `typeinfo for YAML::BadSubscript'
+[16.242s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Node YAML::Node::operator[]<char [16]>(char const (&) [16])':
+[16.242s] uav_node.cpp:(.text._ZN4YAML4NodeixIA16_cEES0_RKT_[_ZN4YAML4NodeixIA16_cEES0_RKT_]+0xb9): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.242s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::detail::node& YAML::detail::node_data::get<char [15]>(char const (&) [15], std::shared_ptr<YAML::detail::memory_holder>)':
+[16.242s] uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x6d): undefined reference to `YAML::detail::node_data::convert_to_map(std::shared_ptr<YAML::detail::memory_holder> const&)'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x386): undefined reference to `YAML::detail::memory_holder::merge(YAML::detail::memory_holder&)'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3d4): undefined reference to `YAML::detail::memory::create_node()'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x3e5): undefined reference to `YAML::detail::node_data::insert_map_pair(YAML::detail::node&, YAML::detail::node&)'
+[16.242s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4d2): undefined reference to `vtable for YAML::RepresentationException'
+[16.243s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4e5): undefined reference to `vtable for YAML::BadSubscript'
+[16.243s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4ec): undefined reference to `YAML::BadSubscript::~BadSubscript()'
+[16.243s] /usr/bin/ld: uav_node.cpp:(.text._ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE[_ZN4YAML6detail9node_data3getIA15_cEERNS0_4nodeERKT_St10shared_ptrINS0_13memory_holderEE]+0x4fa): undefined reference to `typeinfo for YAML::BadSubscript'
+[16.243s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `YAML::Node YAML::Node::operator[]<char [15]>(char const (&) [15])':
+[16.243s] uav_node.cpp:(.text._ZN4YAML4NodeixIA15_cEES0_RKT_[_ZN4YAML4NodeixIA15_cEES0_RKT_]+0xb9): undefined reference to `YAML::detail::node_data::mark_defined()'
+[16.243s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o:(.data.rel.ro._ZTIN4YAML18TypedBadConversionIiEE[_ZTIN4YAML18TypedBadConversionIiEE]+0x10): undefined reference to `typeinfo for YAML::BadConversion'
+[16.243s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o:(.data.rel.ro._ZTIN4YAML18TypedBadConversionIdEE[_ZTIN4YAML18TypedBadConversionIdEE]+0x10): undefined reference to `typeinfo for YAML::BadConversion'
+[16.244s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/base_station.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[16.244s] base_station.cpp:(.text+0x924): undefined reference to `YAML::LoadFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[16.244s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/base_station.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [clone .cold]':
+[16.244s] base_station.cpp:(.text.unlikely+0xff): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x106): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x1cf): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x1d6): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x286): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x28d): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x380): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x387): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x4fc): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x503): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x590): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.245s] /usr/bin/ld: base_station.cpp:(.text.unlikely+0x597): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.245s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/main.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)':
+[16.245s] main.cpp:(.text+0x4b6): undefined reference to `YAML::LoadFile(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[16.245s] /usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/main.cpp.o: in function `Swarm::loadOptions(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [clone .cold]':
+[16.245s] main.cpp:(.text.unlikely+0x76): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.245s] /usr/bin/ld: main.cpp:(.text.unlikely+0x7d): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x343): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x34a): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x3e7): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x3ee): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x5d4): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x5db): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x67e): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x685): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x723): undefined reference to `YAML::InvalidNode::~InvalidNode()'
+[16.246s] /usr/bin/ld: main.cpp:(.text.unlikely+0x72a): undefined reference to `typeinfo for YAML::InvalidNode'
+[16.254s] /usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+[16.256s] collect2: error: ld returned 1 exit status
+[16.257s] gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:224: swarm_spawner] Error 1
+[16.257s] gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2
+[16.257s] gmake: *** [Makefile:146: all] Error 2
+[16.259s] Invoked command in '/home/fourdds/ros2_ws/build/boids' returned '2': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24

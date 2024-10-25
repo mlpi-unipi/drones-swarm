@@ -1,0 +1,92 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/LandingTargetPose.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Relative position of precision land target in navigation (body fixed, north aligned, NED) and inertial (world fixed, north aligned, NED) frames")
+    struct LandingTargetPose {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Flag indicating whether the landing target is static or moving with respect to the ground")
+      boolean is_static;
+
+      @verbatim (language="comment", text=
+        "Flag showing whether relative position is valid")
+      boolean rel_pos_valid;
+
+      @verbatim (language="comment", text=
+        "Flag showing whether relative velocity is valid")
+      boolean rel_vel_valid;
+
+      @verbatim (language="comment", text=
+        "X/north position of target, relative to vehicle (navigation frame)")
+      @unit (value="meters")
+      float x_rel;
+
+      @verbatim (language="comment", text=
+        "Y/east position of target, relative to vehicle (navigation frame)")
+      @unit (value="meters")
+      float y_rel;
+
+      @verbatim (language="comment", text=
+        "Z/down position of target, relative to vehicle (navigation frame)")
+      @unit (value="meters")
+      float z_rel;
+
+      @verbatim (language="comment", text=
+        "X/north velocity  of target, relative to vehicle (navigation frame)")
+      @unit (value="meters/second")
+      float vx_rel;
+
+      @verbatim (language="comment", text=
+        "Y/east velocity of target, relative to vehicle (navigation frame)")
+      @unit (value="meters/second")
+      float vy_rel;
+
+      @verbatim (language="comment", text=
+        "X/north position variance")
+      @unit (value="meters^2")
+      float cov_x_rel;
+
+      @verbatim (language="comment", text=
+        "Y/east position variance")
+      @unit (value="meters^2")
+      float cov_y_rel;
+
+      @verbatim (language="comment", text=
+        "X/north velocity variance")
+      @unit (value="(meters/second)^2")
+      float cov_vx_rel;
+
+      @verbatim (language="comment", text=
+        "Y/east velocity variance")
+      @unit (value="(meters/second)^2")
+      float cov_vy_rel;
+
+      @verbatim (language="comment", text=
+        "Flag showing whether absolute position is valid")
+      boolean abs_pos_valid;
+
+      @verbatim (language="comment", text=
+        "X/north position of target, relative to origin (navigation frame)")
+      @unit (value="meters")
+      float x_abs;
+
+      @verbatim (language="comment", text=
+        "Y/east position of target, relative to origin (navigation frame)")
+      @unit (value="meters")
+      float y_abs;
+
+      @verbatim (language="comment", text=
+        "Z/down position of target, relative to origin (navigation frame)")
+      @unit (value="meters")
+      float z_abs;
+    };
+  };
+};

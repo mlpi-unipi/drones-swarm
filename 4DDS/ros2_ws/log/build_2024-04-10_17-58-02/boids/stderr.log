@@ -1,0 +1,23 @@
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:11[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/main.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/geo.hpp:[m[K In function ‘[01m[Kdouble geo::get_yaw(const std::array<float, 4>&)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/geo.hpp:49:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kpx4_ros_com[m[K’ has not been declared
+   49 |         const auto quaternion_ned = [01;31m[Kpx4_ros_com[m[K::frame_transforms::utils::quaternion::array_to_eigen_quat(quat_array);
+      |                                     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:11[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/geo.hpp:[m[K In function ‘[01m[Kdouble geo::get_yaw(const std::array<float, 4>&)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/geo.hpp:49:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kpx4_ros_com[m[K’ has not been declared
+   49 |         const auto quaternion_ned = [01;31m[Kpx4_ros_com[m[K::frame_transforms::utils::quaternion::array_to_eigen_quat(quat_array);
+      |                                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/geo.hpp:50:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kpx4_ros_com[m[K’ has not been declared
+   50 |         return [01;31m[Kpx4_ros_com[m[K::frame_transforms::utils::quaternion::quaternion_get_yaw(quaternion_ned);
+      |                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/geo.hpp:50:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kpx4_ros_com[m[K’ has not been declared
+   50 |         return [01;31m[Kpx4_ros_com[m[K::frame_transforms::utils::quaternion::quaternion_get_yaw(quaternion_ned);
+      |                [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:90: CMakeFiles/uavs_spawner.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:76: CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/uavs_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

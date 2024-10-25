@@ -1,0 +1,358 @@
+[0.000000] (-) TimerEvent: {}
+[0.000189] (-) JobUnselected: {'identifier': 'boids'}
+[0.000298] (-) JobUnselected: {'identifier': 'iris-logger'}
+[0.000326] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000350] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000376] (uuv_boids) JobQueued: {'identifier': 'uuv_boids', 'dependencies': OrderedDict([('px4_msgs', '/home/fourdds/ros2_ws/install/px4_msgs')])}
+[0.000846] (uuv_boids) JobStarted: {'identifier': 'uuv_boids'}
+[0.007409] (uuv_boids) JobProgress: {'identifier': 'uuv_boids', 'progress': 'cmake'}
+[0.008004] (uuv_boids) JobProgress: {'identifier': 'uuv_boids', 'progress': 'build'}
+[0.008658] (uuv_boids) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/uuv_boids', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ros2_ws/build/uuv_boids', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/356_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '2a975864-2c31-4987-a872-57f69a8edace'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/uuv_boids'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.049214] (uuv_boids) StdoutLine: {'line': b'[  2%] Built target uuv_boids__cpp\n'}
+[0.051713] (uuv_boids) StdoutLine: {'line': b'[ 10%] Built target uuv_boids__rosidl_generator_c\n'}
+[0.052185] (uuv_boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target swarm_spawner\x1b[0m\n'}
+[0.056201] (uuv_boids) StdoutLine: {'line': b'[ 15%] Built target ament_cmake_python_copy_uuv_boids\n'}
+[0.056349] (uuv_boids) StdoutLine: {'line': b'[ 15%] Built target frame_transforms\n'}
+[0.064363] (uuv_boids) StdoutLine: {'line': b'[ 32%] Built target uuv_boids__rosidl_typesupport_introspection_cpp\n'}
+[0.064507] (uuv_boids) StdoutLine: {'line': b'[ 32%] Built target uuv_boids__rosidl_typesupport_cpp\n'}
+[0.065816] (uuv_boids) StdoutLine: {'line': b'[ 41%] Built target uuv_boids__rosidl_typesupport_fastrtps_cpp\n'}
+[0.067026] (uuv_boids) StdoutLine: {'line': b'[ 50%] Built target uuv_boids__rosidl_typesupport_introspection_c\n'}
+[0.069598] (uuv_boids) StdoutLine: {'line': b'[ 58%] Built target uuv_boids__rosidl_typesupport_fastrtps_c\n'}
+[0.070133] (uuv_boids) StdoutLine: {'line': b'[ 67%] Built target uuv_boids__rosidl_typesupport_c\n'}
+[0.070588] (uuv_boids) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o\x1b[0m\n'}
+[0.079185] (uuv_boids) StdoutLine: {'line': b'[ 69%] Built target uuv_boids\n'}
+[0.088468] (uuv_boids) StdoutLine: {'line': b'[ 71%] Built target uuv_boids__py\n'}
+[0.099789] (-) TimerEvent: {}
+[0.101927] (uuv_boids) StdoutLine: {'line': b'[ 78%] Built target uuv_boids__rosidl_generator_py\n'}
+[0.113824] (uuv_boids) StdoutLine: {'line': b'[ 84%] Built target uuv_boids__rosidl_typesupport_c__pyext\n'}
+[0.114083] (uuv_boids) StdoutLine: {'line': b'[ 86%] Built target uuv_boids__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.118084] (uuv_boids) StdoutLine: {'line': b'[ 91%] Built target uuv_boids__rosidl_typesupport_introspection_c__pyext\n'}
+[0.186765] (uuv_boids) StdoutLine: {'line': b'running egg_info\n'}
+[0.194823] (uuv_boids) StdoutLine: {'line': b'writing uuv_boids.egg-info/PKG-INFO\n'}
+[0.195409] (uuv_boids) StdoutLine: {'line': b'writing dependency_links to uuv_boids.egg-info/dependency_links.txt\n'}
+[0.195693] (uuv_boids) StdoutLine: {'line': b'writing top-level names to uuv_boids.egg-info/top_level.txt\n'}
+[0.199858] (-) TimerEvent: {}
+[0.215167] (uuv_boids) StdoutLine: {'line': b"reading manifest file 'uuv_boids.egg-info/SOURCES.txt'\n"}
+[0.215675] (uuv_boids) StdoutLine: {'line': b"writing manifest file 'uuv_boids.egg-info/SOURCES.txt'\n"}
+[0.231112] (uuv_boids) StdoutLine: {'line': b'[ 91%] Built target ament_cmake_python_build_uuv_boids_egg\n'}
+[0.299980] (-) TimerEvent: {}
+[0.400285] (-) TimerEvent: {}
+[0.500563] (-) TimerEvent: {}
+[0.601102] (-) TimerEvent: {}
+[0.701400] (-) TimerEvent: {}
+[0.801722] (-) TimerEvent: {}
+[0.902040] (-) TimerEvent: {}
+[1.002328] (-) TimerEvent: {}
+[1.102611] (-) TimerEvent: {}
+[1.202904] (-) TimerEvent: {}
+[1.303199] (-) TimerEvent: {}
+[1.403535] (-) TimerEvent: {}
+[1.503980] (-) TimerEvent: {}
+[1.604315] (-) TimerEvent: {}
+[1.704634] (-) TimerEvent: {}
+[1.805036] (-) TimerEvent: {}
+[1.905352] (-) TimerEvent: {}
+[2.005678] (-) TimerEvent: {}
+[2.105994] (-) TimerEvent: {}
+[2.206338] (-) TimerEvent: {}
+[2.306688] (-) TimerEvent: {}
+[2.407044] (-) TimerEvent: {}
+[2.507411] (-) TimerEvent: {}
+[2.576126] (uuv_boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Swarm::UavNode::flockingLogic()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.576305] (uuv_boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:195:36:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(random() % 3)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Klong int\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.576348] (uuv_boids) StderrLine: {'line': b'  195 |         Vector2D velocity{\x1b[01;35m\x1b[Krandom() % 3\x1b[m\x1b[K, random() % 3};\n'}
+[2.576376] (uuv_boids) StderrLine: {'line': b'      |                           \x1b[01;35m\x1b[K~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[2.576404] (uuv_boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:195:50:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(random() % 3)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Klong int\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.576431] (uuv_boids) StderrLine: {'line': b'  195 |         Vector2D velocity{random() % 3, \x1b[01;35m\x1b[Krandom() % 3\x1b[m\x1b[K};\n'}
+[2.576454] (uuv_boids) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[2.607525] (-) TimerEvent: {}
+[2.707799] (-) TimerEvent: {}
+[2.808090] (-) TimerEvent: {}
+[2.908398] (-) TimerEvent: {}
+[3.008694] (-) TimerEvent: {}
+[3.108965] (-) TimerEvent: {}
+[3.209330] (-) TimerEvent: {}
+[3.309791] (-) TimerEvent: {}
+[3.410088] (-) TimerEvent: {}
+[3.510456] (-) TimerEvent: {}
+[3.610942] (-) TimerEvent: {}
+[3.711230] (-) TimerEvent: {}
+[3.811521] (-) TimerEvent: {}
+[3.911842] (-) TimerEvent: {}
+[4.012177] (-) TimerEvent: {}
+[4.112519] (-) TimerEvent: {}
+[4.212819] (-) TimerEvent: {}
+[4.313128] (-) TimerEvent: {}
+[4.413453] (-) TimerEvent: {}
+[4.513746] (-) TimerEvent: {}
+[4.614028] (-) TimerEvent: {}
+[4.714320] (-) TimerEvent: {}
+[4.814618] (-) TimerEvent: {}
+[4.914973] (-) TimerEvent: {}
+[5.015479] (-) TimerEvent: {}
+[5.115859] (-) TimerEvent: {}
+[5.216146] (-) TimerEvent: {}
+[5.316430] (-) TimerEvent: {}
+[5.416812] (-) TimerEvent: {}
+[5.517098] (-) TimerEvent: {}
+[5.617432] (-) TimerEvent: {}
+[5.717852] (-) TimerEvent: {}
+[5.818192] (-) TimerEvent: {}
+[5.918545] (-) TimerEvent: {}
+[6.018982] (-) TimerEvent: {}
+[6.119328] (-) TimerEvent: {}
+[6.219737] (-) TimerEvent: {}
+[6.320341] (-) TimerEvent: {}
+[6.420914] (-) TimerEvent: {}
+[6.521517] (-) TimerEvent: {}
+[6.621885] (-) TimerEvent: {}
+[6.722318] (-) TimerEvent: {}
+[6.822935] (-) TimerEvent: {}
+[6.923311] (-) TimerEvent: {}
+[7.023678] (-) TimerEvent: {}
+[7.124042] (-) TimerEvent: {}
+[7.224439] (-) TimerEvent: {}
+[7.324770] (-) TimerEvent: {}
+[7.425084] (-) TimerEvent: {}
+[7.525467] (-) TimerEvent: {}
+[7.625939] (-) TimerEvent: {}
+[7.726347] (-) TimerEvent: {}
+[7.826773] (-) TimerEvent: {}
+[7.927117] (-) TimerEvent: {}
+[8.027412] (-) TimerEvent: {}
+[8.127694] (-) TimerEvent: {}
+[8.227985] (-) TimerEvent: {}
+[8.328311] (-) TimerEvent: {}
+[8.428650] (-) TimerEvent: {}
+[8.529074] (-) TimerEvent: {}
+[8.629564] (-) TimerEvent: {}
+[8.729914] (-) TimerEvent: {}
+[8.830354] (-) TimerEvent: {}
+[8.930748] (-) TimerEvent: {}
+[9.031071] (-) TimerEvent: {}
+[9.131373] (-) TimerEvent: {}
+[9.231787] (-) TimerEvent: {}
+[9.332108] (-) TimerEvent: {}
+[9.432425] (-) TimerEvent: {}
+[9.532733] (-) TimerEvent: {}
+[9.633181] (-) TimerEvent: {}
+[9.733661] (-) TimerEvent: {}
+[9.834071] (-) TimerEvent: {}
+[9.934452] (-) TimerEvent: {}
+[10.034902] (-) TimerEvent: {}
+[10.135361] (-) TimerEvent: {}
+[10.235723] (-) TimerEvent: {}
+[10.336086] (-) TimerEvent: {}
+[10.436463] (-) TimerEvent: {}
+[10.536904] (-) TimerEvent: {}
+[10.637243] (-) TimerEvent: {}
+[10.737586] (-) TimerEvent: {}
+[10.837901] (-) TimerEvent: {}
+[10.938201] (-) TimerEvent: {}
+[11.038605] (-) TimerEvent: {}
+[11.139018] (-) TimerEvent: {}
+[11.239449] (-) TimerEvent: {}
+[11.339863] (-) TimerEvent: {}
+[11.440177] (-) TimerEvent: {}
+[11.540615] (-) TimerEvent: {}
+[11.640995] (-) TimerEvent: {}
+[11.741278] (-) TimerEvent: {}
+[11.841574] (-) TimerEvent: {}
+[11.941893] (-) TimerEvent: {}
+[12.042182] (-) TimerEvent: {}
+[12.142466] (-) TimerEvent: {}
+[12.242809] (-) TimerEvent: {}
+[12.343258] (-) TimerEvent: {}
+[12.443672] (-) TimerEvent: {}
+[12.544052] (-) TimerEvent: {}
+[12.644457] (-) TimerEvent: {}
+[12.744767] (-) TimerEvent: {}
+[12.845136] (-) TimerEvent: {}
+[12.945453] (-) TimerEvent: {}
+[13.045810] (-) TimerEvent: {}
+[13.146099] (-) TimerEvent: {}
+[13.246386] (-) TimerEvent: {}
+[13.346678] (-) TimerEvent: {}
+[13.447018] (-) TimerEvent: {}
+[13.547453] (-) TimerEvent: {}
+[13.647921] (-) TimerEvent: {}
+[13.748379] (-) TimerEvent: {}
+[13.848670] (-) TimerEvent: {}
+[13.948968] (-) TimerEvent: {}
+[14.049275] (-) TimerEvent: {}
+[14.149648] (-) TimerEvent: {}
+[14.249997] (-) TimerEvent: {}
+[14.350346] (-) TimerEvent: {}
+[14.450793] (-) TimerEvent: {}
+[14.551216] (-) TimerEvent: {}
+[14.651647] (-) TimerEvent: {}
+[14.752094] (-) TimerEvent: {}
+[14.852561] (-) TimerEvent: {}
+[14.953024] (-) TimerEvent: {}
+[15.053477] (-) TimerEvent: {}
+[15.153913] (-) TimerEvent: {}
+[15.254282] (-) TimerEvent: {}
+[15.354706] (-) TimerEvent: {}
+[15.454999] (-) TimerEvent: {}
+[15.487785] (uuv_boids) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX executable swarm_spawner\x1b[0m\n'}
+[15.555110] (-) TimerEvent: {}
+[15.655412] (-) TimerEvent: {}
+[15.706843] (uuv_boids) StdoutLine: {'line': b'[100%] Built target swarm_spawner\n'}
+[15.713472] (uuv_boids) CommandEnded: {'returncode': 0}
+[15.755511] (-) TimerEvent: {}
+[15.760324] (uuv_boids) JobProgress: {'identifier': 'uuv_boids', 'progress': 'install'}
+[15.766050] (uuv_boids) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/uuv_boids'], 'cwd': '/home/fourdds/ros2_ws/build/uuv_boids', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/356_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '2a975864-2c31-4987-a872-57f69a8edace'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/uuv_boids'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[15.771646] (uuv_boids) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.771968] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/ament_index/resource_index/rosidl_interfaces/uuv_boids\n'}
+[15.772175] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids\n'}
+[15.772246] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg\n'}
+[15.772304] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/rosidl_generator_c__visibility_control.h\n'}
+[15.772378] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail\n'}
+[15.772461] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__functions.c\n'}
+[15.772534] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__type_support.h\n'}
+[15.772616] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__functions.c\n'}
+[15.772837] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__functions.h\n'}
+[15.772926] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__struct.h\n'}
+[15.773008] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__type_support.h\n'}
+[15.773089] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__struct.h\n'}
+[15.773170] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__functions.h\n'}
+[15.773250] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/geo_ping.h\n'}
+[15.773393] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/flocking.h\n'}
+[15.773466] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/library_path.sh\n'}
+[15.773546] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/library_path.dsv\n'}
+[15.773626] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_generator_c.so\n'}
+[15.773705] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids\n'}
+[15.773785] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg\n'}
+[15.773845] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail\n'}
+[15.773967] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__rosidl_typesupport_fastrtps_c.h\n'}
+[15.774051] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__rosidl_typesupport_fastrtps_c.h\n'}
+[15.774131] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[15.774209] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_typesupport_fastrtps_c.so\n'}
+[15.774293] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids\n'}
+[15.774372] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg\n'}
+[15.774454] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/geo_ping.hpp\n'}
+[15.774535] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail\n'}
+[15.774614] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__builder.hpp\n'}
+[15.774693] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__traits.hpp\n'}
+[15.774759] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__traits.hpp\n'}
+[15.774932] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__builder.hpp\n'}
+[15.774969] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__struct.hpp\n'}
+[15.775200] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__struct.hpp\n'}
+[15.775293] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/flocking.hpp\n'}
+[15.775374] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids\n'}
+[15.775461] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg\n'}
+[15.775539] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail\n'}
+[15.775617] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[15.775695] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[15.775773] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/dds_fastrtps\n'}
+[15.775852] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[15.775929] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_typesupport_fastrtps_cpp.so\n'}
+[15.776007] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids\n'}
+[15.776135] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg\n'}
+[15.776166] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail\n'}
+[15.776208] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__rosidl_typesupport_introspection_c.h\n'}
+[15.776245] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__type_support.c\n'}
+[15.776272] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__type_support.c\n'}
+[15.776298] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__rosidl_typesupport_introspection_c.h\n'}
+[15.776323] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[15.776353] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_typesupport_introspection_c.so\n'}
+[15.776377] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_typesupport_c.so\n'}
+[15.776400] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids\n'}
+[15.776425] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg\n'}
+[15.776448] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail\n'}
+[15.776471] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__type_support.cpp\n'}
+[15.776494] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__rosidl_typesupport_introspection_cpp.hpp\n'}
+[15.776519] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/geo_ping__rosidl_typesupport_introspection_cpp.hpp\n'}
+[15.776543] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/uuv_boids/msg/detail/flocking__type_support.cpp\n'}
+[15.776568] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_typesupport_introspection_cpp.so\n'}
+[15.776592] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_typesupport_cpp.so\n'}
+[15.776614] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/pythonpath.sh\n'}
+[15.776637] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/pythonpath.dsv\n'}
+[15.776659] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids-0.0.0-py3.10.egg-info\n'}
+[15.776682] (uuv_boids) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[15.776704] (uuv_boids) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[15.776727] (uuv_boids) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[15.776749] (uuv_boids) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[15.776772] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids\n'}
+[15.776795] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/_uuv_boids_s.ep.rosidl_typesupport_c.c\n'}
+[15.776817] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/libuuv_boids__rosidl_generator_py.so\n'}
+[15.776839] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/uuv_boids_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[15.776861] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/msg\n'}
+[15.776884] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/msg/_flocking.py\n'}
+[15.776907] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/msg/_geo_ping_s.c\n'}
+[15.776929] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/msg/_flocking_s.c\n'}
+[15.776951] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/msg/_geo_ping.py\n'}
+[15.776973] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/msg/__init__.py\n'}
+[15.776995] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/_uuv_boids_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[15.777018] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/uuv_boids_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[15.777043] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/_uuv_boids_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[15.777065] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/uuv_boids_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[15.777088] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/__init__.py\n'}
+[15.796627] (uuv_boids) StdoutLine: {'line': b"Listing '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids'...\n"}
+[15.796799] (uuv_boids) StdoutLine: {'line': b"Listing '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/msg'...\n"}
+[15.799567] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/uuv_boids_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[15.799719] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/uuv_boids_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[15.799858] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages/uuv_boids/uuv_boids_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[15.800043] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libuuv_boids__rosidl_generator_py.so\n'}
+[15.800122] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/msg/GeoPing.idl\n'}
+[15.800307] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/msg/Flocking.idl\n'}
+[15.800392] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/msg/GeoPing.msg\n'}
+[15.800495] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/msg/Flocking.msg\n'}
+[15.800526] (uuv_boids) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/uuv_boids/lib/uuv_boids/swarm_spawner\n'}
+[15.807756] (uuv_boids) StdoutLine: {'line': b'-- Set runtime path of "/home/fourdds/ros2_ws/install/uuv_boids/lib/uuv_boids/swarm_spawner" to ""\n'}
+[15.807981] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids\n'}
+[15.808070] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/placeholder.txt:Zone.Identifier\n'}
+[15.808152] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/placeholder.txt\n'}
+[15.808231] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/include/uuv_boids/placeholder.txt:Zone.Identifier:Zone.Identifier\n'}
+[15.808418] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/lib/libframe_transforms.so\n'}
+[15.808501] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids//launch\n'}
+[15.808582] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids//launch/boids.launch.py\n'}
+[15.808663] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids//test\n'}
+[15.808742] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids//test/placeholder.txt:Zone.Identifier\n'}
+[15.808822] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids//test/placeholder.txt\n'}
+[15.808901] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids//test/placeholder.txt:Zone.Identifier:Zone.Identifier\n'}
+[15.809027] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/ament_index/resource_index/package_run_dependencies/uuv_boids\n'}
+[15.809096] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/ament_index/resource_index/parent_prefix_path/uuv_boids\n'}
+[15.809177] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/ament_prefix_path.sh\n'}
+[15.809246] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/ament_prefix_path.dsv\n'}
+[15.809325] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/path.sh\n'}
+[15.809414] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/environment/path.dsv\n'}
+[15.809508] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/local_setup.bash\n'}
+[15.809589] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/local_setup.sh\n'}
+[15.809668] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/local_setup.zsh\n'}
+[15.809748] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/local_setup.dsv\n'}
+[15.809828] (uuv_boids) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/package.dsv\n'}
+[15.809907] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/ament_index/resource_index/packages/uuv_boids\n'}
+[15.809987] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_generator_cExport.cmake\n'}
+[15.810066] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_generator_cExport-noconfig.cmake\n'}
+[15.810154] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[15.810226] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[15.810371] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_generator_cppExport.cmake\n'}
+[15.810403] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[15.810430] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[15.810460] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_introspection_cExport.cmake\n'}
+[15.810484] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[15.810508] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_cExport.cmake\n'}
+[15.810533] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[15.810557] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[15.810583] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[15.810635] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_cppExport.cmake\n'}
+[15.810669] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boids__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[15.810697] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_generator_pyExport.cmake\n'}
+[15.810723] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_uuv_boids__rosidl_generator_pyExport-noconfig.cmake\n'}
+[15.810747] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_frame_transformsExport.cmake\n'}
+[15.810771] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/export_frame_transformsExport-noconfig.cmake\n'}
+[15.810795] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/rosidl_cmake-extras.cmake\n'}
+[15.810819] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[15.810844] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[15.810868] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[15.810892] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[15.810915] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[15.810939] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[15.810963] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boidsConfig.cmake\n'}
+[15.810986] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/cmake/uuv_boidsConfig-version.cmake\n'}
+[15.811011] (uuv_boids) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/uuv_boids/share/uuv_boids/package.xml\n'}
+[15.812717] (uuv_boids) CommandEnded: {'returncode': 0}
+[15.855609] (-) TimerEvent: {}
+[15.873499] (uuv_boids) JobEnded: {'identifier': 'uuv_boids', 'rc': 0}
+[15.874383] (-) EventReactorShutdown: {}

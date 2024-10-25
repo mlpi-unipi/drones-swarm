@@ -1,0 +1,39 @@
+Error parsing '/home/fourdds/ros2_ws/src/boids/package.xml':
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+    root = dom.parseString(data)
+  File "/usr/lib/python3.10/xml/dom/minidom.py", line 2000, in parseString
+    return expatbuilder.parseString(string)
+  File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 925, in parseString
+    return builder.parseString(string)
+  File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 223, in parseString
+    parser.Parse(string, True)
+xml.parsers.expat.ExpatError: mismatched tag: line 31, column 35
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+    main()
+  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+    raise e
+  File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+    package = parse_package_string(
+  File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+    raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+catkin_pkg.package.InvalidPackage: Error(s) in package '/home/fourdds/ros2_ws/src/boids/package.xml':
+The manifest contains invalid XML:
+mismatched tag: line 31, column 35
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+  execute_process(/usr/bin/python3
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+  /home/fourdds/ros2_ws/src/boids/package.xml
+  /home/fourdds/ros2_ws/build/boids/ament_cmake_core/package.cmake) returned
+  error code 1
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:226 (ament_package_xml)
+  CMakeLists.txt:35 (rosidl_generate_interfaces)
+
+[0m
+gmake: *** [Makefile:883: cmake_check_build_system] Error 1

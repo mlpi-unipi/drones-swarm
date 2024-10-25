@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/SensorGyro.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef uint8 uint8__3[3];
+    module SensorGyro_Constants {
+      const uint8 ORB_QUEUE_LENGTH = 8;
+    };
+    struct SensorGyro {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "unique device ID for the sensor that does not change between power cycles")
+      uint32 device_id;
+
+      @verbatim (language="comment", text=
+        "angular velocity in the FRD board frame X-axis in rad/s")
+      float x;
+
+      @verbatim (language="comment", text=
+        "angular velocity in the FRD board frame Y-axis in rad/s")
+      float y;
+
+      @verbatim (language="comment", text=
+        "angular velocity in the FRD board frame Z-axis in rad/s")
+      float z;
+
+      @verbatim (language="comment", text=
+        "temperature in degrees Celsius")
+      float temperature;
+
+      uint32 error_count;
+
+      @verbatim (language="comment", text=
+        "clip count per axis in the sample period")
+      uint8__3 clip_counter;
+
+      @verbatim (language="comment", text=
+        "number of raw samples that went into this message")
+      uint8 samples;
+    };
+  };
+};

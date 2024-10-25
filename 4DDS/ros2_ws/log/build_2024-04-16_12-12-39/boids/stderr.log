@@ -1,0 +1,12 @@
+/usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/swarm_master.cpp.o: in function `geo::lat_to_metres(double)':
+swarm_master.cpp:(.text+0x69): multiple definition of `geo::lat_to_metres(double)'; CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x69): first defined here
+/usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/swarm_master.cpp.o: in function `geo::lon_to_metres(double, double)':
+swarm_master.cpp:(.text+0x93): multiple definition of `geo::lon_to_metres(double, double)'; CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x93): first defined here
+/usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/main.cpp.o: in function `geo::lat_to_metres(double)':
+main.cpp:(.text+0x0): multiple definition of `geo::lat_to_metres(double)'; CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x69): first defined here
+/usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/main.cpp.o: in function `geo::lon_to_metres(double, double)':
+main.cpp:(.text+0x2a): multiple definition of `geo::lon_to_metres(double, double)'; CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x93): first defined here
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:224: uavs_spawner] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/uavs_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

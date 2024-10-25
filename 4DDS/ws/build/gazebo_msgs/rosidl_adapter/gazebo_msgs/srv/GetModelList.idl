@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/GetModelList.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module gazebo_msgs {
+  module srv {
+    struct GetModelList_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetModelList_Response {
+      @verbatim (language="comment", text=
+        "Standard metadata for higher-level stamped data types." "\n"
+        "* header.stamp Simulation time when data was collected.")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "list of models in the world")
+      sequence<string> model_names;
+
+      @verbatim (language="comment", text=
+        "return true if get successful")
+      boolean success;
+    };
+  };
+};

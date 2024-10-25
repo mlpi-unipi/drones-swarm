@@ -1,0 +1,228 @@
+[0.000000] (-) TimerEvent: {}
+[0.000176] (-) JobUnselected: {'identifier': 'base_station'}
+[0.000208] (-) JobUnselected: {'identifier': 'boids'}
+[0.000231] (-) JobUnselected: {'identifier': 'fdds_messages'}
+[0.000252] (-) JobUnselected: {'identifier': 'flocking'}
+[0.000522] (-) JobUnselected: {'identifier': 'iris-logger'}
+[0.000556] (-) JobUnselected: {'identifier': 'logging'}
+[0.000565] (-) JobUnselected: {'identifier': 'obstacle_avoidance'}
+[0.000572] (-) JobUnselected: {'identifier': 'parameters'}
+[0.000578] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000585] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000591] (-) JobUnselected: {'identifier': 'stigmergy'}
+[0.000597] (-) JobUnselected: {'identifier': 'stigmergy_map'}
+[0.000604] (-) JobUnselected: {'identifier': 'target_detection'}
+[0.000612] (drone) JobQueued: {'identifier': 'drone', 'dependencies': OrderedDict()}
+[0.000623] (drone) JobStarted: {'identifier': 'drone'}
+[0.005715] (drone) JobProgress: {'identifier': 'drone', 'progress': 'cmake'}
+[0.006199] (drone) JobProgress: {'identifier': 'drone', 'progress': 'build'}
+[0.006901] (drone) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/drone', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/target_detection/lib:/home/fourdds/ros2_ws/install/stigmergy/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/obstacle_avoidance/lib:/home/fourdds/ros2_ws/install/parameters/lib:/home/fourdds/ros2_ws/install/fdds_messages/lib:/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install:/home/fourdds/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/349_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '43c32559-a135-4993-bf3d-f566024fc4a5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/opencv_tests:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/stigmergy/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/fdds_messages/local/lib/python3.10/dist-packages:/home/fourdds/ws/build/opencv_tests:/home/fourdds/ws/install/opencv_tests/lib/python3.10/site-packages:/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.030674] (drone) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Drone\x1b[0m\n'}
+[0.041615] (drone) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o\x1b[0m\n'}
+[0.099607] (-) TimerEvent: {}
+[0.199856] (-) TimerEvent: {}
+[0.300122] (-) TimerEvent: {}
+[0.400381] (-) TimerEvent: {}
+[0.500653] (-) TimerEvent: {}
+[0.600934] (-) TimerEvent: {}
+[0.701229] (-) TimerEvent: {}
+[0.801506] (-) TimerEvent: {}
+[0.901766] (-) TimerEvent: {}
+[1.002042] (-) TimerEvent: {}
+[1.102320] (-) TimerEvent: {}
+[1.202588] (-) TimerEvent: {}
+[1.302910] (-) TimerEvent: {}
+[1.403169] (-) TimerEvent: {}
+[1.503423] (-) TimerEvent: {}
+[1.603705] (-) TimerEvent: {}
+[1.703958] (-) TimerEvent: {}
+[1.804206] (-) TimerEvent: {}
+[1.904499] (-) TimerEvent: {}
+[2.004989] (-) TimerEvent: {}
+[2.105265] (-) TimerEvent: {}
+[2.205535] (-) TimerEvent: {}
+[2.305870] (-) TimerEvent: {}
+[2.401425] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid fdds::Drone::flockingLogic()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.401611] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:189:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((fdds::Drone*)this)->fdds::Drone::yawRadians\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Rotation2D<float>::Scalar\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.401650] (drone) StderrLine: {'line': b'  189 |     Eigen::Rotation2Df rotation_matrix{\x1b[01;35m\x1b[KyawRadians\x1b[m\x1b[K};\n'}
+[2.401677] (drone) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.405940] (-) TimerEvent: {}
+[2.506135] (-) TimerEvent: {}
+[2.610607] (-) TimerEvent: {}
+[2.710843] (-) TimerEvent: {}
+[2.811113] (-) TimerEvent: {}
+[2.911389] (-) TimerEvent: {}
+[3.011666] (-) TimerEvent: {}
+[3.111900] (-) TimerEvent: {}
+[3.212157] (-) TimerEvent: {}
+[3.312401] (-) TimerEvent: {}
+[3.412655] (-) TimerEvent: {}
+[3.513057] (-) TimerEvent: {}
+[3.613351] (-) TimerEvent: {}
+[3.713641] (-) TimerEvent: {}
+[3.813909] (-) TimerEvent: {}
+[3.914161] (-) TimerEvent: {}
+[4.014412] (-) TimerEvent: {}
+[4.114711] (-) TimerEvent: {}
+[4.214971] (-) TimerEvent: {}
+[4.315224] (-) TimerEvent: {}
+[4.415478] (-) TimerEvent: {}
+[4.515742] (-) TimerEvent: {}
+[4.615990] (-) TimerEvent: {}
+[4.716269] (-) TimerEvent: {}
+[4.816536] (-) TimerEvent: {}
+[4.916812] (-) TimerEvent: {}
+[5.017088] (-) TimerEvent: {}
+[5.117403] (-) TimerEvent: {}
+[5.217948] (-) TimerEvent: {}
+[5.318229] (-) TimerEvent: {}
+[5.418490] (-) TimerEvent: {}
+[5.518762] (-) TimerEvent: {}
+[5.619048] (-) TimerEvent: {}
+[5.719339] (-) TimerEvent: {}
+[5.819621] (-) TimerEvent: {}
+[5.919923] (-) TimerEvent: {}
+[6.020231] (-) TimerEvent: {}
+[6.121261] (-) TimerEvent: {}
+[6.221566] (-) TimerEvent: {}
+[6.321894] (-) TimerEvent: {}
+[6.422209] (-) TimerEvent: {}
+[6.522522] (-) TimerEvent: {}
+[6.622821] (-) TimerEvent: {}
+[6.723107] (-) TimerEvent: {}
+[6.823423] (-) TimerEvent: {}
+[6.923852] (-) TimerEvent: {}
+[7.024259] (-) TimerEvent: {}
+[7.124550] (-) TimerEvent: {}
+[7.224880] (-) TimerEvent: {}
+[7.325177] (-) TimerEvent: {}
+[7.425437] (-) TimerEvent: {}
+[7.525705] (-) TimerEvent: {}
+[7.625969] (-) TimerEvent: {}
+[7.726272] (-) TimerEvent: {}
+[7.826631] (-) TimerEvent: {}
+[7.926924] (-) TimerEvent: {}
+[8.027241] (-) TimerEvent: {}
+[8.127614] (-) TimerEvent: {}
+[8.227880] (-) TimerEvent: {}
+[8.328158] (-) TimerEvent: {}
+[8.428421] (-) TimerEvent: {}
+[8.528737] (-) TimerEvent: {}
+[8.629115] (-) TimerEvent: {}
+[8.729419] (-) TimerEvent: {}
+[8.829704] (-) TimerEvent: {}
+[8.930010] (-) TimerEvent: {}
+[9.030388] (-) TimerEvent: {}
+[9.130686] (-) TimerEvent: {}
+[9.231021] (-) TimerEvent: {}
+[9.331475] (-) TimerEvent: {}
+[9.431834] (-) TimerEvent: {}
+[9.532155] (-) TimerEvent: {}
+[9.632442] (-) TimerEvent: {}
+[9.732764] (-) TimerEvent: {}
+[9.833031] (-) TimerEvent: {}
+[9.933291] (-) TimerEvent: {}
+[10.033549] (-) TimerEvent: {}
+[10.133821] (-) TimerEvent: {}
+[10.234076] (-) TimerEvent: {}
+[10.334487] (-) TimerEvent: {}
+[10.434802] (-) TimerEvent: {}
+[10.535256] (-) TimerEvent: {}
+[10.635608] (-) TimerEvent: {}
+[10.735978] (-) TimerEvent: {}
+[10.836414] (-) TimerEvent: {}
+[10.936790] (-) TimerEvent: {}
+[11.037044] (-) TimerEvent: {}
+[11.137296] (-) TimerEvent: {}
+[11.237642] (-) TimerEvent: {}
+[11.337937] (-) TimerEvent: {}
+[11.438284] (-) TimerEvent: {}
+[11.538677] (-) TimerEvent: {}
+[11.639066] (-) TimerEvent: {}
+[11.739457] (-) TimerEvent: {}
+[11.839998] (-) TimerEvent: {}
+[11.940339] (-) TimerEvent: {}
+[12.040680] (-) TimerEvent: {}
+[12.140934] (-) TimerEvent: {}
+[12.241204] (-) TimerEvent: {}
+[12.341539] (-) TimerEvent: {}
+[12.441845] (-) TimerEvent: {}
+[12.542114] (-) TimerEvent: {}
+[12.642395] (-) TimerEvent: {}
+[12.742716] (-) TimerEvent: {}
+[12.843018] (-) TimerEvent: {}
+[12.943358] (-) TimerEvent: {}
+[13.043747] (-) TimerEvent: {}
+[13.144111] (-) TimerEvent: {}
+[13.244385] (-) TimerEvent: {}
+[13.344642] (-) TimerEvent: {}
+[13.444925] (-) TimerEvent: {}
+[13.545265] (-) TimerEvent: {}
+[13.645556] (-) TimerEvent: {}
+[13.745839] (-) TimerEvent: {}
+[13.846190] (-) TimerEvent: {}
+[13.946568] (-) TimerEvent: {}
+[14.046865] (-) TimerEvent: {}
+[14.147187] (-) TimerEvent: {}
+[14.247610] (-) TimerEvent: {}
+[14.347924] (-) TimerEvent: {}
+[14.448179] (-) TimerEvent: {}
+[14.548493] (-) TimerEvent: {}
+[14.648787] (-) TimerEvent: {}
+[14.749043] (-) TimerEvent: {}
+[14.849358] (-) TimerEvent: {}
+[14.949652] (-) TimerEvent: {}
+[15.049987] (-) TimerEvent: {}
+[15.150282] (-) TimerEvent: {}
+[15.250645] (-) TimerEvent: {}
+[15.351000] (-) TimerEvent: {}
+[15.451284] (-) TimerEvent: {}
+[15.551537] (-) TimerEvent: {}
+[15.651796] (-) TimerEvent: {}
+[15.752056] (-) TimerEvent: {}
+[15.852313] (-) TimerEvent: {}
+[15.952575] (-) TimerEvent: {}
+[16.052905] (-) TimerEvent: {}
+[16.153254] (-) TimerEvent: {}
+[16.253520] (-) TimerEvent: {}
+[16.353804] (-) TimerEvent: {}
+[16.454096] (-) TimerEvent: {}
+[16.554476] (-) TimerEvent: {}
+[16.654864] (-) TimerEvent: {}
+[16.755267] (-) TimerEvent: {}
+[16.855727] (-) TimerEvent: {}
+[16.956198] (-) TimerEvent: {}
+[17.056546] (-) TimerEvent: {}
+[17.156866] (-) TimerEvent: {}
+[17.257164] (-) TimerEvent: {}
+[17.331848] (drone) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable Drone\x1b[0m\n'}
+[17.357282] (-) TimerEvent: {}
+[17.457567] (-) TimerEvent: {}
+[17.557940] (-) TimerEvent: {}
+[17.658322] (-) TimerEvent: {}
+[17.718115] (drone) StdoutLine: {'line': b'[100%] Built target Drone\n'}
+[17.724790] (drone) CommandEnded: {'returncode': 0}
+[17.741084] (drone) JobProgress: {'identifier': 'drone', 'progress': 'install'}
+[17.746501] (drone) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/drone'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/target_detection/lib:/home/fourdds/ros2_ws/install/stigmergy/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/obstacle_avoidance/lib:/home/fourdds/ros2_ws/install/parameters/lib:/home/fourdds/ros2_ws/install/fdds_messages/lib:/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install:/home/fourdds/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/349_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '43c32559-a135-4993-bf3d-f566024fc4a5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/opencv_tests:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/stigmergy/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/fdds_messages/local/lib/python3.10/dist-packages:/home/fourdds/ws/build/opencv_tests:/home/fourdds/ws/install/opencv_tests/lib/python3.10/site-packages:/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[17.751094] (drone) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.751314] (drone) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/drone/lib/drone/Drone\n'}
+[17.752806] (drone) StdoutLine: {'line': b'-- Set runtime path of "/home/fourdds/ros2_ws/install/drone/lib/drone/Drone" to ""\n'}
+[17.752961] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/package_run_dependencies/drone\n'}
+[17.753034] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/parent_prefix_path/drone\n'}
+[17.753114] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/environment/ament_prefix_path.sh\n'}
+[17.753280] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/environment/ament_prefix_path.dsv\n'}
+[17.753342] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/environment/path.sh\n'}
+[17.753372] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/environment/path.dsv\n'}
+[17.753398] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.bash\n'}
+[17.753422] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.sh\n'}
+[17.753446] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.zsh\n'}
+[17.753469] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.dsv\n'}
+[17.753492] (drone) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/drone/share/drone/package.dsv\n'}
+[17.753515] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/packages/drone\n'}
+[17.753538] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/cmake/droneConfig.cmake\n'}
+[17.753581] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/cmake/droneConfig-version.cmake\n'}
+[17.753613] (drone) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/drone/share/drone/package.xml\n'}
+[17.754522] (drone) CommandEnded: {'returncode': 0}
+[17.758452] (-) TimerEvent: {}
+[17.780921] (drone) JobEnded: {'identifier': 'drone', 'rc': 0}
+[17.782038] (-) EventReactorShutdown: {}

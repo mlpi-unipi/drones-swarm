@@ -1,0 +1,35 @@
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid Swarm::UavNode::controlTrajectory()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:189:48:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kvector2d::vector2d(<brace-enclosed initializer list>)[m[K’
+  189 |     sendAttitude(0, 0, yaw_error, Point2D{0.1, [01;31m[K}[m[K);
+      |                                                [01;31m[K^[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.hpp:20[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:41:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvector2d::vector2d(double, double)[m[K’
+   41 |     [01;36m[Kvector2d[m[K(const double x, const double y) : x_(x), y_(y) {}
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:41:5:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:21:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvector2d::vector2d(vector2d&&)[m[K’
+   21 |     [01;36m[Kvector2d[m[K(vector2d&& moved)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:21:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kvector2d&&[m[K’
+   21 |     vector2d([01;36m[Kvector2d&& moved[m[K)
+      |              [01;36m[K~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:15:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvector2d::vector2d(const vector2d&)[m[K’
+   15 |     [01;36m[Kvector2d[m[K(const vector2d& other)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:15:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst vector2d&[m[K’
+   15 |     vector2d([01;36m[Kconst vector2d& other[m[K)
+      |              [01;36m[K~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:12:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr vector2d::vector2d()[m[K’
+   12 |     [01;36m[Kvector2d[m[K() = default;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/vector2d.hpp:12:5:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid Swarm::UavNode::flockingLogic()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:208:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcommand[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  208 |     static int [01;35m[Kcommand[m[K = 0;
+      |                [01;35m[K^~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:[m[K At global scope:
+[01m[K/home/fourdds/ros2_ws/src/uuv_boids/src/uav_node.cpp:208:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kcommand[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:76: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

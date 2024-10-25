@@ -1,0 +1,51 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/GetModelProperties.srv
+// generated code does not contain a copyright notice
+
+
+module gazebo_msgs {
+  module srv {
+    struct GetModelProperties_Request {
+      @verbatim (language="comment", text=
+        "name of Gazebo Model")
+      string model_name;
+    };
+    struct GetModelProperties_Response {
+      @verbatim (language="comment", text=
+        "parent model")
+      string parent_model_name;
+
+      @verbatim (language="comment", text=
+        "name of canonical link, link names are prefixed by model name, e.g. pr2::base_link")
+      string canonical_body_name;
+
+      @verbatim (language="comment", text=
+        "list of links, link names are prefixed by model name, e.g. pr2::base_link")
+      sequence<string> body_names;
+
+      @verbatim (language="comment", text=
+        "list of collisions")
+      sequence<string> geom_names;
+
+      @verbatim (language="comment", text=
+        "list of joints attached to the model")
+      sequence<string> joint_names;
+
+      @verbatim (language="comment", text=
+        "list of child models")
+      sequence<string> child_model_names;
+
+      @verbatim (language="comment", text=
+        "returns true if model is static")
+      boolean is_static;
+
+      @verbatim (language="comment", text=
+        "return true if get successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

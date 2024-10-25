@@ -1,0 +1,36 @@
+[35m[1mConsolidate compiler generated dependencies of target stigmergy_map[0m
+[  8%] Built target stigmergy__rosidl_generator_c
+[ 11%] Built target stigmergy__cpp
+[ 11%] Built target ament_cmake_python_copy_stigmergy
+[ 14%] [32mBuilding CXX object CMakeFiles/stigmergy_map.dir/src/StigmergyMap.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/stigmergy_map.dir/src/main.cpp.o[0m
+[ 25%] Built target stigmergy__rosidl_typesupport_introspection_c
+[ 34%] Built target stigmergy__rosidl_typesupport_c
+[ 42%] Built target stigmergy__rosidl_typesupport_fastrtps_c
+[ 51%] Built target stigmergy__rosidl_typesupport_introspection_cpp
+[ 60%] Built target stigmergy__rosidl_typesupport_cpp
+[ 68%] Built target stigmergy__rosidl_typesupport_fastrtps_cpp
+[ 68%] Built target stigmergy
+[ 71%] Built target stigmergy__py
+[ 77%] Built target stigmergy__rosidl_generator_py
+[ 94%] Built target stigmergy__rosidl_typesupport_fastrtps_c__pyext
+[ 94%] Built target stigmergy__rosidl_typesupport_introspection_c__pyext
+[ 94%] Built target stigmergy__rosidl_typesupport_c__pyext
+running egg_info
+writing stigmergy.egg-info/PKG-INFO
+writing dependency_links to stigmergy.egg-info/dependency_links.txt
+writing top-level names to stigmergy.egg-info/top_level.txt
+reading manifest file 'stigmergy.egg-info/SOURCES.txt'
+writing manifest file 'stigmergy.egg-info/SOURCES.txt'
+[ 94%] Built target ament_cmake_python_build_stigmergy_egg
+[01m[K/home/fourdds/ros2_ws/src/stigmergy/src/StigmergyMap.cpp:[m[K In member function ‘[01m[Kvoid StigmergyMap::initialize()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/stigmergy/src/StigmergyMap.cpp:8:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::array<std::shared_ptr<rclcpp::Publisher<stigmergy::msg::PheromoneGradient_<std::allocator<void> > > >, 5>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+    8 |     for (int i = 1; [01;35m[Ki < gradientPublishers.size() + 1[m[K; i++)
+      |                     [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[ 97%] [32m[1mLinking CXX executable stigmergy_map[0m
+/usr/bin/ld: CMakeFiles/stigmergy_map.dir/src/StigmergyMap.cpp.o: in function `StigmergyMap::releasePheromoneCallback(std::shared_ptr<boids::msg::GeoPing_<std::allocator<void> > const>)':
+StigmergyMap.cpp:(.text+0x441): undefined reference to `StigmergyMap::latLonToIndex(float, float)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/stigmergy_map.dir/build.make:224: stigmergy_map] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:592: CMakeFiles/stigmergy_map.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

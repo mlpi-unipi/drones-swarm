@@ -1,0 +1,567 @@
+[0.000000] (-) TimerEvent: {}
+[0.000483] (-) JobUnselected: {'identifier': 'boids'}
+[0.000522] (-) JobUnselected: {'identifier': 'iris-logger'}
+[0.000531] (-) JobUnselected: {'identifier': 'logging'}
+[0.000538] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000545] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000551] (-) JobUnselected: {'identifier': 'stigmergy'}
+[0.000559] (parameters) JobQueued: {'identifier': 'parameters', 'dependencies': OrderedDict()}
+[0.000567] (parameters) JobStarted: {'identifier': 'parameters'}
+[0.005084] (parameters) JobProgress: {'identifier': 'parameters', 'progress': 'cmake'}
+[0.005693] (parameters) JobProgress: {'identifier': 'parameters', 'progress': 'build'}
+[0.005952] (parameters) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/parameters', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ros2_ws/build/parameters', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/stigmergy/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/74475_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '3329f29f-05ee-4710-a1be-e555e10d4c64'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/parameters'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/stigmergy/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.017200] (parameters) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.082434] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_export_include_directories/cmake/ament_cmake_export_include_directories-extras.cmake:24 (find_package):\n'}
+[0.082543] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_core.cmake\n'}
+[0.082577] (parameters) StderrLine: {'line': b'\n'}
+[0.082602] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_core.cmake\n'}
+[0.082624] (parameters) StderrLine: {'line': b'\n'}
+[0.082646] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.082670] (parameters) StderrLine: {'line': b'\n'}
+[0.082692] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake\n'}
+[0.082714] (parameters) StderrLine: {'line': b'\n'}
+[0.082734] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.082756] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_export_include_directories/cmake/ament_export_include_directories.cmake:35 (_ament_cmake_export_include_directories_register_package_hook)\n'}
+[0.082779] (parameters) StderrLine: {'line': b'  CMakeLists.txt:21 (ament_export_include_directories)\n'}
+[0.082800] (parameters) StderrLine: {'line': b'\n'}
+[0.082821] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.082841] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_export_include_directories/cmake/ament_cmake_export_include_directories-extras.cmake:24 (find_package):\n'}
+[0.082862] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.082883] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_export_include_directories/cmake/ament_export_include_directories.cmake:35 (_ament_cmake_export_include_directories_register_package_hook)\n'}
+[0.082903] (parameters) StderrLine: {'line': b'  CMakeLists.txt:21 (ament_export_include_directories)\n'}
+[0.082925] (parameters) StderrLine: {'line': b'\n'}
+[0.082945] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.083279] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_cmake_export_libraries-extras.cmake:24 (find_package):\n'}
+[0.083408] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_core.cmake\n'}
+[0.083438] (parameters) StderrLine: {'line': b'\n'}
+[0.083461] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_core.cmake\n'}
+[0.083485] (parameters) StderrLine: {'line': b'\n'}
+[0.083507] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.083528] (parameters) StderrLine: {'line': b'\n'}
+[0.083555] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake\n'}
+[0.083576] (parameters) StderrLine: {'line': b'\n'}
+[0.083598] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.083620] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_export_libraries.cmake:35 (_ament_cmake_export_libraries_register_environment_hook)\n'}
+[0.083641] (parameters) StderrLine: {'line': b'  CMakeLists.txt:22 (ament_export_libraries)\n'}
+[0.083662] (parameters) StderrLine: {'line': b'\n'}
+[0.083682] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.083702] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_cmake_export_libraries-extras.cmake:24 (find_package):\n'}
+[0.083723] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.083743] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_export_libraries.cmake:35 (_ament_cmake_export_libraries_register_environment_hook)\n'}
+[0.083763] (parameters) StderrLine: {'line': b'  CMakeLists.txt:22 (ament_export_libraries)\n'}
+[0.083783] (parameters) StderrLine: {'line': b'\n'}
+[0.083802] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.083822] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_cmake_export_libraries-extras.cmake:36 (find_package):\n'}
+[0.083842] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_core.cmake\n'}
+[0.083862] (parameters) StderrLine: {'line': b'\n'}
+[0.083882] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_core.cmake\n'}
+[0.083902] (parameters) StderrLine: {'line': b'\n'}
+[0.083921] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.083941] (parameters) StderrLine: {'line': b'\n'}
+[0.083961] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake\n'}
+[0.083981] (parameters) StderrLine: {'line': b'\n'}
+[0.084001] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.084020] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_export_libraries.cmake:36 (_ament_cmake_export_libraries_register_package_hook)\n'}
+[0.084040] (parameters) StderrLine: {'line': b'  CMakeLists.txt:22 (ament_export_libraries)\n'}
+[0.084060] (parameters) StderrLine: {'line': b'\n'}
+[0.084080] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.084099] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_cmake_export_libraries-extras.cmake:36 (find_package):\n'}
+[0.084120] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.084139] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_export_libraries/cmake/ament_export_libraries.cmake:36 (_ament_cmake_export_libraries_register_package_hook)\n'}
+[0.084159] (parameters) StderrLine: {'line': b'  CMakeLists.txt:22 (ament_export_libraries)\n'}
+[0.084179] (parameters) StderrLine: {'line': b'\n'}
+[0.084199] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.084218] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto-extras.cmake:21 (find_package):\n'}
+[0.084238] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_core.cmake\n'}
+[0.084260] (parameters) StderrLine: {'line': b'\n'}
+[0.084279] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_core.cmake\n'}
+[0.084300] (parameters) StderrLine: {'line': b'\n'}
+[0.084321] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.084340] (parameters) StderrLine: {'line': b'\n'}
+[0.084360] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake\n'}
+[0.084381] (parameters) StderrLine: {'line': b'\n'}
+[0.084400] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.084420] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_autoConfig.cmake:41 (include)\n'}
+[0.084440] (parameters) StderrLine: {'line': b'  CMakeLists.txt:37 (find_package)\n'}
+[0.084460] (parameters) StderrLine: {'line': b'\n'}
+[0.084479] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.084498] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto-extras.cmake:21 (find_package):\n'}
+[0.084518] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.084537] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_autoConfig.cmake:41 (include)\n'}
+[0.084558] (parameters) StderrLine: {'line': b'  CMakeLists.txt:37 (find_package)\n'}
+[0.084578] (parameters) StderrLine: {'line': b'\n'}
+[0.084598] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.084617] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto-extras.cmake:22 (find_package):\n'}
+[0.084637] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_test.cmake\n'}
+[0.084659] (parameters) StderrLine: {'line': b'\n'}
+[0.084678] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_test.cmake\n'}
+[0.084699] (parameters) StderrLine: {'line': b'\n'}
+[0.084719] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.084739] (parameters) StderrLine: {'line': b'\n'}
+[0.084759] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_test/cmake/ament_cmake_testConfig.cmake\n'}
+[0.084779] (parameters) StderrLine: {'line': b'\n'}
+[0.084798] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.084818] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_autoConfig.cmake:41 (include)\n'}
+[0.084837] (parameters) StderrLine: {'line': b'  CMakeLists.txt:37 (find_package)\n'}
+[0.084857] (parameters) StderrLine: {'line': b'\n'}
+[0.084898] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.084923] (parameters) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.084950] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto-extras.cmake:22 (find_package):\n'}
+[0.084973] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.084995] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_autoConfig.cmake:41 (include)\n'}
+[0.085017] (parameters) StderrLine: {'line': b'  CMakeLists.txt:37 (find_package)\n'}
+[0.085039] (parameters) StderrLine: {'line': b'\n'}
+[0.085059] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.085080] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at CMakeLists.txt:37 (find_package):\n'}
+[0.085101] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_lint_auto.cmake\n'}
+[0.085122] (parameters) StderrLine: {'line': b'\n'}
+[0.085141] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_lint_auto.cmake\n'}
+[0.085162] (parameters) StderrLine: {'line': b'\n'}
+[0.085182] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.085202] (parameters) StderrLine: {'line': b'\n'}
+[0.085222] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_autoConfig.cmake\n'}
+[0.085244] (parameters) StderrLine: {'line': b'\n'}
+[0.085264] (parameters) StderrLine: {'line': b'\n'}
+[0.085284] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.085303] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at CMakeLists.txt:37 (find_package):\n'}
+[0.085323] (parameters) StderrLine: {'line': b'\n'}
+[0.085342] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.099842] (-) TimerEvent: {}
+[0.114732] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package):\n'}
+[0.114832] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_lint_auto.cmake\n'}
+[0.114863] (parameters) StderrLine: {'line': b'\n'}
+[0.114888] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_lint_auto.cmake\n'}
+[0.114912] (parameters) StderrLine: {'line': b'\n'}
+[0.114934] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.114956] (parameters) StderrLine: {'line': b'\n'}
+[0.114977] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_autoConfig.cmake\n'}
+[0.114999] (parameters) StderrLine: {'line': b'\n'}
+[0.115019] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.115040] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.115061] (parameters) StderrLine: {'line': b'\n'}
+[0.115081] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.115102] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package):\n'}
+[0.115123] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.115144] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.115164] (parameters) StderrLine: {'line': b'\n'}
+[0.115183] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.115348] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:5 (find_package):\n'}
+[0.115391] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_libraries.cmake\n'}
+[0.115415] (parameters) StderrLine: {'line': b'\n'}
+[0.115437] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_libraries.cmake\n'}
+[0.115459] (parameters) StderrLine: {'line': b'\n'}
+[0.115480] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.115501] (parameters) StderrLine: {'line': b'\n'}
+[0.115521] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_libraries/cmake/ament_cmake_librariesConfig.cmake\n'}
+[0.115542] (parameters) StderrLine: {'line': b'\n'}
+[0.115562] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.115583] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.115605] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.115627] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.115648] (parameters) StderrLine: {'line': b'\n'}
+[0.115669] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.115691] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:5 (find_package):\n'}
+[0.115717] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.115739] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.115760] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.115782] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.115804] (parameters) StderrLine: {'line': b'\n'}
+[0.115826] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.115847] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package):\n'}
+[0.115867] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_core.cmake\n'}
+[0.115887] (parameters) StderrLine: {'line': b'\n'}
+[0.115907] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_core.cmake\n'}
+[0.115926] (parameters) StderrLine: {'line': b'\n'}
+[0.115946] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.115965] (parameters) StderrLine: {'line': b'\n'}
+[0.115985] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake\n'}
+[0.116005] (parameters) StderrLine: {'line': b'\n'}
+[0.116025] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.116045] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.116065] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.116084] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.116105] (parameters) StderrLine: {'line': b'\n'}
+[0.116124] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.116144] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package):\n'}
+[0.116165] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.116184] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.116204] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.116223] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.116243] (parameters) StderrLine: {'line': b'\n'}
+[0.116263] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.116282] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheck-extras.cmake:17 (find_package):\n'}
+[0.116309] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_test.cmake\n'}
+[0.116330] (parameters) StderrLine: {'line': b'\n'}
+[0.116350] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_test.cmake\n'}
+[0.116370] (parameters) StderrLine: {'line': b'\n'}
+[0.116390] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.116411] (parameters) StderrLine: {'line': b'\n'}
+[0.116430] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_test/cmake/ament_cmake_testConfig.cmake\n'}
+[0.116450] (parameters) StderrLine: {'line': b'\n'}
+[0.116471] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.116490] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheckConfig.cmake:41 (include)\n'}
+[0.116527] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.116557] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.116604] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.116634] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.116659] (parameters) StderrLine: {'line': b'\n'}
+[0.116682] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.116704] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheck-extras.cmake:17 (find_package):\n'}
+[0.116727] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.116750] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheckConfig.cmake:41 (include)\n'}
+[0.116771] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.116793] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.116814] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.116834] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.116855] (parameters) StderrLine: {'line': b'\n'}
+[0.116876] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.117136] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.117179] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_cppcheck.cmake\n'}
+[0.117204] (parameters) StderrLine: {'line': b'\n'}
+[0.117227] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_cppcheck.cmake\n'}
+[0.117251] (parameters) StderrLine: {'line': b'\n'}
+[0.117273] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.117295] (parameters) StderrLine: {'line': b'\n'}
+[0.117316] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheckConfig.cmake\n'}
+[0.117338] (parameters) StderrLine: {'line': b'\n'}
+[0.117359] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.117380] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.117403] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.117423] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.117444] (parameters) StderrLine: {'line': b'\n'}
+[0.117465] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.117486] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.117506] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.117527] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.117548] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.117583] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.117611] (parameters) StderrLine: {'line': b'\n'}
+[0.117633] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.117656] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_flake8/cmake/ament_cmake_flake8-extras.cmake:17 (find_package):\n'}
+[0.117678] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_test.cmake\n'}
+[0.117699] (parameters) StderrLine: {'line': b'\n'}
+[0.117720] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_test.cmake\n'}
+[0.117741] (parameters) StderrLine: {'line': b'\n'}
+[0.117762] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.117783] (parameters) StderrLine: {'line': b'\n'}
+[0.117804] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_test/cmake/ament_cmake_testConfig.cmake\n'}
+[0.117824] (parameters) StderrLine: {'line': b'\n'}
+[0.117844] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.117865] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_flake8/cmake/ament_cmake_flake8Config.cmake:41 (include)\n'}
+[0.117885] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.117905] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.117925] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.117945] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.117965] (parameters) StderrLine: {'line': b'\n'}
+[0.117985] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.118004] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_flake8/cmake/ament_cmake_flake8-extras.cmake:17 (find_package):\n'}
+[0.118025] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.118044] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_flake8/cmake/ament_cmake_flake8Config.cmake:41 (include)\n'}
+[0.118066] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.118086] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.118106] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.118126] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.118147] (parameters) StderrLine: {'line': b'\n'}
+[0.118168] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.118188] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.118209] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_flake8.cmake\n'}
+[0.118229] (parameters) StderrLine: {'line': b'\n'}
+[0.118249] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_flake8.cmake\n'}
+[0.118269] (parameters) StderrLine: {'line': b'\n'}
+[0.118289] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.118309] (parameters) StderrLine: {'line': b'\n'}
+[0.118329] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_flake8/cmake/ament_cmake_flake8Config.cmake\n'}
+[0.118349] (parameters) StderrLine: {'line': b'\n'}
+[0.118368] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.118388] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.118408] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.118427] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.118447] (parameters) StderrLine: {'line': b'\n'}
+[0.118467] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.118487] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.118508] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.118527] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.118549] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.118570] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.118590] (parameters) StderrLine: {'line': b'\n'}
+[0.118609] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.118629] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmake-extras.cmake:17 (find_package):\n'}
+[0.118649] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_test.cmake\n'}
+[0.118669] (parameters) StderrLine: {'line': b'\n'}
+[0.118688] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_test.cmake\n'}
+[0.118709] (parameters) StderrLine: {'line': b'\n'}
+[0.118729] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.118748] (parameters) StderrLine: {'line': b'\n'}
+[0.118768] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_test/cmake/ament_cmake_testConfig.cmake\n'}
+[0.118788] (parameters) StderrLine: {'line': b'\n'}
+[0.118808] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.118827] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmakeConfig.cmake:41 (include)\n'}
+[0.118848] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.118867] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.118887] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.118907] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.118927] (parameters) StderrLine: {'line': b'\n'}
+[0.118947] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.118966] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmake-extras.cmake:17 (find_package):\n'}
+[0.118986] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.119007] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmakeConfig.cmake:41 (include)\n'}
+[0.119028] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.119049] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.119069] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.119090] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.119110] (parameters) StderrLine: {'line': b'\n'}
+[0.119130] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.119150] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.119170] (parameters) StderrLine: {'line': b'  find_package considered the following paths for\n'}
+[0.119191] (parameters) StderrLine: {'line': b'  ament_cmake_lint_cmake.cmake\n'}
+[0.119211] (parameters) StderrLine: {'line': b'\n'}
+[0.119232] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_lint_cmake.cmake\n'}
+[0.119253] (parameters) StderrLine: {'line': b'\n'}
+[0.119274] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.119294] (parameters) StderrLine: {'line': b'\n'}
+[0.119314] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmakeConfig.cmake\n'}
+[0.119335] (parameters) StderrLine: {'line': b'\n'}
+[0.119356] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.119376] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.119396] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.119418] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.119439] (parameters) StderrLine: {'line': b'\n'}
+[0.119460] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.119480] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.119501] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.119521] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.119541] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.119561] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.119581] (parameters) StderrLine: {'line': b'\n'}
+[0.119600] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.119620] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_pep257/cmake/ament_cmake_pep257-extras.cmake:17 (find_package):\n'}
+[0.119641] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_test.cmake\n'}
+[0.119661] (parameters) StderrLine: {'line': b'\n'}
+[0.119681] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_test.cmake\n'}
+[0.119701] (parameters) StderrLine: {'line': b'\n'}
+[0.119721] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.119743] (parameters) StderrLine: {'line': b'\n'}
+[0.119763] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_test/cmake/ament_cmake_testConfig.cmake\n'}
+[0.119784] (parameters) StderrLine: {'line': b'\n'}
+[0.119803] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.119823] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_pep257/cmake/ament_cmake_pep257Config.cmake:41 (include)\n'}
+[0.119845] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.119865] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.119885] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.119906] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.119926] (parameters) StderrLine: {'line': b'\n'}
+[0.119947] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.119967] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_pep257/cmake/ament_cmake_pep257-extras.cmake:17 (find_package):\n'}
+[0.119988] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.120008] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_pep257/cmake/ament_cmake_pep257Config.cmake:41 (include)\n'}
+[0.120030] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.120050] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.120071] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.120094] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.120114] (parameters) StderrLine: {'line': b'\n'}
+[0.120135] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.120507] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.120562] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_pep257.cmake\n'}
+[0.120586] (parameters) StderrLine: {'line': b'\n'}
+[0.120609] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_pep257.cmake\n'}
+[0.120631] (parameters) StderrLine: {'line': b'\n'}
+[0.120653] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.120675] (parameters) StderrLine: {'line': b'\n'}
+[0.120696] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_pep257/cmake/ament_cmake_pep257Config.cmake\n'}
+[0.120717] (parameters) StderrLine: {'line': b'\n'}
+[0.120738] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.120759] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.120779] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.120800] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.120820] (parameters) StderrLine: {'line': b'\n'}
+[0.120841] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.120861] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.120882] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.120902] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.120922] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.120943] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.120963] (parameters) StderrLine: {'line': b'\n'}
+[0.120983] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.121003] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_uncrustify/cmake/ament_cmake_uncrustify-extras.cmake:17 (find_package):\n'}
+[0.121023] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_test.cmake\n'}
+[0.121043] (parameters) StderrLine: {'line': b'\n'}
+[0.121063] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_test.cmake\n'}
+[0.121083] (parameters) StderrLine: {'line': b'\n'}
+[0.121103] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.121123] (parameters) StderrLine: {'line': b'\n'}
+[0.121143] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_test/cmake/ament_cmake_testConfig.cmake\n'}
+[0.121163] (parameters) StderrLine: {'line': b'\n'}
+[0.121183] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.121204] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_uncrustify/cmake/ament_cmake_uncrustifyConfig.cmake:41 (include)\n'}
+[0.121224] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.121244] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.121264] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.121284] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.121307] (parameters) StderrLine: {'line': b'\n'}
+[0.121327] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.121347] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_uncrustify/cmake/ament_cmake_uncrustify-extras.cmake:17 (find_package):\n'}
+[0.121366] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.121386] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_uncrustify/cmake/ament_cmake_uncrustifyConfig.cmake:41 (include)\n'}
+[0.121406] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.121426] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.121446] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.121466] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.121486] (parameters) StderrLine: {'line': b'\n'}
+[0.121505] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.121524] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.121544] (parameters) StderrLine: {'line': b'  find_package considered the following paths for\n'}
+[0.121564] (parameters) StderrLine: {'line': b'  ament_cmake_uncrustify.cmake\n'}
+[0.121586] (parameters) StderrLine: {'line': b'\n'}
+[0.121606] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_uncrustify.cmake\n'}
+[0.121625] (parameters) StderrLine: {'line': b'\n'}
+[0.121648] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.121668] (parameters) StderrLine: {'line': b'\n'}
+[0.121687] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_uncrustify/cmake/ament_cmake_uncrustifyConfig.cmake\n'}
+[0.121709] (parameters) StderrLine: {'line': b'\n'}
+[0.121728] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.121749] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.121769] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.121789] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.121809] (parameters) StderrLine: {'line': b'\n'}
+[0.121828] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.121847] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.121867] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.121887] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.121906] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.121926] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.121946] (parameters) StderrLine: {'line': b'\n'}
+[0.121965] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.121986] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_xmllint/cmake/ament_cmake_xmllint-extras.cmake:17 (find_package):\n'}
+[0.122394] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_test.cmake\n'}
+[0.122518] (parameters) StderrLine: {'line': b'\n'}
+[0.122688] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_test.cmake\n'}
+[0.122869] (parameters) StderrLine: {'line': b'\n'}
+[0.122897] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.122921] (parameters) StderrLine: {'line': b'\n'}
+[0.122943] (parameters) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.122971] (parameters) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/fourdds/ros2_ws/src/parameters/include>\n'}
+[0.122995] (parameters) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.123017] (parameters) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.123040] (parameters) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.123061] (parameters) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.123083] (parameters) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.123105] (parameters) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.123126] (parameters) StdoutLine: {'line': b'-- Generating done\n'}
+[0.123147] (parameters) StdoutLine: {'line': b'-- Build files have been written to: /home/fourdds/ros2_ws/build/parameters\n'}
+[0.123169] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_test/cmake/ament_cmake_testConfig.cmake\n'}
+[0.123190] (parameters) StderrLine: {'line': b'\n'}
+[0.123211] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.123232] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_xmllint/cmake/ament_cmake_xmllintConfig.cmake:41 (include)\n'}
+[0.123254] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.123274] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.123294] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.123314] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.123335] (parameters) StderrLine: {'line': b'\n'}
+[0.123355] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.123376] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_xmllint/cmake/ament_cmake_xmllint-extras.cmake:17 (find_package):\n'}
+[0.123396] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.123417] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_xmllint/cmake/ament_cmake_xmllintConfig.cmake:41 (include)\n'}
+[0.123437] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[0.123458] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.123479] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.123499] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.123519] (parameters) StderrLine: {'line': b'\n'}
+[0.123539] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.123559] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.123581] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_xmllint.cmake\n'}
+[0.123601] (parameters) StderrLine: {'line': b'\n'}
+[0.123621] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_xmllint.cmake\n'}
+[0.123640] (parameters) StderrLine: {'line': b'\n'}
+[0.123660] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.123680] (parameters) StderrLine: {'line': b'\n'}
+[0.123703] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_xmllint/cmake/ament_cmake_xmllintConfig.cmake\n'}
+[0.123723] (parameters) StderrLine: {'line': b'\n'}
+[0.123743] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.123763] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.123784] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.123804] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.123823] (parameters) StderrLine: {'line': b'\n'}
+[0.123843] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.123863] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):\n'}
+[0.123884] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.123905] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake:41 (include)\n'}
+[0.123926] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package)\n'}
+[0.123945] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.123965] (parameters) StderrLine: {'line': b'\n'}
+[0.123984] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.124004] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package):\n'}
+[0.124024] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_lint_common.cmake\n'}
+[0.124043] (parameters) StderrLine: {'line': b'\n'}
+[0.124063] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_lint_common.cmake\n'}
+[0.124083] (parameters) StderrLine: {'line': b'\n'}
+[0.124102] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.124122] (parameters) StderrLine: {'line': b'\n'}
+[0.124141] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_lint_common/cmake/ament_lint_commonConfig.cmake\n'}
+[0.124162] (parameters) StderrLine: {'line': b'\n'}
+[0.124182] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.124202] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.124224] (parameters) StderrLine: {'line': b'\n'}
+[0.124244] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.124263] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:36 (find_package):\n'}
+[0.124284] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.124304] (parameters) StderrLine: {'line': b'  CMakeLists.txt:45 (ament_lint_auto_find_test_dependencies)\n'}
+[0.124325] (parameters) StderrLine: {'line': b'\n'}
+[0.124344] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.124365] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheck_lint_hook.cmake:15 (find_package):\n'}
+[0.124386] (parameters) StderrLine: {'line': b'  find_package considered the following paths for ament_cmake_core.cmake\n'}
+[0.124406] (parameters) StderrLine: {'line': b'\n'}
+[0.124426] (parameters) StderrLine: {'line': b'    /usr/share/cmake-3.22/Modules/Findament_cmake_core.cmake\n'}
+[0.124446] (parameters) StderrLine: {'line': b'\n'}
+[0.124466] (parameters) StderrLine: {'line': b'  The file was not found.\n'}
+[0.124486] (parameters) StderrLine: {'line': b'\n'}
+[0.124506] (parameters) StderrLine: {'line': b'    /opt/ros/humble/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake\n'}
+[0.124526] (parameters) StderrLine: {'line': b'\n'}
+[0.124548] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.124567] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[0.124587] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_package_hook.cmake:21 (ament_execute_extensions)\n'}
+[0.124607] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[0.124626] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:66 (ament_execute_extensions)\n'}
+[0.124646] (parameters) StderrLine: {'line': b'  CMakeLists.txt:48 (ament_package)\n'}
+[0.124665] (parameters) StderrLine: {'line': b'\n'}
+[0.124684] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.124704] (parameters) StderrLine: {'line': b'\x1b[0mCMake Debug Log at /opt/ros/humble/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheck_lint_hook.cmake:15 (find_package):\n'}
+[0.124724] (parameters) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[0.124744] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[0.124764] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_package_hook.cmake:21 (ament_execute_extensions)\n'}
+[0.124784] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[0.124804] (parameters) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:66 (ament_execute_extensions)\n'}
+[0.124823] (parameters) StderrLine: {'line': b'  CMakeLists.txt:48 (ament_package)\n'}
+[0.124843] (parameters) StderrLine: {'line': b'\n'}
+[0.124863] (parameters) StderrLine: {'line': b'\x1b[0m\n'}
+[0.131017] (parameters) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Parameters\x1b[0m\n'}
+[0.136555] (parameters) StdoutLine: {'line': b'[100%] Built target Parameters\n'}
+[0.140941] (parameters) CommandEnded: {'returncode': 0}
+[0.152182] (parameters) JobProgress: {'identifier': 'parameters', 'progress': 'install'}
+[0.155537] (parameters) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/parameters'], 'cwd': '/home/fourdds/ros2_ws/build/parameters', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/stigmergy/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/74475_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '3329f29f-05ee-4710-a1be-e555e10d4c64'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/parameters'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/stigmergy/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.158394] (parameters) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.158544] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/library_path.sh\n'}
+[0.158639] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/library_path.dsv\n'}
+[0.158669] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/include/parameters\n'}
+[0.158716] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/include/parameters/yaml.hpp\n'}
+[0.158878] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/include/parameters/Parameters.hpp\n'}
+[0.159007] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/lib/libParameters.a\n'}
+[0.159073] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/ament_index/resource_index/package_run_dependencies/parameters\n'}
+[0.159192] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/ament_index/resource_index/parent_prefix_path/parameters\n'}
+[0.159251] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/ament_prefix_path.sh\n'}
+[0.159316] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/ament_prefix_path.dsv\n'}
+[0.159448] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/path.sh\n'}
+[0.159493] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/path.dsv\n'}
+[0.159562] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.bash\n'}
+[0.159664] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.sh\n'}
+[0.159740] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.zsh\n'}
+[0.159783] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.dsv\n'}
+[0.159821] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/share/parameters/package.dsv\n'}
+[0.159887] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/ament_index/resource_index/packages/parameters\n'}
+[0.159963] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.160186] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.160482] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/parametersConfig.cmake\n'}
+[0.160579] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/parametersConfig-version.cmake\n'}
+[0.160655] (parameters) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ros2_ws/install/parameters/share/parameters/package.xml\n'}
+[0.160996] (parameters) CommandEnded: {'returncode': 0}
+[0.178957] (parameters) JobEnded: {'identifier': 'parameters', 'rc': 0}
+[0.179860] (-) EventReactorShutdown: {}

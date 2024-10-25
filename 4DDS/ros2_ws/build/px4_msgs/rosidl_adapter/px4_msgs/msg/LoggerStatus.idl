@@ -1,0 +1,55 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/LoggerStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module LoggerStatus_Constants {
+      @verbatim (language="comment", text=
+        "Normal, full size log")
+      const uint8 LOGGER_TYPE_FULL = 0;
+      @verbatim (language="comment", text=
+        "reduced mission log (e.g. for geotagging)")
+      const uint8 LOGGER_TYPE_MISSION = 1;
+      const uint8 BACKEND_FILE = 1;
+      const uint8 BACKEND_MAVLINK = 2;
+      const uint8 BACKEND_ALL = 3;
+    };
+    struct LoggerStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      uint8 type;
+
+      uint8 backend;
+
+      @verbatim (language="comment", text=
+        "total written to log in kiloBytes")
+      float total_written_kb;
+
+      @verbatim (language="comment", text=
+        "write rate in kiloBytes/s")
+      float write_rate_kb_s;
+
+      @verbatim (language="comment", text=
+        "number of failed buffer writes due to buffer overflow")
+      uint32 dropouts;
+
+      @verbatim (language="comment", text=
+        "messages misssed")
+      uint32 message_gaps;
+
+      @verbatim (language="comment", text=
+        "current buffer fill in Bytes")
+      uint32 buffer_used_bytes;
+
+      @verbatim (language="comment", text=
+        "total buffer size in Bytes")
+      uint32 buffer_size_bytes;
+
+      uint8 num_messages;
+    };
+  };
+};

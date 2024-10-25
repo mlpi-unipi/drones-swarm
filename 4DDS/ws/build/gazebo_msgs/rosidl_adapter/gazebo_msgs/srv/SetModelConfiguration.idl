@@ -1,0 +1,37 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/SetModelConfiguration.srv
+// generated code does not contain a copyright notice
+
+
+module gazebo_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Set joint positions for a model")
+    struct SetModelConfiguration_Request {
+      @verbatim (language="comment", text=
+        "model to set state")
+      string model_name;
+
+      @verbatim (language="comment", text=
+        "UNUSED")
+      string urdf_param_name;
+
+      @verbatim (language="comment", text=
+        "list of joints to set positions.  if joint is not listed here, preserve current position.")
+      sequence<string> joint_names;
+
+      @verbatim (language="comment", text=
+        "set to this position.")
+      sequence<double> joint_positions;
+    };
+    struct SetModelConfiguration_Response {
+      @verbatim (language="comment", text=
+        "return true if setting state successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

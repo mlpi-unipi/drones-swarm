@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/SetModelState.srv
+// generated code does not contain a copyright notice
+
+#include "gazebo_msgs/msg/ModelState.idl"
+
+module gazebo_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Deprecated, kept for ROS 1 bridge." "\n"
+      "Use SetEntityState")
+    struct SetModelState_Request {
+      gazebo_msgs::msg::ModelState model_state;
+    };
+    struct SetModelState_Response {
+      @verbatim (language="comment", text=
+        "return true if setting state successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

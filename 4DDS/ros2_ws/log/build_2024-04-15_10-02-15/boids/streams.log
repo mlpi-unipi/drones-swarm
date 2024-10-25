@@ -1,0 +1,64 @@
+[0.007s] Invoking command in '/home/fourdds/ros2_ws/build/boids': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24
+[0.023s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.111s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.132s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.134s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.139s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.148s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.160s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.170s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.173s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.228s] -- Found px4_msgs: 2.0.1 (/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.248s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.283s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.285s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.353s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.428s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.476s] -- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)
+[0.477s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.576s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.576s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name boids
+[0.576s]   --arguments-file
+[0.576s]   /home/fourdds/ros2_ws/build/boids/rosidl_adapter__arguments__boids.json
+[0.576s]   --output-dir /home/fourdds/ros2_ws/build/boids/rosidl_adapter/boids
+[0.576s]   --output-file /home/fourdds/ros2_ws/build/boids/rosidl_adapter/boids.idls)
+[0.576s]   returned error code 1:
+[0.577s] 
+[0.577s]   Error processing 'float64 neighbors_latitudes_ecef[]' of
+[0.577s]   'boids/GetNeighbors_Response': ''neighbors_latitudes_ecef[]' is an invalid
+[0.577s]   field name.  It should have the pattern
+[0.577s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[0.577s] 
+[0.577s]   Traceback (most recent call last):
+[0.577s] 
+[0.577s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[0.577s]       return _run_code(code, main_globals, None,
+[0.577s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[0.577s]       exec(code, run_globals)
+[0.577s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.577s]       sys.exit(main())
+[0.577s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[0.577s]       abs_idl_file = convert_to_idl(
+[0.577s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl
+[0.577s]       return convert_srv_to_idl(
+[0.577s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl
+[0.577s]       srv = parse_service_string(package_name, input_file.stem, content)
+[0.577s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 863, in parse_service_string
+[0.577s]       response_message = parse_message_string(
+[0.577s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 519, in parse_message_string
+[0.577s]       fields.append(Field(
+[0.577s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 354, in __init__
+[0.577s]       raise NameError(
+[0.577s] 
+[0.577s]   NameError: 'neighbors_latitudes_ecef[]' is an invalid field name.  It
+[0.577s]   should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[0.577s] 
+[0.578s] Call Stack (most recent call first):
+[0.578s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.578s]   CMakeLists.txt:33 (rosidl_generate_interfaces)
+[0.578s] 
+[0.578s] [0m
+[0.578s] -- Configuring incomplete, errors occurred!
+[0.578s] See also "/home/fourdds/ros2_ws/build/boids/CMakeFiles/CMakeOutput.log".
+[0.580s] gmake: *** [Makefile:335: cmake_check_build_system] Error 1
+[0.581s] Invoked command in '/home/fourdds/ros2_ws/build/boids' returned '2': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24

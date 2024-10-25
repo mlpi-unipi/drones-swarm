@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/LaunchDetectionStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module LaunchDetectionStatus_Constants {
+      @verbatim (language="comment", text=
+        "waiting for launch")
+      const uint8 STATE_WAITING_FOR_LAUNCH = 0;
+      @verbatim (language="comment", text=
+        "launch detected, but keep motor(s) disabled (e.g. because it can't spin freely while on catapult)")
+      const uint8 STATE_LAUNCH_DETECTED_DISABLED_MOTOR = 1;
+      @verbatim (language="comment", text=
+        "launch detected, use normal takeoff/flying configuration")
+      const uint8 STATE_FLYING = 2;
+    };
+    @verbatim (language="comment", text=
+      "Status of the launch detection state machine (fixed-wing only)")
+    struct LaunchDetectionStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      uint8 launch_detection_state;
+    };
+  };
+};

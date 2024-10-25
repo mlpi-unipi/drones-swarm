@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/ApplyJointEffort.srv
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+#include "builtin_interfaces/msg/Time.idl"
+
+module gazebo_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "set urdf joint effort")
+    struct ApplyJointEffort_Request {
+      @verbatim (language="comment", text=
+        "joint to apply wrench (linear force and torque)")
+      string joint_name;
+
+      @verbatim (language="comment", text=
+        "effort to apply")
+      double effort;
+
+      @verbatim (language="comment", text=
+        "optional wrench application start time (seconds)" "\n"
+        "if start_time < current time, start as soon as possible")
+      builtin_interfaces::msg::Time start_time;
+
+      @verbatim (language="comment", text=
+        "optional duration of wrench application time (seconds)" "\n"
+        "if duration < 0, apply wrench continuously without end" "\n"
+        "if duration = 0, do nothing" "\n"
+        "if duration < step size, assume step size and" "\n"
+        "display warning in status_message")
+      builtin_interfaces::msg::Duration duration;
+    };
+    struct ApplyJointEffort_Response {
+      @verbatim (language="comment", text=
+        "return true if effort application is successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

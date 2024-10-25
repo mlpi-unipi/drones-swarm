@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/ParameterResetRequest.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module ParameterResetRequest_Constants {
+      const uint8 ORB_QUEUE_LENGTH = 4;
+    };
+    @verbatim (language="comment", text=
+      "ParameterResetRequest : Used by the primary to reset one or all parameter value(s) on the remote")
+    struct ParameterResetRequest {
+      uint64 timestamp;
+
+      uint16 parameter_index;
+
+      @verbatim (language="comment", text=
+        "If this is true then ignore parameter_index")
+      boolean reset_all;
+    };
+  };
+};

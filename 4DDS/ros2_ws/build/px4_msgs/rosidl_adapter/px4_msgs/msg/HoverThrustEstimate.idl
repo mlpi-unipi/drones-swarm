@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/HoverThrustEstimate.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    struct HoverThrustEstimate {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "time of corresponding sensor data last used for this estimate")
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "estimated hover thrust [0.1, 0.9]")
+      float hover_thrust;
+
+      @verbatim (language="comment", text=
+        "estimated hover thrust variance")
+      float hover_thrust_var;
+
+      @verbatim (language="comment", text=
+        "innovation of the last acceleration fusion")
+      float accel_innov;
+
+      @verbatim (language="comment", text=
+        "innovation variance of the last acceleration fusion")
+      float accel_innov_var;
+
+      @verbatim (language="comment", text=
+        "normalized innovation squared test ratio")
+      float accel_innov_test_ratio;
+
+      @verbatim (language="comment", text=
+        "vertical acceleration noise variance estimated form innovation residual")
+      float accel_noise_var;
+
+      boolean valid;
+    };
+  };
+};

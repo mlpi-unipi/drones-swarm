@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/DeleteModel.srv
+// generated code does not contain a copyright notice
+
+
+module gazebo_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Deprecated, kept for ROS 1 bridge." "\n"
+      "Use DeleteEntity")
+    struct DeleteModel_Request {
+      @verbatim (language="comment", text=
+        "name of the Gazebo Model to be deleted")
+      string model_name;
+    };
+    struct DeleteModel_Response {
+      @verbatim (language="comment", text=
+        "return true if deletion is successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

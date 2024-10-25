@@ -1,0 +1,42 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/RadioStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    struct RadioStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "local signal strength")
+      uint8 rssi;
+
+      @verbatim (language="comment", text=
+        "remote signal strength")
+      uint8 remote_rssi;
+
+      @verbatim (language="comment", text=
+        "how full the tx buffer is as a percentage")
+      uint8 txbuf;
+
+      @verbatim (language="comment", text=
+        "background noise level")
+      uint8 noise;
+
+      @verbatim (language="comment", text=
+        "remote background noise level")
+      uint8 remote_noise;
+
+      @verbatim (language="comment", text=
+        "receive errors")
+      uint16 rxerrors;
+
+      @verbatim (language="comment", text=
+        "count of error corrected packets")
+      uint16 fix;
+    };
+  };
+};

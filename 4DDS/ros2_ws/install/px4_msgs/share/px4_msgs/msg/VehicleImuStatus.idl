@@ -1,0 +1,80 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/VehicleImuStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef uint32 uint32__3[3];
+    typedef float float__3[3];
+    struct VehicleImuStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "unique device ID for the sensor that does not change between power cycles")
+      uint32 accel_device_id;
+
+      @verbatim (language="comment", text=
+        "unique device ID for the sensor that does not change between power cycles")
+      uint32 gyro_device_id;
+
+      @verbatim (language="comment", text=
+        "total clipping per axis")
+      uint32__3 accel_clipping;
+
+      @verbatim (language="comment", text=
+        "total clipping per axis")
+      uint32__3 gyro_clipping;
+
+      uint32 accel_error_count;
+
+      uint32 gyro_error_count;
+
+      float accel_rate_hz;
+
+      float gyro_rate_hz;
+
+      @verbatim (language="comment", text=
+        "full raw sensor sample rate (Hz)")
+      float accel_raw_rate_hz;
+
+      @verbatim (language="comment", text=
+        "full raw sensor sample rate (Hz)")
+      float gyro_raw_rate_hz;
+
+      @verbatim (language="comment", text=
+        "high frequency vibration level in the accelerometer data (m/s/s)")
+      float accel_vibration_metric;
+
+      @verbatim (language="comment", text=
+        "high frequency vibration level in the gyro data (rad/s)")
+      float gyro_vibration_metric;
+
+      @verbatim (language="comment", text=
+        "average IMU delta angle coning correction (rad^2)")
+      float delta_angle_coning_metric;
+
+      @verbatim (language="comment", text=
+        "average accelerometer readings since last publication")
+      float__3 mean_accel;
+
+      @verbatim (language="comment", text=
+        "average gyroscope readings since last publication")
+      float__3 mean_gyro;
+
+      @verbatim (language="comment", text=
+        "accelerometer variance since last publication")
+      float__3 var_accel;
+
+      @verbatim (language="comment", text=
+        "gyroscope variance since last publication")
+      float__3 var_gyro;
+
+      float temperature_accel;
+
+      float temperature_gyro;
+    };
+  };
+};

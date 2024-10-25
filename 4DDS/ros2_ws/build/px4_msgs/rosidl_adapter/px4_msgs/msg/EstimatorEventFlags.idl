@@ -1,0 +1,144 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/EstimatorEventFlags.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    struct EstimatorEventFlags {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "the timestamp of the raw data (microseconds)")
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "information events" "\n"
+        "number of information event changes")
+      uint32 information_event_changes;
+
+      @verbatim (language="comment", text=
+        "0 - true when gps quality checks are passing passed")
+      boolean gps_checks_passed;
+
+      @verbatim (language="comment", text=
+        "1 - true when the velocity states are reset to the gps measurement")
+      boolean reset_vel_to_gps;
+
+      @verbatim (language="comment", text=
+        "2 - true when the velocity states are reset using the optical flow measurement")
+      boolean reset_vel_to_flow;
+
+      @verbatim (language="comment", text=
+        "3 - true when the velocity states are reset to the vision system measurement")
+      boolean reset_vel_to_vision;
+
+      @verbatim (language="comment", text=
+        "4 - true when the velocity states are reset to zero")
+      boolean reset_vel_to_zero;
+
+      @verbatim (language="comment", text=
+        "5 - true when the position states are reset to the last known position")
+      boolean reset_pos_to_last_known;
+
+      @verbatim (language="comment", text=
+        "6 - true when the position states are reset to the gps measurement")
+      boolean reset_pos_to_gps;
+
+      @verbatim (language="comment", text=
+        "7 - true when the position states are reset to the vision system measurement")
+      boolean reset_pos_to_vision;
+
+      @verbatim (language="comment", text=
+        "8 - true when the filter starts using gps measurements to correct the state estimates")
+      boolean starting_gps_fusion;
+
+      @verbatim (language="comment", text=
+        "9 - true when the filter starts using vision system position measurements to correct the state estimates")
+      boolean starting_vision_pos_fusion;
+
+      @verbatim (language="comment", text=
+        "10 - true when the filter starts using vision system velocity measurements to correct the state estimates")
+      boolean starting_vision_vel_fusion;
+
+      @verbatim (language="comment", text=
+        "11 - true when the filter starts using vision system yaw  measurements to correct the state estimates")
+      boolean starting_vision_yaw_fusion;
+
+      @verbatim (language="comment", text=
+        "12 - true when the filter resets the yaw to an estimate derived from IMU and GPS data")
+      boolean yaw_aligned_to_imu_gps;
+
+      @verbatim (language="comment", text=
+        "13 - true when the vertical position state is reset to the baro measurement")
+      boolean reset_hgt_to_baro;
+
+      @verbatim (language="comment", text=
+        "14 - true when the vertical position state is reset to the gps measurement")
+      boolean reset_hgt_to_gps;
+
+      @verbatim (language="comment", text=
+        "15 - true when the vertical position state is reset to the rng measurement")
+      boolean reset_hgt_to_rng;
+
+      @verbatim (language="comment", text=
+        "16 - true when the vertical position state is reset to the ev measurement")
+      boolean reset_hgt_to_ev;
+
+      @verbatim (language="comment", text=
+        "warning events" "\n"
+        "number of warning event changes")
+      uint32 warning_event_changes;
+
+      @verbatim (language="comment", text=
+        "0 - true when the gps is failing quality checks")
+      boolean gps_quality_poor;
+
+      @verbatim (language="comment", text=
+        "1 - true when the gps data has not been used to correct the state estimates for a significant time period")
+      boolean gps_fusion_timout;
+
+      @verbatim (language="comment", text=
+        "2 - true when the gps data has stopped for a significant time period")
+      boolean gps_data_stopped;
+
+      @verbatim (language="comment", text=
+        "3 - true when the gps data has stopped for a significant time period but the filter is able to use other sources of data to maintain navigation")
+      boolean gps_data_stopped_using_alternate;
+
+      @verbatim (language="comment", text=
+        "4 - true when the height sensor has not been used to correct the state estimates for a significant time period")
+      boolean height_sensor_timeout;
+
+      @verbatim (language="comment", text=
+        "5 - true when the filter has insufficient data to estimate velocity and position and is falling back to an attitude, height and height rate mode of operation")
+      boolean stopping_navigation;
+
+      @verbatim (language="comment", text=
+        "6 - true when the filter has detected bad acceerometer bias state esitmstes and has reset the corresponding covariance matrix elements")
+      boolean invalid_accel_bias_cov_reset;
+
+      @verbatim (language="comment", text=
+        "7 - true when the filter has detected an invalid yaw estimate and has reset the yaw angle to the GPS ground course")
+      boolean bad_yaw_using_gps_course;
+
+      @verbatim (language="comment", text=
+        "8 - true when the filter has detected bad magnetometer data and is stopping further use of the magnetometer data")
+      boolean stopping_mag_use;
+
+      @verbatim (language="comment", text=
+        "9 - true when the vision system data has stopped for a significant time period")
+      boolean vision_data_stopped;
+
+      @verbatim (language="comment", text=
+        "10 - true when the filter has detected bad magnetometer data, has reset the yaw to anothter source of data and has stopped further use of the magnetometer data")
+      boolean emergency_yaw_reset_mag_stopped;
+
+      @verbatim (language="comment", text=
+        "11 - true when the filter has detected bad GNSS yaw data, has reset the yaw to anothter source of data and has stopped further use of the GNSS yaw data")
+      boolean emergency_yaw_reset_gps_yaw_stopped;
+    };
+  };
+};

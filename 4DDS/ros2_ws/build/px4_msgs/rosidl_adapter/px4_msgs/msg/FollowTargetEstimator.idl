@@ -1,0 +1,55 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/FollowTargetEstimator.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef float float__3[3];
+    struct FollowTargetEstimator {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "time of last filter reset (microseconds)")
+      uint64 last_filter_reset_timestamp;
+
+      @verbatim (language="comment", text=
+        "True if estimator states are okay to be used")
+      boolean valid;
+
+      @verbatim (language="comment", text=
+        "True if estimator stopped receiving follow_target messages for some time. The estimate can still be valid, though it might be inaccurate.")
+      boolean stale;
+
+      @verbatim (language="comment", text=
+        "Estimated target latitude")
+      double lat_est;
+
+      @verbatim (language="comment", text=
+        "Estimated target longitude")
+      double lon_est;
+
+      @verbatim (language="comment", text=
+        "Estimated target altitude")
+      float alt_est;
+
+      @verbatim (language="comment", text=
+        "Estimated target NED position (m)")
+      float__3 pos_est;
+
+      @verbatim (language="comment", text=
+        "Estimated target NED velocity (m/s)")
+      float__3 vel_est;
+
+      @verbatim (language="comment", text=
+        "Estimated target NED acceleration (m^2/s)")
+      float__3 acc_est;
+
+      uint64 prediction_count;
+
+      uint64 fusion_count;
+    };
+  };
+};

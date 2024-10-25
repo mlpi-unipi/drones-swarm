@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/Gripper.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module Gripper_Constants {
+      const int8 COMMAND_GRAB = 0;
+      const int8 COMMAND_RELEASE = 1;
+    };
+    @verbatim (language="comment", text=
+      "Used to command an actuation in the gripper, which is mapped to a specific output in the control allocation module")
+    struct Gripper {
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Commanded state for the gripper")
+      int8 command;
+    };
+  };
+};

@@ -1,0 +1,59 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/RegisterExtComponentRequest.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef uint8 uint8__25[25];
+    module RegisterExtComponentRequest_Constants {
+      @verbatim (language="comment", text=
+        "API version compatibility. Increase this on a breaking semantic change. Changes to any message field are detected separately and do not require an API version change.")
+      const uint16 LATEST_PX4_ROS2_API_VERSION = 1;
+      const uint8 ORB_QUEUE_LENGTH = 2;
+    };
+    @verbatim (language="comment", text=
+      "Request to register an external component")
+    struct RegisterExtComponentRequest {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "ID, set this to a random value")
+      uint64 request_id;
+
+      @verbatim (language="comment", text=
+        "either the requested mode name, or component name")
+      uint8__25 name;
+
+      @verbatim (language="comment", text=
+        "Set to LATEST_PX4_ROS2_API_VERSION")
+      uint16 px4_ros2_api_version;
+
+      @verbatim (language="comment", text=
+        "Components to be registered")
+      boolean register_arming_check;
+
+      @verbatim (language="comment", text=
+        "registering a mode also requires arming_check to be set")
+      boolean register_mode;
+
+      @verbatim (language="comment", text=
+        "registering an executor also requires a mode to be registered (which is the owned mode by the executor)")
+      boolean register_mode_executor;
+
+      @verbatim (language="comment", text=
+        "set to true if an internal mode should be replaced")
+      boolean enable_replace_internal_mode;
+
+      @verbatim (language="comment", text=
+        "vehicle_status::NAVIGATION_STATE_*")
+      uint8 replace_internal_mode;
+
+      @verbatim (language="comment", text=
+        "switch to the registered mode (can only be set in combination with an executor)")
+      boolean activate_mode_immediately;
+    };
+  };
+};

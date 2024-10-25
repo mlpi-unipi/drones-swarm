@@ -1,0 +1,68 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/SensorOpticalFlow.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef float float__2[2];
+    typedef float float__3[3];
+    module SensorOpticalFlow_Constants {
+      const uint8 MODE_UNKNOWN = 0;
+      const uint8 MODE_BRIGHT = 1;
+      const uint8 MODE_LOWLIGHT = 2;
+      const uint8 MODE_SUPER_LOWLIGHT = 3;
+    };
+    struct SensorOpticalFlow {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "unique device ID for the sensor that does not change between power cycles")
+      uint32 device_id;
+
+      @verbatim (language="comment", text=
+        "(radians) optical flow in radians where a positive value is produced by a RH rotation about the body axis")
+      float__2 pixel_flow;
+
+      @verbatim (language="comment", text=
+        "(radians) accumulated gyro radians where a positive value is produced by a RH rotation about the body axis. Set to NaN if flow sensor does not have 3-axis gyro data.")
+      float__3 delta_angle;
+
+      boolean delta_angle_available;
+
+      @verbatim (language="comment", text=
+        "(meters) Distance to the center of the flow field")
+      float distance_m;
+
+      boolean distance_available;
+
+      @verbatim (language="comment", text=
+        "(microseconds) accumulation timespan in microseconds")
+      uint32 integration_timespan_us;
+
+      @verbatim (language="comment", text=
+        "quality, 0: bad quality, 255: maximum quality")
+      uint8 quality;
+
+      uint32 error_count;
+
+      @verbatim (language="comment", text=
+        "(radians/s) Magnitude of maximum angular which the optical flow sensor can measure reliably")
+      float max_flow_rate;
+
+      @verbatim (language="comment", text=
+        "(meters) Minimum distance from ground at which the optical flow sensor operates reliably")
+      float min_ground_distance;
+
+      @verbatim (language="comment", text=
+        "(meters) Maximum distance from ground at which the optical flow sensor operates reliably")
+      float max_ground_distance;
+
+      uint8 mode;
+    };
+  };
+};

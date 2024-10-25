@@ -1,0 +1,928 @@
+[0.000000] (-) TimerEvent: {}
+[0.000274] (-) JobUnselected: {'identifier': 'cv_bridge'}
+[0.000321] (-) JobUnselected: {'identifier': 'gazebo_dev'}
+[0.000331] (-) JobUnselected: {'identifier': 'gazebo_plugins'}
+[0.000338] (-) JobUnselected: {'identifier': 'gazebo_ros'}
+[0.000345] (-) JobUnselected: {'identifier': 'gazebo_ros_pkgs'}
+[0.000352] (-) JobUnselected: {'identifier': 'image_geometry'}
+[0.000358] (-) JobUnselected: {'identifier': 'opencv_tests'}
+[0.000379] (-) JobUnselected: {'identifier': 'vision_opencv'}
+[0.000402] (gazebo_msgs) JobQueued: {'identifier': 'gazebo_msgs', 'dependencies': OrderedDict()}
+[0.000425] (gazebo_msgs) JobStarted: {'identifier': 'gazebo_msgs'}
+[0.006972] (gazebo_msgs) JobProgress: {'identifier': 'gazebo_msgs', 'progress': 'cmake'}
+[0.007968] (gazebo_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_msgs', '-DCMAKE_INSTALL_PREFIX=/home/fourdds/ws/install/gazebo_msgs'], 'cwd': '/home/fourdds/ws/build/gazebo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/target_detection/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/obstacle_avoidance/lib:/home/fourdds/ros2_ws/install/parameters/lib:/home/fourdds/ros2_ws/install/fdds_messages/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS_'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/33464_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '153860dd-bb2b-40d1-a6b7-4756c1a137fa'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy_map:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ros2_ws/install/analysis:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ws/build/gazebo_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/fdds_messages/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy_map:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ros2_ws/install/analysis:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.016927] (gazebo_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.083848] (gazebo_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.087672] (gazebo_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[0.098561] (gazebo_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.099734] (-) TimerEvent: {}
+[0.100296] (gazebo_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.103389] (gazebo_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.108569] (gazebo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.115150] (gazebo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.120802] (gazebo_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.127317] (gazebo_msgs) StdoutLine: {'line': b'-- Found trajectory_msgs: 4.2.4 (/opt/ros/humble/share/trajectory_msgs/cmake)\n'}
+[0.141588] (gazebo_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.199832] (-) TimerEvent: {}
+[0.300080] (-) TimerEvent: {}
+[0.400366] (-) TimerEvent: {}
+[0.470835] (gazebo_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cppcheck: 0.12.11 (/opt/ros/humble/share/ament_cmake_cppcheck/cmake)\n'}
+[0.471160] (gazebo_msgs) StdoutLine: {'line': b'-- Found ament_cmake_cpplint: 0.12.11 (/opt/ros/humble/share/ament_cmake_cpplint/cmake)\n'}
+[0.471507] (gazebo_msgs) StdoutLine: {'line': b'-- Found ament_cmake_uncrustify: 0.12.11 (/opt/ros/humble/share/ament_cmake_uncrustify/cmake)\n'}
+[0.471994] (gazebo_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.500465] (-) TimerEvent: {}
+[0.600727] (-) TimerEvent: {}
+[0.701048] (-) TimerEvent: {}
+[0.721226] (gazebo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.801159] (-) TimerEvent: {}
+[0.811944] (gazebo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.826572] (gazebo_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.838795] (gazebo_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.838903] (gazebo_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.838934] (gazebo_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[0.864850] (gazebo_msgs) StdoutLine: {'line': b'-- Found ament_cmake_flake8: 0.12.11 (/opt/ros/humble/share/ament_cmake_flake8/cmake)\n'}
+[0.865166] (gazebo_msgs) StdoutLine: {'line': b'-- Found ament_cmake_pep257: 0.12.11 (/opt/ros/humble/share/ament_cmake_pep257/cmake)\n'}
+[0.879240] (gazebo_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.901240] (-) TimerEvent: {}
+[0.942912] (gazebo_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[0.944326] (gazebo_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/fourdds/ws/build/gazebo_msgs\n'}
+[0.949877] (gazebo_msgs) CommandEnded: {'returncode': 0}
+[0.951276] (gazebo_msgs) JobProgress: {'identifier': 'gazebo_msgs', 'progress': 'build'}
+[0.951415] (gazebo_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ws/build/gazebo_msgs', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ws/build/gazebo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/target_detection/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/obstacle_avoidance/lib:/home/fourdds/ros2_ws/install/parameters/lib:/home/fourdds/ros2_ws/install/fdds_messages/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS_'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/33464_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '153860dd-bb2b-40d1-a6b7-4756c1a137fa'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy_map:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ros2_ws/install/analysis:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ws/build/gazebo_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/fdds_messages/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy_map:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ros2_ws/install/analysis:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.985206] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_generator_c\x1b[0m\n'}
+[0.987256] (gazebo_msgs) StdoutLine: {'line': b'[  0%] Built target gazebo_msgs__cpp\n'}
+[0.988714] (gazebo_msgs) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_symlink_gazebo_msgs\n'}
+[0.996697] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.997883] (gazebo_msgs) StdoutLine: {'line': b'[ 12%] Built target gazebo_msgs__rosidl_generator_c\n'}
+[0.999074] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.999195] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.001320] (-) TimerEvent: {}
+[1.005783] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[1.008664] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.010363] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.019575] (gazebo_msgs) StdoutLine: {'line': b'[ 37%] Built target gazebo_msgs__rosidl_typesupport_cpp\n'}
+[1.019728] (gazebo_msgs) StdoutLine: {'line': b'[ 37%] Built target gazebo_msgs__rosidl_typesupport_c\n'}
+[1.021852] (gazebo_msgs) StdoutLine: {'line': b'[ 50%] Built target gazebo_msgs__rosidl_typesupport_introspection_c\n'}
+[1.023777] (gazebo_msgs) StdoutLine: {'line': b'[ 63%] Built target gazebo_msgs__rosidl_typesupport_introspection_cpp\n'}
+[1.029194] (gazebo_msgs) StdoutLine: {'line': b'[ 75%] Built target gazebo_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[1.034896] (gazebo_msgs) StdoutLine: {'line': b'[ 88%] Built target gazebo_msgs__rosidl_typesupport_fastrtps_c\n'}
+[1.045136] (gazebo_msgs) StdoutLine: {'line': b'[ 88%] Built target gazebo_msgs\n'}
+[1.055871] (gazebo_msgs) StdoutLine: {'line': b'[ 88%] Built target gazebo_msgs__py\n'}
+[1.066446] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_generator_py\x1b[0m\n'}
+[1.087778] (gazebo_msgs) StdoutLine: {'line': b'[100%] Built target gazebo_msgs__rosidl_generator_py\n'}
+[1.092735] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[1.092832] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[1.092862] (gazebo_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target gazebo_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[1.096298] (gazebo_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.099970] (gazebo_msgs) StdoutLine: {'line': b'[100%] Built target gazebo_msgs__rosidl_typesupport_c__pyext\n'}
+[1.100061] (gazebo_msgs) StdoutLine: {'line': b'[100%] Built target gazebo_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.100094] (gazebo_msgs) StdoutLine: {'line': b'[100%] Built target gazebo_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[1.101402] (-) TimerEvent: {}
+[1.103463] (gazebo_msgs) StdoutLine: {'line': b'writing gazebo_msgs.egg-info/PKG-INFO\n'}
+[1.103938] (gazebo_msgs) StdoutLine: {'line': b'writing dependency_links to gazebo_msgs.egg-info/dependency_links.txt\n'}
+[1.104082] (gazebo_msgs) StdoutLine: {'line': b'writing top-level names to gazebo_msgs.egg-info/top_level.txt\n'}
+[1.123744] (gazebo_msgs) StdoutLine: {'line': b"reading manifest file 'gazebo_msgs.egg-info/SOURCES.txt'\n"}
+[1.124388] (gazebo_msgs) StdoutLine: {'line': b"writing manifest file 'gazebo_msgs.egg-info/SOURCES.txt'\n"}
+[1.142505] (gazebo_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_gazebo_msgs_egg\n'}
+[1.149834] (gazebo_msgs) CommandEnded: {'returncode': 0}
+[1.201500] (-) TimerEvent: {}
+[1.301804] (-) TimerEvent: {}
+[1.402021] (-) TimerEvent: {}
+[1.502339] (-) TimerEvent: {}
+[1.524687] (gazebo_msgs) JobProgress: {'identifier': 'gazebo_msgs', 'progress': 'install'}
+[1.529038] (gazebo_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ws/build/gazebo_msgs'], 'cwd': '/home/fourdds/ws/build/gazebo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/target_detection/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/obstacle_avoidance/lib:/home/fourdds/ros2_ws/install/parameters/lib:/home/fourdds/ros2_ws/install/fdds_messages/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS_'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/33464_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '153860dd-bb2b-40d1-a6b7-4756c1a137fa'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy_map:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ros2_ws/install/analysis:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ws/build/gazebo_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/fdds_messages/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy_map:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/drone:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ros2_ws/install/analysis:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[1.532675] (gazebo_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.533376] (gazebo_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.533504] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/ament_index/resource_index/rosidl_interfaces/gazebo_msgs\n'}
+[1.534298] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/contact_state.h\n'}
+[1.534412] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/contacts_state.h\n'}
+[1.534493] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__functions.h\n'}
+[1.534636] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__struct.h\n'}
+[1.534716] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__type_support.h\n'}
+[1.534798] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__functions.h\n'}
+[1.534876] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__struct.h\n'}
+[1.535019] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__type_support.h\n'}
+[1.535067] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__functions.h\n'}
+[1.535146] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__struct.h\n'}
+[1.535223] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__type_support.h\n'}
+[1.535298] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__functions.h\n'}
+[1.535375] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__struct.h\n'}
+[1.535520] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__type_support.h\n'}
+[1.535580] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__functions.h\n'}
+[1.535658] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__struct.h\n'}
+[1.535727] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__type_support.h\n'}
+[1.535804] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__functions.h\n'}
+[1.535880] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__struct.h\n'}
+[1.535957] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__type_support.h\n'}
+[1.536034] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__functions.h\n'}
+[1.536156] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__struct.h\n'}
+[1.536310] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__type_support.h\n'}
+[1.536346] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__functions.h\n'}
+[1.536413] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__struct.h\n'}
+[1.536489] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__type_support.h\n'}
+[1.536566] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__functions.h\n'}
+[1.536643] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__struct.h\n'}
+[1.536723] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__type_support.h\n'}
+[1.536803] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__functions.h\n'}
+[1.536884] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__struct.h\n'}
+[1.536967] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__type_support.h\n'}
+[1.537050] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__functions.h\n'}
+[1.537131] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__struct.h\n'}
+[1.537165] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__type_support.h\n'}
+[1.537414] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__functions.h\n'}
+[1.537479] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__struct.h\n'}
+[1.537506] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__type_support.h\n'}
+[1.537532] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__functions.h\n'}
+[1.537557] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__struct.h\n'}
+[1.537612] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__type_support.h\n'}
+[1.537696] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/entity_state.h\n'}
+[1.537786] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/link_state.h\n'}
+[1.537867] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/link_states.h\n'}
+[1.537941] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/model_state.h\n'}
+[1.538019] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/model_states.h\n'}
+[1.538096] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/ode_joint_properties.h\n'}
+[1.538248] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/ode_physics.h\n'}
+[1.538301] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/performance_metrics.h\n'}
+[1.538371] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.538457] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/sensor_performance_metric.h\n'}
+[1.538539] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/wheel_slip.h\n'}
+[1.538618] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/world_state.h\n'}
+[1.538747] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/apply_body_wrench.h\n'}
+[1.538843] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/apply_joint_effort.h\n'}
+[1.538962] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/apply_link_wrench.h\n'}
+[1.538998] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/body_request.h\n'}
+[1.539063] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/delete_entity.h\n'}
+[1.539180] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/delete_light.h\n'}
+[1.539263] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/delete_model.h\n'}
+[1.539341] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__functions.h\n'}
+[1.539440] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__struct.h\n'}
+[1.539535] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__type_support.h\n'}
+[1.539621] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__functions.h\n'}
+[1.539741] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__struct.h\n'}
+[1.539829] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__type_support.h\n'}
+[1.539906] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__functions.h\n'}
+[1.539999] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__struct.h\n'}
+[1.540072] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__type_support.h\n'}
+[1.540117] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__functions.h\n'}
+[1.540145] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__struct.h\n'}
+[1.540237] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__type_support.h\n'}
+[1.540281] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__functions.h\n'}
+[1.540309] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__struct.h\n'}
+[1.540335] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__type_support.h\n'}
+[1.540522] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__functions.h\n'}
+[1.540583] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__struct.h\n'}
+[1.540613] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__type_support.h\n'}
+[1.540677] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__functions.h\n'}
+[1.540709] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__struct.h\n'}
+[1.540918] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__type_support.h\n'}
+[1.540964] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__functions.h\n'}
+[1.540991] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__struct.h\n'}
+[1.541061] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__type_support.h\n'}
+[1.541132] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__functions.h\n'}
+[1.541209] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__struct.h\n'}
+[1.541284] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__type_support.h\n'}
+[1.541359] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__functions.h\n'}
+[1.541435] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__struct.h\n'}
+[1.541580] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__type_support.h\n'}
+[1.541633] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__functions.h\n'}
+[1.541709] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__struct.h\n'}
+[1.541789] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__type_support.h\n'}
+[1.541865] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__functions.h\n'}
+[1.541940] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__struct.h\n'}
+[1.542016] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__type_support.h\n'}
+[1.542091] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__functions.h\n'}
+[1.542167] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__struct.h\n'}
+[1.542242] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__type_support.h\n'}
+[1.542352] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__functions.h\n'}
+[1.542503] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__struct.h\n'}
+[1.542571] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__type_support.h\n'}
+[1.542620] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__functions.h\n'}
+[1.542697] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__struct.h\n'}
+[1.542773] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__type_support.h\n'}
+[1.542849] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__functions.h\n'}
+[1.542925] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__struct.h\n'}
+[1.543000] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__type_support.h\n'}
+[1.543076] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__functions.h\n'}
+[1.543151] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__struct.h\n'}
+[1.543227] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__type_support.h\n'}
+[1.543305] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__functions.h\n'}
+[1.543381] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__struct.h\n'}
+[1.543457] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__type_support.h\n'}
+[1.543533] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__functions.h\n'}
+[1.543609] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__struct.h\n'}
+[1.543684] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__type_support.h\n'}
+[1.543825] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__functions.h\n'}
+[1.544033] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__struct.h\n'}
+[1.544082] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__type_support.h\n'}
+[1.544150] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__functions.h\n'}
+[1.544228] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__struct.h\n'}
+[1.544306] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__type_support.h\n'}
+[1.544388] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__functions.h\n'}
+[1.544465] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__struct.h\n'}
+[1.544545] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__type_support.h\n'}
+[1.544622] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__functions.h\n'}
+[1.544699] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__struct.h\n'}
+[1.544775] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__type_support.h\n'}
+[1.544945] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__functions.h\n'}
+[1.545027] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__struct.h\n'}
+[1.545161] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__type_support.h\n'}
+[1.545228] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__functions.h\n'}
+[1.545308] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__struct.h\n'}
+[1.545385] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__type_support.h\n'}
+[1.545461] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__functions.h\n'}
+[1.545537] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__struct.h\n'}
+[1.545612] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__type_support.h\n'}
+[1.545688] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__functions.h\n'}
+[1.545764] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__struct.h\n'}
+[1.545840] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__type_support.h\n'}
+[1.545915] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__functions.h\n'}
+[1.545991] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__struct.h\n'}
+[1.546067] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__type_support.h\n'}
+[1.546289] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__functions.h\n'}
+[1.546317] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__struct.h\n'}
+[1.546342] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__type_support.h\n'}
+[1.546366] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__functions.h\n'}
+[1.546391] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__struct.h\n'}
+[1.546415] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__type_support.h\n'}
+[1.546439] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_entity_state.h\n'}
+[1.546463] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_joint_properties.h\n'}
+[1.546486] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_light_properties.h\n'}
+[1.546509] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_link_properties.h\n'}
+[1.546535] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_link_state.h\n'}
+[1.546557] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_model_list.h\n'}
+[1.546581] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_model_properties.h\n'}
+[1.546602] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_model_state.h\n'}
+[1.546625] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_physics_properties.h\n'}
+[1.546647] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_world_properties.h\n'}
+[1.546669] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/joint_request.h\n'}
+[1.546693] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/link_request.h\n'}
+[1.546716] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_entity_state.h\n'}
+[1.546738] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_joint_properties.h\n'}
+[1.546801] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_joint_trajectory.h\n'}
+[1.546878] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_light_properties.h\n'}
+[1.546955] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_link_properties.h\n'}
+[1.547031] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_link_state.h\n'}
+[1.547415] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_model_configuration.h\n'}
+[1.547578] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_model_state.h\n'}
+[1.547996] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_physics_properties.h\n'}
+[1.548089] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/spawn_entity.h\n'}
+[1.548168] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/spawn_model.h\n'}
+[1.548246] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/library_path.sh\n'}
+[1.548323] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/library_path.dsv\n'}
+[1.548399] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.548475] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.548586] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.548812] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.548858] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__rosidl_typesupport_fastrtps_c.h\n'}
+[1.548948] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549025] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549102] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549293] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549330] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549356] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549385] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549410] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549520] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.549551] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549581] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549606] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549631] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549655] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549678] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549700] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549724] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549747] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549771] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549793] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549816] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549839] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549861] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549883] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549905] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549927] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549949] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549971] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__rosidl_typesupport_fastrtps_c.h\n'}
+[1.549994] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550015] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550037] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550058] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550079] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550104] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550127] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550191] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550275] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550351] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550427] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__rosidl_typesupport_fastrtps_c.h\n'}
+[1.550503] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/contact_state.hpp\n'}
+[1.550610] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/contacts_state.hpp\n'}
+[1.550689] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__builder.hpp\n'}
+[1.550765] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__struct.hpp\n'}
+[1.550842] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__traits.hpp\n'}
+[1.550917] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__builder.hpp\n'}
+[1.550992] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__struct.hpp\n'}
+[1.551068] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__traits.hpp\n'}
+[1.551212] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__builder.hpp\n'}
+[1.551261] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__struct.hpp\n'}
+[1.551313] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__traits.hpp\n'}
+[1.551451] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__builder.hpp\n'}
+[1.551545] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__struct.hpp\n'}
+[1.551593] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__traits.hpp\n'}
+[1.551669] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__builder.hpp\n'}
+[1.551737] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__struct.hpp\n'}
+[1.551804] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__traits.hpp\n'}
+[1.551863] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__builder.hpp\n'}
+[1.551940] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__struct.hpp\n'}
+[1.552016] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__traits.hpp\n'}
+[1.552093] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__builder.hpp\n'}
+[1.552169] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__struct.hpp\n'}
+[1.552245] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__traits.hpp\n'}
+[1.552389] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__builder.hpp\n'}
+[1.552453] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__struct.hpp\n'}
+[1.552521] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__traits.hpp\n'}
+[1.552598] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__builder.hpp\n'}
+[1.552674] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__struct.hpp\n'}
+[1.552751] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__traits.hpp\n'}
+[1.552849] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__builder.hpp\n'}
+[1.552951] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__struct.hpp\n'}
+[1.553028] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__traits.hpp\n'}
+[1.553104] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__builder.hpp\n'}
+[1.553180] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__struct.hpp\n'}
+[1.553257] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__traits.hpp\n'}
+[1.553333] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__builder.hpp\n'}
+[1.553409] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__struct.hpp\n'}
+[1.553485] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__traits.hpp\n'}
+[1.553560] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__builder.hpp\n'}
+[1.553635] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__struct.hpp\n'}
+[1.553711] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__traits.hpp\n'}
+[1.553787] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/entity_state.hpp\n'}
+[1.553906] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/link_state.hpp\n'}
+[1.554120] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/link_states.hpp\n'}
+[1.554191] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/model_state.hpp\n'}
+[1.554268] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/model_states.hpp\n'}
+[1.554386] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/ode_joint_properties.hpp\n'}
+[1.554465] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/ode_physics.hpp\n'}
+[1.554542] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/performance_metrics.hpp\n'}
+[1.554618] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/sensor_performance_metric.hpp\n'}
+[1.554723] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/wheel_slip.hpp\n'}
+[1.554834] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/world_state.hpp\n'}
+[1.554928] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/apply_body_wrench.hpp\n'}
+[1.555005] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/apply_joint_effort.hpp\n'}
+[1.555116] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/apply_link_wrench.hpp\n'}
+[1.555193] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/body_request.hpp\n'}
+[1.555272] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/delete_entity.hpp\n'}
+[1.555352] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/delete_light.hpp\n'}
+[1.555429] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/delete_model.hpp\n'}
+[1.555503] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__builder.hpp\n'}
+[1.555579] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__struct.hpp\n'}
+[1.555654] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__traits.hpp\n'}
+[1.555730] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__builder.hpp\n'}
+[1.555805] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__struct.hpp\n'}
+[1.555880] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__traits.hpp\n'}
+[1.555956] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__builder.hpp\n'}
+[1.556034] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__struct.hpp\n'}
+[1.556179] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__traits.hpp\n'}
+[1.556249] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__builder.hpp\n'}
+[1.556314] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__struct.hpp\n'}
+[1.556454] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__traits.hpp\n'}
+[1.556534] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__builder.hpp\n'}
+[1.556670] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__struct.hpp\n'}
+[1.556753] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__traits.hpp\n'}
+[1.556821] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__builder.hpp\n'}
+[1.556898] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__struct.hpp\n'}
+[1.556975] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__traits.hpp\n'}
+[1.557052] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__builder.hpp\n'}
+[1.557140] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__struct.hpp\n'}
+[1.557223] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__traits.hpp\n'}
+[1.557275] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__builder.hpp\n'}
+[1.557409] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__struct.hpp\n'}
+[1.557494] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__traits.hpp\n'}
+[1.557571] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__builder.hpp\n'}
+[1.557648] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__struct.hpp\n'}
+[1.557781] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__traits.hpp\n'}
+[1.557859] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__builder.hpp\n'}
+[1.557937] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__struct.hpp\n'}
+[1.558015] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__traits.hpp\n'}
+[1.558105] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__builder.hpp\n'}
+[1.558184] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__struct.hpp\n'}
+[1.558262] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__traits.hpp\n'}
+[1.558330] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__builder.hpp\n'}
+[1.558409] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__struct.hpp\n'}
+[1.558490] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__traits.hpp\n'}
+[1.558566] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__builder.hpp\n'}
+[1.558642] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__struct.hpp\n'}
+[1.558718] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__traits.hpp\n'}
+[1.558794] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__builder.hpp\n'}
+[1.558871] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__struct.hpp\n'}
+[1.558945] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__traits.hpp\n'}
+[1.559021] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__builder.hpp\n'}
+[1.559098] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__struct.hpp\n'}
+[1.559174] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__traits.hpp\n'}
+[1.559250] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__builder.hpp\n'}
+[1.559327] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__struct.hpp\n'}
+[1.559403] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__traits.hpp\n'}
+[1.559479] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__builder.hpp\n'}
+[1.559555] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__struct.hpp\n'}
+[1.559648] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__traits.hpp\n'}
+[1.559724] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__builder.hpp\n'}
+[1.559799] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__struct.hpp\n'}
+[1.559874] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__traits.hpp\n'}
+[1.559950] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__builder.hpp\n'}
+[1.560030] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__struct.hpp\n'}
+[1.560106] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__traits.hpp\n'}
+[1.560182] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__builder.hpp\n'}
+[1.560258] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__struct.hpp\n'}
+[1.560334] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__traits.hpp\n'}
+[1.560410] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__builder.hpp\n'}
+[1.560488] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__struct.hpp\n'}
+[1.560564] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__traits.hpp\n'}
+[1.560649] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__builder.hpp\n'}
+[1.560725] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__struct.hpp\n'}
+[1.560801] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__traits.hpp\n'}
+[1.561014] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__builder.hpp\n'}
+[1.561164] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__struct.hpp\n'}
+[1.561245] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__traits.hpp\n'}
+[1.561321] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__builder.hpp\n'}
+[1.561396] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__struct.hpp\n'}
+[1.561471] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__traits.hpp\n'}
+[1.561580] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__builder.hpp\n'}
+[1.561648] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__struct.hpp\n'}
+[1.561676] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__traits.hpp\n'}
+[1.561701] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__builder.hpp\n'}
+[1.561727] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__struct.hpp\n'}
+[1.561753] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__traits.hpp\n'}
+[1.561816] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__builder.hpp\n'}
+[1.561854] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__struct.hpp\n'}
+[1.561907] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__traits.hpp\n'}
+[1.561986] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__builder.hpp\n'}
+[1.562065] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__struct.hpp\n'}
+[1.562142] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__traits.hpp\n'}
+[1.562223] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__builder.hpp\n'}
+[1.562301] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__struct.hpp\n'}
+[1.562378] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__traits.hpp\n'}
+[1.562454] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__builder.hpp\n'}
+[1.562532] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__struct.hpp\n'}
+[1.562613] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__traits.hpp\n'}
+[1.562690] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_entity_state.hpp\n'}
+[1.562770] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_joint_properties.hpp\n'}
+[1.562847] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_light_properties.hpp\n'}
+[1.562924] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_link_properties.hpp\n'}
+[1.563000] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_link_state.hpp\n'}
+[1.563077] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_model_list.hpp\n'}
+[1.563154] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_model_properties.hpp\n'}
+[1.563231] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_model_state.hpp\n'}
+[1.563308] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_physics_properties.hpp\n'}
+[1.563385] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/get_world_properties.hpp\n'}
+[1.563464] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/joint_request.hpp\n'}
+[1.563541] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/link_request.hpp\n'}
+[1.563622] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_entity_state.hpp\n'}
+[1.563700] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_joint_properties.hpp\n'}
+[1.563777] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_joint_trajectory.hpp\n'}
+[1.563854] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_light_properties.hpp\n'}
+[1.563933] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_link_properties.hpp\n'}
+[1.564043] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_link_state.hpp\n'}
+[1.564136] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_model_configuration.hpp\n'}
+[1.564216] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_model_state.hpp\n'}
+[1.564295] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/set_physics_properties.hpp\n'}
+[1.564373] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/spawn_entity.hpp\n'}
+[1.564486] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/spawn_model.hpp\n'}
+[1.564583] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.564663] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.564743] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.564821] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.564899] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.564977] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565103] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565345] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565428] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565509] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565590] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565667] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565744] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565822] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.565899] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.565976] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566053] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566123] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566201] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566277] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566355] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566432] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566509] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566586] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566662] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566739] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566817] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566895] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.566972] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.567051] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.567380] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.567464] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.567541] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.567618] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.567696] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.567772] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568079] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568168] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568245] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568327] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568440] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568533] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568610] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568719] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.568799] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__rosidl_typesupport_introspection_c.h\n'}
+[1.568875] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__rosidl_typesupport_introspection_c.h\n'}
+[1.568950] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__rosidl_typesupport_introspection_c.h\n'}
+[1.569025] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__rosidl_typesupport_introspection_c.h\n'}
+[1.569104] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__rosidl_typesupport_introspection_c.h\n'}
+[1.569180] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__rosidl_typesupport_introspection_c.h\n'}
+[1.569256] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__rosidl_typesupport_introspection_c.h\n'}
+[1.569370] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.569450] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__rosidl_typesupport_introspection_c.h\n'}
+[1.569526] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__rosidl_typesupport_introspection_c.h\n'}
+[1.569610] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__rosidl_typesupport_introspection_c.h\n'}
+[1.569646] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__rosidl_typesupport_introspection_c.h\n'}
+[1.569712] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__rosidl_typesupport_introspection_c.h\n'}
+[1.569757] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.569784] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__rosidl_typesupport_introspection_c.h\n'}
+[1.569866] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__rosidl_typesupport_introspection_c.h\n'}
+[1.569942] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__rosidl_typesupport_introspection_c.h\n'}
+[1.570019] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__rosidl_typesupport_introspection_c.h\n'}
+[1.570100] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__rosidl_typesupport_introspection_c.h\n'}
+[1.570178] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__rosidl_typesupport_introspection_c.h\n'}
+[1.570266] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__rosidl_typesupport_introspection_c.h\n'}
+[1.570491] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__rosidl_typesupport_introspection_c.h\n'}
+[1.570609] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.570692] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.570787] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.570869] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__rosidl_typesupport_introspection_c.h\n'}
+[1.570948] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__rosidl_typesupport_introspection_c.h\n'}
+[1.571027] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.571105] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__rosidl_typesupport_introspection_c.h\n'}
+[1.571183] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.571261] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.571339] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__rosidl_typesupport_introspection_c.h\n'}
+[1.571419] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__rosidl_typesupport_introspection_c.h\n'}
+[1.571498] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__rosidl_typesupport_introspection_c.h\n'}
+[1.571576] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.571654] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__rosidl_typesupport_introspection_c.h\n'}
+[1.571734] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.571812] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.571890] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__rosidl_typesupport_introspection_c.h\n'}
+[1.571969] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__rosidl_typesupport_introspection_c.h\n'}
+[1.572047] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__rosidl_typesupport_introspection_c.h\n'}
+[1.572126] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__rosidl_typesupport_introspection_c.h\n'}
+[1.572204] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__rosidl_typesupport_introspection_c.h\n'}
+[1.572284] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__rosidl_typesupport_introspection_c.h\n'}
+[1.572364] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572442] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572521] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/entity_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572599] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572677] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/link_states__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572755] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572834] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/model_states__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572913] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_joint_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.572991] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/ode_physics__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573070] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/performance_metrics__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573148] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/sensor_performance_metric__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573228] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/wheel_slip__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573309] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/msg/detail/world_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573386] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_body_wrench__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573464] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_joint_effort__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573542] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/apply_link_wrench__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573620] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/body_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573697] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_entity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573776] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_light__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573855] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/delete_model__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.573932] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_entity_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574010] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_joint_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574089] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_light_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574217] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574302] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_link_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574448] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_list__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574617] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574718] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_model_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574798] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_physics_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574878] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/get_world_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.574957] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/joint_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575035] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/link_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575114] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_entity_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575192] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575270] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_joint_trajectory__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575339] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_light_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575420] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575498] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_link_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575578] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_configuration__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575655] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_model_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575732] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/set_physics_properties__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575810] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_entity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575888] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/include/gazebo_msgs/gazebo_msgs/srv/detail/spawn_model__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.575966] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/pythonpath.sh\n'}
+[1.576044] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/pythonpath.dsv\n'}
+[1.576123] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs-3.7.0-py3.10.egg-info/PKG-INFO\n'}
+[1.576201] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs-3.7.0-py3.10.egg-info/SOURCES.txt\n'}
+[1.576279] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs-3.7.0-py3.10.egg-info/dependency_links.txt\n'}
+[1.576356] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs-3.7.0-py3.10.egg-info/top_level.txt\n'}
+[1.576433] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/__init__.py\n'}
+[1.576510] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/_gazebo_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[1.576588] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/_gazebo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.576669] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/_gazebo_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.576747] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/gazebo_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.576824] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/gazebo_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.576902] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/gazebo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.576980] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/libgazebo_msgs__rosidl_generator_py.so\n'}
+[1.577070] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/__init__.py\n'}
+[1.577138] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_contact_state.py\n'}
+[1.577220] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_contact_state_s.c\n'}
+[1.577300] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_contacts_state.py\n'}
+[1.577379] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_contacts_state_s.c\n'}
+[1.577428] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_entity_state.py\n'}
+[1.577456] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_entity_state_s.c\n'}
+[1.577496] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_link_state.py\n'}
+[1.577521] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_link_state_s.c\n'}
+[1.577823] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_link_states.py\n'}
+[1.577907] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_link_states_s.c\n'}
+[1.577985] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_model_state.py\n'}
+[1.578062] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_model_state_s.c\n'}
+[1.578139] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_model_states.py\n'}
+[1.578217] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_model_states_s.c\n'}
+[1.578294] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_ode_joint_properties.py\n'}
+[1.578371] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_ode_joint_properties_s.c\n'}
+[1.578448] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_ode_physics.py\n'}
+[1.578526] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_ode_physics_s.c\n'}
+[1.578604] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_performance_metrics.py\n'}
+[1.578685] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_performance_metrics_s.c\n'}
+[1.578762] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_sensor_performance_metric.py\n'}
+[1.578840] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_sensor_performance_metric_s.c\n'}
+[1.578994] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_wheel_slip.py\n'}
+[1.579081] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_wheel_slip_s.c\n'}
+[1.579168] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_world_state.py\n'}
+[1.579247] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg/_world_state_s.c\n'}
+[1.579326] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/__init__.py\n'}
+[1.579403] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_apply_body_wrench.py\n'}
+[1.579480] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_apply_body_wrench_s.c\n'}
+[1.579570] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_apply_joint_effort.py\n'}
+[1.579648] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_apply_joint_effort_s.c\n'}
+[1.579731] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_apply_link_wrench.py\n'}
+[1.579809] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_apply_link_wrench_s.c\n'}
+[1.579888] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_body_request.py\n'}
+[1.579966] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_body_request_s.c\n'}
+[1.580043] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_delete_entity.py\n'}
+[1.580120] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_delete_entity_s.c\n'}
+[1.580197] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_delete_light.py\n'}
+[1.580275] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_delete_light_s.c\n'}
+[1.580352] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_delete_model.py\n'}
+[1.580429] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_delete_model_s.c\n'}
+[1.580506] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_entity_state.py\n'}
+[1.580714] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_entity_state_s.c\n'}
+[1.580798] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_joint_properties.py\n'}
+[1.580888] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_joint_properties_s.c\n'}
+[1.580925] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_light_properties.py\n'}
+[1.580951] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_light_properties_s.c\n'}
+[1.581050] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_link_properties.py\n'}
+[1.581128] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_link_properties_s.c\n'}
+[1.581295] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_link_state.py\n'}
+[1.581411] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_link_state_s.c\n'}
+[1.581492] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_model_list.py\n'}
+[1.581571] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_model_list_s.c\n'}
+[1.581650] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_model_properties.py\n'}
+[1.581729] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_model_properties_s.c\n'}
+[1.581841] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_model_state.py\n'}
+[1.581920] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_model_state_s.c\n'}
+[1.581998] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_physics_properties.py\n'}
+[1.582066] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_physics_properties_s.c\n'}
+[1.582146] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_world_properties.py\n'}
+[1.582224] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_get_world_properties_s.c\n'}
+[1.582301] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_joint_request.py\n'}
+[1.582380] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_joint_request_s.c\n'}
+[1.582457] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_link_request.py\n'}
+[1.582535] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_link_request_s.c\n'}
+[1.582612] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_entity_state.py\n'}
+[1.582691] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_entity_state_s.c\n'}
+[1.582769] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_joint_properties.py\n'}
+[1.582847] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_joint_properties_s.c\n'}
+[1.582925] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_joint_trajectory.py\n'}
+[1.583002] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_joint_trajectory_s.c\n'}
+[1.583080] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_light_properties.py\n'}
+[1.583157] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_light_properties_s.c\n'}
+[1.583235] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_link_properties.py\n'}
+[1.583313] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_link_properties_s.c\n'}
+[1.583391] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_link_state.py\n'}
+[1.583468] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_link_state_s.c\n'}
+[1.583544] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_model_configuration.py\n'}
+[1.583622] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_model_configuration_s.c\n'}
+[1.583699] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_model_state.py\n'}
+[1.583776] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_model_state_s.c\n'}
+[1.583853] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_physics_properties.py\n'}
+[1.583931] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_set_physics_properties_s.c\n'}
+[1.584009] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_spawn_entity.py\n'}
+[1.584094] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_spawn_entity_s.c\n'}
+[1.584172] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_spawn_model.py\n'}
+[1.584329] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv/_spawn_model_s.c\n'}
+[1.584398] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/gazebo_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.584476] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/gazebo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.584555] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/gazebo_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.584634] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ContactState.idl\n'}
+[1.584753] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ContactsState.idl\n'}
+[1.584831] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/EntityState.idl\n'}
+[1.584945] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/LinkState.idl\n'}
+[1.585013] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/LinkStates.idl\n'}
+[1.585091] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ModelState.idl\n'}
+[1.585169] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ModelStates.idl\n'}
+[1.585247] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ODEJointProperties.idl\n'}
+[1.585325] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ODEPhysics.idl\n'}
+[1.585403] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/PerformanceMetrics.idl\n'}
+[1.585480] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/SensorPerformanceMetric.idl\n'}
+[1.585558] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/WheelSlip.idl\n'}
+[1.585635] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/WorldState.idl\n'}
+[1.585712] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyBodyWrench.idl\n'}
+[1.585789] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyLinkWrench.idl\n'}
+[1.585865] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyJointEffort.idl\n'}
+[1.585942] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/BodyRequest.idl\n'}
+[1.586020] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteEntity.idl\n'}
+[1.586097] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteLight.idl\n'}
+[1.586175] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteModel.idl\n'}
+[1.586254] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetJointProperties.idl\n'}
+[1.586333] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetEntityState.idl\n'}
+[1.586412] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLightProperties.idl\n'}
+[1.586490] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkProperties.idl\n'}
+[1.586570] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkState.idl\n'}
+[1.586648] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelList.idl\n'}
+[1.586726] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelProperties.idl\n'}
+[1.586803] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelState.idl\n'}
+[1.586881] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetPhysicsProperties.idl\n'}
+[1.586959] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetWorldProperties.idl\n'}
+[1.587036] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/JointRequest.idl\n'}
+[1.587127] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/LinkRequest.idl\n'}
+[1.587208] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetEntityState.idl\n'}
+[1.587289] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointProperties.idl\n'}
+[1.587371] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointTrajectory.idl\n'}
+[1.587449] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLightProperties.idl\n'}
+[1.587528] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkProperties.idl\n'}
+[1.587608] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkState.idl\n'}
+[1.587686] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelConfiguration.idl\n'}
+[1.587765] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelState.idl\n'}
+[1.587844] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetPhysicsProperties.idl\n'}
+[1.587922] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnEntity.idl\n'}
+[1.588000] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnModel.idl\n'}
+[1.588078] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ContactState.msg\n'}
+[1.588156] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ContactsState.msg\n'}
+[1.588234] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/EntityState.msg\n'}
+[1.588312] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/LinkState.msg\n'}
+[1.588391] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/LinkStates.msg\n'}
+[1.588469] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ModelState.msg\n'}
+[1.588546] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ModelStates.msg\n'}
+[1.588624] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ODEJointProperties.msg\n'}
+[1.588703] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/ODEPhysics.msg\n'}
+[1.588780] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/PerformanceMetrics.msg\n'}
+[1.588858] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/SensorPerformanceMetric.msg\n'}
+[1.588935] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/WheelSlip.msg\n'}
+[1.589013] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/msg/WorldState.msg\n'}
+[1.589090] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyBodyWrench.srv\n'}
+[1.589167] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyBodyWrench_Request.msg\n'}
+[1.589244] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyBodyWrench_Response.msg\n'}
+[1.589321] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyLinkWrench.srv\n'}
+[1.589398] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyLinkWrench_Request.msg\n'}
+[1.589476] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyLinkWrench_Response.msg\n'}
+[1.589553] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyJointEffort.srv\n'}
+[1.589630] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyJointEffort_Request.msg\n'}
+[1.589752] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/ApplyJointEffort_Response.msg\n'}
+[1.589830] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/BodyRequest.srv\n'}
+[1.589907] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/BodyRequest_Request.msg\n'}
+[1.589984] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/BodyRequest_Response.msg\n'}
+[1.590061] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteEntity.srv\n'}
+[1.590138] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteEntity_Request.msg\n'}
+[1.590215] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteEntity_Response.msg\n'}
+[1.590291] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteLight.srv\n'}
+[1.590369] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteLight_Request.msg\n'}
+[1.590449] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteLight_Response.msg\n'}
+[1.590603] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteModel.srv\n'}
+[1.590637] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteModel_Request.msg\n'}
+[1.590663] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/DeleteModel_Response.msg\n'}
+[1.590689] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetJointProperties.srv\n'}
+[1.590713] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetJointProperties_Request.msg\n'}
+[1.590738] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetJointProperties_Response.msg\n'}
+[1.590761] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetEntityState.srv\n'}
+[1.590783] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetEntityState_Request.msg\n'}
+[1.590808] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetEntityState_Response.msg\n'}
+[1.590832] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLightProperties.srv\n'}
+[1.590855] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLightProperties_Request.msg\n'}
+[1.590877] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLightProperties_Response.msg\n'}
+[1.590900] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkProperties.srv\n'}
+[1.590923] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkProperties_Request.msg\n'}
+[1.590947] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkProperties_Response.msg\n'}
+[1.590969] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkState.srv\n'}
+[1.590992] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkState_Request.msg\n'}
+[1.591014] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetLinkState_Response.msg\n'}
+[1.591036] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelList.srv\n'}
+[1.591060] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelList_Request.msg\n'}
+[1.591081] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelList_Response.msg\n'}
+[1.591103] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelProperties.srv\n'}
+[1.591126] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelProperties_Request.msg\n'}
+[1.591147] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelProperties_Response.msg\n'}
+[1.591168] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelState.srv\n'}
+[1.591190] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelState_Request.msg\n'}
+[1.591211] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetModelState_Response.msg\n'}
+[1.591233] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetPhysicsProperties.srv\n'}
+[1.591255] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetPhysicsProperties_Request.msg\n'}
+[1.591279] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetPhysicsProperties_Response.msg\n'}
+[1.591301] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetWorldProperties.srv\n'}
+[1.591324] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetWorldProperties_Request.msg\n'}
+[1.591346] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/GetWorldProperties_Response.msg\n'}
+[1.591368] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/JointRequest.srv\n'}
+[1.591389] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/JointRequest_Request.msg\n'}
+[1.591420] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/JointRequest_Response.msg\n'}
+[1.591441] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/LinkRequest.srv\n'}
+[1.591466] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/LinkRequest_Request.msg\n'}
+[1.591488] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/LinkRequest_Response.msg\n'}
+[1.591510] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetEntityState.srv\n'}
+[1.591534] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetEntityState_Request.msg\n'}
+[1.591558] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetEntityState_Response.msg\n'}
+[1.591581] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointProperties.srv\n'}
+[1.591603] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointProperties_Request.msg\n'}
+[1.591626] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointProperties_Response.msg\n'}
+[1.591647] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointTrajectory.srv\n'}
+[1.591668] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointTrajectory_Request.msg\n'}
+[1.591691] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetJointTrajectory_Response.msg\n'}
+[1.591713] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLightProperties.srv\n'}
+[1.591736] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLightProperties_Request.msg\n'}
+[1.591757] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLightProperties_Response.msg\n'}
+[1.591781] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkProperties.srv\n'}
+[1.591803] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkProperties_Request.msg\n'}
+[1.591825] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkProperties_Response.msg\n'}
+[1.591848] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkState.srv\n'}
+[1.591871] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkState_Request.msg\n'}
+[1.591893] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetLinkState_Response.msg\n'}
+[1.591915] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelConfiguration.srv\n'}
+[1.591938] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelConfiguration_Request.msg\n'}
+[1.591962] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelConfiguration_Response.msg\n'}
+[1.591984] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelState.srv\n'}
+[1.592006] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelState_Request.msg\n'}
+[1.592028] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetModelState_Response.msg\n'}
+[1.592051] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetPhysicsProperties.srv\n'}
+[1.592072] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetPhysicsProperties_Request.msg\n'}
+[1.592094] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SetPhysicsProperties_Response.msg\n'}
+[1.592116] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnEntity.srv\n'}
+[1.592138] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnEntity_Request.msg\n'}
+[1.592160] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnEntity_Response.msg\n'}
+[1.592182] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnModel.srv\n'}
+[1.592204] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnModel_Request.msg\n'}
+[1.592226] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/srv/SpawnModel_Response.msg\n'}
+[1.592247] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/ament_index/resource_index/package_run_dependencies/gazebo_msgs\n'}
+[1.592269] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/ament_index/resource_index/parent_prefix_path/gazebo_msgs\n'}
+[1.592291] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/ament_prefix_path.sh\n'}
+[1.592315] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/ament_prefix_path.dsv\n'}
+[1.592337] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/path.sh\n'}
+[1.592359] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/environment/path.dsv\n'}
+[1.592380] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/local_setup.bash\n'}
+[1.592403] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/local_setup.sh\n'}
+[1.592426] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/local_setup.zsh\n'}
+[1.592447] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/local_setup.dsv\n'}
+[1.592468] (gazebo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.dsv\n'}
+[1.592626] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/ament_index/resource_index/packages/gazebo_msgs\n'}
+[1.592824] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.592951] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.593122] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.593270] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.593373] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.593452] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.593529] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.593668] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgsConfig.cmake\n'}
+[1.593717] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgsConfig-version.cmake\n'}
+[1.593745] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.xml\n'}
+[1.593771] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/gazebo_msgs_mapping_rules.yaml\n'}
+[1.593821] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_generator_c.so\n'}
+[1.593858] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[1.593934] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.594044] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_typesupport_introspection_c.so\n'}
+[1.594150] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_typesupport_c.so\n'}
+[1.594263] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[1.594371] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_typesupport_cpp.so\n'}
+[1.602410] (-) TimerEvent: {}
+[1.613069] (gazebo_msgs) StdoutLine: {'line': b"Listing '/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs'...\n"}
+[1.613139] (gazebo_msgs) StdoutLine: {'line': b"Compiling '/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/__init__.py'...\n"}
+[1.613175] (gazebo_msgs) StdoutLine: {'line': b"Listing '/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/msg'...\n"}
+[1.613203] (gazebo_msgs) StdoutLine: {'line': b"Listing '/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages/gazebo_msgs/srv'...\n"}
+[1.615822] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/lib/libgazebo_msgs__rosidl_generator_py.so\n'}
+[1.615944] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_generator_cExport.cmake\n'}
+[1.616071] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.616121] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.616149] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.616190] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.616321] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.616369] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.616397] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.616422] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.616447] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.616471] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.616494] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.616518] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.616540] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.616561] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/gazebo_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.616583] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.616642] (gazebo_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/cmake/export_gazebo_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.617672] (gazebo_msgs) CommandEnded: {'returncode': 0}
+[1.702560] (-) TimerEvent: {}
+[1.802832] (-) TimerEvent: {}
+[1.903097] (-) TimerEvent: {}
+[2.001584] (gazebo_msgs) JobEnded: {'identifier': 'gazebo_msgs', 'rc': 0}
+[2.002196] (-) EventReactorShutdown: {}

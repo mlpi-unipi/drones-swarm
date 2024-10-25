@@ -1,0 +1,113 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/OnboardComputerStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef uint8 uint8__8[8];
+    typedef uint8 uint8__10[10];
+    typedef uint8 uint8__4[4];
+    typedef int8 int8__8[8];
+    typedef int16 int16__4[4];
+    typedef uint32 uint32__4[4];
+    typedef uint32 uint32__6[6];
+    @verbatim (language="comment", text=
+      "ONBOARD_COMPUTER_STATUS message data")
+    struct OnboardComputerStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      @unit (value="us")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "time since system boot of the companion (milliseconds)")
+      @unit (value="ms")
+      uint32 uptime;
+
+      @verbatim (language="comment", text=
+        "type of onboard computer 0: Mission computer primary, 1: Mission computer backup 1, 2: Mission computer backup 2, 3: Compute node, 4-5: Compute spares, 6-9: Payload computers.")
+      uint8 type;
+
+      @verbatim (language="comment", text=
+        "CPU usage on the component in percent")
+      uint8__8 cpu_cores;
+
+      @verbatim (language="comment", text=
+        "Combined CPU usage as the last 10 slices of 100 MS")
+      uint8__10 cpu_combined;
+
+      @verbatim (language="comment", text=
+        "GPU usage on the component in percent")
+      uint8__4 gpu_cores;
+
+      @verbatim (language="comment", text=
+        "Combined GPU usage as the last 10 slices of 100 MS")
+      uint8__10 gpu_combined;
+
+      @verbatim (language="comment", text=
+        "Temperature of the board")
+      @unit (value="degC")
+      int8 temperature_board;
+
+      @verbatim (language="comment", text=
+        "Temperature of the CPU core")
+      @unit (value="degC")
+      int8__8 temperature_core;
+
+      @verbatim (language="comment", text=
+        "Fan speeds")
+      @unit (value="rpm")
+      int16__4 fan_speed;
+
+      @verbatim (language="comment", text=
+        "Amount of used RAM on the component system")
+      @unit (value="MB")
+      uint32 ram_usage;
+
+      @verbatim (language="comment", text=
+        "Total amount of RAM on the component system")
+      @unit (value="MB")
+      uint32 ram_total;
+
+      @verbatim (language="comment", text=
+        "Storage type: 0: HDD, 1: SSD, 2: EMMC, 3: SD card (non-removable), 4: SD card (removable)")
+      uint32__4 storage_type;
+
+      @verbatim (language="comment", text=
+        "Amount of used storage space on the component system")
+      @unit (value="MB")
+      uint32__4 storage_usage;
+
+      @verbatim (language="comment", text=
+        "Total amount of storage space on the component system")
+      @unit (value="MB")
+      uint32__4 storage_total;
+
+      @verbatim (language="comment", text=
+        "Link type: 0-9: UART, 10-19: Wired network, 20-29: Wifi, 30-39: Point-to-point proprietary, 40-49: Mesh proprietary")
+      @unit (value="Kb/s")
+      uint32__6 link_type;
+
+      @verbatim (language="comment", text=
+        "Network traffic from the component system")
+      @unit (value="Kb/s")
+      uint32__6 link_tx_rate;
+
+      @verbatim (language="comment", text=
+        "Network traffic to the component system")
+      @unit (value="Kb/s")
+      uint32__6 link_rx_rate;
+
+      @verbatim (language="comment", text=
+        "Network capacity from the component system")
+      @unit (value="Kb/s")
+      uint32__6 link_tx_max;
+
+      @verbatim (language="comment", text=
+        "Network capacity to the component system")
+      @unit (value="Kb/s")
+      uint32__6 link_rx_max;
+    };
+  };
+};

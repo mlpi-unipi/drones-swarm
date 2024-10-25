@@ -1,0 +1,52 @@
+[0.007s] Invoking command in '/home/fourdds/ros2_ws/build/boids': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24
+[0.030s] [35m[1mConsolidate compiler generated dependencies of target swarm_spawner[0m
+[0.030s] [  2%] Built target boids__cpp
+[0.030s] [ 10%] Built target boids__rosidl_generator_c
+[0.033s] [ 10%] Built target ament_cmake_python_copy_boids
+[0.033s] [ 15%] Built target frame_transforms
+[0.040s] [ 23%] Built target boids__rosidl_typesupport_cpp
+[0.040s] [ 32%] Built target boids__rosidl_typesupport_fastrtps_cpp
+[0.040s] [ 41%] Built target boids__rosidl_typesupport_introspection_cpp
+[0.042s] [ 43%] [32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o[0m
+[0.043s] [ 52%] Built target boids__rosidl_typesupport_introspection_c
+[0.043s] [ 63%] Built target boids__rosidl_typesupport_c
+[0.043s] [ 69%] Built target boids__rosidl_typesupport_fastrtps_c
+[0.051s] [ 69%] Built target boids
+[0.059s] [ 71%] Built target boids__py
+[0.069s] [ 78%] Built target boids__rosidl_generator_py
+[0.079s] [ 86%] Built target boids__rosidl_typesupport_introspection_c__pyext
+[0.079s] [ 86%] Built target boids__rosidl_typesupport_fastrtps_c__pyext
+[0.079s] [ 91%] Built target boids__rosidl_typesupport_c__pyext
+[0.129s] running egg_info
+[0.136s] writing boids.egg-info/PKG-INFO
+[0.137s] writing dependency_links to boids.egg-info/dependency_links.txt
+[0.137s] writing top-level names to boids.egg-info/top_level.txt
+[0.154s] reading manifest file 'boids.egg-info/SOURCES.txt'
+[0.154s] writing manifest file 'boids.egg-info/SOURCES.txt'
+[0.167s] [ 91%] Built target ament_cmake_python_build_boids_egg
+[2.074s] [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid Swarm::UavNode::cameraSubscriptionCallback(sensor_msgs::msg::CompressedImage_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[2.074s] [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:329:19:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kstd::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::size() const [with _Tp = cv::DMatch; _Alloc = std::allocator<cv::DMatch>; std::vector<_Tp, _Alloc>::size_type = long unsigned int][m[K’
+[2.074s]   329 |         [01;31m[Kstd::cout << matches.size[m[K << std::endl;
+[2.074s]       |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[2.074s] In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+[2.074s]                  from [01m[K/usr/include/c++/11/functional:62[m[K,
+[2.074s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[2.074s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[2.074s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+[2.074s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.074s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.074s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.074s]                  from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3[m[K,
+[2.074s]                  from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[2.074s] [01m[K/usr/include/c++/11/bits/stl_vector.h:918:7:[m[K [01;36m[Knote: [m[Kdeclared here
+[2.074s]   918 |       [01;36m[Ksize[m[K() const _GLIBCXX_NOEXCEPT
+[2.074s]       |       [01;36m[K^~~~[m[K
+[2.074s] [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:303:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kimg_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.074s]   303 |     static int [01;35m[Kimg_id[m[K = 0;
+[2.074s]       |                [01;35m[K^~~~~~[m[K
+[6.223s] [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K At global scope:
+[6.223s] [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:303:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kimg_id[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.254s] gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:76: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o] Error 1
+[6.254s] gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2
+[6.254s] gmake: *** [Makefile:146: all] Error 2
+[6.256s] Invoked command in '/home/fourdds/ros2_ws/build/boids' returned '2': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24

@@ -1,0 +1,77 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/VehicleCommandAck.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module VehicleCommandAck_Constants {
+      @verbatim (language="comment", text=
+        "Result cases. This follows the MAVLink MAV_RESULT enum definition" "\n"        "Command ACCEPTED and EXECUTED |")
+      const uint8 VEHICLE_CMD_RESULT_ACCEPTED = 0;
+      @verbatim (language="comment", text=
+        "Command TEMPORARY REJECTED/DENIED |")
+      const uint8 VEHICLE_CMD_RESULT_TEMPORARILY_REJECTED = 1;
+      @verbatim (language="comment", text=
+        "Command PERMANENTLY DENIED |")
+      const uint8 VEHICLE_CMD_RESULT_DENIED = 2;
+      @verbatim (language="comment", text=
+        "Command UNKNOWN/UNSUPPORTED |")
+      const uint8 VEHICLE_CMD_RESULT_UNSUPPORTED = 3;
+      @verbatim (language="comment", text=
+        "Command executed, but failed |")
+      const uint8 VEHICLE_CMD_RESULT_FAILED = 4;
+      @verbatim (language="comment", text=
+        "Command being executed |")
+      const uint8 VEHICLE_CMD_RESULT_IN_PROGRESS = 5;
+      @verbatim (language="comment", text=
+        "Command Canceled")
+      const uint8 VEHICLE_CMD_RESULT_CANCELLED = 6;
+      @verbatim (language="comment", text=
+        "Arming denied specific cases")
+      const uint16 ARM_AUTH_DENIED_REASON_GENERIC = 0;
+      const uint16 ARM_AUTH_DENIED_REASON_NONE = 1;
+      const uint16 ARM_AUTH_DENIED_REASON_INVALID_WAYPOINT = 2;
+      const uint16 ARM_AUTH_DENIED_REASON_TIMEOUT = 3;
+      const uint16 ARM_AUTH_DENIED_REASON_AIRSPACE_IN_USE = 4;
+      const uint16 ARM_AUTH_DENIED_REASON_BAD_WEATHER = 5;
+      const uint8 ORB_QUEUE_LENGTH = 4;
+    };
+    @verbatim (language="comment", text=
+      "Vehicle Command Ackonwledgement uORB message." "\n"
+      "Used for acknowledging the vehicle command being received." "\n"
+      "Follows the MAVLink COMMAND_ACK message definition")
+    struct VehicleCommandAck {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Command that is being acknowledged")
+      uint32 command;
+
+      @verbatim (language="comment", text=
+        "Command result")
+      uint8 result;
+
+      @verbatim (language="comment", text=
+        "Also used as progress, it can be set with the reason why the command was denied, or the progress percentage when result is MAV_RESULT_IN_PROGRESS")
+      @unit (value="%")
+      uint8 result_param1;
+
+      @verbatim (language="comment", text=
+        "Additional parameter of the result, example: which parameter of MAV_CMD_NAV_WAYPOINT caused it to be denied.")
+      int32 result_param2;
+
+      uint8 target_system;
+
+      @verbatim (language="comment", text=
+        "Target component / mode executor")
+      uint16 target_component;
+
+      @verbatim (language="comment", text=
+        "Indicates if the command came from an external source")
+      boolean from_external;
+    };
+  };
+};

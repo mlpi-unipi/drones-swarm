@@ -1,0 +1,9 @@
+[ 33%] [32m[1mLinking CXX executable Drone[0m
+/usr/bin/ld: CMakeFiles/Drone.dir/src/main.cpp.o: in function `fdds::TargetDetection::TargetDetection(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, fdds::Parameters const&, rclcpp::Node&)':
+main.cpp:(.text._ZN4fdds15TargetDetectionC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_10ParametersERN6rclcpp4NodeE[_ZN4fdds15TargetDetectionC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_10ParametersERN6rclcpp4NodeE]+0x133): undefined reference to `fdds::TargetDetection::cameraSubscriptionCallback(std::shared_ptr<sensor_msgs::msg::CompressedImage_<std::allocator<void> > >)'
+/usr/bin/ld: /home/fourdds/ros2_ws/install/target_detection/lib/libTargetDetection.a(TargetDetection.cpp.o): in function `fdds::TargetDetection::tick()':
+TargetDetection.cpp:(.text+0x4a3): undefined reference to `cv_bridge::toCvCopy(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > const> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/Drone.dir/build.make:267: Drone] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

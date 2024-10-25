@@ -1,0 +1,26 @@
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:33[m[K,
+                 from [01m[K/usr/include/c++/11/bits/allocator.h:46[m[K,
+                 from [01m[K/usr/include/c++/11/memory:64[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/main.cpp:1[m[K:
+/usr/include/c++/11/ext/new_allocator.h: In instantiation of ‘[01m[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = Swarm::BaseStation; _Args = {int&, const Swarm::Options&}; _Tp = Swarm::BaseStation][m[K’:
+[01m[K/usr/include/c++/11/bits/alloc_traits.h:516:17:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<_Tp1> >::construct(std::allocator_traits<std::allocator<_Tp1> >::allocator_type&, _Up*, _Args&& ...) [with _Up = Swarm::BaseStation; _Args = {int&, const Swarm::Options&}; _Tp = Swarm::BaseStation; std::allocator_traits<std::allocator<_Tp1> >::allocator_type = std::allocator<Swarm::BaseStation>][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:519:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {int&, const Swarm::Options&}; _Tp = Swarm::BaseStation; _Alloc = std::allocator<Swarm::BaseStation>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:650:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = Swarm::BaseStation; _Alloc = std::allocator<Swarm::BaseStation>; _Args = {int&, const Swarm::Options&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1342:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<Swarm::BaseStation>; _Args = {int&, const Swarm::Options&}; _Tp = Swarm::BaseStation; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:409:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<Swarm::BaseStation>; _Args = {int&, const Swarm::Options&}; _Tp = Swarm::BaseStation][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:862:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = Swarm::BaseStation; _Alloc = std::allocator<Swarm::BaseStation>; _Args = {int&, const Swarm::Options&}][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:878:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = Swarm::BaseStation; _Args = {int&, const Swarm::Options&}][m[K’
+[01m[K/home/fourdds/ros2_ws/src/boids/src/main.cpp:23:64:[m[K   required from here
+[01m[K/usr/include/c++/11/ext/new_allocator.h:162:11:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[KSwarm::Options&[m[K’ to ‘[01m[Kconst Swarm::Options[m[K’ discards qualifiers
+  162 |         { [01;31m[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)[m[K; }
+      |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/main.cpp:2[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/base_station.hpp:14:48:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[KSwarm::BaseStation::BaseStation(int, Swarm::Options&)[m[K’
+   14 |     BaseStation(const int swarm_size, [01;36m[KOptions& options_[m[K) : Node("BaseStation"), swarmSize(swarm_size), options(options_)
+      |                                       [01;36m[K~~~~~~~~~^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:104: CMakeFiles/swarm_spawner.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

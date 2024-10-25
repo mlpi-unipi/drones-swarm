@@ -1,0 +1,122 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/TecsStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    struct TecsStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Altitude setpoint AMSL")
+      @unit (value="m")
+      float altitude_sp;
+
+      @verbatim (language="comment", text=
+        "Altitude setpoint reference AMSL")
+      @unit (value="m")
+      float altitude_reference;
+
+      @verbatim (language="comment", text=
+        "Height rate setpoint reference")
+      @unit (value="m/s")
+      float height_rate_reference;
+
+      @verbatim (language="comment", text=
+        "Direct height rate setpoint from velocity reference generator")
+      @unit (value="m/s")
+      float height_rate_direct;
+
+      @verbatim (language="comment", text=
+        "Height rate setpoint")
+      @unit (value="m/s")
+      float height_rate_setpoint;
+
+      @verbatim (language="comment", text=
+        "Height rate")
+      @unit (value="m/s")
+      float height_rate;
+
+      @verbatim (language="comment", text=
+        "Equivalent airspeed setpoint")
+      @unit (value="m/s")
+      float equivalent_airspeed_sp;
+
+      @verbatim (language="comment", text=
+        "True airspeed setpoint")
+      @unit (value="m/s")
+      float true_airspeed_sp;
+
+      @verbatim (language="comment", text=
+        "True airspeed filtered")
+      @unit (value="m/s")
+      float true_airspeed_filtered;
+
+      @verbatim (language="comment", text=
+        "True airspeed derivative setpoint")
+      @unit (value="m/s^2")
+      float true_airspeed_derivative_sp;
+
+      @verbatim (language="comment", text=
+        "True airspeed derivative")
+      @unit (value="m/s^2")
+      float true_airspeed_derivative;
+
+      @verbatim (language="comment", text=
+        "True airspeed derivative raw")
+      @unit (value="m/s^2")
+      float true_airspeed_derivative_raw;
+
+      @verbatim (language="comment", text=
+        "Total energy rate setpoint")
+      @unit (value="m^2/s^3")
+      float total_energy_rate_sp;
+
+      @verbatim (language="comment", text=
+        "Total energy rate estimate")
+      @unit (value="m^2/s^3")
+      float total_energy_rate;
+
+      @verbatim (language="comment", text=
+        "Energy balance rate setpoint")
+      @unit (value="m^2/s^3")
+      float total_energy_balance_rate_sp;
+
+      @verbatim (language="comment", text=
+        "Energy balance rate estimate")
+      @unit (value="m^2/s^3")
+      float total_energy_balance_rate;
+
+      @verbatim (language="comment", text=
+        "Throttle integrator value")
+      @unit (value="-")
+      float throttle_integ;
+
+      @verbatim (language="comment", text=
+        "Pitch integrator value")
+      @unit (value="rad")
+      float pitch_integ;
+
+      @verbatim (language="comment", text=
+        "Current throttle setpoint")
+      @unit (value="-")
+      float throttle_sp;
+
+      @verbatim (language="comment", text=
+        "Current pitch setpoint")
+      @unit (value="rad")
+      float pitch_sp_rad;
+
+      @verbatim (language="comment", text=
+        "estimated throttle value [0,1] required to fly level at equivalent_airspeed_sp in the current atmospheric conditions")
+      float throttle_trim;
+
+      @verbatim (language="comment", text=
+        "0: no underspeed, 1: maximal underspeed. Controller takes measures to avoid stall proportional to ratio if >0.")
+      float underspeed_ratio;
+    };
+  };
+};

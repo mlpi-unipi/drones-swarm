@@ -1,0 +1,12 @@
+[0.008s] Invoking command in '/home/fourdds/ros2_ws/build/boids': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24
+[0.030s] [35m[1mConsolidate compiler generated dependencies of target uavs_spawner[0m
+[0.033s] [ 40%] Built target frame_transforms
+[0.041s] [ 60%] [32mBuilding CXX object CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o[0m
+[9.688s] [ 80%] [32m[1mLinking CXX executable uavs_spawner[0m
+[10.075s] /usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o: in function `uav_node::startup_logic()':
+[10.075s] uav_node.cpp:(.text+0x1358): undefined reference to `uav_node::request_loiter()'
+[10.119s] collect2: error: ld returned 1 exit status
+[10.120s] gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:175: uavs_spawner] Error 1
+[10.120s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/uavs_spawner.dir/all] Error 2
+[10.120s] gmake: *** [Makefile:146: all] Error 2
+[10.122s] Invoked command in '/home/fourdds/ros2_ws/build/boids' returned '2': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24
