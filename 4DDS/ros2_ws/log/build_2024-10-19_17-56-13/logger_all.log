@@ -1,0 +1,742 @@
+[0.103s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-skip', 'stigmergy']
+[0.103s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=['stigmergy'], packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7eff9f842a40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7eff9f842410>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7eff9f842410>>, mixin_verb=('build',))
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.136s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/fourdds/ros2_ws'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/analysis) by extension 'ros'
+[0.163s] DEBUG:colcon.colcon_core.package_identification:Package 'src/analysis' with type 'ros.ament_python' and name 'analysis'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/base_station) by extension 'ros'
+[0.167s] DEBUG:colcon.colcon_core.package_identification:Package 'src/base_station' with type 'ros.ament_cmake' and name 'base_station'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/drone) by extension 'ros'
+[0.169s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drone' with type 'ros.ament_cmake' and name 'drone'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/fdds_messages) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/fdds_messages' with type 'ros.ament_cmake' and name 'fdds_messages'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(src/obstacle_avoidance) by extension 'ros'
+[0.175s] DEBUG:colcon.colcon_core.package_identification:Package 'src/obstacle_avoidance' with type 'ros.ament_cmake' and name 'obstacle_avoidance'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(src/parameters) by extension 'ros'
+[0.177s] DEBUG:colcon.colcon_core.package_identification:Package 'src/parameters' with type 'ros.ament_cmake' and name 'parameters'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_msgs) by extension 'ros'
+[0.179s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_msgs' with type 'ros.ament_cmake' and name 'px4_msgs'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/px4_ros_com) by extension 'ros'
+[0.182s] DEBUG:colcon.colcon_core.package_identification:Package 'src/px4_ros_com' with type 'ros.ament_cmake' and name 'px4_ros_com'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extensions ['ignore', 'ignore_ament_install']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extension 'ignore'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extension 'ignore_ament_install'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extensions ['colcon_pkg']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extension 'colcon_pkg'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extensions ['colcon_meta']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extension 'colcon_meta'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extensions ['ros']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy) by extension 'ros'
+[0.186s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stigmergy' with type 'ros.ament_cmake' and name 'stigmergy'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extension 'ignore_ament_install'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extensions ['colcon_pkg']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extension 'colcon_pkg'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extension 'colcon_meta'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extensions ['ros']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(src/stigmergy_map) by extension 'ros'
+[0.188s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stigmergy_map' with type 'ros.ament_cmake' and name 'stigmergy_map'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extensions ['ignore', 'ignore_ament_install']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extension 'ignore'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extension 'ignore_ament_install'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extensions ['colcon_pkg']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extension 'colcon_pkg'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extensions ['colcon_meta']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extension 'colcon_meta'
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extensions ['ros']
+[0.189s] Level 1:colcon.colcon_core.package_identification:_identify(src/target_detection) by extension 'ros'
+[0.190s] DEBUG:colcon.colcon_core.package_identification:Package 'src/target_detection' with type 'ros.ament_cmake' and name 'target_detection'
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.190s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.209s] INFO:colcon.colcon_core.package_selection:Skipping package 'stigmergy' in 'src/stigmergy'
+[0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.210s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.212s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 281 installed packages in /opt/ros/humble
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.242s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'cmake_target' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'cmake_clean_cache' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'cmake_clean_first' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'cmake_force_configure' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'ament_cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'catkin_cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'analysis' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.243s] DEBUG:colcon.colcon_core.verb:Building package 'analysis' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/analysis', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/analysis', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/analysis', 'symlink_install': False, 'test_result_base': None}
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'cmake_target' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'cmake_clean_cache' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'cmake_clean_first' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'cmake_force_configure' from command line to 'False'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'ament_cmake_args' from command line to 'None'
+[0.243s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'base_station' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'base_station' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/base_station', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/base_station', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/base_station', 'symlink_install': False, 'test_result_base': None}
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'cmake_target' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'cmake_clean_cache' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'cmake_clean_first' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'cmake_force_configure' from command line to 'False'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'ament_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'catkin_cmake_args' from command line to 'None'
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'drone' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.244s] DEBUG:colcon.colcon_core.verb:Building package 'drone' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/drone', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/drone', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/drone', 'symlink_install': False, 'test_result_base': None}
+[0.244s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'fdds_messages' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'fdds_messages' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/fdds_messages', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/fdds_messages', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/fdds_messages', 'symlink_install': False, 'test_result_base': None}
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'cmake_target' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'cmake_clean_cache' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'cmake_clean_first' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'cmake_force_configure' from command line to 'False'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'ament_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'catkin_cmake_args' from command line to 'None'
+[0.245s] Level 5:colcon.colcon_core.verb:set package 'parameters' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.245s] DEBUG:colcon.colcon_core.verb:Building package 'parameters' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/parameters', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/parameters', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/parameters', 'symlink_install': False, 'test_result_base': None}
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_args' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'px4_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.246s] DEBUG:colcon.colcon_core.verb:Building package 'px4_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/px4_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/px4_msgs', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/px4_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'cmake_args' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'cmake_target' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'cmake_clean_cache' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'cmake_clean_first' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'cmake_force_configure' from command line to 'False'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'ament_cmake_args' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'catkin_cmake_args' from command line to 'None'
+[0.246s] Level 5:colcon.colcon_core.verb:set package 'stigmergy_map' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.246s] DEBUG:colcon.colcon_core.verb:Building package 'stigmergy_map' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/stigmergy_map', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/stigmergy_map', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/stigmergy_map', 'symlink_install': False, 'test_result_base': None}
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'cmake_args' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'cmake_target' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'cmake_clean_cache' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'cmake_clean_first' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'cmake_force_configure' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'ament_cmake_args' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'catkin_cmake_args' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'target_detection' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.247s] DEBUG:colcon.colcon_core.verb:Building package 'target_detection' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/target_detection', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/target_detection', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/target_detection', 'symlink_install': False, 'test_result_base': None}
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'cmake_args' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'cmake_target' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'cmake_clean_cache' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'cmake_clean_first' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'cmake_force_configure' from command line to 'False'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'ament_cmake_args' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'catkin_cmake_args' from command line to 'None'
+[0.247s] Level 5:colcon.colcon_core.verb:set package 'obstacle_avoidance' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.247s] DEBUG:colcon.colcon_core.verb:Building package 'obstacle_avoidance' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/obstacle_avoidance', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/obstacle_avoidance', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/obstacle_avoidance', 'symlink_install': False, 'test_result_base': None}
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_args' from command line to 'None'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target' from command line to 'None'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_cache' from command line to 'False'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_clean_first' from command line to 'False'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'cmake_force_configure' from command line to 'False'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'ament_cmake_args' from command line to 'None'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_cmake_args' from command line to 'None'
+[0.248s] Level 5:colcon.colcon_core.verb:set package 'px4_ros_com' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.248s] DEBUG:colcon.colcon_core.verb:Building package 'px4_ros_com' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ros2_ws/build/px4_ros_com', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ros2_ws/install/px4_ros_com', 'merge_install': False, 'path': '/home/fourdds/ros2_ws/src/px4_ros_com', 'symlink_install': False, 'test_result_base': None}
+[0.248s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.249s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.250s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/parameters' with build type 'ament_cmake'
+[0.251s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/parameters'
+[0.254s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.254s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.254s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.258s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/px4_msgs' with build type 'ament_cmake'
+[0.258s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/px4_msgs'
+[0.258s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.259s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.263s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/fourdds/ros2_ws/src/analysis' with build type 'ament_python'
+[0.263s] Level 1:colcon.colcon_core.shell:create_environment_hook('analysis', 'ament_prefix_path')
+[0.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/analysis/share/analysis/hook/ament_prefix_path.ps1'
+[0.265s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/analysis/share/analysis/hook/ament_prefix_path.dsv'
+[0.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/analysis/share/analysis/hook/ament_prefix_path.sh'
+[0.267s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.267s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.271s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/base_station' with build type 'ament_cmake'
+[0.272s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/base_station'
+[0.272s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.272s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.275s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/drone' with build type 'ament_cmake'
+[0.276s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/drone'
+[0.276s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.276s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.280s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/fdds_messages' with build type 'ament_cmake'
+[0.281s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/fdds_messages'
+[0.281s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.281s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.285s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/stigmergy_map' with build type 'ament_cmake'
+[0.286s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/stigmergy_map'
+[0.287s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.287s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.290s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/target_detection' with build type 'ament_cmake'
+[0.290s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/target_detection'
+[0.291s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.291s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.304s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/parameters': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/parameters -- -j16 -l16
+[0.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/px4_msgs -- -j16 -l16
+[0.507s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/fourdds/ros2_ws/src/analysis'
+[0.507s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.507s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.516s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/base_station': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/base_station -- -j16 -l16
+[0.521s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16
+[0.527s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/fdds_messages': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/fdds_messages -- -j16 -l16
+[0.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/stigmergy_map': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/stigmergy_map -- -j16 -l16
+[0.560s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/target_detection': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/target_detection -- -j16 -l16
+[0.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/parameters' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/parameters -- -j16 -l16
+[0.623s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/parameters': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/parameters
+[0.627s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/stigmergy_map' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/stigmergy_map -- -j16 -l16
+[0.631s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/base_station' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/base_station -- -j16 -l16
+[0.654s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16
+[0.669s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/target_detection' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/target_detection -- -j16 -l16
+[0.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parameters)
+[0.674s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/parameters' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/parameters
+[0.678s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters' for CMake module files
+[0.679s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters' for CMake config files
+[0.683s] Level 1:colcon.colcon_core.shell:create_environment_hook('parameters', 'cmake_prefix_path')
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/parameters/share/parameters/hook/cmake_prefix_path.ps1'
+[0.684s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/parameters/share/parameters/hook/cmake_prefix_path.dsv'
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/parameters/share/parameters/hook/cmake_prefix_path.sh'
+[0.686s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/lib'
+[0.687s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/bin'
+[0.687s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/lib/pkgconfig/parameters.pc'
+[0.687s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/lib/python3.10/site-packages'
+[0.688s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/bin'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.ps1'
+[0.690s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.dsv'
+[0.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.sh'
+[0.693s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.bash'
+[0.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.zsh'
+[0.696s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/parameters/share/colcon-core/packages/parameters)
+[0.702s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/stigmergy_map': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/stigmergy_map
+[0.706s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/base_station': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/base_station
+[0.709s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/drone
+[0.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/target_detection': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/target_detection
+[0.743s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(parameters)
+[0.744s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters' for CMake module files
+[0.751s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters' for CMake config files
+[0.754s] Level 1:colcon.colcon_core.shell:create_environment_hook('parameters', 'cmake_prefix_path')
+[0.755s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/parameters/share/parameters/hook/cmake_prefix_path.ps1'
+[0.757s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/parameters/share/parameters/hook/cmake_prefix_path.dsv'
+[0.760s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/parameters/share/parameters/hook/cmake_prefix_path.sh'
+[0.763s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/lib'
+[0.763s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/bin'
+[0.763s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/lib/pkgconfig/parameters.pc'
+[0.764s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/lib/python3.10/site-packages'
+[0.764s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/parameters/bin'
+[0.765s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.ps1'
+[0.768s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.dsv'
+[0.769s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.sh'
+[0.770s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.bash'
+[0.771s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/parameters/share/parameters/package.zsh'
+[0.771s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/parameters/share/colcon-core/packages/parameters)
+[0.773s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/obstacle_avoidance' with build type 'ament_cmake'
+[0.773s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/obstacle_avoidance'
+[0.774s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.774s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.783s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(base_station)
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station' for CMake module files
+[0.786s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/base_station' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/base_station
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station' for CMake config files
+[0.789s] Level 1:colcon.colcon_core.shell:create_environment_hook('base_station', 'cmake_prefix_path')
+[0.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/base_station/share/base_station/hook/cmake_prefix_path.ps1'
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/base_station/share/base_station/hook/cmake_prefix_path.dsv'
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/base_station/share/base_station/hook/cmake_prefix_path.sh'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/lib'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/bin'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/lib/pkgconfig/base_station.pc'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/lib/python3.10/site-packages'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/bin'
+[0.792s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.ps1'
+[0.792s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.dsv'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.sh'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.bash'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.zsh'
+[0.794s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/base_station/share/colcon-core/packages/base_station)
+[0.796s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stigmergy_map)
+[0.796s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map' for CMake module files
+[0.797s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/stigmergy_map' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/stigmergy_map
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map' for CMake config files
+[0.801s] Level 1:colcon.colcon_core.shell:create_environment_hook('stigmergy_map', 'cmake_prefix_path')
+[0.801s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/hook/cmake_prefix_path.ps1'
+[0.802s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/hook/cmake_prefix_path.dsv'
+[0.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/hook/cmake_prefix_path.sh'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/lib'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/bin'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/lib/pkgconfig/stigmergy_map.pc'
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/lib/python3.10/site-packages'
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/bin'
+[0.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.ps1'
+[0.805s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.dsv'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.sh'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.bash'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.zsh'
+[0.807s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/stigmergy_map/share/colcon-core/packages/stigmergy_map)
+[0.809s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone)
+[0.810s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone' for CMake module files
+[0.810s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/drone
+[0.812s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone' for CMake config files
+[0.814s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone', 'cmake_prefix_path')
+[0.815s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/drone/share/drone/hook/cmake_prefix_path.ps1'
+[0.816s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/drone/share/drone/hook/cmake_prefix_path.dsv'
+[0.816s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/drone/share/drone/hook/cmake_prefix_path.sh'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/lib'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/bin'
+[0.818s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/lib/pkgconfig/drone.pc'
+[0.818s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/lib/python3.10/site-packages'
+[0.818s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/bin'
+[0.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.ps1'
+[2.381s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/drone/share/drone/package.dsv'
+[2.382s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.sh'
+[2.383s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.bash'
+[2.384s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.zsh'
+[2.385s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/drone/share/colcon-core/packages/drone)
+[2.388s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(target_detection)
+[2.388s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection' for CMake module files
+[2.389s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/target_detection' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/target_detection
+[2.390s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection' for CMake config files
+[2.393s] Level 1:colcon.colcon_core.shell:create_environment_hook('target_detection', 'cmake_prefix_path')
+[2.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/hook/cmake_prefix_path.ps1'
+[2.395s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/hook/cmake_prefix_path.dsv'
+[2.396s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/hook/cmake_prefix_path.sh'
+[2.397s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/lib'
+[2.397s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/bin'
+[2.397s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/lib/pkgconfig/target_detection.pc'
+[2.397s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/lib/python3.10/site-packages'
+[2.398s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/bin'
+[2.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.ps1'
+[2.399s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.dsv'
+[2.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.sh'
+[2.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.bash'
+[2.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.zsh'
+[2.402s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/target_detection/share/colcon-core/packages/target_detection)
+[2.411s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(base_station)
+[2.413s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station' for CMake module files
+[2.415s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station' for CMake config files
+[2.416s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/obstacle_avoidance': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/parameters/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/fourdds/ros2_ws/build/obstacle_avoidance -- -j16 -l16
+[2.417s] Level 1:colcon.colcon_core.shell:create_environment_hook('base_station', 'cmake_prefix_path')
+[2.417s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/base_station/share/base_station/hook/cmake_prefix_path.ps1'
+[2.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/base_station/share/base_station/hook/cmake_prefix_path.dsv'
+[2.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/base_station/share/base_station/hook/cmake_prefix_path.sh'
+[2.421s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/lib'
+[2.421s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/bin'
+[2.421s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/lib/pkgconfig/base_station.pc'
+[2.422s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/lib/python3.10/site-packages'
+[2.422s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/base_station/bin'
+[2.422s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.ps1'
+[2.424s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.dsv'
+[2.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.sh'
+[2.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.bash'
+[2.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/base_station/share/base_station/package.zsh'
+[2.429s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/base_station/share/colcon-core/packages/base_station)
+[2.430s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stigmergy_map)
+[2.431s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map' for CMake module files
+[2.434s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map' for CMake config files
+[2.434s] Level 1:colcon.colcon_core.shell:create_environment_hook('stigmergy_map', 'cmake_prefix_path')
+[2.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/hook/cmake_prefix_path.ps1'
+[2.436s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/hook/cmake_prefix_path.dsv'
+[2.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/hook/cmake_prefix_path.sh'
+[2.438s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/lib'
+[2.438s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/bin'
+[2.438s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/lib/pkgconfig/stigmergy_map.pc'
+[2.439s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/lib/python3.10/site-packages'
+[2.439s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/stigmergy_map/bin'
+[2.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.ps1'
+[2.441s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.dsv'
+[2.442s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.sh'
+[2.443s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.bash'
+[2.444s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.zsh'
+[2.445s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/stigmergy_map/share/colcon-core/packages/stigmergy_map)
+[2.448s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drone)
+[2.448s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone' for CMake module files
+[2.452s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone' for CMake config files
+[2.452s] Level 1:colcon.colcon_core.shell:create_environment_hook('drone', 'cmake_prefix_path')
+[2.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/drone/share/drone/hook/cmake_prefix_path.ps1'
+[2.454s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/drone/share/drone/hook/cmake_prefix_path.dsv'
+[2.454s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/drone/share/drone/hook/cmake_prefix_path.sh'
+[2.455s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/lib'
+[2.456s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/bin'
+[2.456s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/lib/pkgconfig/drone.pc'
+[2.456s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/lib/python3.10/site-packages'
+[2.456s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/drone/bin'
+[2.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.ps1'
+[2.458s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/drone/share/drone/package.dsv'
+[2.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.sh'
+[2.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.bash'
+[2.461s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/drone/share/drone/package.zsh'
+[2.462s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/drone/share/colcon-core/packages/drone)
+[2.462s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(target_detection)
+[2.463s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection' for CMake module files
+[2.466s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection' for CMake config files
+[2.466s] Level 1:colcon.colcon_core.shell:create_environment_hook('target_detection', 'cmake_prefix_path')
+[2.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/hook/cmake_prefix_path.ps1'
+[2.467s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/hook/cmake_prefix_path.dsv'
+[2.469s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/hook/cmake_prefix_path.sh'
+[2.470s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/lib'
+[2.470s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/bin'
+[2.470s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/lib/pkgconfig/target_detection.pc'
+[2.471s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/lib/python3.10/site-packages'
+[2.471s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/target_detection/bin'
+[2.471s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.ps1'
+[2.472s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.dsv'
+[2.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.sh'
+[2.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.bash'
+[2.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.zsh'
+[2.478s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/target_detection/share/colcon-core/packages/target_detection)
+[2.527s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/obstacle_avoidance' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/parameters/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/fourdds/ros2_ws/build/obstacle_avoidance -- -j16 -l16
+[2.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/obstacle_avoidance': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/parameters/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/fourdds/ros2_ws/build/obstacle_avoidance
+[2.620s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(obstacle_avoidance)
+[2.621s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance' for CMake module files
+[2.622s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/obstacle_avoidance' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/parameters/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/fourdds/ros2_ws/build/obstacle_avoidance
+[2.625s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance' for CMake config files
+[2.628s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_avoidance', 'cmake_prefix_path')
+[2.628s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/hook/cmake_prefix_path.ps1'
+[2.629s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/hook/cmake_prefix_path.dsv'
+[2.630s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/hook/cmake_prefix_path.sh'
+[2.631s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/lib'
+[2.632s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/bin'
+[2.632s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/lib/pkgconfig/obstacle_avoidance.pc'
+[2.632s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/lib/python3.10/site-packages'
+[2.633s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/bin'
+[2.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.ps1'
+[2.634s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.dsv'
+[2.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.sh'
+[2.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.bash'
+[2.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.zsh'
+[2.638s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/obstacle_avoidance/share/colcon-core/packages/obstacle_avoidance)
+[2.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(obstacle_avoidance)
+[2.673s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance' for CMake module files
+[2.673s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance' for CMake config files
+[2.673s] Level 1:colcon.colcon_core.shell:create_environment_hook('obstacle_avoidance', 'cmake_prefix_path')
+[2.674s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/hook/cmake_prefix_path.ps1'
+[2.675s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/hook/cmake_prefix_path.dsv'
+[2.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/hook/cmake_prefix_path.sh'
+[2.676s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/lib'
+[2.676s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/bin'
+[2.676s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/lib/pkgconfig/obstacle_avoidance.pc'
+[2.677s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/lib/python3.10/site-packages'
+[2.677s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/obstacle_avoidance/bin'
+[2.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.ps1'
+[2.678s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.dsv'
+[2.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.sh'
+[2.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.bash'
+[2.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.zsh'
+[2.680s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/obstacle_avoidance/share/colcon-core/packages/obstacle_avoidance)
+[2.683s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/fdds_messages' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/fdds_messages -- -j16 -l16
+[2.796s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/fdds_messages': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/fdds_messages
+[2.902s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/px4_msgs -- -j16 -l16
+[2.927s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fdds_messages)
+[2.928s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages' for CMake module files
+[2.928s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/fdds_messages' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/fdds_messages
+[2.930s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages' for CMake config files
+[2.935s] Level 1:colcon.colcon_core.shell:create_environment_hook('fdds_messages', 'cmake_prefix_path')
+[2.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/cmake_prefix_path.ps1'
+[2.936s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/cmake_prefix_path.dsv'
+[2.937s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/cmake_prefix_path.sh'
+[2.938s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/lib'
+[2.938s] Level 1:colcon.colcon_core.shell:create_environment_hook('fdds_messages', 'ld_library_path_lib')
+[2.938s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/ld_library_path_lib.ps1'
+[2.939s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/ld_library_path_lib.dsv'
+[2.939s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/ld_library_path_lib.sh'
+[2.940s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/bin'
+[2.940s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/lib/pkgconfig/fdds_messages.pc'
+[2.940s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/lib/python3.10/site-packages'
+[2.940s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/bin'
+[2.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.ps1'
+[2.942s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.dsv'
+[2.942s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.sh'
+[2.943s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.bash'
+[2.943s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.zsh'
+[2.944s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/fdds_messages/share/colcon-core/packages/fdds_messages)
+[3.046s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fdds_messages)
+[3.047s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages' for CMake module files
+[3.047s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages' for CMake config files
+[3.048s] Level 1:colcon.colcon_core.shell:create_environment_hook('fdds_messages', 'cmake_prefix_path')
+[3.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/cmake_prefix_path.ps1'
+[3.049s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/cmake_prefix_path.dsv'
+[3.049s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/cmake_prefix_path.sh'
+[3.050s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/lib'
+[3.051s] Level 1:colcon.colcon_core.shell:create_environment_hook('fdds_messages', 'ld_library_path_lib')
+[3.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/ld_library_path_lib.ps1'
+[3.052s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/ld_library_path_lib.dsv'
+[3.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/hook/ld_library_path_lib.sh'
+[3.053s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/bin'
+[3.053s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/lib/pkgconfig/fdds_messages.pc'
+[3.054s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/lib/python3.10/site-packages'
+[3.054s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/fdds_messages/bin'
+[3.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.ps1'
+[3.056s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.dsv'
+[3.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.sh'
+[3.058s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.bash'
+[3.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/package.zsh'
+[3.059s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/fdds_messages/share/colcon-core/packages/fdds_messages)
+[3.245s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/src/analysis': PYTHONPATH=/home/fourdds/ros2_ws/build/analysis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/analysis build --build-base /home/fourdds/ros2_ws/build/analysis/build install --record /home/fourdds/ros2_ws/build/analysis/install.log --single-version-externally-managed install_data
+[3.717s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/analysis' for CMake module files
+[3.718s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/src/analysis' returned '0': PYTHONPATH=/home/fourdds/ros2_ws/build/analysis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/analysis build --build-base /home/fourdds/ros2_ws/build/analysis/build install --record /home/fourdds/ros2_ws/build/analysis/install.log --single-version-externally-managed install_data
+[3.720s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/analysis' for CMake config files
+[3.726s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/analysis/lib'
+[3.726s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/analysis/bin'
+[3.726s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/analysis/lib/pkgconfig/analysis.pc'
+[3.727s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages'
+[3.727s] Level 1:colcon.colcon_core.shell:create_environment_hook('analysis', 'pythonpath')
+[3.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/analysis/share/analysis/hook/pythonpath.ps1'
+[3.727s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/analysis/share/analysis/hook/pythonpath.dsv'
+[3.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/analysis/share/analysis/hook/pythonpath.sh'
+[3.729s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/analysis/bin'
+[3.729s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(analysis)
+[3.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/analysis/share/analysis/package.ps1'
+[3.730s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/analysis/share/analysis/package.dsv'
+[3.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/analysis/share/analysis/package.sh'
+[3.731s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/analysis/share/analysis/package.bash'
+[3.731s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/analysis/share/analysis/package.zsh'
+[3.731s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/analysis/share/colcon-core/packages/analysis)
+[8.750s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/px4_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/px4_msgs
+[11.061s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[11.061s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs' for CMake module files
+[11.063s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/px4_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ros2_ws/build/px4_msgs
+[11.064s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs' for CMake config files
+[11.106s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[11.106s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[11.107s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[11.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[11.108s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/lib'
+[11.108s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[11.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[11.109s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[11.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[11.110s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/bin'
+[11.110s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[11.110s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/lib/python3.10/site-packages'
+[11.111s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/bin'
+[11.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.ps1'
+[11.111s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.dsv'
+[11.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.sh'
+[11.112s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.bash'
+[11.113s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.zsh'
+[11.113s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[16.536s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_msgs)
+[16.536s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs' for CMake module files
+[16.536s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs' for CMake config files
+[16.550s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'cmake_prefix_path')
+[16.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.ps1'
+[16.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.dsv'
+[16.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/cmake_prefix_path.sh'
+[16.552s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/lib'
+[16.552s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_msgs', 'ld_library_path_lib')
+[16.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.ps1'
+[16.553s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.dsv'
+[16.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/hook/ld_library_path_lib.sh'
+[16.553s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/bin'
+[16.553s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/lib/pkgconfig/px4_msgs.pc'
+[16.554s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/lib/python3.10/site-packages'
+[16.554s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_msgs/bin'
+[16.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.ps1'
+[16.555s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.dsv'
+[16.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.sh'
+[16.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.bash'
+[16.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/package.zsh'
+[16.556s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/px4_msgs/share/colcon-core/packages/px4_msgs)
+[16.557s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ros2_ws/src/px4_ros_com' with build type 'ament_cmake'
+[16.557s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ros2_ws/src/px4_ros_com'
+[16.558s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[16.558s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[16.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ros2_ws/build/px4_ros_com -- -j16 -l16
+[16.892s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ros2_ws/build/px4_ros_com -- -j16 -l16
+[16.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ros2_ws/build/px4_ros_com': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ros2_ws/build/px4_ros_com
+[17.018s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[17.019s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com' for CMake module files
+[17.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ros2_ws/build/px4_ros_com' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ros2_ws/build/px4_ros_com
+[17.021s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com' for CMake config files
+[17.026s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[17.026s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[17.027s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[17.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[17.028s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/lib'
+[17.028s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[17.028s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[17.029s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[17.029s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[17.030s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/bin'
+[17.030s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[17.030s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/lib/python3.10/site-packages'
+[17.030s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/bin'
+[17.030s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[17.031s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[17.031s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.sh'
+[17.032s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.bash'
+[17.032s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[17.033s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[17.081s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(px4_ros_com)
+[17.082s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com' for CMake module files
+[17.082s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com' for CMake config files
+[17.082s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'cmake_prefix_path')
+[17.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.ps1'
+[17.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.dsv'
+[17.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/cmake_prefix_path.sh'
+[17.085s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/lib'
+[17.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('px4_ros_com', 'ld_library_path_lib')
+[17.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.ps1'
+[17.086s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.dsv'
+[17.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/hook/ld_library_path_lib.sh'
+[17.087s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/bin'
+[17.087s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/lib/pkgconfig/px4_ros_com.pc'
+[17.087s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/lib/python3.10/site-packages'
+[17.087s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ros2_ws/install/px4_ros_com/bin'
+[17.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.ps1'
+[17.088s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.dsv'
+[17.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.sh'
+[17.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.bash'
+[17.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ros2_ws/install/px4_ros_com/share/px4_ros_com/package.zsh'
+[17.090s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ros2_ws/install/px4_ros_com/share/colcon-core/packages/px4_ros_com)
+[17.090s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[17.091s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[17.091s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[17.091s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[17.099s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[17.099s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[17.099s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[17.099s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[17.101s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[17.101s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[17.101s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ros2_ws/install/local_setup.ps1'
+[17.102s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fourdds/ros2_ws/install/_local_setup_util_ps1.py'
+[17.104s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ros2_ws/install/setup.ps1'
+[17.104s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ros2_ws/install/local_setup.sh'
+[17.105s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fourdds/ros2_ws/install/_local_setup_util_sh.py'
+[17.106s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ros2_ws/install/setup.sh'
+[17.107s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ros2_ws/install/local_setup.bash'
+[17.107s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ros2_ws/install/setup.bash'
+[17.108s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ros2_ws/install/local_setup.zsh'
+[17.109s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ros2_ws/install/setup.zsh'

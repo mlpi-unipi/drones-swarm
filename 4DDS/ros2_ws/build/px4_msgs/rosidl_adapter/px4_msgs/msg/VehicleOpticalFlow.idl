@@ -1,0 +1,56 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/VehicleOpticalFlow.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef float float__2[2];
+    typedef float float__3[3];
+    @verbatim (language="comment", text=
+      "Optical flow in XYZ body frame in SI units.")
+    struct VehicleOpticalFlow {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "unique device ID for the sensor that does not change between power cycles")
+      uint32 device_id;
+
+      @verbatim (language="comment", text=
+        "(radians) accumulated optical flow in radians where a positive value is produced by a RH rotation about the body axis")
+      float__2 pixel_flow;
+
+      @verbatim (language="comment", text=
+        "(radians) accumulated gyro radians where a positive value is produced by a RH rotation about the body axis. (NAN if unavailable)")
+      float__3 delta_angle;
+
+      @verbatim (language="comment", text=
+        "(meters) Distance to the center of the flow field (NAN if unavailable)")
+      float distance_m;
+
+      @verbatim (language="comment", text=
+        "(microseconds) accumulation timespan in microseconds")
+      uint32 integration_timespan_us;
+
+      @verbatim (language="comment", text=
+        "Average of quality of accumulated frames, 0: bad quality, 255: maximum quality")
+      uint8 quality;
+
+      @verbatim (language="comment", text=
+        "(radians/s) Magnitude of maximum angular which the optical flow sensor can measure reliably")
+      float max_flow_rate;
+
+      @verbatim (language="comment", text=
+        "(meters) Minimum distance from ground at which the optical flow sensor operates reliably")
+      float min_ground_distance;
+
+      @verbatim (language="comment", text=
+        "(meters) Maximum distance from ground at which the optical flow sensor operates reliably")
+      float max_ground_distance;
+    };
+  };
+};

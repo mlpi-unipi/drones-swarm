@@ -1,0 +1,411 @@
+[0.000000] (-) TimerEvent: {}
+[0.001324] (-) JobUnselected: {'identifier': 'analysis'}
+[0.002142] (-) JobUnselected: {'identifier': 'base_station'}
+[0.002974] (-) JobUnselected: {'identifier': 'fdds_messages'}
+[0.003215] (-) JobUnselected: {'identifier': 'obstacle_avoidance'}
+[0.003326] (-) JobUnselected: {'identifier': 'parameters'}
+[0.003420] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.003461] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.003496] (-) JobUnselected: {'identifier': 'stigmergy'}
+[0.003668] (-) JobUnselected: {'identifier': 'stigmergy_map'}
+[0.003781] (-) JobUnselected: {'identifier': 'target_detection'}
+[0.003848] (drone) JobQueued: {'identifier': 'drone', 'dependencies': OrderedDict()}
+[0.003894] (drone) JobStarted: {'identifier': 'drone'}
+[0.031682] (drone) JobProgress: {'identifier': 'drone', 'progress': 'cmake'}
+[0.034409] (drone) JobProgress: {'identifier': 'drone', 'progress': 'build'}
+[0.035848] (drone) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/drone', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/18153_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '1998f28d-df4c-4379-84f0-4f42da9556f4'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099036] (-) TimerEvent: {}
+[0.199830] (-) TimerEvent: {}
+[0.256227] (drone) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Drone\x1b[0m\n'}
+[0.300019] (-) TimerEvent: {}
+[0.310314] (drone) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o\x1b[0m\n'}
+[0.312359] (drone) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/main.cpp.o\x1b[0m\n'}
+[0.400277] (-) TimerEvent: {}
+[0.501032] (-) TimerEvent: {}
+[0.601590] (-) TimerEvent: {}
+[0.702089] (-) TimerEvent: {}
+[0.802609] (-) TimerEvent: {}
+[0.903165] (-) TimerEvent: {}
+[1.003717] (-) TimerEvent: {}
+[1.104288] (-) TimerEvent: {}
+[1.205031] (-) TimerEvent: {}
+[1.305895] (-) TimerEvent: {}
+[1.406441] (-) TimerEvent: {}
+[1.506982] (-) TimerEvent: {}
+[1.607602] (-) TimerEvent: {}
+[1.708246] (-) TimerEvent: {}
+[1.808936] (-) TimerEvent: {}
+[1.909549] (-) TimerEvent: {}
+[2.010203] (-) TimerEvent: {}
+[2.110982] (-) TimerEvent: {}
+[2.211951] (-) TimerEvent: {}
+[2.312824] (-) TimerEvent: {}
+[2.413788] (-) TimerEvent: {}
+[2.514494] (-) TimerEvent: {}
+[2.615178] (-) TimerEvent: {}
+[2.715913] (-) TimerEvent: {}
+[2.816582] (-) TimerEvent: {}
+[2.917495] (-) TimerEvent: {}
+[3.018412] (-) TimerEvent: {}
+[3.119081] (-) TimerEvent: {}
+[3.219750] (-) TimerEvent: {}
+[3.320404] (-) TimerEvent: {}
+[3.421053] (-) TimerEvent: {}
+[3.521705] (-) TimerEvent: {}
+[3.622382] (-) TimerEvent: {}
+[3.723020] (-) TimerEvent: {}
+[3.823637] (-) TimerEvent: {}
+[3.924437] (-) TimerEvent: {}
+[4.025506] (-) TimerEvent: {}
+[4.126384] (-) TimerEvent: {}
+[4.226941] (-) TimerEvent: {}
+[4.327662] (-) TimerEvent: {}
+[4.428459] (-) TimerEvent: {}
+[4.529196] (-) TimerEvent: {}
+[4.629921] (-) TimerEvent: {}
+[4.730507] (-) TimerEvent: {}
+[4.831080] (-) TimerEvent: {}
+[4.931784] (-) TimerEvent: {}
+[5.032553] (-) TimerEvent: {}
+[5.133184] (-) TimerEvent: {}
+[5.234069] (-) TimerEvent: {}
+[5.334853] (-) TimerEvent: {}
+[5.435939] (-) TimerEvent: {}
+[5.536744] (-) TimerEvent: {}
+[5.637472] (-) TimerEvent: {}
+[5.738404] (-) TimerEvent: {}
+[5.839297] (-) TimerEvent: {}
+[5.939975] (-) TimerEvent: {}
+[6.040825] (-) TimerEvent: {}
+[6.141568] (-) TimerEvent: {}
+[6.242211] (-) TimerEvent: {}
+[6.343257] (-) TimerEvent: {}
+[6.443969] (-) TimerEvent: {}
+[6.544772] (-) TimerEvent: {}
+[6.645662] (-) TimerEvent: {}
+[6.746785] (-) TimerEvent: {}
+[6.847696] (-) TimerEvent: {}
+[6.948486] (-) TimerEvent: {}
+[7.049206] (-) TimerEvent: {}
+[7.149914] (-) TimerEvent: {}
+[7.250673] (-) TimerEvent: {}
+[7.351734] (-) TimerEvent: {}
+[7.452461] (-) TimerEvent: {}
+[7.553161] (-) TimerEvent: {}
+[7.654020] (-) TimerEvent: {}
+[7.754661] (-) TimerEvent: {}
+[7.855470] (-) TimerEvent: {}
+[7.956343] (-) TimerEvent: {}
+[8.057049] (-) TimerEvent: {}
+[8.157788] (-) TimerEvent: {}
+[8.258686] (-) TimerEvent: {}
+[8.359365] (-) TimerEvent: {}
+[8.460044] (-) TimerEvent: {}
+[8.560645] (-) TimerEvent: {}
+[8.661615] (-) TimerEvent: {}
+[8.762411] (-) TimerEvent: {}
+[8.863087] (-) TimerEvent: {}
+[8.961554] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.962058] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:29:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst class std::shared_ptr<fdds::Drone>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[KvehicleType\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.962213] (drone) StderrLine: {'line': b'   29 |                 node.\x1b[01;31m\x1b[KvehicleType\x1b[m\x1b[K = argv[2]; //Setto il tipo del veicolo\n'}
+[8.962322] (drone) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.963287] (-) TimerEvent: {}
+[8.999690] (drone) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[9.000051] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[9.000212] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[9.000328] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[9.000445] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[9.000566] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[9.000668] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[9.000781] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[9.000890] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[9.000989] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[9.001088] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[9.001205] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4\x1b[m\x1b[K,\n'}
+[9.001327] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1\x1b[m\x1b[K:\n'}
+[9.001427] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid fdds::Drone::flockingLogic()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.001526] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:178:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%s\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kstd::string\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[9.001820] (drone) StderrLine: {'line': b'  178 |     RCLCPP_INFO(get_logger(), \x1b[01;35m\x1b[K"Nome del veicolo: %s"\x1b[m\x1b[K, vehicleType);\n'}
+[9.001999] (drone) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.002112] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:178:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[9.002234] (drone) StderrLine: {'line': b'  178 |     RCLCPP_INFO(get_logger(), "Nome del veicolo: \x1b[01;36m\x1b[K%s\x1b[m\x1b[K", vehicleType);\n'}
+[9.002343] (drone) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[9.002454] (drone) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[9.002554] (drone) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kchar*\x1b[m\x1b[K\n'}
+[9.002678] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:192:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((fdds::Drone*)this)->fdds::Drone::yawRadians\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Rotation2D<float>::Scalar\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[9.002790] (drone) StderrLine: {'line': b'  192 |     Eigen::Rotation2Df rotation_matrix{\x1b[01;35m\x1b[KyawRadians\x1b[m\x1b[K};\n'}
+[9.002906] (drone) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.063504] (-) TimerEvent: {}
+[9.164056] (-) TimerEvent: {}
+[9.264595] (-) TimerEvent: {}
+[9.365180] (-) TimerEvent: {}
+[9.465848] (-) TimerEvent: {}
+[9.566548] (-) TimerEvent: {}
+[9.667310] (-) TimerEvent: {}
+[9.767908] (-) TimerEvent: {}
+[9.868594] (-) TimerEvent: {}
+[9.969752] (-) TimerEvent: {}
+[10.070910] (-) TimerEvent: {}
+[10.171609] (-) TimerEvent: {}
+[10.272377] (-) TimerEvent: {}
+[10.372932] (-) TimerEvent: {}
+[10.473702] (-) TimerEvent: {}
+[10.574638] (-) TimerEvent: {}
+[10.675419] (-) TimerEvent: {}
+[10.776233] (-) TimerEvent: {}
+[10.876979] (-) TimerEvent: {}
+[10.977612] (-) TimerEvent: {}
+[11.078084] (-) TimerEvent: {}
+[11.178700] (-) TimerEvent: {}
+[11.279258] (-) TimerEvent: {}
+[11.379867] (-) TimerEvent: {}
+[11.481207] (-) TimerEvent: {}
+[11.582076] (-) TimerEvent: {}
+[11.682722] (-) TimerEvent: {}
+[11.783274] (-) TimerEvent: {}
+[11.883809] (-) TimerEvent: {}
+[11.984376] (-) TimerEvent: {}
+[12.084955] (-) TimerEvent: {}
+[12.185722] (-) TimerEvent: {}
+[12.286293] (-) TimerEvent: {}
+[12.386894] (-) TimerEvent: {}
+[12.487502] (-) TimerEvent: {}
+[12.588078] (-) TimerEvent: {}
+[12.688732] (-) TimerEvent: {}
+[12.789464] (-) TimerEvent: {}
+[12.890145] (-) TimerEvent: {}
+[12.990724] (-) TimerEvent: {}
+[13.091287] (-) TimerEvent: {}
+[13.191920] (-) TimerEvent: {}
+[13.292615] (-) TimerEvent: {}
+[13.393426] (-) TimerEvent: {}
+[13.494195] (-) TimerEvent: {}
+[13.594742] (-) TimerEvent: {}
+[13.695308] (-) TimerEvent: {}
+[13.796021] (-) TimerEvent: {}
+[13.896631] (-) TimerEvent: {}
+[13.997443] (-) TimerEvent: {}
+[14.098153] (-) TimerEvent: {}
+[14.198745] (-) TimerEvent: {}
+[14.299472] (-) TimerEvent: {}
+[14.400030] (-) TimerEvent: {}
+[14.500634] (-) TimerEvent: {}
+[14.601483] (-) TimerEvent: {}
+[14.702432] (-) TimerEvent: {}
+[14.803275] (-) TimerEvent: {}
+[14.818841] (drone) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/Drone.dir/build.make:90: CMakeFiles/Drone.dir/src/main.cpp.o] Error 1\n'}
+[14.819151] (drone) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[14.903532] (-) TimerEvent: {}
+[15.004204] (-) TimerEvent: {}
+[15.104990] (-) TimerEvent: {}
+[15.205696] (-) TimerEvent: {}
+[15.306295] (-) TimerEvent: {}
+[15.407002] (-) TimerEvent: {}
+[15.507635] (-) TimerEvent: {}
+[15.608373] (-) TimerEvent: {}
+[15.709033] (-) TimerEvent: {}
+[15.809796] (-) TimerEvent: {}
+[15.910535] (-) TimerEvent: {}
+[16.011222] (-) TimerEvent: {}
+[16.111987] (-) TimerEvent: {}
+[16.212533] (-) TimerEvent: {}
+[16.313113] (-) TimerEvent: {}
+[16.413972] (-) TimerEvent: {}
+[16.514721] (-) TimerEvent: {}
+[16.615470] (-) TimerEvent: {}
+[16.716138] (-) TimerEvent: {}
+[16.816943] (-) TimerEvent: {}
+[16.917416] (-) TimerEvent: {}
+[17.018074] (-) TimerEvent: {}
+[17.118799] (-) TimerEvent: {}
+[17.219530] (-) TimerEvent: {}
+[17.320313] (-) TimerEvent: {}
+[17.421037] (-) TimerEvent: {}
+[17.521775] (-) TimerEvent: {}
+[17.622461] (-) TimerEvent: {}
+[17.723163] (-) TimerEvent: {}
+[17.823721] (-) TimerEvent: {}
+[17.924449] (-) TimerEvent: {}
+[18.025113] (-) TimerEvent: {}
+[18.125681] (-) TimerEvent: {}
+[18.226446] (-) TimerEvent: {}
+[18.327305] (-) TimerEvent: {}
+[18.428027] (-) TimerEvent: {}
+[18.528663] (-) TimerEvent: {}
+[18.629375] (-) TimerEvent: {}
+[18.730174] (-) TimerEvent: {}
+[18.830906] (-) TimerEvent: {}
+[18.931711] (-) TimerEvent: {}
+[19.032285] (-) TimerEvent: {}
+[19.133001] (-) TimerEvent: {}
+[19.233708] (-) TimerEvent: {}
+[19.334593] (-) TimerEvent: {}
+[19.435264] (-) TimerEvent: {}
+[19.535869] (-) TimerEvent: {}
+[19.636402] (-) TimerEvent: {}
+[19.736882] (-) TimerEvent: {}
+[19.837417] (-) TimerEvent: {}
+[19.938037] (-) TimerEvent: {}
+[20.039111] (-) TimerEvent: {}
+[20.139958] (-) TimerEvent: {}
+[20.240596] (-) TimerEvent: {}
+[20.341234] (-) TimerEvent: {}
+[20.442014] (-) TimerEvent: {}
+[20.542672] (-) TimerEvent: {}
+[20.643297] (-) TimerEvent: {}
+[20.743916] (-) TimerEvent: {}
+[20.844445] (-) TimerEvent: {}
+[20.945062] (-) TimerEvent: {}
+[21.046239] (-) TimerEvent: {}
+[21.147039] (-) TimerEvent: {}
+[21.247723] (-) TimerEvent: {}
+[21.348591] (-) TimerEvent: {}
+[21.449275] (-) TimerEvent: {}
+[21.549919] (-) TimerEvent: {}
+[21.650596] (-) TimerEvent: {}
+[21.751191] (-) TimerEvent: {}
+[21.851866] (-) TimerEvent: {}
+[21.952501] (-) TimerEvent: {}
+[22.053178] (-) TimerEvent: {}
+[22.153953] (-) TimerEvent: {}
+[22.254542] (-) TimerEvent: {}
+[22.355219] (-) TimerEvent: {}
+[22.456000] (-) TimerEvent: {}
+[22.556727] (-) TimerEvent: {}
+[22.657483] (-) TimerEvent: {}
+[22.758077] (-) TimerEvent: {}
+[22.858608] (-) TimerEvent: {}
+[22.959116] (-) TimerEvent: {}
+[23.059829] (-) TimerEvent: {}
+[23.160367] (-) TimerEvent: {}
+[23.261102] (-) TimerEvent: {}
+[23.361966] (-) TimerEvent: {}
+[23.462995] (-) TimerEvent: {}
+[23.563668] (-) TimerEvent: {}
+[23.664226] (-) TimerEvent: {}
+[23.764825] (-) TimerEvent: {}
+[23.865836] (-) TimerEvent: {}
+[23.966780] (-) TimerEvent: {}
+[24.067492] (-) TimerEvent: {}
+[24.168137] (-) TimerEvent: {}
+[24.268816] (-) TimerEvent: {}
+[24.369860] (-) TimerEvent: {}
+[24.470764] (-) TimerEvent: {}
+[24.571457] (-) TimerEvent: {}
+[24.672055] (-) TimerEvent: {}
+[24.772874] (-) TimerEvent: {}
+[24.873683] (-) TimerEvent: {}
+[24.974477] (-) TimerEvent: {}
+[25.075385] (-) TimerEvent: {}
+[25.176034] (-) TimerEvent: {}
+[25.276694] (-) TimerEvent: {}
+[25.377493] (-) TimerEvent: {}
+[25.478286] (-) TimerEvent: {}
+[25.578829] (-) TimerEvent: {}
+[25.679415] (-) TimerEvent: {}
+[25.780073] (-) TimerEvent: {}
+[25.880825] (-) TimerEvent: {}
+[25.981513] (-) TimerEvent: {}
+[26.082004] (-) TimerEvent: {}
+[26.182634] (-) TimerEvent: {}
+[26.283270] (-) TimerEvent: {}
+[26.384010] (-) TimerEvent: {}
+[26.484627] (-) TimerEvent: {}
+[26.585216] (-) TimerEvent: {}
+[26.685887] (-) TimerEvent: {}
+[26.786680] (-) TimerEvent: {}
+[26.887491] (-) TimerEvent: {}
+[26.988167] (-) TimerEvent: {}
+[27.088681] (-) TimerEvent: {}
+[27.189560] (-) TimerEvent: {}
+[27.290329] (-) TimerEvent: {}
+[27.391138] (-) TimerEvent: {}
+[27.491652] (-) TimerEvent: {}
+[27.592138] (-) TimerEvent: {}
+[27.692764] (-) TimerEvent: {}
+[27.793458] (-) TimerEvent: {}
+[27.894089] (-) TimerEvent: {}
+[27.994745] (-) TimerEvent: {}
+[28.095347] (-) TimerEvent: {}
+[28.195896] (-) TimerEvent: {}
+[28.296630] (-) TimerEvent: {}
+[28.397489] (-) TimerEvent: {}
+[28.498197] (-) TimerEvent: {}
+[28.598895] (-) TimerEvent: {}
+[28.699377] (-) TimerEvent: {}
+[28.799967] (-) TimerEvent: {}
+[28.900828] (-) TimerEvent: {}
+[29.001440] (-) TimerEvent: {}
+[29.101937] (-) TimerEvent: {}
+[29.202885] (-) TimerEvent: {}
+[29.303592] (-) TimerEvent: {}
+[29.404247] (-) TimerEvent: {}
+[29.505019] (-) TimerEvent: {}
+[29.605992] (-) TimerEvent: {}
+[29.706984] (-) TimerEvent: {}
+[29.807707] (-) TimerEvent: {}
+[29.908289] (-) TimerEvent: {}
+[30.008852] (-) TimerEvent: {}
+[30.109361] (-) TimerEvent: {}
+[30.209923] (-) TimerEvent: {}
+[30.310575] (-) TimerEvent: {}
+[30.411066] (-) TimerEvent: {}
+[30.511590] (-) TimerEvent: {}
+[30.612297] (-) TimerEvent: {}
+[30.712824] (-) TimerEvent: {}
+[30.813458] (-) TimerEvent: {}
+[30.914008] (-) TimerEvent: {}
+[31.014955] (-) TimerEvent: {}
+[31.115701] (-) TimerEvent: {}
+[31.216450] (-) TimerEvent: {}
+[31.317380] (-) TimerEvent: {}
+[31.418060] (-) TimerEvent: {}
+[31.518664] (-) TimerEvent: {}
+[31.619460] (-) TimerEvent: {}
+[31.720235] (-) TimerEvent: {}
+[31.820874] (-) TimerEvent: {}
+[31.921606] (-) TimerEvent: {}
+[32.022733] (-) TimerEvent: {}
+[32.123519] (-) TimerEvent: {}
+[32.224767] (-) TimerEvent: {}
+[32.325372] (-) TimerEvent: {}
+[32.425945] (-) TimerEvent: {}
+[32.526601] (-) TimerEvent: {}
+[32.627300] (-) TimerEvent: {}
+[32.727873] (-) TimerEvent: {}
+[32.828383] (-) TimerEvent: {}
+[32.928948] (-) TimerEvent: {}
+[33.029826] (-) TimerEvent: {}
+[33.130305] (-) TimerEvent: {}
+[33.230861] (-) TimerEvent: {}
+[33.331503] (-) TimerEvent: {}
+[33.432260] (-) TimerEvent: {}
+[33.532972] (-) TimerEvent: {}
+[33.633541] (-) TimerEvent: {}
+[33.734329] (-) TimerEvent: {}
+[33.835079] (-) TimerEvent: {}
+[33.935823] (-) TimerEvent: {}
+[34.036507] (-) TimerEvent: {}
+[34.137281] (-) TimerEvent: {}
+[34.238081] (-) TimerEvent: {}
+[34.338895] (-) TimerEvent: {}
+[34.439456] (-) TimerEvent: {}
+[34.540267] (-) TimerEvent: {}
+[34.641194] (-) TimerEvent: {}
+[34.741720] (-) TimerEvent: {}
+[34.842380] (-) TimerEvent: {}
+[34.942863] (-) TimerEvent: {}
+[35.043490] (-) TimerEvent: {}
+[35.144123] (-) TimerEvent: {}
+[35.244715] (-) TimerEvent: {}
+[35.345332] (-) TimerEvent: {}
+[35.445779] (-) TimerEvent: {}
+[35.546645] (-) TimerEvent: {}
+[35.647345] (-) TimerEvent: {}
+[35.748109] (-) TimerEvent: {}
+[35.802842] (drone) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2\n'}
+[35.803691] (drone) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[35.808028] (drone) CommandEnded: {'returncode': 2}
+[35.848243] (-) TimerEvent: {}
+[35.879205] (drone) JobEnded: {'identifier': 'drone', 'rc': 2}
+[35.891072] (-) EventReactorShutdown: {}

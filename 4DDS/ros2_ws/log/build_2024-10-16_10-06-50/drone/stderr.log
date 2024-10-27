@@ -1,0 +1,10 @@
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::sendVelocity(const Vector2d&, float)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:428:26:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kstd::array<float, 3> velocity[m[K’ shadows a parameter
+  428 |     std::array<float, 3> [01;31m[Kvelocity[m[K = msg.velocity;
+      |                          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:55:[m[K [01;36m[Knote: [m[K‘[01m[Kconst Vector2d& velocity[m[K’ previously declared here
+  412 | void fdds::Drone::sendVelocity([01;36m[Kconst Eigen::Vector2d& velocity[m[K, float value)
+      |                                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

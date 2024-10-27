@@ -1,0 +1,11 @@
+[0.026s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16
+[0.131s] [ 33%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o[0m
+[7.462s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::flockingLogic()[m[K’:
+[7.463s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:304:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct fdds::Parameters[m[K’ has no member named ‘[01m[KdesiredRelativeDepth[m[K’; did you mean ‘[01m[KdesiredRelativeAltitude[m[K’?
+[7.463s]   304 |         if (odometryZDownMetres > options.[01;31m[KdesiredRelativeDepth[m[K - 0.5) {
+[7.463s]       |                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[7.463s]       |                                           [32m[KdesiredRelativeAltitude[m[K
+[18.270s] gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+[18.270s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+[18.271s] gmake: *** [Makefile:146: all] Error 2
+[18.274s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16

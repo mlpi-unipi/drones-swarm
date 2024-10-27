@@ -1,0 +1,7 @@
+/usr/bin/ld: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o: in function `Swarm::UavNode::initialize()':
+uav_node.cpp:(.text+0x67fb): undefined reference to `Swarm::UavNode::rpLidarSubscriptionCallback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > const>)'
+/usr/bin/ld: uav_node.cpp:(.text+0x6a2f): undefined reference to `Swarm::UavNode::downLidarSubscriptionCallback(std::shared_ptr<sensor_msgs::msg::Range_<std::allocator<void> > const>)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:283: swarm_spawner] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

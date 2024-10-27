@@ -1,0 +1,76 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/NavigatorMissionItem.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    struct NavigatorMissionItem {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Instance count of this mission. Increments monotonically whenever the mission is modified")
+      uint32 instance_count;
+
+      @verbatim (language="comment", text=
+        "Sequence of the current mission item")
+      uint16 sequence_current;
+
+      uint16 nav_cmd;
+
+      float latitude;
+
+      float longitude;
+
+      @verbatim (language="comment", text=
+        "time that the MAV should stay inside the radius before advancing in seconds")
+      float time_inside;
+
+      @verbatim (language="comment", text=
+        "default radius in which the mission is accepted as reached in meters")
+      float acceptance_radius;
+
+      @verbatim (language="comment", text=
+        "loiter radius in meters, 0 for a VTOL to hover, negative for counter-clockwise")
+      float loiter_radius;
+
+      @verbatim (language="comment", text=
+        "in radians NED -PI..+PI, NAN means don't change yaw")
+      float yaw;
+
+      @verbatim (language="comment", text=
+        "altitude in meters (AMSL)")
+      float altitude;
+
+      @verbatim (language="comment", text=
+        "mission frame")
+      uint8 frame;
+
+      @verbatim (language="comment", text=
+        "mission item origin (onboard or mavlink)")
+      uint8 origin;
+
+      @verbatim (language="comment", text=
+        "exit xtrack location: 0 for center of loiter wp, 1 for exit location")
+      boolean loiter_exit_xtrack;
+
+      @verbatim (language="comment", text=
+        "heading needs to be reached")
+      boolean force_heading;
+
+      @verbatim (language="comment", text=
+        "true if altitude is relative from start point")
+      boolean altitude_is_relative;
+
+      @verbatim (language="comment", text=
+        "true if next waypoint should follow after this one")
+      boolean autocontinue;
+
+      @verbatim (language="comment", text=
+        "part of the vtol back transition sequence")
+      boolean vtol_back_transition;
+    };
+  };
+};

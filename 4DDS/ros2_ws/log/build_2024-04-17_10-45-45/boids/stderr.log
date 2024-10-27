@@ -1,0 +1,22 @@
+[01m[K/home/fourdds/ros2_ws/src/boids/src/swarm_master.cpp:[m[K In member function ‘[01m[Kvoid swarm_master::geo_ping_callback(std::shared_ptr<const boids::msg::GeoPing_<std::allocator<void> > >)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/swarm_master.cpp:26:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = const struct boids::msg::GeoPing_<std::allocator<void> >[m[K’ {aka ‘[01m[Kconst struct boids::msg::GeoPing_<std::allocator<void> >[m[K’} has no member named ‘[01m[Klatitude_ecef_m[m[K’; did you mean ‘[01m[Klatitude_m[m[K’?
+   26 |     point2d drone_position(msg->[01;31m[Klatitude_ecef_m[m[K, msg->longitude_ecef_m);
+      |                                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                 [32m[Klatitude_m[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/swarm_master.cpp:26:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = const struct boids::msg::GeoPing_<std::allocator<void> >[m[K’ {aka ‘[01m[Kconst struct boids::msg::GeoPing_<std::allocator<void> >[m[K’} has no member named ‘[01m[Klongitude_ecef_m[m[K’; did you mean ‘[01m[Klongitude_m[m[K’?
+   26 |     point2d drone_position(msg->latitude_ecef_m, msg->[01;31m[Klongitude_ecef_m[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                                                       [32m[Klongitude_m[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/swarm_master.cpp:[m[K In member function ‘[01m[Kvoid swarm_master::publish_center_of_mass(int, const vector2d&)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/swarm_master.cpp:49:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing NeighborsCOM = struct boids::msg::NeighborsCOM_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct boids::msg::NeighborsCOM_<std::allocator<void> >[m[K’} has no member named ‘[01m[Klatitude_ecef_m[m[K’; did you mean ‘[01m[Klatitude_m[m[K’?
+   49 |     msg.[01;31m[Klatitude_ecef_m[m[K = neighbors_com.x_;
+      |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |         [32m[Klatitude_m[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/swarm_master.cpp:50:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing NeighborsCOM = struct boids::msg::NeighborsCOM_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct boids::msg::NeighborsCOM_<std::allocator<void> >[m[K’} has no member named ‘[01m[Klongitude_ecef_m[m[K’; did you mean ‘[01m[Klongitude_m[m[K’?
+   50 |     msg.[01;31m[Klongitude_ecef_m[m[K = neighbors_com.y_;
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |         [32m[Klongitude_m[m[K
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:90: CMakeFiles/uavs_spawner.dir/src/swarm_master.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/uavs_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

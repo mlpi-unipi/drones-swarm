@@ -1,0 +1,733 @@
+[0.210s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.210s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f163356aaa0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f163356a470>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f163356a470>>, mixin_verb=('build',))
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.282s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.282s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/fourdds/ws'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'ignore'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'ignore_ament_install'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extensions ['colcon_pkg']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'colcon_pkg'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extensions ['colcon_meta']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'colcon_meta'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extensions ['ros']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'ros'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extensions ['cmake', 'python']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'cmake'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'python'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extensions ['python_setup_py']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs) by extension 'python_setup_py'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extensions ['ignore', 'ignore_ament_install']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extension 'ignore'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extension 'colcon_pkg'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extensions ['colcon_meta']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extension 'colcon_meta'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extensions ['ros']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_dev) by extension 'ros'
+[0.322s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros_pkgs/gazebo_dev' with type 'ros.ament_cmake' and name 'gazebo_dev'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extension 'ignore'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extension 'ignore_ament_install'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extensions ['colcon_pkg']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extension 'colcon_pkg'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extensions ['colcon_meta']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_msgs) by extension 'ros'
+[0.326s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros_pkgs/gazebo_msgs' with type 'ros.ament_cmake' and name 'gazebo_msgs'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extension 'ignore_ament_install'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extensions ['colcon_pkg']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extension 'colcon_pkg'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extensions ['colcon_meta']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extension 'colcon_meta'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extensions ['ros']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_plugins) by extension 'ros'
+[0.333s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros_pkgs/gazebo_plugins' with type 'ros.ament_cmake' and name 'gazebo_plugins'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extension 'ignore'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extension 'ignore_ament_install'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extensions ['colcon_pkg']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extension 'colcon_pkg'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extensions ['colcon_meta']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros) by extension 'ros'
+[0.340s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros_pkgs/gazebo_ros' with type 'ros.ament_cmake' and name 'gazebo_ros'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'ros'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extensions ['cmake', 'python']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'cmake'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'python'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extensions ['python_setup_py']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_control) by extension 'python_setup_py'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extension 'ignore'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extension 'ignore_ament_install'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extensions ['colcon_pkg']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extension 'colcon_pkg'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extensions ['colcon_meta']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extension 'colcon_meta'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extensions ['ros']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/gazebo_ros_pkgs/gazebo_ros_pkgs) by extension 'ros'
+[0.348s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gazebo_ros_pkgs/gazebo_ros_pkgs' with type 'ros.ament_cmake' and name 'gazebo_ros_pkgs'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'colcon_meta'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['ros']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'ros'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['cmake', 'python']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'cmake'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'python'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extensions ['python_setup_py']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv) by extension 'python_setup_py'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'colcon_pkg'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['colcon_meta']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'colcon_meta'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extensions ['ros']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/cv_bridge) by extension 'ros'
+[0.356s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/cv_bridge' with type 'ros.ament_cmake' and name 'cv_bridge'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['colcon_pkg']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'colcon_pkg'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['colcon_meta']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extensions ['ros']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/image_geometry) by extension 'ros'
+[0.360s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/image_geometry' with type 'ros.ament_cmake' and name 'image_geometry'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ignore'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ignore_ament_install'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['colcon_pkg']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'colcon_pkg'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['colcon_meta']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'colcon_meta'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extensions ['ros']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/opencv_tests) by extension 'ros'
+[0.363s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/opencv_tests' with type 'ros.ament_python' and name 'opencv_tests'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['ignore', 'ignore_ament_install']
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ignore'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ignore_ament_install'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['colcon_pkg']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'colcon_pkg'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['colcon_meta']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'colcon_meta'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extensions ['ros']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(src/vision_opencv/vision_opencv) by extension 'ros'
+[0.366s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vision_opencv/vision_opencv' with type 'ros.ament_cmake' and name 'vision_opencv'
+[0.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.408s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Updating descriptor of package 'src/gazebo_ros_pkgs/gazebo_ros' from colcon.pkg: {'dependencies': ['Gazebo']}
+[0.410s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Updating descriptor of package 'src/gazebo_ros_pkgs/gazebo_dev' from colcon.pkg: {'dependencies': ['Gazebo']}
+[0.411s] INFO:colcon.colcon_metadata.metadata.colcon_pkg:Updating descriptor of package 'src/gazebo_ros_pkgs/gazebo_plugins' from colcon.pkg: {'dependencies': ['Gazebo']}
+[0.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.418s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.424s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 281 installed packages in /opt/ros/humble
+[0.426s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.476s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'cv_bridge' is in: /opt/ros/humble
+	'image_geometry' is in: /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding cv_bridge image_geometry
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_target' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'cv_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.478s] DEBUG:colcon.colcon_core.verb:Building package 'cv_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/cv_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/cv_bridge', 'merge_install': False, 'path': '/home/fourdds/ws/src/vision_opencv/cv_bridge', 'symlink_install': True, 'test_result_base': None}
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'cmake_target' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'cmake_clean_cache' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'cmake_clean_first' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'cmake_force_configure' from command line to 'False'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'ament_cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'catkin_cmake_args' from command line to 'None'
+[0.479s] Level 5:colcon.colcon_core.verb:set package 'gazebo_dev' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.479s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_dev' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/gazebo_dev', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/gazebo_dev', 'merge_install': False, 'path': '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_dev', 'symlink_install': True, 'test_result_base': None}
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'cmake_args' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'cmake_target' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.480s] Level 5:colcon.colcon_core.verb:set package 'gazebo_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.480s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/gazebo_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/gazebo_msgs', 'merge_install': False, 'path': '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_target' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.481s] Level 5:colcon.colcon_core.verb:set package 'image_geometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.481s] DEBUG:colcon.colcon_core.verb:Building package 'image_geometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/image_geometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/image_geometry', 'merge_install': False, 'path': '/home/fourdds/ws/src/vision_opencv/image_geometry', 'symlink_install': True, 'test_result_base': None}
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'cmake_target' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.482s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.482s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/gazebo_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/gazebo_ros', 'merge_install': False, 'path': '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_ros', 'symlink_install': True, 'test_result_base': None}
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_args' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_target' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_clean_cache' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_clean_first' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'cmake_force_configure' from command line to 'False'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'ament_cmake_args' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'catkin_cmake_args' from command line to 'None'
+[0.483s] Level 5:colcon.colcon_core.verb:set package 'opencv_tests' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.483s] DEBUG:colcon.colcon_core.verb:Building package 'opencv_tests' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/opencv_tests', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/opencv_tests', 'merge_install': False, 'path': '/home/fourdds/ws/src/vision_opencv/opencv_tests', 'symlink_install': True, 'test_result_base': None}
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_args' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_target' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_clean_cache' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_clean_first' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'cmake_force_configure' from command line to 'False'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'ament_cmake_args' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'catkin_cmake_args' from command line to 'None'
+[0.484s] Level 5:colcon.colcon_core.verb:set package 'vision_opencv' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.484s] DEBUG:colcon.colcon_core.verb:Building package 'vision_opencv' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/vision_opencv', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/vision_opencv', 'merge_install': False, 'path': '/home/fourdds/ws/src/vision_opencv/vision_opencv', 'symlink_install': True, 'test_result_base': None}
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'cmake_target' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'cmake_clean_cache' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'cmake_clean_first' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'cmake_force_configure' from command line to 'False'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'ament_cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'catkin_cmake_args' from command line to 'None'
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'gazebo_plugins' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.485s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_plugins' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/gazebo_plugins', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/gazebo_plugins', 'merge_install': False, 'path': '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_plugins', 'symlink_install': True, 'test_result_base': None}
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'cmake_target' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'gazebo_ros_pkgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.486s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_ros_pkgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fourdds/ws/build/gazebo_ros_pkgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fourdds/ws/install/gazebo_ros_pkgs', 'merge_install': False, 'path': '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_ros_pkgs', 'symlink_install': True, 'test_result_base': None}
+[0.487s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.489s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.490s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/vision_opencv/cv_bridge' with build type 'ament_cmake'
+[0.490s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/vision_opencv/cv_bridge'
+[0.496s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.497s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.497s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.503s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_dev' with build type 'ament_cmake'
+[0.503s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_dev'
+[0.504s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.504s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.509s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_msgs' with build type 'ament_cmake'
+[0.509s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_msgs'
+[0.510s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.510s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.515s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/vision_opencv/image_geometry' with build type 'ament_cmake'
+[0.515s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/vision_opencv/image_geometry'
+[0.516s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.516s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.535s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/cv_bridge -- -j16 -l16
+[0.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_dev': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_dev -- -j16 -l16
+[0.558s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_msgs -- -j16 -l16
+[0.570s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/image_geometry': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/image_geometry -- -j16 -l16
+[0.614s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_dev' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_dev -- -j16 -l16
+[0.687s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_dev': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_dev
+[0.730s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_dev)
+[0.734s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_dev' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_dev
+[0.738s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev' for CMake module files
+[0.739s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev' for CMake config files
+[0.740s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_dev', 'cmake_prefix_path')
+[0.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/hook/cmake_prefix_path.ps1'
+[0.743s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/hook/cmake_prefix_path.dsv'
+[0.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/hook/cmake_prefix_path.sh'
+[0.747s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/bin'
+[0.747s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/lib/pkgconfig/gazebo_dev.pc'
+[0.748s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/lib/python3.10/site-packages'
+[0.748s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/bin'
+[0.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.ps1'
+[0.752s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.dsv'
+[0.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.sh'
+[0.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.bash'
+[0.757s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.zsh'
+[0.759s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_dev/share/colcon-core/packages/gazebo_dev)
+[0.803s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_dev)
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev' for CMake module files
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev' for CMake config files
+[0.805s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_dev', 'cmake_prefix_path')
+[0.806s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/hook/cmake_prefix_path.ps1'
+[0.807s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/hook/cmake_prefix_path.dsv'
+[0.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/hook/cmake_prefix_path.sh'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/bin'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/lib/pkgconfig/gazebo_dev.pc'
+[0.810s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/lib/python3.10/site-packages'
+[0.810s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_dev/bin'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.ps1'
+[0.813s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.dsv'
+[0.814s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.sh'
+[0.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.bash'
+[0.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_dev/share/gazebo_dev/package.zsh'
+[0.818s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_dev/share/colcon-core/packages/gazebo_dev)
+[1.222s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/image_geometry -- -j16 -l16
+[1.288s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/image_geometry': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/image_geometry
+[1.297s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/cv_bridge -- -j16 -l16
+[1.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_msgs -- -j16 -l16
+[1.355s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/cv_bridge
+[1.415s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_geometry)
+[1.417s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry' for CMake module files
+[1.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/image_geometry
+[1.419s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry' for CMake config files
+[1.420s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'cmake_prefix_path')
+[1.420s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.ps1'
+[1.422s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.dsv'
+[1.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.sh'
+[1.424s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/lib'
+[1.425s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'ld_library_path_lib')
+[1.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.ps1'
+[1.426s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.dsv'
+[1.427s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.sh'
+[1.428s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/bin'
+[1.428s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/lib/pkgconfig/image_geometry.pc'
+[1.429s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/lib/python3.10/site-packages'
+[1.429s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/bin'
+[1.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.ps1'
+[1.431s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.dsv'
+[1.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.sh'
+[1.433s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.bash'
+[1.434s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.zsh'
+[1.435s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/image_geometry/share/colcon-core/packages/image_geometry)
+[1.467s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv_bridge)
+[1.468s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge' for CMake module files
+[1.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/cv_bridge' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/cv_bridge
+[1.470s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge' for CMake config files
+[1.471s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'cmake_prefix_path')
+[1.471s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.ps1'
+[1.472s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.dsv'
+[1.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.sh'
+[1.475s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/lib'
+[1.475s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'ld_library_path_lib')
+[1.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.ps1'
+[1.476s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.dsv'
+[1.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.sh'
+[1.478s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/bin'
+[1.478s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/lib/pkgconfig/cv_bridge.pc'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/lib/python3.10/site-packages'
+[1.479s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/bin'
+[1.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.ps1'
+[1.480s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.dsv'
+[1.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.sh'
+[1.482s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.bash'
+[1.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.zsh'
+[1.484s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/cv_bridge/share/colcon-core/packages/cv_bridge)
+[1.492s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_geometry)
+[1.493s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry' for CMake module files
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry' for CMake config files
+[1.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'cmake_prefix_path')
+[1.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.ps1'
+[1.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.dsv'
+[1.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/cmake_prefix_path.sh'
+[1.499s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/lib'
+[1.499s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_geometry', 'ld_library_path_lib')
+[1.499s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.ps1'
+[1.500s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.dsv'
+[1.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/image_geometry/share/image_geometry/hook/ld_library_path_lib.sh'
+[1.502s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/bin'
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/lib/pkgconfig/image_geometry.pc'
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/lib/python3.10/site-packages'
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/image_geometry/bin'
+[1.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.ps1'
+[1.505s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.dsv'
+[1.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.sh'
+[1.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.bash'
+[1.509s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/image_geometry/share/image_geometry/package.zsh'
+[1.510s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/image_geometry/share/colcon-core/packages/image_geometry)
+[1.528s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv_bridge)
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge' for CMake module files
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge' for CMake config files
+[1.529s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'cmake_prefix_path')
+[1.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.ps1'
+[1.531s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.dsv'
+[1.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/cmake_prefix_path.sh'
+[1.532s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/lib'
+[1.533s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv_bridge', 'ld_library_path_lib')
+[1.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.ps1'
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.dsv'
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/hook/ld_library_path_lib.sh'
+[1.535s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/bin'
+[1.535s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/lib/pkgconfig/cv_bridge.pc'
+[1.535s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/lib/python3.10/site-packages'
+[1.536s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/cv_bridge/bin'
+[1.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.ps1'
+[1.538s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.dsv'
+[1.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.sh'
+[1.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.bash'
+[1.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/cv_bridge/share/cv_bridge/package.zsh'
+[1.541s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/cv_bridge/share/colcon-core/packages/cv_bridge)
+[1.542s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/fourdds/ws/src/vision_opencv/opencv_tests' with build type 'ament_python'
+[1.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_tests', 'ament_prefix_path')
+[1.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.ps1'
+[1.546s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.dsv'
+[1.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/hook/ament_prefix_path.sh'
+[1.548s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.548s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.552s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/vision_opencv/vision_opencv' with build type 'ament_cmake'
+[1.552s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/vision_opencv/vision_opencv'
+[1.553s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.553s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.937s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/fourdds/ws/src/vision_opencv/opencv_tests'
+[1.937s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.937s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.955s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/vision_opencv': AMENT_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/vision_opencv -- -j16 -l16
+[2.005s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/vision_opencv' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/vision_opencv -- -j16 -l16
+[2.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/vision_opencv': AMENT_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/vision_opencv
+[2.073s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_opencv)
+[2.074s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv' for CMake module files
+[2.075s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/vision_opencv' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/vision_opencv
+[2.076s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv' for CMake config files
+[2.076s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_opencv', 'cmake_prefix_path')
+[2.077s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.ps1'
+[2.077s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.dsv'
+[2.078s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.sh'
+[2.080s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/bin'
+[2.080s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/lib/pkgconfig/vision_opencv.pc'
+[2.080s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/lib/python3.10/site-packages'
+[2.081s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/bin'
+[2.081s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.ps1'
+[2.083s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.dsv'
+[2.084s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.sh'
+[2.085s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.bash'
+[2.086s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.zsh'
+[2.087s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/vision_opencv/share/colcon-core/packages/vision_opencv)
+[2.118s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vision_opencv)
+[2.119s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv' for CMake module files
+[2.119s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv' for CMake config files
+[2.119s] Level 1:colcon.colcon_core.shell:create_environment_hook('vision_opencv', 'cmake_prefix_path')
+[2.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.ps1'
+[2.121s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.dsv'
+[2.122s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/hook/cmake_prefix_path.sh'
+[2.123s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/bin'
+[2.123s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/lib/pkgconfig/vision_opencv.pc'
+[2.123s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/lib/python3.10/site-packages'
+[2.124s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/vision_opencv/bin'
+[2.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.ps1'
+[2.125s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.dsv'
+[2.127s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.sh'
+[2.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.bash'
+[2.129s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/vision_opencv/share/vision_opencv/package.zsh'
+[2.130s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/vision_opencv/share/colcon-core/packages/vision_opencv)
+[2.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_msgs
+[2.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/opencv_tests': AMENT_PREFIX_PATH=/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/cv_bridge LD_LIBRARY_PATH=/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fourdds/ws/install/opencv_tests/lib/python3.10/site-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/fourdds/ws/build/opencv_tests/build --no-deps symlink_data
+[2.988s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_msgs)
+[2.989s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs' for CMake module files
+[2.989s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_msgs
+[2.990s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs' for CMake config files
+[2.996s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_msgs', 'cmake_prefix_path')
+[2.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/cmake_prefix_path.ps1'
+[2.998s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/cmake_prefix_path.dsv'
+[2.999s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/cmake_prefix_path.sh'
+[3.000s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/lib'
+[3.001s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_msgs', 'ld_library_path_lib')
+[3.001s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/ld_library_path_lib.ps1'
+[3.002s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/ld_library_path_lib.dsv'
+[3.003s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/ld_library_path_lib.sh'
+[3.004s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/bin'
+[3.004s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/lib/pkgconfig/gazebo_msgs.pc'
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/lib/python3.10/site-packages'
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/bin'
+[3.006s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.ps1'
+[3.007s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.dsv'
+[3.007s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.sh'
+[3.008s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.bash'
+[3.009s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.zsh'
+[3.010s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_msgs/share/colcon-core/packages/gazebo_msgs)
+[3.816s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_tests', 'pythonpath_develop')
+[3.817s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/build/opencv_tests/share/opencv_tests/hook/pythonpath_develop.ps1'
+[3.818s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/opencv_tests' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/cv_bridge LD_LIBRARY_PATH=/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/build/opencv_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fourdds/ws/install/opencv_tests/lib/python3.10/site-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/fourdds/ws/build/opencv_tests/build --no-deps symlink_data
+[3.819s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/build/opencv_tests/share/opencv_tests/hook/pythonpath_develop.dsv'
+[3.820s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/build/opencv_tests/share/opencv_tests/hook/pythonpath_develop.sh'
+[3.821s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/opencv_tests' for CMake module files
+[3.822s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/opencv_tests' for CMake config files
+[3.823s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/opencv_tests/lib'
+[3.824s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/opencv_tests/bin'
+[3.824s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/opencv_tests/lib/pkgconfig/opencv_tests.pc'
+[3.824s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/opencv_tests/lib/python3.10/site-packages'
+[3.824s] Level 1:colcon.colcon_core.shell:create_environment_hook('opencv_tests', 'pythonpath')
+[3.825s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/hook/pythonpath.ps1'
+[3.826s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/hook/pythonpath.dsv'
+[3.827s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/hook/pythonpath.sh'
+[3.828s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/opencv_tests/bin'
+[3.828s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(opencv_tests)
+[3.829s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/package.ps1'
+[3.830s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/package.dsv'
+[3.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/package.sh'
+[3.833s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/package.bash'
+[3.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/opencv_tests/share/opencv_tests/package.zsh'
+[3.835s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/opencv_tests/share/colcon-core/packages/opencv_tests)
+[5.648s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_msgs)
+[5.648s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs' for CMake module files
+[5.649s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs' for CMake config files
+[5.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_msgs', 'cmake_prefix_path')
+[5.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/cmake_prefix_path.ps1'
+[5.656s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/cmake_prefix_path.dsv'
+[5.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/cmake_prefix_path.sh'
+[5.660s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/lib'
+[5.660s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_msgs', 'ld_library_path_lib')
+[5.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/ld_library_path_lib.ps1'
+[5.662s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/ld_library_path_lib.dsv'
+[5.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/hook/ld_library_path_lib.sh'
+[5.664s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/bin'
+[5.664s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/lib/pkgconfig/gazebo_msgs.pc'
+[5.665s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/lib/python3.10/site-packages'
+[5.665s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_msgs/bin'
+[5.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.ps1'
+[5.667s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.dsv'
+[5.668s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.sh'
+[5.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.bash'
+[5.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_msgs/share/gazebo_msgs/package.zsh'
+[5.672s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_msgs/share/colcon-core/packages/gazebo_msgs)
+[5.673s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_ros' with build type 'ament_cmake'
+[5.673s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_ros'
+[5.674s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.675s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.699s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_ros': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_ros -- -j16 -l16
+[6.240s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_ros' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_ros -- -j16 -l16
+[6.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_ros': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_ros
+[6.428s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros)
+[6.429s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros' for CMake module files
+[6.430s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_ros' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_ros
+[6.430s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros' for CMake config files
+[6.431s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros', 'cmake_prefix_path')
+[6.431s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/cmake_prefix_path.ps1'
+[6.432s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/cmake_prefix_path.dsv'
+[6.433s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/cmake_prefix_path.sh'
+[6.433s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/lib'
+[6.433s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros', 'ld_library_path_lib')
+[6.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/ld_library_path_lib.ps1'
+[6.434s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/ld_library_path_lib.dsv'
+[6.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/ld_library_path_lib.sh'
+[6.435s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/bin'
+[6.435s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/lib/pkgconfig/gazebo_ros.pc'
+[6.436s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/lib/python3.10/site-packages'
+[6.436s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/bin'
+[6.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.ps1'
+[6.438s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.dsv'
+[6.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.sh'
+[6.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.bash'
+[6.441s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.zsh'
+[6.442s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_ros/share/colcon-core/packages/gazebo_ros)
+[6.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros)
+[6.531s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros' for CMake module files
+[6.531s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros' for CMake config files
+[6.532s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros', 'cmake_prefix_path')
+[6.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/cmake_prefix_path.ps1'
+[6.534s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/cmake_prefix_path.dsv'
+[6.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/cmake_prefix_path.sh'
+[6.536s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/lib'
+[6.536s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros', 'ld_library_path_lib')
+[6.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/ld_library_path_lib.ps1'
+[6.537s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/ld_library_path_lib.dsv'
+[6.538s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/hook/ld_library_path_lib.sh'
+[6.539s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/bin'
+[6.539s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/lib/pkgconfig/gazebo_ros.pc'
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/lib/python3.10/site-packages'
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros/bin'
+[6.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.ps1'
+[6.542s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.dsv'
+[6.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.sh'
+[6.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.bash'
+[6.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros/share/gazebo_ros/package.zsh'
+[6.547s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_ros/share/colcon-core/packages/gazebo_ros)
+[6.548s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_plugins' with build type 'ament_cmake'
+[6.548s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_plugins'
+[6.549s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.549s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_plugins': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_plugins -- -j16 -l16
+[7.001s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_plugins' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_plugins -- -j16 -l16
+[7.158s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_plugins': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_plugins
+[7.201s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_plugins)
+[7.202s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_plugins' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_plugins
+[7.202s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins' for CMake module files
+[7.203s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins' for CMake config files
+[7.204s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins', 'cmake_prefix_path')
+[7.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/cmake_prefix_path.ps1'
+[7.206s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/cmake_prefix_path.dsv'
+[7.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/cmake_prefix_path.sh'
+[7.208s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/lib'
+[7.208s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins', 'ld_library_path_lib')
+[7.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/ld_library_path_lib.ps1'
+[7.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/ld_library_path_lib.dsv'
+[7.210s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/ld_library_path_lib.sh'
+[7.211s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/bin'
+[7.211s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/lib/pkgconfig/gazebo_plugins.pc'
+[7.211s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/lib/python3.10/site-packages'
+[7.212s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/bin'
+[7.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.ps1'
+[7.213s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.dsv'
+[7.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.sh'
+[7.215s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.bash'
+[7.216s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.zsh'
+[7.217s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_plugins/share/colcon-core/packages/gazebo_plugins)
+[7.376s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_plugins)
+[7.376s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins' for CMake module files
+[7.377s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins' for CMake config files
+[7.378s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins', 'cmake_prefix_path')
+[7.378s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/cmake_prefix_path.ps1'
+[7.379s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/cmake_prefix_path.dsv'
+[7.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/cmake_prefix_path.sh'
+[7.381s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/lib'
+[7.381s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_plugins', 'ld_library_path_lib')
+[7.381s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/ld_library_path_lib.ps1'
+[7.382s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/ld_library_path_lib.dsv'
+[7.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/hook/ld_library_path_lib.sh'
+[7.384s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/bin'
+[7.384s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/lib/pkgconfig/gazebo_plugins.pc'
+[7.385s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/lib/python3.10/site-packages'
+[7.385s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_plugins/bin'
+[7.386s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.ps1'
+[7.387s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.dsv'
+[7.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.sh'
+[7.389s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.bash'
+[7.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_plugins/share/gazebo_plugins/package.zsh'
+[7.391s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_plugins/share/colcon-core/packages/gazebo_plugins)
+[7.391s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_ros_pkgs' with build type 'ament_cmake'
+[7.392s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_ros_pkgs'
+[7.392s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.393s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_ros_pkgs': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_ros_pkgs -- -j16 -l16
+[7.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_ros_pkgs' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fourdds/ws/build/gazebo_ros_pkgs -- -j16 -l16
+[7.515s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fourdds/ws/build/gazebo_ros_pkgs': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_ros_pkgs
+[7.547s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros_pkgs)
+[7.547s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fourdds/ws/build/gazebo_ros_pkgs' returned '0': AMENT_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fourdds/ws/build/gazebo_ros_pkgs
+[7.548s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs' for CMake module files
+[7.549s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs' for CMake config files
+[7.549s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros_pkgs', 'cmake_prefix_path')
+[7.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/hook/cmake_prefix_path.ps1'
+[7.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/hook/cmake_prefix_path.dsv'
+[7.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/hook/cmake_prefix_path.sh'
+[7.552s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/bin'
+[7.552s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/lib/pkgconfig/gazebo_ros_pkgs.pc'
+[7.552s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/lib/python3.10/site-packages'
+[7.552s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/bin'
+[7.553s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.ps1'
+[7.554s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.dsv'
+[7.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.sh'
+[7.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.bash'
+[7.556s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.zsh'
+[7.557s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_ros_pkgs/share/colcon-core/packages/gazebo_ros_pkgs)
+[7.590s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_ros_pkgs)
+[7.590s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs' for CMake module files
+[7.591s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs' for CMake config files
+[7.591s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_ros_pkgs', 'cmake_prefix_path')
+[7.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/hook/cmake_prefix_path.ps1'
+[7.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/hook/cmake_prefix_path.dsv'
+[7.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/hook/cmake_prefix_path.sh'
+[7.594s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/bin'
+[7.595s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/lib/pkgconfig/gazebo_ros_pkgs.pc'
+[7.595s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/lib/python3.10/site-packages'
+[7.595s] Level 1:colcon.colcon_core.environment:checking '/home/fourdds/ws/install/gazebo_ros_pkgs/bin'
+[7.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.ps1'
+[7.597s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.dsv'
+[7.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.sh'
+[7.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.bash'
+[7.600s] INFO:colcon.colcon_core.shell:Creating package script '/home/fourdds/ws/install/gazebo_ros_pkgs/share/gazebo_ros_pkgs/package.zsh'
+[7.600s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fourdds/ws/install/gazebo_ros_pkgs/share/colcon-core/packages/gazebo_ros_pkgs)
+[7.601s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.602s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.602s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[7.603s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.614s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[7.614s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.614s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.614s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.616s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[7.616s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.617s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ws/install/local_setup.ps1'
+[7.618s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fourdds/ws/install/_local_setup_util_ps1.py'
+[7.639s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ws/install/setup.ps1'
+[7.641s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ws/install/local_setup.sh'
+[7.642s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fourdds/ws/install/_local_setup_util_sh.py'
+[7.643s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ws/install/setup.sh'
+[7.645s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ws/install/local_setup.bash'
+[7.646s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ws/install/setup.bash'
+[7.647s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fourdds/ws/install/local_setup.zsh'
+[7.649s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fourdds/ws/install/setup.zsh'

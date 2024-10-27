@@ -1,0 +1,135 @@
+[0.000000] (-) TimerEvent: {}
+[0.000690] (-) JobUnselected: {'identifier': 'iris-logger'}
+[0.000733] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000768] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000872] (boids) JobQueued: {'identifier': 'boids', 'dependencies': OrderedDict([('px4_msgs', '/home/fourdds/ros2_ws/install/px4_msgs')])}
+[0.000909] (boids) JobStarted: {'identifier': 'boids'}
+[0.007079] (boids) JobProgress: {'identifier': 'boids', 'progress': 'cmake'}
+[0.007300] (boids) JobProgress: {'identifier': 'boids', 'progress': 'build'}
+[0.007833] (boids) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/boids', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ros2_ws/build/boids', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds/ros2_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/2941_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '1cea43af-2376-46d3-9555-a3240c97146d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/boids'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.030368] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target swarm_spawner\x1b[0m\n'}
+[0.031233] (boids) StdoutLine: {'line': b'[  2%] Built target boids__cpp\n'}
+[0.032699] (boids) StdoutLine: {'line': b'[ 10%] Built target boids__rosidl_generator_c\n'}
+[0.034971] (boids) StdoutLine: {'line': b'[ 10%] Built target ament_cmake_python_copy_boids\n'}
+[0.036563] (boids) StdoutLine: {'line': b'[ 15%] Built target frame_transforms\n'}
+[0.042417] (boids) StdoutLine: {'line': b'[ 26%] Built target boids__rosidl_typesupport_fastrtps_cpp\n'}
+[0.042634] (boids) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o\x1b[0m\n'}
+[0.042706] (boids) StdoutLine: {'line': b'[ 34%] Built target boids__rosidl_typesupport_cpp\n'}
+[0.043550] (boids) StdoutLine: {'line': b'[ 43%] Built target boids__rosidl_typesupport_introspection_cpp\n'}
+[0.043691] (boids) StdoutLine: {'line': b'[ 52%] Built target boids__rosidl_typesupport_introspection_c\n'}
+[0.044293] (boids) StdoutLine: {'line': b'[ 60%] Built target boids__rosidl_typesupport_fastrtps_c\n'}
+[0.044946] (boids) StdoutLine: {'line': b'[ 69%] Built target boids__rosidl_typesupport_c\n'}
+[0.053116] (boids) StdoutLine: {'line': b'[ 69%] Built target boids\n'}
+[0.061285] (boids) StdoutLine: {'line': b'[ 71%] Built target boids__py\n'}
+[0.070864] (boids) StdoutLine: {'line': b'[ 78%] Built target boids__rosidl_generator_py\n'}
+[0.080208] (boids) StdoutLine: {'line': b'[ 82%] Built target boids__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.080434] (boids) StdoutLine: {'line': b'[ 91%] Built target boids__rosidl_typesupport_introspection_c__pyext\n'}
+[0.080477] (boids) StdoutLine: {'line': b'[ 91%] Built target boids__rosidl_typesupport_c__pyext\n'}
+[0.099854] (-) TimerEvent: {}
+[0.132159] (boids) StdoutLine: {'line': b'running egg_info\n'}
+[0.138825] (boids) StdoutLine: {'line': b'writing boids.egg-info/PKG-INFO\n'}
+[0.139106] (boids) StdoutLine: {'line': b'writing dependency_links to boids.egg-info/dependency_links.txt\n'}
+[0.139242] (boids) StdoutLine: {'line': b'writing top-level names to boids.egg-info/top_level.txt\n'}
+[0.157221] (boids) StdoutLine: {'line': b"reading manifest file 'boids.egg-info/SOURCES.txt'\n"}
+[0.157481] (boids) StdoutLine: {'line': b"writing manifest file 'boids.egg-info/SOURCES.txt'\n"}
+[0.171349] (boids) StdoutLine: {'line': b'[ 91%] Built target ament_cmake_python_build_boids_egg\n'}
+[0.200006] (-) TimerEvent: {}
+[0.300267] (-) TimerEvent: {}
+[0.400522] (-) TimerEvent: {}
+[0.500794] (-) TimerEvent: {}
+[0.601136] (-) TimerEvent: {}
+[0.701558] (-) TimerEvent: {}
+[0.801868] (-) TimerEvent: {}
+[0.902241] (-) TimerEvent: {}
+[1.002513] (-) TimerEvent: {}
+[1.102983] (-) TimerEvent: {}
+[1.203324] (-) TimerEvent: {}
+[1.303614] (-) TimerEvent: {}
+[1.403891] (-) TimerEvent: {}
+[1.504212] (-) TimerEvent: {}
+[1.604495] (-) TimerEvent: {}
+[1.704791] (-) TimerEvent: {}
+[1.805191] (-) TimerEvent: {}
+[1.864216] (boids) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.864374] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[1.864412] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.864439] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[1.864463] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.864487] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.864514] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[1.864537] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[1.864560] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.864582] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[1.864605] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3\x1b[m\x1b[K,\n'}
+[1.864627] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1\x1b[m\x1b[K:\n'}
+[1.864649] (boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Swarm::UavNode::flockingLogic()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.864670] (boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:223:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger\n'}
+[1.864692] (boids) StderrLine: {'line': b'  223 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K("Sending speed: %f %f", currentSpeed.x_, currentSpeed.y_);\n'}
+[1.864714] (boids) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.864868] (boids) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[1.864945] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.864980] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[1.865007] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.865032] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[1.865055] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.865076] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.865098] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[1.865119] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[1.865141] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.865163] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[1.865186] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3\x1b[m\x1b[K,\n'}
+[1.865207] (boids) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1\x1b[m\x1b[K:\n'}
+[1.865229] (boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:223:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kget_name\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K("Sending speed: %f %f")\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kconst char [21]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.865254] (boids) StderrLine: {'line': b'  223 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K("Sending speed: %f %f", currentSpeed.x_, currentSpeed.y_);\n'}
+[1.865276] (boids) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.865297] (boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:223:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kget_name\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[K("Sending speed: %f %f")\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kconst char [21]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.865320] (boids) StderrLine: {'line': b'  223 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K("Sending speed: %f %f", currentSpeed.x_, currentSpeed.y_);\n'}
+[1.865342] (boids) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.905376] (-) TimerEvent: {}
+[2.005723] (-) TimerEvent: {}
+[2.105999] (-) TimerEvent: {}
+[2.206354] (-) TimerEvent: {}
+[2.306628] (-) TimerEvent: {}
+[2.406879] (-) TimerEvent: {}
+[2.507132] (-) TimerEvent: {}
+[2.607397] (-) TimerEvent: {}
+[2.707730] (-) TimerEvent: {}
+[2.807965] (-) TimerEvent: {}
+[2.908275] (-) TimerEvent: {}
+[3.008599] (-) TimerEvent: {}
+[3.108916] (-) TimerEvent: {}
+[3.209199] (-) TimerEvent: {}
+[3.309493] (-) TimerEvent: {}
+[3.409820] (-) TimerEvent: {}
+[3.510178] (-) TimerEvent: {}
+[3.610492] (-) TimerEvent: {}
+[3.710759] (-) TimerEvent: {}
+[3.811113] (-) TimerEvent: {}
+[3.911455] (-) TimerEvent: {}
+[4.011717] (-) TimerEvent: {}
+[4.111972] (-) TimerEvent: {}
+[4.212215] (-) TimerEvent: {}
+[4.312468] (-) TimerEvent: {}
+[4.412720] (-) TimerEvent: {}
+[4.512965] (-) TimerEvent: {}
+[4.613222] (-) TimerEvent: {}
+[4.713471] (-) TimerEvent: {}
+[4.813687] (-) TimerEvent: {}
+[4.913941] (-) TimerEvent: {}
+[5.014189] (-) TimerEvent: {}
+[5.114443] (-) TimerEvent: {}
+[5.214679] (-) TimerEvent: {}
+[5.314933] (-) TimerEvent: {}
+[5.415189] (-) TimerEvent: {}
+[5.515438] (-) TimerEvent: {}
+[5.615684] (-) TimerEvent: {}
+[5.715928] (-) TimerEvent: {}
+[5.816195] (-) TimerEvent: {}
+[5.916459] (-) TimerEvent: {}
+[6.016700] (-) TimerEvent: {}
+[6.053845] (boids) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:76: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o] Error 1\n'}
+[6.054165] (boids) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2\n'}
+[6.054251] (boids) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[6.055223] (boids) CommandEnded: {'returncode': 2}
+[6.097456] (boids) JobEnded: {'identifier': 'boids', 'rc': 2}
+[6.100000] (-) EventReactorShutdown: {}

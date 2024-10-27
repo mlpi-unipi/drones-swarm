@@ -1,0 +1,92 @@
+[0.000000] (-) TimerEvent: {}
+[0.000229] (-) JobUnselected: {'identifier': 'base_station'}
+[0.000265] (-) JobUnselected: {'identifier': 'boids'}
+[0.000275] (-) JobUnselected: {'identifier': 'fdds_messages'}
+[0.000282] (-) JobUnselected: {'identifier': 'flocking'}
+[0.000302] (-) JobUnselected: {'identifier': 'iris-logger'}
+[0.000421] (-) JobUnselected: {'identifier': 'logging'}
+[0.000446] (-) JobUnselected: {'identifier': 'obstacle_avoidance'}
+[0.000455] (-) JobUnselected: {'identifier': 'parameters'}
+[0.000462] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000468] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000475] (-) JobUnselected: {'identifier': 'stigmergy'}
+[0.000481] (-) JobUnselected: {'identifier': 'stigmergy_map'}
+[0.000487] (-) JobUnselected: {'identifier': 'target_detection'}
+[0.000509] (drone) JobQueued: {'identifier': 'drone', 'dependencies': OrderedDict()}
+[0.000519] (drone) JobStarted: {'identifier': 'drone'}
+[0.005272] (drone) JobProgress: {'identifier': 'drone', 'progress': 'cmake'}
+[0.005476] (drone) JobProgress: {'identifier': 'drone', 'progress': 'build'}
+[0.005908] (drone) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/drone', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/target_detection/lib:/home/fourdds/ros2_ws/install/stigmergy/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/obstacle_avoidance/lib:/home/fourdds/ros2_ws/install/parameters/lib:/home/fourdds/ros2_ws/install/fdds_messages/lib:/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install:/home/fourdds/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/349_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '43c32559-a135-4993-bf3d-f566024fc4a5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/opencv_tests:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/stigmergy/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/fdds_messages/local/lib/python3.10/dist-packages:/home/fourdds/ws/build/opencv_tests:/home/fourdds/ws/install/opencv_tests/lib/python3.10/site-packages:/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.029462] (drone) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Drone\x1b[0m\n'}
+[0.040757] (drone) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/main.cpp.o\x1b[0m\n'}
+[0.099784] (-) TimerEvent: {}
+[0.200031] (-) TimerEvent: {}
+[0.300289] (-) TimerEvent: {}
+[0.400528] (-) TimerEvent: {}
+[0.500786] (-) TimerEvent: {}
+[0.601033] (-) TimerEvent: {}
+[0.701383] (-) TimerEvent: {}
+[0.801679] (-) TimerEvent: {}
+[0.901988] (-) TimerEvent: {}
+[1.002269] (-) TimerEvent: {}
+[1.102527] (-) TimerEvent: {}
+[1.202771] (-) TimerEvent: {}
+[1.303082] (-) TimerEvent: {}
+[1.403349] (-) TimerEvent: {}
+[1.503649] (-) TimerEvent: {}
+[1.603907] (-) TimerEvent: {}
+[1.704213] (-) TimerEvent: {}
+[1.804525] (-) TimerEvent: {}
+[1.904832] (-) TimerEvent: {}
+[2.005088] (-) TimerEvent: {}
+[2.105420] (-) TimerEvent: {}
+[2.205690] (-) TimerEvent: {}
+[2.305956] (-) TimerEvent: {}
+[2.406214] (-) TimerEvent: {}
+[2.506473] (-) TimerEvent: {}
+[2.606740] (-) TimerEvent: {}
+[2.694825] (drone) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:33\x1b[m\x1b[K,\n'}
+[2.694969] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/bits/allocator.h:46\x1b[m\x1b[K,\n'}
+[2.695002] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:64\x1b[m\x1b[K,\n'}
+[2.695026] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[2.695051] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3\x1b[m\x1b[K,\n'}
+[2.695073] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:1\x1b[m\x1b[K:\n'}
+[2.695095] (drone) StderrLine: {'line': b'/usr/include/c++/11/ext/new_allocator.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = fdds::Drone; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.695120] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/alloc_traits.h:516:17:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstatic void std::allocator_traits<std::allocator<_Tp1> >::construct(std::allocator_traits<std::allocator<_Tp1> >::allocator_type&, _Up*, _Args&& ...) [with _Up = fdds::Drone; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone; std::allocator_traits<std::allocator<_Tp1> >::allocator_type = std::allocator<fdds::Drone>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695145] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr_base.h:519:39:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone; _Alloc = std::allocator<fdds::Drone>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695169] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr_base.h:650:16:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = fdds::Drone; _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695212] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr_base.h:1342:14:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695251] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:409:59:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695278] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:862:14:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = fdds::Drone; _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695303] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/shared_ptr.h:878:39:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = fdds::Drone; _Args = {int&, fdds::Parameters&}]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695327] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:27:50:\x1b[m\x1b[K   required from here\n'}
+[2.695350] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/ext/new_allocator.h:162:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kfdds::Drone::Drone(int&, fdds::Parameters&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695372] (drone) StderrLine: {'line': b'  162 |         { \x1b[01;31m\x1b[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)\x1b[m\x1b[K; }\n'}
+[2.695394] (drone) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.695414] (drone) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:1\x1b[m\x1b[K:\n'}
+[2.695435] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:43:9:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kfdds::Drone::Drone(int, const Options&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695458] (drone) StderrLine: {'line': b'   43 |         \x1b[01;36m\x1b[KDrone\x1b[m\x1b[K(const int id,\n'}
+[2.695479] (drone) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.695500] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:44:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 2 from \xe2\x80\x98\x1b[01m\x1b[Kfdds::Parameters\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst Options&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.695522] (drone) StderrLine: {'line': b'   44 |                 \x1b[01;36m\x1b[Kconst Options& options_\x1b[m\x1b[K) : Node("UAV_" + std::to_string(id)),              // initialize ROS2 Node\n'}
+[2.695546] (drone) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[2.706866] (-) TimerEvent: {}
+[2.807152] (-) TimerEvent: {}
+[2.907419] (-) TimerEvent: {}
+[3.007689] (-) TimerEvent: {}
+[3.107953] (-) TimerEvent: {}
+[3.208225] (-) TimerEvent: {}
+[3.308506] (-) TimerEvent: {}
+[3.408828] (-) TimerEvent: {}
+[3.509147] (-) TimerEvent: {}
+[3.609400] (-) TimerEvent: {}
+[3.709645] (-) TimerEvent: {}
+[3.809955] (-) TimerEvent: {}
+[3.910229] (-) TimerEvent: {}
+[4.010500] (-) TimerEvent: {}
+[4.014005] (drone) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/Drone.dir/build.make:90: CMakeFiles/Drone.dir/src/main.cpp.o] Error 1\n'}
+[4.014342] (drone) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2\n'}
+[4.014417] (drone) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.015554] (drone) CommandEnded: {'returncode': 2}
+[4.034536] (drone) JobEnded: {'identifier': 'drone', 'rc': 2}
+[4.045014] (-) EventReactorShutdown: {}

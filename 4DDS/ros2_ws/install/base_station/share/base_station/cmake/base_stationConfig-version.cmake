@@ -1,0 +1,1 @@
+/home/fourdds/ros2_ws/build/base_station/ament_cmake_core/base_stationConfig-version.cmake

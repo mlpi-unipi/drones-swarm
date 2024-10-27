@@ -1,0 +1,54 @@
+[0.292s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fourdds/ros2_ws/src/drone -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fourdds/ros2_ws/install/drone
+[0.326s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.549s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.586s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.666s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.669s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.686s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.707s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.731s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.751s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.757s] -- Found px4_msgs: 2.0.1 (/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.782s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.804s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.805s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.004s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.101s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.170s] -- Found obstacle_avoidance: 0.0.0 (/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/cmake)
+[1.173s] -- Found target_detection: 0.0.0 (/home/fourdds/ros2_ws/install/target_detection/share/target_detection/cmake)
+[1.176s] -- Found parameters: 0.0.0 (/home/fourdds/ros2_ws/install/parameters/share/parameters/cmake)
+[1.180s] -- Found fdds_messages: 0.0.0 (/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/cmake)
+[1.207s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.301s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.302s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/fourdds/ros2_ws/src/drone/include>
+[1.302s] -- Configured cppcheck exclude dirs and/or files: 
+[1.302s] -- Added test 'lint_cmake' to check CMake code style
+[1.304s] -- Added test 'uncrustify' to check C / C++ code style
+[1.305s] -- Configured uncrustify additional arguments: 
+[1.306s] -- Added test 'xmllint' to check XML markup files
+[1.311s] -- Configuring done
+[1.346s] -- Generating done
+[1.349s] -- Build files have been written to: /home/fourdds/ros2_ws/build/drone
+[1.362s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fourdds/ros2_ws/src/drone -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fourdds/ros2_ws/install/drone
+[1.364s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16
+[1.404s] [35m[1mConsolidate compiler generated dependencies of target Drone[0m
+[1.432s] [ 66%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/main.cpp.o[0m
+[1.432s] [ 66%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o[0m
+[7.259s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:399:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid fdds::Drone::sendGotoDepth(const Vector2d&)[m[K’
+[7.259s]   399 | void [01;31m[Kfdds[m[K::Drone::sendGotoDepth(const Eigen::Vector2d& location)
+[7.259s]       |      [01;31m[K^~~~[m[K
+[7.260s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:399:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid fdds::Drone::sendGotoDepth(const Vector2d&)[m[K’
+[7.260s] In file included from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[7.260s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:34:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass fdds::Drone[m[K’ defined here
+[7.260s]    34 |     class [01;36m[KDrone[m[K : public rclcpp::Node
+[7.260s]       |           [01;36m[K^~~~~[m[K
+[7.284s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::requestDepth()[m[K’:
+[7.284s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:482:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsendGotoDepth[m[K’ was not declared in this scope; did you mean ‘[01m[KsendGoto[m[K’?
+[7.285s]   482 |     [01;31m[KsendGotoDepth[m[K(odometryPositionMetres);
+[7.285s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[7.285s]       |     [32m[KsendGoto[m[K
+[16.449s] gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+[16.449s] gmake[2]: *** Waiting for unfinished jobs....
+[17.962s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+[17.962s] gmake: *** [Makefile:146: all] Error 2
+[17.967s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16

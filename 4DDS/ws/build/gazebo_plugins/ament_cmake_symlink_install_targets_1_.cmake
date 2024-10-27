@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/fourdds/ws/build/gazebo_plugins/libgazebo_ros_wheel_slip.so" "TARGETS" "gazebo_ros_wheel_slip" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

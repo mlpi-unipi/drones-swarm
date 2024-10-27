@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/GeofenceResult.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module GeofenceResult_Constants {
+      @verbatim (language="comment", text=
+        "no action on geofence violation")
+      const uint8 GF_ACTION_NONE = 0;
+      @verbatim (language="comment", text=
+        "critical mavlink message")
+      const uint8 GF_ACTION_WARN = 1;
+      @verbatim (language="comment", text=
+        "switch to AUTO|LOITER")
+      const uint8 GF_ACTION_LOITER = 2;
+      @verbatim (language="comment", text=
+        "switch to AUTO|RTL")
+      const uint8 GF_ACTION_RTL = 3;
+      @verbatim (language="comment", text=
+        "flight termination")
+      const uint8 GF_ACTION_TERMINATE = 4;
+      @verbatim (language="comment", text=
+        "switch to AUTO|LAND")
+      const uint8 GF_ACTION_LAND = 5;
+    };
+    struct GeofenceResult {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "true the check for max distance from Home is triggered")
+      boolean geofence_max_dist_triggered;
+
+      @verbatim (language="comment", text=
+        "true the check for max altitude above Home is triggered")
+      boolean geofence_max_alt_triggered;
+
+      @verbatim (language="comment", text=
+        "true the check for custom inclusion/exclusion geofence(s) is triggered")
+      boolean geofence_custom_fence_triggered;
+
+      @verbatim (language="comment", text=
+        "action to take when the geofence is breached")
+      uint8 geofence_action;
+    };
+  };
+};

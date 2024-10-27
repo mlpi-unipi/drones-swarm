@@ -1,0 +1,63 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/VehicleRoi.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module VehicleRoi_Constants {
+      @verbatim (language="comment", text=
+        "No region of interest")
+      const uint8 ROI_NONE = 0;
+      @verbatim (language="comment", text=
+        "Point toward next MISSION with optional offset")
+      const uint8 ROI_WPNEXT = 1;
+      @verbatim (language="comment", text=
+        "Point toward given MISSION")
+      const uint8 ROI_WPINDEX = 2;
+      @verbatim (language="comment", text=
+        "Point toward fixed location")
+      const uint8 ROI_LOCATION = 3;
+      @verbatim (language="comment", text=
+        "Point toward target")
+      const uint8 ROI_TARGET = 4;
+      const uint8 ROI_ENUM_END = 5;
+    };
+    @verbatim (language="comment", text=
+      "Vehicle Region Of Interest (ROI)")
+    struct VehicleRoi {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "ROI mode (see above)")
+      uint8 mode;
+
+      @verbatim (language="comment", text=
+        "Latitude to point to")
+      double lat;
+
+      @verbatim (language="comment", text=
+        "Longitude to point to")
+      double lon;
+
+      @verbatim (language="comment", text=
+        "Altitude to point to")
+      float alt;
+
+      @verbatim (language="comment", text=
+        "additional angle offsets to next waypoint (only used with ROI_WPNEXT)" "\n"
+        "angle offset in rad")
+      float roll_offset;
+
+      @verbatim (language="comment", text=
+        "angle offset in rad")
+      float pitch_offset;
+
+      @verbatim (language="comment", text=
+        "angle offset in rad")
+      float yaw_offset;
+    };
+  };
+};

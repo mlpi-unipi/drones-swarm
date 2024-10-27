@@ -1,0 +1,180 @@
+[0.000000] (-) TimerEvent: {}
+[0.001204] (-) JobUnselected: {'identifier': 'iris-logger'}
+[0.001387] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.001412] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.001432] (-) JobUnselected: {'identifier': 'uuv_boids'}
+[0.001454] (boids) JobQueued: {'identifier': 'boids', 'dependencies': OrderedDict([('px4_msgs', '/home/fourdds/ros2_ws/install/px4_msgs')])}
+[0.001479] (boids) JobStarted: {'identifier': 'boids'}
+[0.005740] (boids) JobProgress: {'identifier': 'boids', 'progress': 'cmake'}
+[0.005916] (boids) JobProgress: {'identifier': 'boids', 'progress': 'build'}
+[0.006272] (boids) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/boids', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ros2_ws/build/boids', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/564_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', 'a14521aa-1ded-4b97-a393-ad401b19bab8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/boids'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.025295] (boids) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.100144] (-) TimerEvent: {}
+[0.125904] (boids) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[0.147419] (boids) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.149758] (boids) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.155933] (boids) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.165361] (boids) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.177229] (boids) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.188272] (boids) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.190692] (boids) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.200220] (-) TimerEvent: {}
+[0.246087] (boids) StdoutLine: {'line': b'-- Found px4_msgs: 2.0.1 (/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/cmake)\n'}
+[0.265799] (boids) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.300286] (-) TimerEvent: {}
+[0.302956] (boids) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.304883] (boids) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.373084] (boids) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.400370] (-) TimerEvent: {}
+[0.455982] (boids) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.500478] (-) TimerEvent: {}
+[0.503526] (boids) StdoutLine: {'line': b'-- Found rclpy: 3.3.12 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.504208] (boids) StdoutLine: {'line': b'-- Found boids: 0.0.0 (/home/fourdds/ros2_ws/install/boids/share/boids/cmake)\n'}
+[0.534155] (boids) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[0.547669] (boids) StdoutLine: {'line': b'-- Found image_transport: 3.1.8 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[0.584362] (boids) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[0.584869] (boids) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.600583] (-) TimerEvent: {}
+[0.700820] (-) TimerEvent: {}
+[0.729089] (boids) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.800920] (-) TimerEvent: {}
+[0.890094] (boids) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.901007] (-) TimerEvent: {}
+[0.951839] (boids) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.964798] (boids) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.978167] (boids) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.978267] (boids) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.978298] (boids) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[0.990660] (boids) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.001106] (-) TimerEvent: {}
+[1.007616] (boids) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.008483] (boids) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.008992] (boids) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/fourdds/ros2_ws/src/boids/include;$<BUILD_INTERFACE:/home/fourdds/ros2_ws/src/boids/include/boids>\n'}
+[1.009044] (boids) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.009757] (boids) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[1.009829] (boids) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[1.010201] (boids) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.010618] (boids) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.010983] (boids) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.011771] (boids) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.011830] (boids) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.012138] (boids) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.014832] (boids) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.040780] (boids) StdoutLine: {'line': b'-- Generating done\n'}
+[1.042478] (boids) StdoutLine: {'line': b'-- Build files have been written to: /home/fourdds/ros2_ws/build/boids\n'}
+[1.057835] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_generator_c\x1b[0m\n'}
+[1.057959] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target frame_transforms\x1b[0m\n'}
+[1.058798] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target swarm_spawner\x1b[0m\n'}
+[1.061465] (boids) StdoutLine: {'line': b'[  2%] Built target boids__cpp\n'}
+[1.062537] (boids) StdoutLine: {'line': b'[ 10%] Built target boids__rosidl_generator_c\n'}
+[1.064990] (boids) StdoutLine: {'line': b'[ 10%] Built target ament_cmake_python_copy_boids\n'}
+[1.065989] (boids) StdoutLine: {'line': b'[ 15%] Built target frame_transforms\n'}
+[1.066921] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.067109] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.068941] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.069131] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.069213] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_c\x1b[0m\n'}
+[1.070009] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.070143] (boids) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o\x1b[0m\n'}
+[1.070441] (boids) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/base_station.cpp.o\x1b[0m\n'}
+[1.071697] (boids) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/yaml.cpp.o\x1b[0m\n'}
+[1.072558] (boids) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/swarm_spawner.dir/src/main.cpp.o\x1b[0m\n'}
+[1.073542] (boids) StdoutLine: {'line': b'[ 32%] Built target boids__rosidl_typesupport_fastrtps_cpp\n'}
+[1.074482] (boids) StdoutLine: {'line': b'[ 41%] Built target boids__rosidl_typesupport_cpp\n'}
+[1.075804] (boids) StdoutLine: {'line': b'[ 58%] Built target boids__rosidl_typesupport_c\n'}
+[1.075871] (boids) StdoutLine: {'line': b'[ 58%] Built target boids__rosidl_typesupport_fastrtps_c\n'}
+[1.076858] (boids) StdoutLine: {'line': b'[ 73%] Built target boids__rosidl_typesupport_introspection_cpp\n'}
+[1.076940] (boids) StdoutLine: {'line': b'[ 76%] Built target boids__rosidl_typesupport_introspection_c\n'}
+[1.085707] (boids) StdoutLine: {'line': b'[ 76%] Built target boids\n'}
+[1.094243] (boids) StdoutLine: {'line': b'[ 78%] Built target boids__py\n'}
+[1.100226] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_generator_py\x1b[0m\n'}
+[1.101199] (-) TimerEvent: {}
+[1.107243] (boids) StdoutLine: {'line': b'[ 84%] Built target boids__rosidl_generator_py\n'}
+[1.112433] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[1.112816] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[1.114421] (boids) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target boids__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[1.119375] (boids) StdoutLine: {'line': b'[ 93%] Built target boids__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.119553] (boids) StdoutLine: {'line': b'[ 93%] Built target boids__rosidl_typesupport_c__pyext\n'}
+[1.122037] (boids) StdoutLine: {'line': b'[ 97%] Built target boids__rosidl_typesupport_introspection_c__pyext\n'}
+[1.165957] (boids) StdoutLine: {'line': b'running egg_info\n'}
+[1.172604] (boids) StdoutLine: {'line': b'writing boids.egg-info/PKG-INFO\n'}
+[1.173030] (boids) StdoutLine: {'line': b'writing dependency_links to boids.egg-info/dependency_links.txt\n'}
+[1.173373] (boids) StdoutLine: {'line': b'writing top-level names to boids.egg-info/top_level.txt\n'}
+[1.193212] (boids) StdoutLine: {'line': b"reading manifest file 'boids.egg-info/SOURCES.txt'\n"}
+[1.193655] (boids) StdoutLine: {'line': b"writing manifest file 'boids.egg-info/SOURCES.txt'\n"}
+[1.201303] (-) TimerEvent: {}
+[1.210326] (boids) StdoutLine: {'line': b'[ 97%] Built target ament_cmake_python_build_boids_egg\n'}
+[1.301404] (-) TimerEvent: {}
+[1.401719] (-) TimerEvent: {}
+[1.501997] (-) TimerEvent: {}
+[1.602301] (-) TimerEvent: {}
+[1.702568] (-) TimerEvent: {}
+[1.802883] (-) TimerEvent: {}
+[1.903158] (-) TimerEvent: {}
+[2.003442] (-) TimerEvent: {}
+[2.103722] (-) TimerEvent: {}
+[2.204068] (-) TimerEvent: {}
+[2.304358] (-) TimerEvent: {}
+[2.404648] (-) TimerEvent: {}
+[2.504930] (-) TimerEvent: {}
+[2.605204] (-) TimerEvent: {}
+[2.705488] (-) TimerEvent: {}
+[2.805781] (-) TimerEvent: {}
+[2.906056] (-) TimerEvent: {}
+[3.006337] (-) TimerEvent: {}
+[3.041831] (boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Swarm::UavNode::cameraSubscriptionCallback(sensor_msgs::msg::Image_<std::allocator<void> >::ConstSharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.041985] (boids) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:312:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kstd::ofstream file\x1b[m\x1b[K\xe2\x80\x99 has initializer but incomplete type\n'}
+[3.042024] (boids) StderrLine: {'line': b'  312 |     std::ofstream file\x1b[01;31m\x1b[K(\x1b[m\x1b[K"/home/fourdds/.swarm/img.raw", std::ios::trunc | std::ios::binary);\n'}
+[3.042051] (boids) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.106454] (-) TimerEvent: {}
+[3.206715] (-) TimerEvent: {}
+[3.306992] (-) TimerEvent: {}
+[3.407256] (-) TimerEvent: {}
+[3.507576] (-) TimerEvent: {}
+[3.607852] (-) TimerEvent: {}
+[3.708126] (-) TimerEvent: {}
+[3.808399] (-) TimerEvent: {}
+[3.908695] (-) TimerEvent: {}
+[4.008960] (-) TimerEvent: {}
+[4.109230] (-) TimerEvent: {}
+[4.211680] (-) TimerEvent: {}
+[4.312093] (-) TimerEvent: {}
+[4.412366] (-) TimerEvent: {}
+[4.512629] (-) TimerEvent: {}
+[4.612961] (-) TimerEvent: {}
+[4.713284] (-) TimerEvent: {}
+[4.813598] (-) TimerEvent: {}
+[4.913876] (-) TimerEvent: {}
+[5.014211] (-) TimerEvent: {}
+[5.114526] (-) TimerEvent: {}
+[5.214864] (-) TimerEvent: {}
+[5.315177] (-) TimerEvent: {}
+[5.415502] (-) TimerEvent: {}
+[5.515822] (-) TimerEvent: {}
+[5.616186] (-) TimerEvent: {}
+[5.716532] (-) TimerEvent: {}
+[5.816865] (-) TimerEvent: {}
+[5.917158] (-) TimerEvent: {}
+[6.017494] (-) TimerEvent: {}
+[6.117797] (-) TimerEvent: {}
+[6.218125] (-) TimerEvent: {}
+[6.318393] (-) TimerEvent: {}
+[6.418699] (-) TimerEvent: {}
+[6.518984] (-) TimerEvent: {}
+[6.619317] (-) TimerEvent: {}
+[6.719634] (-) TimerEvent: {}
+[6.819913] (-) TimerEvent: {}
+[6.920198] (-) TimerEvent: {}
+[7.020509] (-) TimerEvent: {}
+[7.120845] (-) TimerEvent: {}
+[7.221148] (-) TimerEvent: {}
+[7.321408] (-) TimerEvent: {}
+[7.421675] (-) TimerEvent: {}
+[7.521988] (-) TimerEvent: {}
+[7.569169] (boids) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:76: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o] Error 1\n'}
+[7.569379] (boids) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2\n'}
+[7.569487] (boids) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[7.570618] (boids) CommandEnded: {'returncode': 2}
+[7.612622] (boids) JobEnded: {'identifier': 'boids', 'rc': 2}
+[7.622051] (-) TimerEvent: {}
+[7.623060] (-) EventReactorShutdown: {}

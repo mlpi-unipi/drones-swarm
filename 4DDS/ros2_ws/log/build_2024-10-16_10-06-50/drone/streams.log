@@ -1,0 +1,14 @@
+[0.037s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16
+[0.269s] [35m[1mConsolidate compiler generated dependencies of target Drone[0m
+[0.407s] [ 33%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o[0m
+[9.102s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::sendVelocity(const Vector2d&, float)[m[K’:
+[9.102s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:428:26:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kstd::array<float, 3> velocity[m[K’ shadows a parameter
+[9.102s]   428 |     std::array<float, 3> [01;31m[Kvelocity[m[K = msg.velocity;
+[9.102s]       |                          [01;31m[K^~~~~~~~[m[K
+[9.102s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:55:[m[K [01;36m[Knote: [m[K‘[01m[Kconst Vector2d& velocity[m[K’ previously declared here
+[9.102s]   412 | void fdds::Drone::sendVelocity([01;36m[Kconst Eigen::Vector2d& velocity[m[K, float value)
+[9.102s]       |                                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[20.552s] gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+[20.553s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+[20.554s] gmake: *** [Makefile:146: all] Error 2
+[20.559s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16

@@ -1,0 +1,43 @@
+In file included from [01m[K/home/fourdds/ros2_ws/src/logging/src/Logger.cpp:3[m[K:
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:35:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+   35 |     std::vector<rclcpp::Subscription<[01;31m[Kstd_msgs[m[K::msg::String>::SharedPtr> subscriptions;
+      |                                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:35:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   35 |     std::vector<rclcpp::Subscription<std_msgs::msg::String[01;31m[K>[m[K::SharedPtr> subscriptions;
+      |                                                           [01;31m[K^[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:35:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:35:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:35:59:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:35:71:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   35 |     std::vector<rclcpp::Subscription<std_msgs::msg::String>::SharedPtr[01;31m[K>[m[K subscriptions;
+      |                                                                       [01;31m[K^[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:35:71:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:[m[K In constructor ‘[01m[KLogger::Logger()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:14:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+   14 |             auto subscription = this->create_subscription<[01;31m[Kstd_msgs[m[K::msg::String>(
+      |                                                           [01;31m[K^~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:14:39:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   14 |             auto subscription = this->[01;31m[Kcreate_subscription<std_msgs::msg::String>[m[K(
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:15:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic[m[K’ was not declared in this scope
+   15 |                 [01;31m[Ktopic[m[K, 10,
+      |                 [01;31m[K^~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:16:36:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_callback[m[K’ is not a member of ‘[01m[KLogger[m[K’
+   16 |                 std::bind(&Logger::[01;31m[Ktopic_callback[m[K, this, std::placeholders::_1));
+      |                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:17:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscriptions_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksubscriptions[m[K’?
+   17 |             [01;31m[Ksubscriptions_[m[K.push_back(subscription);
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+      |             [32m[Ksubscriptions[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:21:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbinary_file_[m[K’ was not declared in this scope; did you mean ‘[01m[Kbinary_file[m[K’?
+   21 |         [01;31m[Kbinary_file_[m[K.open("log.bin", std::ios::out | std::ios::binary);
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+      |         [32m[Kbinary_file[m[K
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:[m[K In destructor ‘[01m[Kvirtual Logger::~Logger()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/logging/include/logging/Logger.hpp:29:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kbinary_file_[m[K’ was not declared in this scope; did you mean ‘[01m[Kbinary_file[m[K’?
+   29 |         if ([01;31m[Kbinary_file_[m[K.is_open()) {
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+      |             [32m[Kbinary_file[m[K
+gmake[2]: *** [CMakeFiles/Logger.dir/build.make:76: CMakeFiles/Logger.dir/src/Logger.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Logger.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

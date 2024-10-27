@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target uavs_spawner[0m
+[ 40%] Built target frame_transforms
+[ 80%] [32mBuilding CXX object CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/uavs_spawner.dir/src/main.cpp.o[0m
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid uav_node::init()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:24:16:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kstatus_callback[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   24 |     const auto [01;35m[Kstatus_callback[m[K = std::bind(&uav_node::status_callback, this, std::placeholders::_1);
+      |                [01;35m[K^~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable uavs_spawner[0m
+/usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o: in function `uav_node::init()':
+uav_node.cpp:(.text+0x54e): undefined reference to `uav_node::status_callback(std::shared_ptr<px4_msgs::msg::VehicleStatus_<std::allocator<void> > const>)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:175: uavs_spawner] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/uavs_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

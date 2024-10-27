@@ -1,0 +1,52 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gazebo_msgs/msg/ODEJointProperties.msg
+// generated code does not contain a copyright notice
+
+
+module gazebo_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "access to low level joint properties, change these at your own risk")
+    struct ODEJointProperties {
+      @verbatim (language="comment", text=
+        "joint damping")
+      sequence<double> damping;
+
+      @verbatim (language="comment", text=
+        "joint limit")
+      sequence<double> hi_stop;
+
+      @verbatim (language="comment", text=
+        "joint limit")
+      sequence<double> lo_stop;
+
+      @verbatim (language="comment", text=
+        "set joint erp")
+      sequence<double> erp;
+
+      @verbatim (language="comment", text=
+        "set joint cfm")
+      sequence<double> cfm;
+
+      @verbatim (language="comment", text=
+        "set joint erp for joint limit \"contact\" joint")
+      sequence<double> stop_erp;
+
+      @verbatim (language="comment", text=
+        "set joint cfm for joint limit \"contact\" joint")
+      sequence<double> stop_cfm;
+
+      @verbatim (language="comment", text=
+        "joint fudge_factor applied at limits, see ODE manual for info.")
+      sequence<double> fudge_factor;
+
+      @verbatim (language="comment", text=
+        "ode joint param fmax")
+      sequence<double> fmax;
+
+      @verbatim (language="comment", text=
+        "ode joint param vel")
+      sequence<double> vel;
+    };
+  };
+};

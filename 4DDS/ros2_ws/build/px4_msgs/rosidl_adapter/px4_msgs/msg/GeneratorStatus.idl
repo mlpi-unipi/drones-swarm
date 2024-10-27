@@ -1,0 +1,139 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/GeneratorStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module GeneratorStatus_Constants {
+      @verbatim (language="comment", text=
+        "Generator is off.")
+      const uint64 STATUS_FLAG_OFF = 1;
+      @verbatim (language="comment", text=
+        "Generator is ready to start generating power.")
+      const uint64 STATUS_FLAG_READY = 2;
+      @verbatim (language="comment", text=
+        "Generator is generating power.")
+      const uint64 STATUS_FLAG_GENERATING = 4;
+      @verbatim (language="comment", text=
+        "Generator is charging the batteries (generating enough power to charge and provide the load).")
+      const uint64 STATUS_FLAG_CHARGING = 8;
+      @verbatim (language="comment", text=
+        "Generator is operating at a reduced maximum power.")
+      const uint64 STATUS_FLAG_REDUCED_POWER = 16;
+      @verbatim (language="comment", text=
+        "Generator is providing the maximum output.")
+      const uint64 STATUS_FLAG_MAXPOWER = 32;
+      @verbatim (language="comment", text=
+        "Generator is near the maximum operating temperature, cooling is insufficient.")
+      const uint64 STATUS_FLAG_OVERTEMP_WARNING = 64;
+      @verbatim (language="comment", text=
+        "Generator hit the maximum operating temperature and shutdown.")
+      const uint64 STATUS_FLAG_OVERTEMP_FAULT = 128;
+      @verbatim (language="comment", text=
+        "Power electronics are near the maximum operating temperature, cooling is insufficient.")
+      const uint64 STATUS_FLAG_ELECTRONICS_OVERTEMP_WARNING = 256;
+      @verbatim (language="comment", text=
+        "Power electronics hit the maximum operating temperature and shutdown.")
+      const uint64 STATUS_FLAG_ELECTRONICS_OVERTEMP_FAULT = 512;
+      @verbatim (language="comment", text=
+        "Power electronics experienced a fault and shutdown.")
+      const uint64 STATUS_FLAG_ELECTRONICS_FAULT = 1024;
+      @verbatim (language="comment", text=
+        "The power source supplying the generator failed e.g. mechanical generator stopped, tether is no longer providing power, solar cell is in shade, hydrogen reaction no longer happening.")
+      const uint64 STATUS_FLAG_POWERSOURCE_FAULT = 2048;
+      @verbatim (language="comment", text=
+        "Generator controller having communication problems.")
+      const uint64 STATUS_FLAG_COMMUNICATION_WARNING = 4096;
+      @verbatim (language="comment", text=
+        "Power electronic or generator cooling system error.")
+      const uint64 STATUS_FLAG_COOLING_WARNING = 8192;
+      @verbatim (language="comment", text=
+        "Generator controller power rail experienced a fault.")
+      const uint64 STATUS_FLAG_POWER_RAIL_FAULT = 16384;
+      @verbatim (language="comment", text=
+        "Generator controller exceeded the overcurrent threshold and shutdown to prevent damage.")
+      const uint64 STATUS_FLAG_OVERCURRENT_FAULT = 32768;
+      @verbatim (language="comment", text=
+        "Generator controller detected a high current going into the batteries and shutdown to prevent battery damage. |")
+      const uint64 STATUS_FLAG_BATTERY_OVERCHARGE_CURRENT_FAULT = 65536;
+      @verbatim (language="comment", text=
+        "Generator controller exceeded it's overvoltage threshold and shutdown to prevent it exceeding the voltage rating.")
+      const uint64 STATUS_FLAG_OVERVOLTAGE_FAULT = 131072;
+      @verbatim (language="comment", text=
+        "Batteries are under voltage (generator will not start).")
+      const uint64 STATUS_FLAG_BATTERY_UNDERVOLT_FAULT = 262144;
+      @verbatim (language="comment", text=
+        "Generator start is inhibited by e.g. a safety switch.")
+      const uint64 STATUS_FLAG_START_INHIBITED = 524288;
+      @verbatim (language="comment", text=
+        "Generator requires maintenance.")
+      const uint64 STATUS_FLAG_MAINTENANCE_REQUIRED = 1048576;
+      @verbatim (language="comment", text=
+        "Generator is not ready to generate yet.")
+      const uint64 STATUS_FLAG_WARMING_UP = 2097152;
+      @verbatim (language="comment", text=
+        "Generator is idle.")
+      const uint64 STATUS_FLAG_IDLE = 4194304;
+    };
+    struct GeneratorStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "Status flags")
+      uint64 status;
+
+      @verbatim (language="comment", text=
+        "Current into/out of battery. Positive for out. Negative for in. NaN: field not provided.")
+      @unit (value="A")
+      float battery_current;
+
+      @verbatim (language="comment", text=
+        "Current going to the UAV. If battery current not available this is the DC current from the generator. Positive for out. Negative for in. NaN: field not provided")
+      @unit (value="A")
+      float load_current;
+
+      @verbatim (language="comment", text=
+        "The power being generated. NaN: field not provided")
+      @unit (value="W")
+      float power_generated;
+
+      @verbatim (language="comment", text=
+        "Voltage of the bus seen at the generator, or battery bus if battery bus is controlled by generator and at a different voltage to main bus.")
+      @unit (value="V")
+      float bus_voltage;
+
+      @verbatim (language="comment", text=
+        "The target battery current. Positive for out. Negative for in. NaN: field not provided")
+      @unit (value="A")
+      float bat_current_setpoint;
+
+      @verbatim (language="comment", text=
+        "Seconds this generator has run since it was rebooted. UINT32_MAX: field not provided.")
+      @unit (value="s")
+      uint32 runtime;
+
+      @verbatim (language="comment", text=
+        "Seconds until this generator requires maintenance.  A negative value indicates maintenance is past-due. INT32_MAX: field not provided.")
+      @unit (value="s")
+      int32 time_until_maintenance;
+
+      @verbatim (language="comment", text=
+        "Speed of electrical generator or alternator. UINT16_MAX: field not provided.")
+      @unit (value="rpm")
+      uint16 generator_speed;
+
+      @verbatim (language="comment", text=
+        "The temperature of the rectifier or power converter. INT16_MAX: field not provided.")
+      @unit (value="degC")
+      int16 rectifier_temperature;
+
+      @verbatim (language="comment", text=
+        "The temperature of the mechanical motor, fuel cell core or generator. INT16_MAX: field not provided.")
+      @unit (value="degC")
+      int16 generator_temperature;
+    };
+  };
+};

@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/VelocityLimits.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Velocity and yaw rate limits for a multicopter position slow mode only")
+    struct VelocityLimits {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "absolute speeds, NAN means use default limit" "\n"
+        "[m/s]")
+      @unit (value="m/s")
+      float horizontal_velocity;
+
+      @unit (value="m/s")
+      float vertical_velocity;
+
+      @unit (value="rad/s")
+      float yaw_rate;
+    };
+  };
+};

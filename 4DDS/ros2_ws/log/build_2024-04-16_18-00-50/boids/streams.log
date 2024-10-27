@@ -1,0 +1,38 @@
+[0.006s] Invoking command in '/home/fourdds/ros2_ws/build/boids': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24
+[0.028s] [  2%] Built target boids__cpp
+[0.029s] [35m[1mConsolidate compiler generated dependencies of target uavs_spawner[0m
+[0.031s] [ 11%] Built target boids__rosidl_generator_c
+[0.033s] [ 11%] Built target ament_cmake_python_copy_boids
+[0.035s] [ 15%] Built target frame_transforms
+[0.039s] [ 24%] Built target boids__rosidl_typesupport_cpp
+[0.039s] [ 33%] Built target boids__rosidl_typesupport_fastrtps_cpp
+[0.040s] [ 35%] [32mBuilding CXX object CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o[0m
+[0.040s] [ 44%] Built target boids__rosidl_typesupport_introspection_cpp
+[0.043s] [ 53%] Built target boids__rosidl_typesupport_introspection_c
+[0.043s] [ 62%] Built target boids__rosidl_typesupport_c
+[0.044s] [ 71%] Built target boids__rosidl_typesupport_fastrtps_c
+[0.052s] [ 71%] Built target boids
+[0.060s] [ 73%] Built target boids__py
+[0.070s] [ 80%] Built target boids__rosidl_generator_py
+[0.081s] [ 84%] Built target boids__rosidl_typesupport_fastrtps_c__pyext
+[0.082s] [ 88%] Built target boids__rosidl_typesupport_introspection_c__pyext
+[0.082s] [ 93%] Built target boids__rosidl_typesupport_c__pyext
+[0.127s] running egg_info
+[0.133s] writing boids.egg-info/PKG-INFO
+[0.134s] writing dependency_links to boids.egg-info/dependency_links.txt
+[0.134s] writing top-level names to boids.egg-info/top_level.txt
+[0.152s] reading manifest file 'boids.egg-info/SOURCES.txt'
+[0.152s] writing manifest file 'boids.egg-info/SOURCES.txt'
+[0.166s] [ 93%] Built target ament_cmake_python_build_boids_egg
+[11.043s] [ 95%] [32m[1mLinking CXX executable uavs_spawner[0m
+[11.679s] /usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o: in function `Swarm::UavNode::initialize()':
+[11.680s] uav_node.cpp:(.text+0x226): undefined reference to `Swarm::UavNode::gpsSubscriptionCallback(std::shared_ptr<px4_msgs::msg::VehicleGlobalPosition_<std::allocator<void> > const>)'
+[11.680s] /usr/bin/ld: uav_node.cpp:(.text+0x365): undefined reference to `Swarm::UavNode::attitudeSubscriptionCallback(std::shared_ptr<px4_msgs::msg::VehicleAttitude_<std::allocator<void> > const>)'
+[11.681s] /usr/bin/ld: uav_node.cpp:(.text+0x4ab): undefined reference to `Swarm::UavNode::odometrySubscriptionCallback(std::shared_ptr<px4_msgs::msg::VehicleOdometry_<std::allocator<void> > const>)'
+[11.681s] /usr/bin/ld: uav_node.cpp:(.text+0x5f1): undefined reference to `Swarm::UavNode::lidarSubscriptionCallback(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > const>)'
+[11.682s] /usr/bin/ld: uav_node.cpp:(.text+0x737): undefined reference to `Swarm::UavNode::neighborsSubscriptionCallback(std::shared_ptr<boids::msg::NeighborsCOM_<std::allocator<void> > const>)'
+[11.745s] collect2: error: ld returned 1 exit status
+[11.746s] gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:224: uavs_spawner] Error 1
+[11.746s] gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/uavs_spawner.dir/all] Error 2
+[11.746s] gmake: *** [Makefile:146: all] Error 2
+[11.749s] Invoked command in '/home/fourdds/ros2_ws/build/boids' returned '2': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24

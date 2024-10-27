@@ -1,0 +1,85 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/NpfgStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    struct NpfgStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "(boolean) true = wind estimate is valid and/or being used by controller (also indicates if wind est usage is disabled despite being valid)")
+      uint8 wind_est_valid;
+
+      @verbatim (language="comment", text=
+        "resultant lateral acceleration reference")
+      @unit (value="m/s^2")
+      float lat_accel;
+
+      @verbatim (language="comment", text=
+        "lateral acceleration demand only for maintaining curvature")
+      @unit (value="m/s^2")
+      float lat_accel_ff;
+
+      @verbatim (language="comment", text=
+        "bearing feasibility [0,1]")
+      float bearing_feas;
+
+      @verbatim (language="comment", text=
+        "on-track bearing feasibility [0,1]")
+      float bearing_feas_on_track;
+
+      @verbatim (language="comment", text=
+        "signed track error")
+      @unit (value="m")
+      float signed_track_error;
+
+      @verbatim (language="comment", text=
+        "track error bound")
+      @unit (value="m")
+      float track_error_bound;
+
+      @verbatim (language="comment", text=
+        "(true) airspeed reference")
+      @unit (value="m/s")
+      float airspeed_ref;
+
+      @verbatim (language="comment", text=
+        "bearing angle")
+      @unit (value="rad")
+      float bearing;
+
+      @verbatim (language="comment", text=
+        "heading angle reference")
+      @unit (value="rad")
+      float heading_ref;
+
+      @verbatim (language="comment", text=
+        "minimum forward ground speed reference")
+      @unit (value="m/s")
+      float min_ground_speed_ref;
+
+      @verbatim (language="comment", text=
+        "adapted period (if auto-tuning enabled)")
+      @unit (value="s")
+      float adapted_period;
+
+      @verbatim (language="comment", text=
+        "controller proportional gain")
+      @unit (value="rad/s")
+      float p_gain;
+
+      @verbatim (language="comment", text=
+        "controller time constant")
+      @unit (value="s")
+      float time_const;
+
+      @verbatim (language="comment", text=
+        "estimate of certainty of the correct functionality of the npfg roll setpoint in [0, 1]")
+      float can_run_factor;
+    };
+  };
+};

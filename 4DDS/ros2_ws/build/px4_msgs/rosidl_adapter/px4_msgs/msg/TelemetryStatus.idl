@@ -1,0 +1,160 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/TelemetryStatus.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module TelemetryStatus_Constants {
+      const uint8 LINK_TYPE_GENERIC = 0;
+      const uint8 LINK_TYPE_UBIQUITY_BULLET = 1;
+      const uint8 LINK_TYPE_WIRE = 2;
+      const uint8 LINK_TYPE_USB = 3;
+      const uint8 LINK_TYPE_IRIDIUM = 4;
+      @verbatim (language="comment", text=
+        "Heartbeat timeout (tolerate missing 1 + jitter)")
+      const uint64 HEARTBEAT_TIMEOUT_US = 2500000;
+    };
+    struct TelemetryStatus {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "type of the radio hardware (LINK_TYPE_*)")
+      uint8 type;
+
+      uint8 mode;
+
+      boolean flow_control;
+
+      boolean forwarding;
+
+      boolean mavlink_v2;
+
+      boolean ftp;
+
+      uint8 streams;
+
+      @verbatim (language="comment", text=
+        "configured maximum data rate (Bytes/s)")
+      float data_rate;
+
+      float rate_multiplier;
+
+      @verbatim (language="comment", text=
+        "transmit rate average (Bytes/s)")
+      float tx_rate_avg;
+
+      @verbatim (language="comment", text=
+        "transmit error rate average (Bytes/s)")
+      float tx_error_rate_avg;
+
+      @verbatim (language="comment", text=
+        "total message sent count")
+      uint32 tx_message_count;
+
+      @verbatim (language="comment", text=
+        "number of TX buffer overruns")
+      uint32 tx_buffer_overruns;
+
+      @verbatim (language="comment", text=
+        "transmit rate average (Bytes/s)")
+      float rx_rate_avg;
+
+      @verbatim (language="comment", text=
+        "count of total messages received")
+      uint32 rx_message_count;
+
+      uint32 rx_message_lost_count;
+
+      @verbatim (language="comment", text=
+        "number of RX buffer overruns")
+      uint32 rx_buffer_overruns;
+
+      @verbatim (language="comment", text=
+        "number of parse errors")
+      uint32 rx_parse_errors;
+
+      @verbatim (language="comment", text=
+        "number of packet drops")
+      uint32 rx_packet_drop_count;
+
+      float rx_message_lost_rate;
+
+      @verbatim (language="comment", text=
+        "Heartbeats per type" "\n"
+        "MAV_TYPE_ANTENNA_TRACKER")
+      boolean heartbeat_type_antenna_tracker;
+
+      @verbatim (language="comment", text=
+        "MAV_TYPE_GCS")
+      boolean heartbeat_type_gcs;
+
+      @verbatim (language="comment", text=
+        "MAV_TYPE_ONBOARD_CONTROLLER")
+      boolean heartbeat_type_onboard_controller;
+
+      @verbatim (language="comment", text=
+        "MAV_TYPE_GIMBAL")
+      boolean heartbeat_type_gimbal;
+
+      @verbatim (language="comment", text=
+        "MAV_TYPE_ADSB")
+      boolean heartbeat_type_adsb;
+
+      @verbatim (language="comment", text=
+        "MAV_TYPE_CAMERA")
+      boolean heartbeat_type_camera;
+
+      @verbatim (language="comment", text=
+        "MAV_TYPE_PARACHUTE")
+      boolean heartbeat_type_parachute;
+
+      @verbatim (language="comment", text=
+        "MAV_TYPE_ODID")
+      boolean heartbeat_type_open_drone_id;
+
+      @verbatim (language="comment", text=
+        "Heartbeats per component" "\n"
+        "MAV_COMP_ID_TELEMETRY_RADIO")
+      boolean heartbeat_component_telemetry_radio;
+
+      @verbatim (language="comment", text=
+        "MAV_COMP_ID_LOG")
+      boolean heartbeat_component_log;
+
+      @verbatim (language="comment", text=
+        "MAV_COMP_ID_OSD")
+      boolean heartbeat_component_osd;
+
+      @verbatim (language="comment", text=
+        "MAV_COMP_ID_OBSTACLE_AVOIDANCE")
+      boolean heartbeat_component_obstacle_avoidance;
+
+      @verbatim (language="comment", text=
+        "MAV_COMP_ID_VISUAL_INERTIAL_ODOMETRY")
+      boolean heartbeat_component_vio;
+
+      @verbatim (language="comment", text=
+        "MAV_COMP_ID_PAIRING_MANAGER")
+      boolean heartbeat_component_pairing_manager;
+
+      @verbatim (language="comment", text=
+        "MAV_COMP_ID_UDP_BRIDGE")
+      boolean heartbeat_component_udp_bridge;
+
+      @verbatim (language="comment", text=
+        "MAV_COMP_ID_UART_BRIDGE")
+      boolean heartbeat_component_uart_bridge;
+
+      @verbatim (language="comment", text=
+        "Misc component health")
+      boolean avoidance_system_healthy;
+
+      boolean open_drone_id_system_healthy;
+
+      boolean parachute_system_healthy;
+    };
+  };
+};

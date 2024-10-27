@@ -1,0 +1,1 @@
+/home/fourdds/ws/build/gazebo_msgs/rosidl_cmake/srv/GetLightProperties_Response.msg

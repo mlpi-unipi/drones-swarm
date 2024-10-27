@@ -1,0 +1,69 @@
+[35m[1mConsolidate compiler generated dependencies of target Drone[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o[0m
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::flockingLogic()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:328:24:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[KEigen::Vector2d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 2, 1>[m[K’} and ‘[01m[Kdouble[m[K’)
+  328 |         currentSpeed = [01;31m[K1.5[m[K;//velocity;
+      |                        [01;31m[K^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:328:24:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’ and ‘[01m[Kdouble[m[K’
+  328 |         currentSpeed = [01;36m[K1.5[m[K;//velocity;
+      |                        [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:328:24:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’ and ‘[01m[Kdouble[m[K’
+  328 |         currentSpeed = [01;36m[K1.5[m[K;//velocity;
+      |                        [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:328:24:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’ and ‘[01m[Kdouble[m[K’
+  328 |         currentSpeed = [01;36m[K1.5[m[K;//velocity;
+      |                        [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = double; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:328:24:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’ and ‘[01m[Kdouble[m[K’
+  328 |         currentSpeed = [01;36m[K1.5[m[K;//velocity;
+      |                        [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = double; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[Kconst Eigen::Matrix<double, 2, 1>&[m[K’
+  206 |     EIGEN_STRONG_INLINE Matrix& operator=([01;36m[Kconst Matrix& other[m[K)
+      |                                           [01;36m[K~~~~~~~~~~~~~~^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = double; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kdouble[m[K’ to ‘[01m[KEigen::Matrix<double, 2, 1>&&[m[K’
+  279 |     Matrix& operator=([01;36m[KMatrix&& other[m[K) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |                       [01;36m[K~~~~~~~~~^~~~~[m[K
+gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

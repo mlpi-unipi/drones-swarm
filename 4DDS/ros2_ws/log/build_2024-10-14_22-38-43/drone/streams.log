@@ -1,0 +1,1296 @@
+[0.231s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fourdds/ros2_ws/src/drone -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fourdds/ros2_ws/install/drone
+[0.285s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.436s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.447s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.478s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.482s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.491s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.498s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.514s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.531s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.532s] -- Found px4_msgs: 2.0.1 (/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.546s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.573s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.575s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.757s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.807s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.839s] -- Found obstacle_avoidance: 0.0.0 (/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/cmake)
+[0.840s] -- Found target_detection: 0.0.0 (/home/fourdds/ros2_ws/install/target_detection/share/target_detection/cmake)
+[0.841s] -- Found parameters: 0.0.0 (/home/fourdds/ros2_ws/install/parameters/share/parameters/cmake)
+[0.844s] -- Found fdds_messages: 0.0.0 (/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/cmake)
+[0.854s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.919s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.920s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/fourdds/ros2_ws/src/drone/include>
+[0.920s] -- Configured cppcheck exclude dirs and/or files: 
+[0.920s] -- Added test 'lint_cmake' to check CMake code style
+[0.921s] -- Added test 'uncrustify' to check C / C++ code style
+[0.921s] -- Configured uncrustify additional arguments: 
+[0.921s] -- Added test 'xmllint' to check XML markup files
+[0.922s] -- Configuring done
+[0.940s] -- Generating done
+[0.942s] -- Build files have been written to: /home/fourdds/ros2_ws/build/drone
+[0.953s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/fourdds/ros2_ws/src/drone -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fourdds/ros2_ws/install/drone
+[0.956s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16
+[0.995s] [35m[1mConsolidate compiler generated dependencies of target Drone[0m
+[1.023s] [ 33%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o[0m
+[1.023s] [ 66%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/main.cpp.o[0m
+[6.112s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::flockingLogic()[m[K’:
+[6.112s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:231:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kfdds::Drone::requestTakeoff(const float&)[m[K’
+[6.113s]   231 |             [01;31m[KrequestTakeoff(options.desiredRelativeAltitude)[m[K;
+[6.113s]       |             [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.113s] In file included from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.113s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:214:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid fdds::Drone::requestTakeoff()[m[K’
+[6.113s]   214 |         void [01;36m[KrequestTakeoff[m[K();
+[6.113s]       |              [01;36m[K^~~~~~~~~~~~~~[m[K
+[6.113s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:214:14:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[6.264s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:305:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kfdds::Drone::requestTakeoff(const float&)[m[K’
+[6.264s]   305 |             [01;31m[KrequestTakeoff(options.desiredRelativeDepth)[m[K;
+[6.264s]       |             [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.264s] In file included from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.264s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:214:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid fdds::Drone::requestTakeoff()[m[K’
+[6.264s]   214 |         void [01;36m[KrequestTakeoff[m[K();
+[6.264s]       |              [01;36m[K^~~~~~~~~~~~~~[m[K
+[6.264s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:214:14:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[6.271s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::sendGoto(const Vector2d&, float)[m[K’:
+[6.273s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:28:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::basic_ostream<char>[m[K’ and ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’})
+[6.275s]   396 |     [32m[Kstd::cout<<"MSG GOTO: "[m[K[01;31m[K<<[m[K[34m[Kmsg[m[K<<"\n";
+[6.278s]       |     [32m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K[01;31m[K^~[m[K[34m[K~~~[m[K
+[6.296s]       |              [32m[K|[m[K               [34m[K|[m[K
+[6.298s]       |              [32m[K|[m[K               [34m[Kpx4_msgs::msg::TrajectorySetpoint {aka px4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >}[m[K
+[6.298s]       |              [32m[Kstd::basic_ostream<char>[m[K
+[6.298s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.299s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.299s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.299s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.299s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.299s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.300s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.300s] [01m[K/usr/include/c++/11/ostream:108:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.300s]   108 |       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+[6.300s]       |       [01;36m[K^~~~~~~~[m[K
+[6.300s] [01m[K/usr/include/c++/11/ostream:108:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>& (*)(std::basic_ostream<char>&)[m[K’}
+[6.300s]   108 |       operator<<([01;36m[K__ostream_type& (*__pf)(__ostream_type&)[m[K)
+[6.301s]       |                  [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.301s] [01m[K/usr/include/c++/11/ostream:117:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>][m[K’
+[6.301s]   117 |       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+[6.301s]       |       [01;36m[K^~~~~~~~[m[K
+[6.301s] [01m[K/usr/include/c++/11/ostream:117:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)[m[K’ {aka ‘[01m[Kstd::basic_ios<char>& (*)(std::basic_ios<char>&)[m[K’}
+[6.301s]   117 |       operator<<([01;36m[K__ios_type& (*__pf)(__ios_type&)[m[K)
+[6.301s]       |                  [01;36m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[6.301s] [01m[K/usr/include/c++/11/ostream:127:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.302s]   127 |       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+[6.302s]       |       [01;36m[K^~~~~~~~[m[K
+[6.302s] [01m[K/usr/include/c++/11/ostream:127:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+[6.302s]   127 |       operator<<([01;36m[Kios_base& (*__pf) (ios_base&)[m[K)
+[6.302s]       |                  [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[6.302s] [01m[K/usr/include/c++/11/ostream:166:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.302s]   166 |       [01;36m[Koperator[m[K<<(long __n)
+[6.302s]       |       [01;36m[K^~~~~~~~[m[K
+[6.302s] [01m[K/usr/include/c++/11/ostream:166:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong int[m[K’
+[6.302s]   166 |       operator<<([01;36m[Klong __n[m[K)
+[6.302s]       |                  [01;36m[K~~~~~^~~[m[K
+[6.303s] [01m[K/usr/include/c++/11/ostream:170:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.303s]   170 |       [01;36m[Koperator[m[K<<(unsigned long __n)
+[6.303s]       |       [01;36m[K^~~~~~~~[m[K
+[6.303s] [01m[K/usr/include/c++/11/ostream:170:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong unsigned int[m[K’
+[6.303s]   170 |       operator<<([01;36m[Kunsigned long __n[m[K)
+[6.303s]       |                  [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[6.303s] [01m[K/usr/include/c++/11/ostream:174:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.303s]   174 |       [01;36m[Koperator[m[K<<(bool __n)
+[6.303s]       |       [01;36m[K^~~~~~~~[m[K
+[6.303s] [01m[K/usr/include/c++/11/ostream:174:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kbool[m[K’
+[6.303s]   174 |       operator<<([01;36m[Kbool __n[m[K)
+[6.303s]       |                  [01;36m[K~~~~~^~~[m[K
+[6.303s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.303s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.303s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.304s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.304s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.304s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.304s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.305s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.305s] [01m[K/usr/include/c++/11/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+[6.305s]    91 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+[6.305s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.305s] [01m[K/usr/include/c++/11/bits/ostream.tcc:92:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kshort int[m[K’
+[6.305s]    92 |     operator<<([01;36m[Kshort __n[m[K)
+[6.306s]       |                [01;36m[K~~~~~~^~~[m[K
+[6.306s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.306s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.306s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.306s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.307s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.307s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.307s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.308s] [01m[K/usr/include/c++/11/ostream:181:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.308s]   181 |       [01;36m[Koperator[m[K<<(unsigned short __n)
+[6.308s]       |       [01;36m[K^~~~~~~~[m[K
+[6.308s] [01m[K/usr/include/c++/11/ostream:181:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kshort unsigned int[m[K’
+[6.308s]   181 |       operator<<([01;36m[Kunsigned short __n[m[K)
+[6.308s]       |                  [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[6.308s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.308s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.308s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.308s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.308s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.308s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.308s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.308s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.308s] [01m[K/usr/include/c++/11/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+[6.308s]   105 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+[6.309s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.309s] [01m[K/usr/include/c++/11/bits/ostream.tcc:106:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kint[m[K’
+[6.309s]   106 |     operator<<([01;36m[Kint __n[m[K)
+[6.309s]       |                [01;36m[K~~~~^~~[m[K
+[6.309s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.309s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.309s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.309s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.310s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.310s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.310s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.310s] [01m[K/usr/include/c++/11/ostream:192:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.310s]   192 |       [01;36m[Koperator[m[K<<(unsigned int __n)
+[6.310s]       |       [01;36m[K^~~~~~~~[m[K
+[6.310s] [01m[K/usr/include/c++/11/ostream:192:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kunsigned int[m[K’
+[6.311s]   192 |       operator<<([01;36m[Kunsigned int __n[m[K)
+[6.311s]       |                  [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[6.311s] [01m[K/usr/include/c++/11/ostream:201:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.312s]   201 |       [01;36m[Koperator[m[K<<(long long __n)
+[6.312s]       |       [01;36m[K^~~~~~~~[m[K
+[6.312s] [01m[K/usr/include/c++/11/ostream:201:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong long int[m[K’
+[6.312s]   201 |       operator<<([01;36m[Klong long __n[m[K)
+[6.312s]       |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[6.312s] [01m[K/usr/include/c++/11/ostream:205:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.312s]   205 |       [01;36m[Koperator[m[K<<(unsigned long long __n)
+[6.313s]       |       [01;36m[K^~~~~~~~[m[K
+[6.313s] [01m[K/usr/include/c++/11/ostream:205:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong long unsigned int[m[K’
+[6.313s]   205 |       operator<<([01;36m[Kunsigned long long __n[m[K)
+[6.313s]       |                  [01;36m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[6.313s] [01m[K/usr/include/c++/11/ostream:220:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.313s]   220 |       [01;36m[Koperator[m[K<<(double __f)
+[6.313s]       |       [01;36m[K^~~~~~~~[m[K
+[6.313s] [01m[K/usr/include/c++/11/ostream:220:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kdouble[m[K’
+[6.313s]   220 |       operator<<([01;36m[Kdouble __f[m[K)
+[6.313s]       |                  [01;36m[K~~~~~~~^~~[m[K
+[6.313s] [01m[K/usr/include/c++/11/ostream:224:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.313s]   224 |       [01;36m[Koperator[m[K<<(float __f)
+[6.313s]       |       [01;36m[K^~~~~~~~[m[K
+[6.314s] [01m[K/usr/include/c++/11/ostream:224:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kfloat[m[K’
+[6.314s]   224 |       operator<<([01;36m[Kfloat __f[m[K)
+[6.314s]       |                  [01;36m[K~~~~~~^~~[m[K
+[6.314s] [01m[K/usr/include/c++/11/ostream:232:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.315s]   232 |       [01;36m[Koperator[m[K<<(long double __f)
+[6.315s]       |       [01;36m[K^~~~~~~~[m[K
+[6.315s] [01m[K/usr/include/c++/11/ostream:232:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong double[m[K’
+[6.315s]   232 |       operator<<([01;36m[Klong double __f[m[K)
+[6.315s]       |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[6.315s] [01m[K/usr/include/c++/11/ostream:245:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.315s]   245 |       [01;36m[Koperator[m[K<<(const void* __p)
+[6.315s]       |       [01;36m[K^~~~~~~~[m[K
+[6.315s] [01m[K/usr/include/c++/11/ostream:245:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kconst void*[m[K’
+[6.315s]   245 |       operator<<([01;36m[Kconst void* __p[m[K)
+[6.315s]       |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[6.315s] [01m[K/usr/include/c++/11/ostream:250:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t][m[K’
+[6.315s]   250 |       [01;36m[Koperator[m[K<<(nullptr_t)
+[6.316s]       |       [01;36m[K^~~~~~~~[m[K
+[6.316s] [01m[K/usr/include/c++/11/ostream:250:18:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::nullptr_t[m[K’
+[6.316s]   250 |       operator<<([01;36m[Knullptr_t[m[K)
+[6.316s]       |                  [01;36m[K^~~~~~~~~[m[K
+[6.317s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.317s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.318s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.318s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.318s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.318s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.318s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.318s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.318s] [01m[K/usr/include/c++/11/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>][m[K’
+[6.318s]   119 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+[6.318s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.318s] [01m[K/usr/include/c++/11/bits/ostream.tcc:120:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type*[m[K’ {aka ‘[01m[Kstd::basic_streambuf<char>*[m[K’}
+[6.318s]   120 |     operator<<([01;36m[K__streambuf_type* __sbin[m[K)
+[6.318s]       |                [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[6.318s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[6.318s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[6.318s]                  from [01m[K/usr/include/c++/11/bits/locale_classes.h:40[m[K,
+[6.319s]                  from [01m[K/usr/include/c++/11/bits/ios_base.h:41[m[K,
+[6.319s]                  from [01m[K/usr/include/c++/11/ios:42[m[K,
+[6.319s]                  from [01m[K/usr/include/c++/11/istream:38[m[K,
+[6.319s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.319s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.320s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.320s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.320s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.320s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.321s] [01m[K/usr/include/c++/11/string_view:667:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)[m[K’
+[6.321s]   667 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+[6.321s]       |     [01;36m[K^~~~~~~~[m[K
+[6.321s] [01m[K/usr/include/c++/11/string_view:667:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.321s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+[6.321s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.321s]       |                              [01;36m[K^~~[m[K
+[6.322s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[6.322s]                  from [01m[K/usr/include/c++/11/bits/locale_classes.h:40[m[K,
+[6.322s]                  from [01m[K/usr/include/c++/11/bits/ios_base.h:41[m[K,
+[6.322s]                  from [01m[K/usr/include/c++/11/ios:42[m[K,
+[6.322s]                  from [01m[K/usr/include/c++/11/istream:38[m[K,
+[6.322s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.322s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.322s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.322s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.322s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.322s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.322s] [01m[K/usr/include/c++/11/bits/basic_string.h:6531:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+[6.322s]  6531 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+[6.322s]       |     [01;36m[K^~~~~~~~[m[K
+[6.322s] [01m[K/usr/include/c++/11/bits/basic_string.h:6531:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.322s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+[6.322s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.323s]       |                              [01;36m[K^~~[m[K
+[6.323s] In file included from [01m[K/usr/include/c++/11/bits/ios_base.h:46[m[K,
+[6.323s]                  from [01m[K/usr/include/c++/11/ios:42[m[K,
+[6.323s]                  from [01m[K/usr/include/c++/11/istream:38[m[K,
+[6.323s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.323s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.323s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.323s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.324s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.324s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.324s] [01m[K/usr/include/c++/11/system_error:279:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)[m[K’
+[6.324s]   279 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+[6.324s]       |     [01;36m[K^~~~~~~~[m[K
+[6.325s] [01m[K/usr/include/c++/11/system_error:279:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.325s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst std::error_code&[m[K’
+[6.325s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.325s]       |                              [01;36m[K^~~[m[K
+[6.325s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.325s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.325s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.325s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.325s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.325s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.326s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.326s] [01m[K/usr/include/c++/11/ostream:513:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)[m[K’
+[6.326s]   513 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+[6.326s]       |     [01;36m[K^~~~~~~~[m[K
+[6.326s] [01m[K/usr/include/c++/11/ostream:513:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.326s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’)
+[6.326s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.326s]       |                              [01;36m[K^~~[m[K
+[6.326s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.326s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.326s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.326s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.326s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.326s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.326s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.326s] [01m[K/usr/include/c++/11/ostream:518:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)[m[K’
+[6.326s]   518 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+[6.327s]       |     [01;36m[K^~~~~~~~[m[K
+[6.327s] [01m[K/usr/include/c++/11/ostream:518:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.327s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar[m[K’
+[6.327s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.327s]       |                              [01;36m[K^~~[m[K
+[6.327s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.327s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.327s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.327s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.328s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.328s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.328s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.328s] [01m[K/usr/include/c++/11/ostream:524:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)[m[K’
+[6.328s]   524 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+[6.328s]       |     [01;36m[K^~~~~~~~[m[K
+[6.328s] [01m[K/usr/include/c++/11/ostream:524:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.328s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar[m[K’
+[6.328s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.328s]       |                              [01;36m[K^~~[m[K
+[6.328s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.328s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.328s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.329s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.329s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.329s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.329s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.329s] [01m[K/usr/include/c++/11/ostream:530:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)[m[K’
+[6.329s]   530 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+[6.329s]       |     [01;36m[K^~~~~~~~[m[K
+[6.329s] [01m[K/usr/include/c++/11/ostream:530:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.330s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Ksigned char[m[K’
+[6.330s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.330s]       |                              [01;36m[K^~~[m[K
+[6.330s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.330s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.330s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.330s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.330s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.331s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.331s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.331s] [01m[K/usr/include/c++/11/ostream:535:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)[m[K’
+[6.331s]   535 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+[6.331s]       |     [01;36m[K^~~~~~~~[m[K
+[6.331s] [01m[K/usr/include/c++/11/ostream:535:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.332s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kunsigned char[m[K’
+[6.332s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.332s]       |                              [01;36m[K^~~[m[K
+[6.332s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.332s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.332s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.332s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.332s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.333s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.333s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.333s] [01m[K/usr/include/c++/11/ostream:594:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)[m[K’
+[6.333s]   594 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+[6.333s]       |     [01;36m[K^~~~~~~~[m[K
+[6.334s] [01m[K/usr/include/c++/11/ostream:594:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.334s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’
+[6.334s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.334s]       |                              [01;36m[K^~~[m[K
+[6.334s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.334s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.334s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.334s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.334s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.334s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.334s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.334s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.335s] [01m[K/usr/include/c++/11/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)[m[K’
+[6.335s]   321 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+[6.335s]       |     [01;36m[K^~~~~~~~[m[K
+[6.335s] [01m[K/usr/include/c++/11/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.335s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char*[m[K’
+[6.335s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.335s]       |                              [01;36m[K^~~[m[K
+[6.335s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.336s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.336s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.336s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.336s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.336s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.336s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.337s] [01m[K/usr/include/c++/11/ostream:611:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)[m[K’
+[6.337s]   611 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+[6.337s]       |     [01;36m[K^~~~~~~~[m[K
+[6.337s] [01m[K/usr/include/c++/11/ostream:611:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.337s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char*[m[K’
+[6.338s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.338s]       |                              [01;36m[K^~~[m[K
+[6.338s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.338s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.338s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.338s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.338s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.338s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.338s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.338s] [01m[K/usr/include/c++/11/ostream:624:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)[m[K’
+[6.338s]   624 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+[6.338s]       |     [01;36m[K^~~~~~~~[m[K
+[6.338s] [01m[K/usr/include/c++/11/ostream:624:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.338s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst signed char*[m[K’
+[6.338s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.339s]       |                              [01;36m[K^~~[m[K
+[6.339s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.339s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.339s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.339s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.339s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.340s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.340s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.340s] [01m[K/usr/include/c++/11/ostream:629:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)[m[K’
+[6.340s]   629 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+[6.340s]       |     [01;36m[K^~~~~~~~[m[K
+[6.340s] [01m[K/usr/include/c++/11/ostream:629:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.340s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst unsigned char*[m[K’
+[6.340s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.341s]       |                              [01;36m[K^~~[m[K
+[6.341s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.341s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.341s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.341s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.342s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.342s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.342s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.342s] [01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)[m[K’
+[6.342s]   750 |     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+[6.343s]       |     [01;36m[K^~~~~~~~[m[K
+[6.343s] [01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.343s] /usr/include/c++/11/ostream: In substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = px4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >][m[K’:
+[6.343s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K   required from here
+[6.343s] [01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, void>[m[K’
+[6.343s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.343s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.343s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.343s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.344s] [01m[K/usr/include/c++/11/complex:555:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)[m[K’
+[6.344s]   555 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+[6.344s]       |     [01;36m[K^~~~~~~~[m[K
+[6.344s] [01m[K/usr/include/c++/11/complex:555:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.344s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[6.344s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.344s]       |                              [01;36m[K^~~[m[K
+[6.344s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:81[m[K,
+[6.344s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.344s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.344s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.345s] [01m[K/usr/include/c++/11/cstddef:126:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(std::byte, _IntegerType)[m[K’
+[6.345s]   126 |     [01;36m[Koperator[m[K<<(byte __b, _IntegerType __shift) noexcept
+[6.345s]       |     [01;36m[K^~~~~~~~[m[K
+[6.345s] [01m[K/usr/include/c++/11/cstddef:126:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.345s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:14:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::operator<< <std::char_traits<char> >(std::cout, ((const char*)"MSG GOTO: "))[m[K’ (type ‘[01m[Kstd::basic_ostream<char>[m[K’) to type ‘[01m[Kstd::byte[m[K’
+[6.345s]   396 |     [01;36m[Kstd::cout<<"MSG GOTO: "[m[K<<msg<<"\n";
+[6.345s]       |     [01;36m[K~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[6.345s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[6.345s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[6.346s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.346s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.346s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+[6.346s]    70 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_Ch, _Tr>& __os,
+[6.346s]       |     [01;36m[K^~~~~~~~[m[K
+[6.346s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.346s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+[6.346s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.346s]       |                              [01;36m[K^~~[m[K
+[6.346s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:22[m[K,
+[6.346s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.347s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.347s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.347s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.347s] [01m[K/usr/include/c++/11/thread:92:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::thread::id)[m[K’
+[6.347s]    92 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+[6.347s]       |     [01;36m[K^~~~~~~~[m[K
+[6.347s] [01m[K/usr/include/c++/11/thread:92:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.347s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::thread::id[m[K’
+[6.347s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.347s]       |                              [01;36m[K^~~[m[K
+[6.348s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.348s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.348s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.348s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.348s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.348s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.348s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.349s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.349s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.349s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.349s] [01m[K/usr/include/c++/11/iomanip:79:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)[m[K’
+[6.349s]    79 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+[6.349s]       |     [01;36m[K^~~~~~~~[m[K
+[6.350s] [01m[K/usr/include/c++/11/iomanip:79:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.350s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Resetiosflags[m[K’
+[6.350s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.350s]       |                              [01;36m[K^~~[m[K
+[6.351s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.351s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.352s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.352s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.352s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.352s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.352s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.352s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.352s] [01m[K/usr/include/c++/11/iomanip:109:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)[m[K’
+[6.352s]   109 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+[6.352s]       |     [01;36m[K^~~~~~~~[m[K
+[6.352s] [01m[K/usr/include/c++/11/iomanip:109:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.352s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setiosflags[m[K’
+[6.353s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.353s]       |                              [01;36m[K^~~[m[K
+[6.353s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.354s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.354s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.354s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.355s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.356s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.356s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.356s] [01m[K/usr/include/c++/11/iomanip:143:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)[m[K’
+[6.356s]   143 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+[6.356s]       |     [01;36m[K^~~~~~~~[m[K
+[6.356s] [01m[K/usr/include/c++/11/iomanip:143:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.356s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setbase[m[K’
+[6.356s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.357s]       |                              [01;36m[K^~~[m[K
+[6.357s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.357s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.357s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.357s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.357s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.357s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.357s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.357s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.359s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.359s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.359s] [01m[K/usr/include/c++/11/iomanip:178:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)[m[K’
+[6.359s]   178 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+[6.359s]       |     [01;36m[K^~~~~~~~[m[K
+[6.360s] [01m[K/usr/include/c++/11/iomanip:178:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.360s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Setfill<_CharT>[m[K’
+[6.360s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.360s]       |                              [01;36m[K^~~[m[K
+[6.360s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.360s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.360s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.361s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.361s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.361s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.361s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.361s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.361s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.362s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.362s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.362s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.362s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.362s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.362s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.362s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.362s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.362s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.362s] [01m[K/usr/include/c++/11/iomanip:208:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)[m[K’
+[6.362s]   208 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+[6.362s]       |     [01;36m[K^~~~~~~~[m[K
+[6.363s] [01m[K/usr/include/c++/11/iomanip:208:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.363s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setprecision[m[K’
+[6.363s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.363s]       |                              [01;36m[K^~~[m[K
+[6.363s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.364s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.365s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.365s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.365s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.365s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.365s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.365s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.365s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.366s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.366s] [01m[K/usr/include/c++/11/iomanip:238:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)[m[K’
+[6.366s]   238 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+[6.366s]       |     [01;36m[K^~~~~~~~[m[K
+[6.366s] [01m[K/usr/include/c++/11/iomanip:238:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.366s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setw[m[K’
+[6.366s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.366s]       |                              [01;36m[K^~~[m[K
+[6.366s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.366s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.366s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.366s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.366s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.366s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.367s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.368s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.368s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.368s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.368s] [01m[K/usr/include/c++/11/iomanip:311:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)[m[K’
+[6.369s]   311 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+[6.369s]       |     [01;36m[K^~~~~~~~[m[K
+[6.369s] [01m[K/usr/include/c++/11/iomanip:311:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.369s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Put_money<_MoneyT>[m[K’
+[6.369s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.369s]       |                              [01;36m[K^~~[m[K
+[6.369s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.369s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.369s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.369s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.369s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.370s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.371s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.371s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.371s] [01m[K/usr/include/c++/11/iomanip:363:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)[m[K’
+[6.372s]   363 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+[6.372s]       |     [01;36m[K^~~~~~~~[m[K
+[6.372s] [01m[K/usr/include/c++/11/iomanip:363:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.372s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:396:30:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Put_time<_CharT>[m[K’
+[6.372s]   396 |     std::cout<<"MSG GOTO: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.372s]       |                              [01;36m[K^~~[m[K
+[6.372s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::sendVelocity(const Vector2d&, float)[m[K’:
+[6.372s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:32:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::basic_ostream<char>[m[K’ and ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’})
+[6.372s]   412 |     [32m[Kstd::cout<<"MSG VELOCITY: "[m[K[01;31m[K<<[m[K[34m[Kmsg[m[K<<"\n";
+[6.373s]       |     [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K[01;31m[K^~[m[K[34m[K~~~[m[K
+[6.373s]       |              [32m[K|[m[K                   [34m[K|[m[K
+[6.373s]       |              [32m[K|[m[K                   [34m[Kpx4_msgs::msg::TrajectorySetpoint {aka px4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >}[m[K
+[6.373s]       |              [32m[Kstd::basic_ostream<char>[m[K
+[6.373s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.373s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.373s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.373s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.373s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.373s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.373s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.373s] [01m[K/usr/include/c++/11/ostream:108:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.373s]   108 |       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+[6.373s]       |       [01;36m[K^~~~~~~~[m[K
+[6.373s] [01m[K/usr/include/c++/11/ostream:108:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>& (*)(std::basic_ostream<char>&)[m[K’}
+[6.374s]   108 |       operator<<([01;36m[K__ostream_type& (*__pf)(__ostream_type&)[m[K)
+[6.374s]       |                  [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.374s] [01m[K/usr/include/c++/11/ostream:117:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>][m[K’
+[6.374s]   117 |       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+[6.374s]       |       [01;36m[K^~~~~~~~[m[K
+[6.374s] [01m[K/usr/include/c++/11/ostream:117:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)[m[K’ {aka ‘[01m[Kstd::basic_ios<char>& (*)(std::basic_ios<char>&)[m[K’}
+[6.374s]   117 |       operator<<([01;36m[K__ios_type& (*__pf)(__ios_type&)[m[K)
+[6.374s]       |                  [01;36m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[6.375s] [01m[K/usr/include/c++/11/ostream:127:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.375s]   127 |       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+[6.375s]       |       [01;36m[K^~~~~~~~[m[K
+[6.375s] [01m[K/usr/include/c++/11/ostream:127:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+[6.376s]   127 |       operator<<([01;36m[Kios_base& (*__pf) (ios_base&)[m[K)
+[6.376s]       |                  [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[6.376s] [01m[K/usr/include/c++/11/ostream:166:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.376s]   166 |       [01;36m[Koperator[m[K<<(long __n)
+[6.376s]       |       [01;36m[K^~~~~~~~[m[K
+[6.376s] [01m[K/usr/include/c++/11/ostream:166:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong int[m[K’
+[6.376s]   166 |       operator<<([01;36m[Klong __n[m[K)
+[6.376s]       |                  [01;36m[K~~~~~^~~[m[K
+[6.376s] [01m[K/usr/include/c++/11/ostream:170:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.376s]   170 |       [01;36m[Koperator[m[K<<(unsigned long __n)
+[6.376s]       |       [01;36m[K^~~~~~~~[m[K
+[6.376s] [01m[K/usr/include/c++/11/ostream:170:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong unsigned int[m[K’
+[6.376s]   170 |       operator<<([01;36m[Kunsigned long __n[m[K)
+[6.376s]       |                  [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[6.377s] [01m[K/usr/include/c++/11/ostream:174:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.377s]   174 |       [01;36m[Koperator[m[K<<(bool __n)
+[6.377s]       |       [01;36m[K^~~~~~~~[m[K
+[6.377s] [01m[K/usr/include/c++/11/ostream:174:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kbool[m[K’
+[6.377s]   174 |       operator<<([01;36m[Kbool __n[m[K)
+[6.377s]       |                  [01;36m[K~~~~~^~~[m[K
+[6.377s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.377s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.377s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.377s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.377s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.377s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.378s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.378s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.378s] [01m[K/usr/include/c++/11/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+[6.378s]    91 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+[6.378s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.378s] [01m[K/usr/include/c++/11/bits/ostream.tcc:92:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kshort int[m[K’
+[6.378s]    92 |     operator<<([01;36m[Kshort __n[m[K)
+[6.378s]       |                [01;36m[K~~~~~~^~~[m[K
+[6.378s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.378s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.378s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.378s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.378s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.379s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.379s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.379s] [01m[K/usr/include/c++/11/ostream:181:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.379s]   181 |       [01;36m[Koperator[m[K<<(unsigned short __n)
+[6.379s]       |       [01;36m[K^~~~~~~~[m[K
+[6.379s] [01m[K/usr/include/c++/11/ostream:181:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kshort unsigned int[m[K’
+[6.379s]   181 |       operator<<([01;36m[Kunsigned short __n[m[K)
+[6.379s]       |                  [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+[6.379s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.379s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.379s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.380s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.380s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.380s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.380s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.380s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.380s] [01m[K/usr/include/c++/11/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+[6.380s]   105 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+[6.380s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.380s] [01m[K/usr/include/c++/11/bits/ostream.tcc:106:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kint[m[K’
+[6.380s]   106 |     operator<<([01;36m[Kint __n[m[K)
+[6.380s]       |                [01;36m[K~~~~^~~[m[K
+[6.380s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.380s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.380s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.380s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.380s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.380s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.380s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.381s] [01m[K/usr/include/c++/11/ostream:192:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.381s]   192 |       [01;36m[Koperator[m[K<<(unsigned int __n)
+[6.381s]       |       [01;36m[K^~~~~~~~[m[K
+[6.381s] [01m[K/usr/include/c++/11/ostream:192:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kunsigned int[m[K’
+[6.381s]   192 |       operator<<([01;36m[Kunsigned int __n[m[K)
+[6.381s]       |                  [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[6.381s] [01m[K/usr/include/c++/11/ostream:201:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.381s]   201 |       [01;36m[Koperator[m[K<<(long long __n)
+[6.381s]       |       [01;36m[K^~~~~~~~[m[K
+[6.381s] [01m[K/usr/include/c++/11/ostream:201:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong long int[m[K’
+[6.381s]   201 |       operator<<([01;36m[Klong long __n[m[K)
+[6.381s]       |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[6.382s] [01m[K/usr/include/c++/11/ostream:205:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.382s]   205 |       [01;36m[Koperator[m[K<<(unsigned long long __n)
+[6.382s]       |       [01;36m[K^~~~~~~~[m[K
+[6.382s] [01m[K/usr/include/c++/11/ostream:205:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong long unsigned int[m[K’
+[6.382s]   205 |       operator<<([01;36m[Kunsigned long long __n[m[K)
+[6.382s]       |                  [01;36m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[6.382s] [01m[K/usr/include/c++/11/ostream:220:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.382s]   220 |       [01;36m[Koperator[m[K<<(double __f)
+[6.383s]       |       [01;36m[K^~~~~~~~[m[K
+[6.383s] [01m[K/usr/include/c++/11/ostream:220:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kdouble[m[K’
+[6.383s]   220 |       operator<<([01;36m[Kdouble __f[m[K)
+[6.383s]       |                  [01;36m[K~~~~~~~^~~[m[K
+[6.383s] [01m[K/usr/include/c++/11/ostream:224:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.383s]   224 |       [01;36m[Koperator[m[K<<(float __f)
+[6.383s]       |       [01;36m[K^~~~~~~~[m[K
+[6.383s] [01m[K/usr/include/c++/11/ostream:224:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kfloat[m[K’
+[6.384s]   224 |       operator<<([01;36m[Kfloat __f[m[K)
+[6.384s]       |                  [01;36m[K~~~~~~^~~[m[K
+[6.384s] [01m[K/usr/include/c++/11/ostream:232:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.384s]   232 |       [01;36m[Koperator[m[K<<(long double __f)
+[6.384s]       |       [01;36m[K^~~~~~~~[m[K
+[6.384s] [01m[K/usr/include/c++/11/ostream:232:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Klong double[m[K’
+[6.384s]   232 |       operator<<([01;36m[Klong double __f[m[K)
+[6.384s]       |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[6.384s] [01m[K/usr/include/c++/11/ostream:245:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+[6.384s]   245 |       [01;36m[Koperator[m[K<<(const void* __p)
+[6.385s]       |       [01;36m[K^~~~~~~~[m[K
+[6.385s] [01m[K/usr/include/c++/11/ostream:245:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kconst void*[m[K’
+[6.385s]   245 |       operator<<([01;36m[Kconst void* __p[m[K)
+[6.385s]       |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[6.385s] [01m[K/usr/include/c++/11/ostream:250:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t][m[K’
+[6.385s]   250 |       [01;36m[Koperator[m[K<<(nullptr_t)
+[6.385s]       |       [01;36m[K^~~~~~~~[m[K
+[6.385s] [01m[K/usr/include/c++/11/ostream:250:18:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::nullptr_t[m[K’
+[6.385s]   250 |       operator<<([01;36m[Knullptr_t[m[K)
+[6.385s]       |                  [01;36m[K^~~~~~~~~[m[K
+[6.386s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.386s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.386s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.386s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.386s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.386s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.386s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.386s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.386s] [01m[K/usr/include/c++/11/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>][m[K’
+[6.386s]   119 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+[6.386s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.387s] [01m[K/usr/include/c++/11/bits/ostream.tcc:120:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type*[m[K’ {aka ‘[01m[Kstd::basic_streambuf<char>*[m[K’}
+[6.387s]   120 |     operator<<([01;36m[K__streambuf_type* __sbin[m[K)
+[6.387s]       |                [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[6.387s] In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+[6.387s]                  from [01m[K/usr/include/c++/11/string:55[m[K,
+[6.388s]                  from [01m[K/usr/include/c++/11/bits/locale_classes.h:40[m[K,
+[6.388s]                  from [01m[K/usr/include/c++/11/bits/ios_base.h:41[m[K,
+[6.388s]                  from [01m[K/usr/include/c++/11/ios:42[m[K,
+[6.388s]                  from [01m[K/usr/include/c++/11/istream:38[m[K,
+[6.388s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.388s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.388s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.388s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.388s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.389s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.389s] [01m[K/usr/include/c++/11/string_view:667:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)[m[K’
+[6.389s]   667 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+[6.389s]       |     [01;36m[K^~~~~~~~[m[K
+[6.389s] [01m[K/usr/include/c++/11/string_view:667:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.389s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+[6.389s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.389s]       |                                  [01;36m[K^~~[m[K
+[6.389s] In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+[6.389s]                  from [01m[K/usr/include/c++/11/bits/locale_classes.h:40[m[K,
+[6.389s]                  from [01m[K/usr/include/c++/11/bits/ios_base.h:41[m[K,
+[6.390s]                  from [01m[K/usr/include/c++/11/ios:42[m[K,
+[6.390s]                  from [01m[K/usr/include/c++/11/istream:38[m[K,
+[6.390s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.390s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.390s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.390s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.390s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.390s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.390s] [01m[K/usr/include/c++/11/bits/basic_string.h:6531:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+[6.390s]  6531 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+[6.390s]       |     [01;36m[K^~~~~~~~[m[K
+[6.390s] [01m[K/usr/include/c++/11/bits/basic_string.h:6531:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.390s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+[6.390s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.390s]       |                                  [01;36m[K^~~[m[K
+[6.390s] In file included from [01m[K/usr/include/c++/11/bits/ios_base.h:46[m[K,
+[6.390s]                  from [01m[K/usr/include/c++/11/ios:42[m[K,
+[6.390s]                  from [01m[K/usr/include/c++/11/istream:38[m[K,
+[6.390s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.391s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.391s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.391s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.391s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.391s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.391s] [01m[K/usr/include/c++/11/system_error:279:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)[m[K’
+[6.391s]   279 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+[6.391s]       |     [01;36m[K^~~~~~~~[m[K
+[6.391s] [01m[K/usr/include/c++/11/system_error:279:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.391s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst std::error_code&[m[K’
+[6.391s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.392s]       |                                  [01;36m[K^~~[m[K
+[6.392s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.392s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.392s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.392s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.392s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.392s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.392s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.392s] [01m[K/usr/include/c++/11/ostream:513:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)[m[K’
+[6.393s]   513 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+[6.393s]       |     [01;36m[K^~~~~~~~[m[K
+[6.393s] [01m[K/usr/include/c++/11/ostream:513:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.393s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’)
+[6.394s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.394s]       |                                  [01;36m[K^~~[m[K
+[6.394s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.394s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.394s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.394s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.394s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.394s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.395s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.395s] [01m[K/usr/include/c++/11/ostream:518:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)[m[K’
+[6.395s]   518 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+[6.395s]       |     [01;36m[K^~~~~~~~[m[K
+[6.395s] [01m[K/usr/include/c++/11/ostream:518:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.395s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar[m[K’
+[6.396s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.396s]       |                                  [01;36m[K^~~[m[K
+[6.396s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.396s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.396s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.396s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.397s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.397s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.397s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.397s] [01m[K/usr/include/c++/11/ostream:524:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)[m[K’
+[6.397s]   524 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+[6.397s]       |     [01;36m[K^~~~~~~~[m[K
+[6.397s] [01m[K/usr/include/c++/11/ostream:524:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.397s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kchar[m[K’
+[6.397s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.398s]       |                                  [01;36m[K^~~[m[K
+[6.398s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.398s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.398s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.398s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.398s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.398s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.398s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.398s] [01m[K/usr/include/c++/11/ostream:530:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)[m[K’
+[6.398s]   530 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+[6.399s]       |     [01;36m[K^~~~~~~~[m[K
+[6.399s] [01m[K/usr/include/c++/11/ostream:530:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.399s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Ksigned char[m[K’
+[6.399s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.399s]       |                                  [01;36m[K^~~[m[K
+[6.399s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.399s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.399s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.400s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.400s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.400s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.400s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.400s] [01m[K/usr/include/c++/11/ostream:535:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)[m[K’
+[6.400s]   535 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+[6.400s]       |     [01;36m[K^~~~~~~~[m[K
+[6.400s] [01m[K/usr/include/c++/11/ostream:535:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.400s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kunsigned char[m[K’
+[6.400s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.400s]       |                                  [01;36m[K^~~[m[K
+[6.400s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.401s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.401s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.401s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.401s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.401s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.401s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.401s] [01m[K/usr/include/c++/11/ostream:594:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)[m[K’
+[6.401s]   594 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+[6.401s]       |     [01;36m[K^~~~~~~~[m[K
+[6.401s] [01m[K/usr/include/c++/11/ostream:594:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.401s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’
+[6.402s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.402s]       |                                  [01;36m[K^~~[m[K
+[6.402s] In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+[6.402s]                  from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.402s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.402s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.402s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.402s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.402s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.403s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.403s] [01m[K/usr/include/c++/11/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)[m[K’
+[6.403s]   321 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+[6.403s]       |     [01;36m[K^~~~~~~~[m[K
+[6.403s] [01m[K/usr/include/c++/11/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.403s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char*[m[K’
+[6.403s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.403s]       |                                  [01;36m[K^~~[m[K
+[6.403s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.404s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.404s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.404s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.404s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.404s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.404s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.404s] [01m[K/usr/include/c++/11/ostream:611:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)[m[K’
+[6.404s]   611 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+[6.404s]       |     [01;36m[K^~~~~~~~[m[K
+[6.404s] [01m[K/usr/include/c++/11/ostream:611:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.404s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst char*[m[K’
+[6.405s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.405s]       |                                  [01;36m[K^~~[m[K
+[6.405s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.405s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.405s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.405s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.405s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.405s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.405s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.405s] [01m[K/usr/include/c++/11/ostream:624:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)[m[K’
+[6.405s]   624 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+[6.405s]       |     [01;36m[K^~~~~~~~[m[K
+[6.406s] [01m[K/usr/include/c++/11/ostream:624:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.406s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst signed char*[m[K’
+[6.406s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.406s]       |                                  [01;36m[K^~~[m[K
+[6.406s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.406s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.406s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.406s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.406s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.407s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.407s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.407s] [01m[K/usr/include/c++/11/ostream:629:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)[m[K’
+[6.407s]   629 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+[6.407s]       |     [01;36m[K^~~~~~~~[m[K
+[6.407s] [01m[K/usr/include/c++/11/ostream:629:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.407s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kconst unsigned char*[m[K’
+[6.407s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.407s]       |                                  [01;36m[K^~~[m[K
+[6.407s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[6.407s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[6.407s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[6.408s]                  from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.408s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.408s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.408s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.408s] [01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)[m[K’
+[6.408s]   750 |     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+[6.408s]       |     [01;36m[K^~~~~~~~[m[K
+[6.409s] [01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.409s] /usr/include/c++/11/ostream: In substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = px4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >][m[K’:
+[6.409s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K   required from here
+[6.409s] [01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, void>[m[K’
+[6.409s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:50[m[K,
+[6.409s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.409s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.410s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.410s] [01m[K/usr/include/c++/11/complex:555:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::complex<_Tp>&)[m[K’
+[6.410s]   555 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+[6.410s]       |     [01;36m[K^~~~~~~~[m[K
+[6.410s] [01m[K/usr/include/c++/11/complex:555:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.410s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+[6.410s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.410s]       |                                  [01;36m[K^~~[m[K
+[6.410s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:81[m[K,
+[6.410s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.410s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[6.411s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.411s] [01m[K/usr/include/c++/11/cstddef:126:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(std::byte, _IntegerType)[m[K’
+[6.411s]   126 |     [01;36m[Koperator[m[K<<(byte __b, _IntegerType __shift) noexcept
+[6.411s]       |     [01;36m[K^~~~~~~~[m[K
+[6.411s] [01m[K/usr/include/c++/11/cstddef:126:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.411s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:14:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::operator<< <std::char_traits<char> >(std::cout, ((const char*)"MSG VELOCITY: "))[m[K’ (type ‘[01m[Kstd::basic_ostream<char>[m[K’) to type ‘[01m[Kstd::byte[m[K’
+[6.411s]   412 |     [01;36m[Kstd::cout<<"MSG VELOCITY: "[m[K<<msg<<"\n";
+[6.411s]       |     [01;36m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[6.411s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[6.411s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[6.411s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.411s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.411s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+[6.411s]    70 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_Ch, _Tr>& __os,
+[6.411s]       |     [01;36m[K^~~~~~~~[m[K
+[6.411s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.411s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’} is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+[6.411s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.411s]       |                                  [01;36m[K^~~[m[K
+[6.412s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:22[m[K,
+[6.412s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.412s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.412s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.412s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.412s] [01m[K/usr/include/c++/11/thread:92:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::thread::id)[m[K’
+[6.412s]    92 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+[6.413s]       |     [01;36m[K^~~~~~~~[m[K
+[6.413s] [01m[K/usr/include/c++/11/thread:92:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.413s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::thread::id[m[K’
+[6.413s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.413s]       |                                  [01;36m[K^~~[m[K
+[6.413s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.413s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.414s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.414s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.414s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.414s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.414s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.414s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.414s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.414s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.414s] [01m[K/usr/include/c++/11/iomanip:79:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)[m[K’
+[6.414s]    79 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+[6.414s]       |     [01;36m[K^~~~~~~~[m[K
+[6.414s] [01m[K/usr/include/c++/11/iomanip:79:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.414s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Resetiosflags[m[K’
+[6.414s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.414s]       |                                  [01;36m[K^~~[m[K
+[6.415s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.415s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.415s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.415s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.415s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.415s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.415s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.415s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.416s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.416s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.416s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.416s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.416s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.416s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.417s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.417s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.417s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.417s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.417s] [01m[K/usr/include/c++/11/iomanip:109:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)[m[K’
+[6.417s]   109 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+[6.417s]       |     [01;36m[K^~~~~~~~[m[K
+[6.417s] [01m[K/usr/include/c++/11/iomanip:109:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.417s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setiosflags[m[K’
+[6.417s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.417s]       |                                  [01;36m[K^~~[m[K
+[6.417s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.417s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.418s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.419s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.419s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.419s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.419s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.419s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.419s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.419s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.419s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.420s] [01m[K/usr/include/c++/11/iomanip:143:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)[m[K’
+[6.420s]   143 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+[6.420s]       |     [01;36m[K^~~~~~~~[m[K
+[6.420s] [01m[K/usr/include/c++/11/iomanip:143:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.420s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setbase[m[K’
+[6.420s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.420s]       |                                  [01;36m[K^~~[m[K
+[6.420s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.420s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.421s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.421s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.421s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.421s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.422s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.422s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.422s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.423s] [01m[K/usr/include/c++/11/iomanip:178:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)[m[K’
+[6.423s]   178 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+[6.423s]       |     [01;36m[K^~~~~~~~[m[K
+[6.423s] [01m[K/usr/include/c++/11/iomanip:178:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.423s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Setfill<_CharT>[m[K’
+[6.423s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.423s]       |                                  [01;36m[K^~~[m[K
+[6.423s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.423s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.424s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.425s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.425s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.425s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.425s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.425s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.425s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.425s] [01m[K/usr/include/c++/11/iomanip:208:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)[m[K’
+[6.425s]   208 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+[6.425s]       |     [01;36m[K^~~~~~~~[m[K
+[6.425s] [01m[K/usr/include/c++/11/iomanip:208:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.425s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setprecision[m[K’
+[6.425s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.425s]       |                                  [01;36m[K^~~[m[K
+[6.425s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.425s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.426s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.427s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.427s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.427s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.427s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.427s] [01m[K/usr/include/c++/11/iomanip:238:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)[m[K’
+[6.427s]   238 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+[6.427s]       |     [01;36m[K^~~~~~~~[m[K
+[6.428s] [01m[K/usr/include/c++/11/iomanip:238:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.428s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kmsg[m[K’ (type ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint[m[K’ {aka ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’}) to type ‘[01m[Kstd::_Setw[m[K’
+[6.428s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.428s]       |                                  [01;36m[K^~~[m[K
+[6.428s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.428s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.428s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.428s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.428s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.428s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.429s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.430s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.430s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.430s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.430s] [01m[K/usr/include/c++/11/iomanip:311:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)[m[K’
+[6.430s]   311 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+[6.430s]       |     [01;36m[K^~~~~~~~[m[K
+[6.431s] [01m[K/usr/include/c++/11/iomanip:311:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.431s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Put_money<_MoneyT>[m[K’
+[6.431s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.431s]       |                                  [01;36m[K^~~[m[K
+[6.431s] In file included from [01m[K/opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:19[m[K,
+[6.431s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:15[m[K,
+[6.431s]                  from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:9[m[K,
+[6.431s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[6.431s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[6.431s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:32[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[6.432s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.432s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:4[m[K,
+[6.432s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.432s] [01m[K/usr/include/c++/11/iomanip:363:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)[m[K’
+[6.432s]   363 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+[6.433s]       |     [01;36m[K^~~~~~~~[m[K
+[6.433s] [01m[K/usr/include/c++/11/iomanip:363:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.433s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:412:34:[m[K [01;36m[Knote: [m[K  ‘[01m[Kpx4_msgs::msg::TrajectorySetpoint_<std::allocator<void> >[m[K’ is not derived from ‘[01m[Kstd::_Put_time<_CharT>[m[K’
+[6.433s]   412 |     std::cout<<"MSG VELOCITY: "<<[01;36m[Kmsg[m[K<<"\n";
+[6.434s]       |                                  [01;36m[K^~~[m[K
+[6.434s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K At global scope:
+[6.434s] [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:468:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid fdds::Drone::requestTakeoff(float)[m[K’
+[6.434s]   468 | void [01;31m[Kfdds[m[K::Drone::requestTakeoff(float value)
+[6.434s]       |      [01;31m[K^~~~[m[K
+[6.434s] In file included from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.434s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:214:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid fdds::Drone::requestTakeoff()[m[K’
+[6.434s]   214 |         void [01;36m[KrequestTakeoff[m[K();
+[6.434s]       |              [01;36m[K^~~~~~~~~~~~~~[m[K
+[6.434s] In file included from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[6.434s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:34:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass fdds::Drone[m[K’ defined here
+[6.434s]    34 |     class [01;36m[KDrone[m[K : public rclcpp::Node
+[6.435s]       |           [01;36m[K^~~~~[m[K
+[15.181s] gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+[15.181s] gmake[2]: *** Waiting for unfinished jobs....
+[16.650s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+[16.651s] gmake: *** [Makefile:146: all] Error 2
+[16.654s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j16 -l16

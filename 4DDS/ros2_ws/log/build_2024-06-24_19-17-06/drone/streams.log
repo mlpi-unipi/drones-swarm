@@ -1,0 +1,41 @@
+[0.009s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fourdds/ros2_ws/install/analysis:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j24 -l24
+[0.024s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.113s] -- Found builtin_interfaces: 1.2.1 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.195s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.197s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.201s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.208s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.218s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.227s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.228s] -- Found px4_msgs: 2.0.1 (/home/fourdds/ros2_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.248s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.279s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.280s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.939s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.031s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[3.105s] -- Found cv_bridge: 3.2.1 (/home/fourdds/ws/install/cv_bridge/share/cv_bridge/cmake)
+[3.117s] -- Found obstacle_avoidance: 0.0.0 (/home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/cmake)
+[3.117s] -- Found target_detection: 0.0.0 (/home/fourdds/ros2_ws/install/target_detection/share/target_detection/cmake)
+[3.118s] -- Found parameters: 0.0.0 (/home/fourdds/ros2_ws/install/parameters/share/parameters/cmake)
+[3.119s] -- Found fdds_messages: 0.0.0 (/home/fourdds/ros2_ws/install/fdds_messages/share/fdds_messages/cmake)
+[3.127s] -- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)
+[3.776s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.824s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.824s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/fourdds/ros2_ws/src/drone/include>
+[3.824s] -- Configured cppcheck exclude dirs and/or files: 
+[3.825s] -- Added test 'lint_cmake' to check CMake code style
+[3.825s] -- Added test 'uncrustify' to check C / C++ code style
+[3.825s] -- Configured uncrustify additional arguments: 
+[3.825s] -- Added test 'xmllint' to check XML markup files
+[3.826s] -- Configuring done
+[3.835s] -- Generating done
+[3.837s] -- Build files have been written to: /home/fourdds/ros2_ws/build/drone
+[3.859s] [35m[1mConsolidate compiler generated dependencies of target Drone[0m
+[3.873s] [ 33%] [32m[1mLinking CXX executable Drone[0m
+[4.105s] /usr/bin/ld: /home/fourdds/ros2_ws/install/target_detection/lib/libTargetDetection.a(TargetDetection.cpp.o): in function `fdds::TargetDetection::tick()':
+[4.105s] TargetDetection.cpp:(.text+0x4a3): undefined reference to `cv_bridge::toCvCopy(std::shared_ptr<sensor_msgs::msg::Image_<std::allocator<void> > const> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[4.119s] collect2: error: ld returned 1 exit status
+[4.120s] gmake[2]: *** [CMakeFiles/Drone.dir/build.make:267: Drone] Error 1
+[4.120s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+[4.120s] gmake: *** [Makefile:146: all] Error 2
+[4.122s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fourdds/ros2_ws/install/analysis:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j24 -l24

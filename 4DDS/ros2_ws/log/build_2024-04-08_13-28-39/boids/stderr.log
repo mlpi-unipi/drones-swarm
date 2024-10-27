@@ -1,0 +1,47 @@
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid uav_node::init()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:12:51:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid uav_node::gps_subscription_callback(std::shared_ptr<const px4_msgs::msg::SensorGps_<std::allocator<void> > >)[m[K’
+   12 |     const auto gps_callback = std::bind([01;31m[Kuav_node::gps_subscription_callback[m[K, this, std::placeholders::_1);
+      |                                         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:57:10:[m[K [01;36m[Knote: [m[Kdeclared here
+   57 |     void [01;36m[Kgps_subscription_callback[m[K(const std::shared_ptr<const SensorGps> msg) noexcept;
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:17:56:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid uav_node::timesync_subscription_callback(std::shared_ptr<const px4_msgs::msg::TimesyncStatus_<std::allocator<void> > >)[m[K’
+   17 |     const auto timesync_callback = std::bind([01;31m[Kuav_node::timesync_subscription_callback[m[K, this, std::placeholders::_1);
+      |                                              [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:58:10:[m[K [01;36m[Knote: [m[Kdeclared here
+   58 |     void [01;36m[Ktimesync_subscription_callback[m[K(const std::shared_ptr<const TimesyncStatus> msg) noexcept;
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:22:54:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid uav_node::status_callback(std::shared_ptr<const px4_msgs::msg::VehicleStatus_<std::allocator<void> > >)[m[K’
+   22 |     const auto status_callback = std::bind([01;31m[Kuav_node::status_callback[m[K, this, std::placeholders::_1);
+      |                                            [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:59:10:[m[K [01;36m[Knote: [m[Kdeclared here
+   59 |     void [01;36m[Kstatus_callback[m[K(const std::shared_ptr<const VehicleStatus> msg) noexcept;
+      |          [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K At global scope:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:35:6:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kvoid uav_node::gps_subscription_callback(px4_msgs::msg::SensorGps_<std::allocator<void> >::ConstSharedPtr)[m[K’ has a different exception specifier
+   35 | void [01;31m[Kuav_node[m[K::gps_subscription_callback(SensorGps::ConstSharedPtr msg)
+      |      [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:57:10:[m[K [01;36m[Knote: [m[Kfrom previous declaration ‘[01m[Kvoid uav_node::gps_subscription_callback(std::shared_ptr<const px4_msgs::msg::SensorGps_<std::allocator<void> > >) noexcept[m[K’
+   57 |     void [01;36m[Kgps_subscription_callback[m[K(const std::shared_ptr<const SensorGps> msg) noexcept;
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:43:6:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kvoid uav_node::timesync_subscription_callback(std::shared_ptr<const px4_msgs::msg::TimesyncStatus_<std::allocator<void> > >)[m[K’ has a different exception specifier
+   43 | void [01;31m[Kuav_node[m[K::timesync_subscription_callback(std::shared_ptr<const TimesyncStatus> msg)
+      |      [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:58:10:[m[K [01;36m[Knote: [m[Kfrom previous declaration ‘[01m[Kvoid uav_node::timesync_subscription_callback(std::shared_ptr<const px4_msgs::msg::TimesyncStatus_<std::allocator<void> > >) noexcept[m[K’
+   58 |     void [01;36m[Ktimesync_subscription_callback[m[K(const std::shared_ptr<const TimesyncStatus> msg) noexcept;
+      |          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:49:6:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kvoid uav_node::status_callback(std::shared_ptr<const px4_msgs::msg::VehicleStatus_<std::allocator<void> > >)[m[K’ has a different exception specifier
+   49 | void [01;31m[Kuav_node[m[K::status_callback(std::shared_ptr<const VehicleStatus> msg)
+      |      [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:59:10:[m[K [01;36m[Knote: [m[Kfrom previous declaration ‘[01m[Kvoid uav_node::status_callback(std::shared_ptr<const px4_msgs::msg::VehicleStatus_<std::allocator<void> > >) noexcept[m[K’
+   59 |     void [01;36m[Kstatus_callback[m[K(const std::shared_ptr<const VehicleStatus> msg) noexcept;
+      |          [01;36m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:76: CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/uavs_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

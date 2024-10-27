@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/GetWorldProperties.srv
+// generated code does not contain a copyright notice
+
+
+module gazebo_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Deprecated, kept for ROS 1 bridge." "\n"
+      "Use GetModelList")
+    struct GetWorldProperties_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetWorldProperties_Response {
+      @verbatim (language="comment", text=
+        "current sim time")
+      double sim_time;
+
+      @verbatim (language="comment", text=
+        "list of models in the world")
+      sequence<string> model_names;
+
+      @verbatim (language="comment", text=
+        "if X is used")
+      boolean rendering_enabled;
+
+      @verbatim (language="comment", text=
+        "return true if get successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

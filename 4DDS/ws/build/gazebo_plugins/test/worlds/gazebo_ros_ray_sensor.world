@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.6">
+  <world name="ray_sensor_test">
+    <gravity>0 0 0</gravity>
+    <!-- Global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="ray_sensor_box">
+      <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+      <link name="ray_link">
+        <visual name="visual_box">
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name="collision_box">
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.05</size>
+            </box>
+          </geometry>
+          <laser_retro>100.0</laser_retro>
+        </collision>
+        <sensor name="sensor_ray" type="ray">
+          <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>300</samples>
+                <min_angle>-0.5236</min_angle>
+                <max_angle>0.5236</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>100</samples>
+                <min_angle>-0.5236</min_angle>
+                <max_angle>0.5236</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.05</min>
+              <max>50.0</max>
+            </range>
+          </ray>
+          <always_on>true</always_on>
+          <update_rate>3.0</update_rate>
+          <!-- Instance of ray plugin for each output type -->
+          <plugin name="pc2" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/ray</namespace>
+              <remapping>~/out:=pointcloud2</remapping>
+            </ros>
+            <output_type>sensor_msgs/PointCloud2</output_type>
+          </plugin>
+          <plugin name="pc" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/ray</namespace>
+              <remapping>~/out:=pointcloud</remapping>
+            </ros>
+            <output_type>sensor_msgs/PointCloud</output_type>
+          </plugin>
+          <plugin name="ls" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/ray</namespace>
+              <remapping>~/out:=laserscan</remapping>
+            </ros>
+            <output_type>sensor_msgs/LaserScan</output_type>
+          </plugin>
+          <plugin name="range" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/ray</namespace>
+              <remapping>~/out:=range</remapping>
+            </ros>
+            <output_type>sensor_msgs/Range</output_type>
+          </plugin>
+        </sensor>
+<!-- Disabled while gpu laser is broken in gazebo9, see https://bitbucket.org/osrf/gazebo/issues/2486/conflicts-between-vertical-gpu-rays-and
+          <plugin name="pc2_gpu" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/gpu_ray</namespace>
+              <remapping>~/out:=pointcloud2</remapping>
+            </ros>
+            <output_type>sensor_msgs/PointCloud2</output_type>
+          </plugin>
+          <plugin name="pc_gpu" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/gpu_ray</namespace>
+              <remapping>~/out:=pointcloud</remapping>
+            </ros>
+            <output_type>sensor_msgs/PointCloud</output_type>
+          </plugin>
+          <plugin name="ls_gpu" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/gpu_ray</namespace>
+              <remapping>~/out:=laserscan</remapping>
+            </ros>
+            <output_type>sensor_msgs/LaserScan</output_type>
+          </plugin>
+          <plugin name="range_gpu" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>/gpu_ray</namespace>
+              <remapping>~/out:=range</remapping>
+            </ros>
+            <output_type>sensor_msgs/Range</output_type>
+          </plugin>
+        </sensor>
+-->
+      </link>
+    </model>
+    <model name="sphere">
+      <pose>1.0 0.0 0.0 0.0 0.0</pose>
+      <link name="base_link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <laser_retro>80.0</laser_retro>
+        </collision>
+      </link>
+    </model>
+    <model name="sphere2">
+      <pose>5.0 0.9 0.0 0.0 0.0</pose>
+      <link name="base_link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <laser_retro>80.0</laser_retro>
+        </collision>
+      </link>
+    </model>
+    <model name="sphere3">
+      <pose>5.0 -1.2 0.0 0.0 0.0</pose>
+      <link name="base_link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <laser_retro>80.0</laser_retro>
+        </collision>
+      </link>
+    </model>
+    <model name="sphere4">
+      <pose>3.0 -1.5 1.0 0.0 0.0</pose>
+      <link name="base_link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <laser_retro>80.0</laser_retro>
+        </collision>
+      </link>
+    </model>
+    <model name="sphere5">
+      <pose>3.0 1.3 -0.8 0.0 0.0</pose>
+      <link name="base_link">
+        <visual name="visual">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <laser_retro>80.0</laser_retro>
+        </collision>
+      </link>
+    </model>
+  </world>
+</sdf>

@@ -1,0 +1,46 @@
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/main.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:[m[K In constructor ‘[01m[Kuav_node::uav_node(uint8_t)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:109:91:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::counting_semaphore<1>::counting_semaphore()[m[K’
+  109 |     explicit uav_node(const uint8_t vehicle_id) : Node("uav_node"), vehicle_id_(vehicle_id[01;31m[K)[m[K
+      |                                                                                           [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/stop_token:37[m[K,
+                 from [01m[K/usr/include/c++/11/condition_variable:47[m[K,
+                 from [01m[K/usr/include/c++/11/future:39[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/main.cpp:1[m[K:
+[01m[K/usr/include/c++/11/semaphore:53:16:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::counting_semaphore<__least_max_value>::counting_semaphore(std::ptrdiff_t) [with long int __least_max_value = 1; std::ptrdiff_t = long int][m[K’
+   53 |       explicit [01;36m[Kcounting_semaphore[m[K(ptrdiff_t __desired) noexcept
+      |                [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/semaphore:53:16:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+In file included from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:[m[K In constructor ‘[01m[Kuav_node::uav_node(uint8_t)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:109:91:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kstd::counting_semaphore<1>::counting_semaphore()[m[K’
+  109 |     explicit uav_node(const uint8_t vehicle_id) : Node("uav_node"), vehicle_id_(vehicle_id[01;31m[K)[m[K
+      |                                                                                           [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/stop_token:37[m[K,
+                 from [01m[K/usr/include/c++/11/condition_variable:47[m[K,
+                 from [01m[K/usr/include/c++/11/future:39[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/usr/include/c++/11/semaphore:53:16:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::counting_semaphore<__least_max_value>::counting_semaphore(std::ptrdiff_t) [with long int __least_max_value = 1; std::ptrdiff_t = long int][m[K’
+   53 |       explicit [01;36m[Kcounting_semaphore[m[K(ptrdiff_t __desired) noexcept
+      |                [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/semaphore:53:16:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid uav_node::startup_logic()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:56:12:[m[K [01;35m[Kwarning: [m[Kenumeration value ‘[01m[Kready[m[K’ not handled in switch [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wswitch-Wswitch]8;;[m[K]
+   56 |     switch [01;35m[K([m[Kvehicle_state_)
+      |            [01;35m[K^[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid uav_node::request_command_response_callback(std::shared_future<std::shared_ptr<px4_msgs::srv::VehicleCommand_Response_<std::allocator<void> > > >)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:247:36:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around assignment used as truth value [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wparentheses-Wparentheses]8;;[m[K]
+  247 |                 if ([01;35m[Kvehicle_state_ = state::takeoff_requested[m[K)
+      |                     [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:90: CMakeFiles/uavs_spawner.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:76: CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/uavs_spawner.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

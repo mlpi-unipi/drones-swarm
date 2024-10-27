@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gazebo_msgs/msg/ContactState.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+#include "geometry_msgs/msg/Wrench.idl"
+
+module gazebo_msgs {
+  module msg {
+    struct ContactState {
+      @verbatim (language="comment", text=
+        "text info on this contact")
+      string info;
+
+      @verbatim (language="comment", text=
+        "name of contact collision1")
+      string collision1_name;
+
+      @verbatim (language="comment", text=
+        "name of contact collision2")
+      string collision2_name;
+
+      @verbatim (language="comment", text=
+        "list of forces/torques")
+      sequence<geometry_msgs::msg::Wrench> wrenches;
+
+      @verbatim (language="comment", text=
+        "sum of forces/torques in every DOF")
+      geometry_msgs::msg::Wrench total_wrench;
+
+      @verbatim (language="comment", text=
+        "list of contact position")
+      sequence<geometry_msgs::msg::Vector3> contact_positions;
+
+      @verbatim (language="comment", text=
+        "list of contact normals")
+      sequence<geometry_msgs::msg::Vector3> contact_normals;
+
+      @verbatim (language="comment", text=
+        "list of penetration depths")
+      sequence<double> depths;
+    };
+  };
+};

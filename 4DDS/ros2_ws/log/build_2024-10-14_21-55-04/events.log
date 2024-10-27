@@ -1,0 +1,712 @@
+[0.000000] (-) TimerEvent: {}
+[0.001600] (analysis) JobQueued: {'identifier': 'analysis', 'dependencies': OrderedDict()}
+[0.001741] (base_station) JobQueued: {'identifier': 'base_station', 'dependencies': OrderedDict()}
+[0.001839] (drone) JobQueued: {'identifier': 'drone', 'dependencies': OrderedDict()}
+[0.001879] (fdds_messages) JobQueued: {'identifier': 'fdds_messages', 'dependencies': OrderedDict()}
+[0.001910] (parameters) JobQueued: {'identifier': 'parameters', 'dependencies': OrderedDict()}
+[0.001998] (px4_msgs) JobQueued: {'identifier': 'px4_msgs', 'dependencies': OrderedDict()}
+[0.002074] (stigmergy) JobQueued: {'identifier': 'stigmergy', 'dependencies': OrderedDict()}
+[0.002162] (stigmergy_map) JobQueued: {'identifier': 'stigmergy_map', 'dependencies': OrderedDict()}
+[0.002238] (target_detection) JobQueued: {'identifier': 'target_detection', 'dependencies': OrderedDict()}
+[0.002335] (obstacle_avoidance) JobQueued: {'identifier': 'obstacle_avoidance', 'dependencies': OrderedDict([('parameters', '/home/fourdds/ros2_ws/install/parameters')])}
+[0.002422] (px4_ros_com) JobQueued: {'identifier': 'px4_ros_com', 'dependencies': OrderedDict([('px4_msgs', '/home/fourdds/ros2_ws/install/px4_msgs')])}
+[0.002517] (parameters) JobStarted: {'identifier': 'parameters'}
+[0.012923] (px4_msgs) JobStarted: {'identifier': 'px4_msgs'}
+[0.020331] (analysis) JobStarted: {'identifier': 'analysis'}
+[0.035147] (base_station) JobStarted: {'identifier': 'base_station'}
+[0.044237] (drone) JobStarted: {'identifier': 'drone'}
+[0.051373] (fdds_messages) JobStarted: {'identifier': 'fdds_messages'}
+[0.062528] (stigmergy) JobStarted: {'identifier': 'stigmergy'}
+[0.070081] (stigmergy_map) JobStarted: {'identifier': 'stigmergy_map'}
+[0.079485] (target_detection) JobStarted: {'identifier': 'target_detection'}
+[0.096030] (parameters) JobProgress: {'identifier': 'parameters', 'progress': 'cmake'}
+[0.097524] (parameters) JobProgress: {'identifier': 'parameters', 'progress': 'build'}
+[0.099459] (-) TimerEvent: {}
+[0.100137] (parameters) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/parameters', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/parameters', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/parameters'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.110206] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'cmake'}
+[0.111493] (px4_msgs) JobProgress: {'identifier': 'px4_msgs', 'progress': 'build'}
+[0.112384] (px4_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/px4_msgs', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/px4_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/px4_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.199673] (-) TimerEvent: {}
+[0.300651] (-) TimerEvent: {}
+[0.401276] (-) TimerEvent: {}
+[0.501983] (-) TimerEvent: {}
+[0.573405] (base_station) JobProgress: {'identifier': 'base_station', 'progress': 'cmake'}
+[0.575497] (base_station) JobProgress: {'identifier': 'base_station', 'progress': 'build'}
+[0.576729] (base_station) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/base_station', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/base_station', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/base_station'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.583852] (drone) JobProgress: {'identifier': 'drone', 'progress': 'cmake'}
+[0.584754] (drone) JobProgress: {'identifier': 'drone', 'progress': 'build'}
+[0.587376] (drone) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/drone', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.596898] (fdds_messages) JobProgress: {'identifier': 'fdds_messages', 'progress': 'cmake'}
+[0.597091] (fdds_messages) JobProgress: {'identifier': 'fdds_messages', 'progress': 'build'}
+[0.598015] (fdds_messages) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/fdds_messages', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/fdds_messages', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/fdds_messages'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.606793] (-) TimerEvent: {}
+[0.610558] (stigmergy) JobProgress: {'identifier': 'stigmergy', 'progress': 'cmake'}
+[0.611540] (stigmergy) Command: {'cmd': ['/usr/bin/cmake', '/home/fourdds/ros2_ws/src/stigmergy', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/fourdds/ros2_ws/install/stigmergy'], 'cwd': '/home/fourdds/ros2_ws/build/stigmergy', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/stigmergy'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.620969] (stigmergy_map) JobProgress: {'identifier': 'stigmergy_map', 'progress': 'cmake'}
+[0.621976] (stigmergy_map) JobProgress: {'identifier': 'stigmergy_map', 'progress': 'build'}
+[0.624647] (stigmergy_map) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/stigmergy_map', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/stigmergy_map', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/stigmergy_map'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.634750] (target_detection) JobProgress: {'identifier': 'target_detection', 'progress': 'cmake'}
+[0.638158] (target_detection) JobProgress: {'identifier': 'target_detection', 'progress': 'build'}
+[0.639970] (target_detection) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/target_detection', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/target_detection', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/target_detection'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.651266] (parameters) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/Parameters.dir/src/Parameters.cpp.o\x1b[0m\n'}
+[0.683974] (stigmergy) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.709416] (-) TimerEvent: {}
+[0.717928] (drone) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Drone\x1b[0m\n'}
+[0.731147] (base_station) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/BaseStation.dir/src/BaseStation.cpp.o\x1b[0m\n'}
+[0.754977] (fdds_messages) StderrLine: {'line': b"failed to create symbolic link '/home/fourdds/ros2_ws/build/fdds_messages/ament_cmake_python/fdds_messages/fdds_messages' because existing path cannot be removed: Is a directory\n"}
+[0.755422] (fdds_messages) StdoutLine: {'line': b'[  2%] Built target fdds_messages__cpp\n'}
+[0.762329] (fdds_messages) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_fdds_messages.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_fdds_messages] Error 1\n'}
+[0.762766] (fdds_messages) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_fdds_messages.dir/all] Error 2\n'}
+[0.762913] (fdds_messages) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[0.768914] (fdds_messages) StdoutLine: {'line': b'[ 12%] Built target fdds_messages__rosidl_generator_c\n'}
+[0.773437] (fdds_messages) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[0.774051] (stigmergy_map) StdoutLine: {'line': b'[100%] Built target StigmergyMap\n'}
+[0.776605] (fdds_messages) CommandEnded: {'returncode': 2}
+[0.791898] (drone) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o\x1b[0m\n'}
+[0.797400] (drone) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/main.cpp.o\x1b[0m\n'}
+[0.809686] (-) TimerEvent: {}
+[0.811460] (stigmergy_map) CommandEnded: {'returncode': 0}
+[0.815776] (target_detection) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/TargetDetection.dir/src/TargetDetection.cpp.o\x1b[0m\n'}
+[0.872478] (stigmergy_map) JobProgress: {'identifier': 'stigmergy_map', 'progress': 'install'}
+[0.896685] (stigmergy_map) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/stigmergy_map'], 'cwd': '/home/fourdds/ros2_ws/build/stigmergy_map', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/stigmergy_map'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.910616] (-) TimerEvent: {}
+[0.911490] (stigmergy_map) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.912750] (stigmergy_map) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.913499] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/lib/stigmergy_map/StigmergyMap\n'}
+[0.913978] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/ament_index/resource_index/package_run_dependencies/stigmergy_map\n'}
+[0.914338] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/ament_index/resource_index/parent_prefix_path/stigmergy_map\n'}
+[0.914666] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/environment/ament_prefix_path.sh\n'}
+[0.915772] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/environment/ament_prefix_path.dsv\n'}
+[0.916368] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/environment/path.sh\n'}
+[0.916578] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/environment/path.dsv\n'}
+[0.917233] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/local_setup.bash\n'}
+[0.917788] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/local_setup.sh\n'}
+[0.918228] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/local_setup.zsh\n'}
+[0.918608] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/local_setup.dsv\n'}
+[0.920835] (stigmergy_map) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.dsv\n'}
+[0.943263] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/ament_index/resource_index/packages/stigmergy_map\n'}
+[0.944071] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/cmake/stigmergy_mapConfig.cmake\n'}
+[0.944644] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/cmake/stigmergy_mapConfig-version.cmake\n'}
+[0.945970] (stigmergy_map) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/stigmergy_map/share/stigmergy_map/package.xml\n'}
+[0.950067] (stigmergy_map) CommandEnded: {'returncode': 0}
+[1.011119] (-) TimerEvent: {}
+[1.013607] (stigmergy) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.015276] (fdds_messages) JobEnded: {'identifier': 'fdds_messages', 'rc': 2}
+[1.028027] (stigmergy) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.063272] (stigmergy_map) JobEnded: {'identifier': 'stigmergy_map', 'rc': 0}
+[1.090311] (stigmergy) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.096018] (stigmergy) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.107231] (stigmergy) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.111308] (-) TimerEvent: {}
+[1.128740] (stigmergy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.152724] (stigmergy) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.211669] (-) TimerEvent: {}
+[1.217141] (stigmergy) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.219680] (stigmergy) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.227234] (px4_msgs) StderrLine: {'line': b"failed to create symbolic link '/home/fourdds/ros2_ws/build/px4_msgs/ament_cmake_python/px4_msgs/px4_msgs' because existing path cannot be removed: Is a directory\n"}
+[1.229990] (px4_msgs) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_px4_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_px4_msgs] Error 1\n'}
+[1.230881] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_px4_msgs.dir/all] Error 2\n'}
+[1.231310] (px4_msgs) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[1.271383] (px4_msgs) StdoutLine: {'line': b'[  0%] Built target px4_msgs__cpp\n'}
+[1.311886] (-) TimerEvent: {}
+[1.338441] (px4_msgs) StdoutLine: {'line': b'[ 12%] Built target px4_msgs__rosidl_generator_c\n'}
+[1.342546] (px4_msgs) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[1.342944] (parameters) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX static library libParameters.a\x1b[0m\n'}
+[1.349161] (px4_msgs) CommandEnded: {'returncode': 2}
+[1.412150] (-) TimerEvent: {}
+[1.413825] (parameters) StdoutLine: {'line': b'[100%] Built target Parameters\n'}
+[1.438520] (parameters) CommandEnded: {'returncode': 0}
+[1.495719] (parameters) JobProgress: {'identifier': 'parameters', 'progress': 'install'}
+[1.496520] (parameters) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/parameters'], 'cwd': '/home/fourdds/ros2_ws/build/parameters', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/parameters'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.512363] (-) TimerEvent: {}
+[1.514744] (parameters) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.515944] (parameters) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.516884] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/library_path.sh\n'}
+[1.517458] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/library_path.dsv\n'}
+[1.518061] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/include/parameters/Parameters.hpp\n'}
+[1.518445] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/include/parameters/yaml.hpp\n'}
+[1.518845] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/ament_index/resource_index/package_run_dependencies/parameters\n'}
+[1.519720] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/ament_index/resource_index/parent_prefix_path/parameters\n'}
+[1.521155] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/ament_prefix_path.sh\n'}
+[1.522065] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/ament_prefix_path.dsv\n'}
+[1.522763] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/path.sh\n'}
+[1.523500] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/environment/path.dsv\n'}
+[1.523714] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.bash\n'}
+[1.523869] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.sh\n'}
+[1.524017] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.zsh\n'}
+[1.524163] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/local_setup.dsv\n'}
+[1.524307] (parameters) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ros2_ws/install/parameters/share/parameters/package.dsv\n'}
+[1.540319] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/ament_index/resource_index/packages/parameters\n'}
+[1.541256] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.542245] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.543003] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/parametersConfig.cmake\n'}
+[1.543247] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/cmake/parametersConfig-version.cmake\n'}
+[1.543444] (parameters) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/parameters/share/parameters/package.xml\n'}
+[1.543575] (parameters) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/parameters/lib/libParameters.a\n'}
+[1.551037] (stigmergy) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.556913] (parameters) CommandEnded: {'returncode': 0}
+[1.612568] (-) TimerEvent: {}
+[1.637341] (stigmergy) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.641030] (stigmergy) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.659099] (parameters) JobEnded: {'identifier': 'parameters', 'rc': 0}
+[1.664638] (obstacle_avoidance) JobStarted: {'identifier': 'obstacle_avoidance'}
+[1.684157] (obstacle_avoidance) JobProgress: {'identifier': 'obstacle_avoidance', 'progress': 'cmake'}
+[1.687301] (obstacle_avoidance) JobProgress: {'identifier': 'obstacle_avoidance', 'progress': 'build'}
+[1.688384] (obstacle_avoidance) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/obstacle_avoidance', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/obstacle_avoidance', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/parameters/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/obstacle_avoidance'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble')]), 'shell': False}
+[1.709443] (stigmergy) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:15 (find_package):\n'}
+[1.710170] (stigmergy) StderrLine: {'line': b'  By not providing "Findstigmergy.cmake" in CMAKE_MODULE_PATH this project\n'}
+[1.710429] (stigmergy) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[1.710589] (stigmergy) StderrLine: {'line': b'  "stigmergy", but CMake did not find one.\n'}
+[1.710743] (stigmergy) StderrLine: {'line': b'\n'}
+[1.710887] (stigmergy) StderrLine: {'line': b'  Could not find a package configuration file provided by "stigmergy" with\n'}
+[1.711054] (stigmergy) StderrLine: {'line': b'  any of the following names:\n'}
+[1.711196] (stigmergy) StderrLine: {'line': b'\n'}
+[1.711337] (stigmergy) StderrLine: {'line': b'    stigmergyConfig.cmake\n'}
+[1.712597] (-) TimerEvent: {}
+[1.713052] (stigmergy) StderrLine: {'line': b'    stigmergy-config.cmake\n'}
+[1.713383] (stigmergy) StderrLine: {'line': b'\n'}
+[1.713573] (stigmergy) StderrLine: {'line': b'  Add the installation prefix of "stigmergy" to CMAKE_PREFIX_PATH or set\n'}
+[1.713726] (stigmergy) StderrLine: {'line': b'  "stigmergy_DIR" to a directory containing one of the above files.  If\n'}
+[1.713976] (stigmergy) StderrLine: {'line': b'  "stigmergy" provides a separate development package or SDK, be sure it has\n'}
+[1.714157] (stigmergy) StderrLine: {'line': b'  been installed.\n'}
+[1.714289] (stigmergy) StderrLine: {'line': b'\n'}
+[1.714423] (stigmergy) StderrLine: {'line': b'\x1b[0m\n'}
+[1.714550] (stigmergy) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.714725] (stigmergy) StdoutLine: {'line': b'See also "/home/fourdds/ros2_ws/build/stigmergy/CMakeFiles/CMakeOutput.log".\n'}
+[1.732869] (stigmergy) CommandEnded: {'returncode': 1}
+[1.772609] (stigmergy) JobEnded: {'identifier': 'stigmergy', 'rc': 1}
+[1.808548] (obstacle_avoidance) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ObstacleAvoidance.dir/src/ObstacleAvoidance.cpp.o\x1b[0m\n'}
+[1.812782] (-) TimerEvent: {}
+[1.913568] (-) TimerEvent: {}
+[2.014537] (-) TimerEvent: {}
+[2.026207] (analysis) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/fourdds/ros2_ws/build/analysis/build', '--no-deps', 'symlink_data'], 'cwd': '/home/fourdds/ros2_ws/build/analysis', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'MAIL': '/var/mail/fourdds', 'USER': 'fourdds', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}', 'HOME': '/home/fourdds', 'OLDPWD': '/home/fourdds', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': '4DDS', 'DEBUGINFOD_URLS': '', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'fourdds', 'NAME': 'DESKTOP-B9M18GO', 'WSL_INTEROP': '/run/WSL/1128_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c2', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin', 'COM_OBL_RC_ACT': '1', 'WT_SESSION': '814b7844-bf08-424e-98a6-ffb69094b1d2', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'UXRCE_DDS_SYNCT': '0', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/fourdds/ros2_ws/build/analysis', 'LC_ALL': 'en_US.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fourdds/ros2_ws/build/analysis/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[2.114716] (-) TimerEvent: {}
+[2.215430] (-) TimerEvent: {}
+[2.315960] (-) TimerEvent: {}
+[2.416959] (-) TimerEvent: {}
+[2.517554] (-) TimerEvent: {}
+[2.618303] (-) TimerEvent: {}
+[2.718998] (-) TimerEvent: {}
+[2.728161] (analysis) StdoutLine: {'line': b'running develop\n'}
+[2.729324] (analysis) StderrLine: {'line': b'/home/fourdds/.local/lib/python3.10/site-packages/setuptools/command/develop.py:42: EasyInstallDeprecationWarning: easy_install command is deprecated.\n'}
+[2.729761] (analysis) StderrLine: {'line': b'!!\n'}
+[2.729866] (analysis) StderrLine: {'line': b'\n'}
+[2.730090] (analysis) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.730215] (analysis) StderrLine: {'line': b'        Please avoid running ``setup.py`` and ``easy_install``.\n'}
+[2.730327] (analysis) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[2.730464] (analysis) StderrLine: {'line': b'        standards-based tools.\n'}
+[2.730549] (analysis) StderrLine: {'line': b'\n'}
+[2.731134] (analysis) StderrLine: {'line': b'        See https://github.com/pypa/setuptools/issues/917 for details.\n'}
+[2.731467] (analysis) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.731611] (analysis) StderrLine: {'line': b'\n'}
+[2.731724] (analysis) StderrLine: {'line': b'!!\n'}
+[2.731920] (analysis) StderrLine: {'line': b'  easy_install.initialize_options(self)\n'}
+[2.819170] (-) TimerEvent: {}
+[2.919793] (-) TimerEvent: {}
+[3.020908] (-) TimerEvent: {}
+[3.121890] (-) TimerEvent: {}
+[3.190636] (analysis) StdoutLine: {'line': b'running egg_info\n'}
+[3.220744] (analysis) StdoutLine: {'line': b'writing analysis.egg-info/PKG-INFO\n'}
+[3.222083] (analysis) StdoutLine: {'line': b'writing dependency_links to analysis.egg-info/dependency_links.txt\n'}
+[3.222621] (-) TimerEvent: {}
+[3.223813] (analysis) StdoutLine: {'line': b'writing entry points to analysis.egg-info/entry_points.txt\n'}
+[3.225191] (analysis) StdoutLine: {'line': b'writing requirements to analysis.egg-info/requires.txt\n'}
+[3.225692] (analysis) StdoutLine: {'line': b'writing top-level names to analysis.egg-info/top_level.txt\n'}
+[3.315965] (analysis) StdoutLine: {'line': b"reading manifest file 'analysis.egg-info/SOURCES.txt'\n"}
+[3.318176] (analysis) StdoutLine: {'line': b"writing manifest file 'analysis.egg-info/SOURCES.txt'\n"}
+[3.322880] (-) TimerEvent: {}
+[3.358477] (analysis) StdoutLine: {'line': b'running build_ext\n'}
+[3.359806] (analysis) StdoutLine: {'line': b'Creating /home/fourdds/ros2_ws/install/analysis/lib/python3.10/site-packages/analysis.egg-link (link to .)\n'}
+[3.360955] (analysis) StdoutLine: {'line': b'Installing ConvertToCSV script to /home/fourdds/ros2_ws/install/analysis/lib/analysis\n'}
+[3.361836] (analysis) StdoutLine: {'line': b'\n'}
+[3.362324] (analysis) StdoutLine: {'line': b'Installed /home/fourdds/ros2_ws/build/analysis\n'}
+[3.363207] (analysis) StdoutLine: {'line': b'running symlink_data\n'}
+[3.423075] (-) TimerEvent: {}
+[3.458804] (analysis) CommandEnded: {'returncode': 0}
+[3.486465] (analysis) JobEnded: {'identifier': 'analysis', 'rc': 0}
+[3.523644] (-) TimerEvent: {}
+[3.624223] (-) TimerEvent: {}
+[3.724984] (-) TimerEvent: {}
+[3.826205] (-) TimerEvent: {}
+[3.926908] (-) TimerEvent: {}
+[4.028087] (-) TimerEvent: {}
+[4.128741] (-) TimerEvent: {}
+[4.230142] (-) TimerEvent: {}
+[4.330826] (-) TimerEvent: {}
+[4.431389] (-) TimerEvent: {}
+[4.532048] (-) TimerEvent: {}
+[4.633152] (-) TimerEvent: {}
+[4.733782] (-) TimerEvent: {}
+[4.834504] (-) TimerEvent: {}
+[4.935242] (-) TimerEvent: {}
+[5.036345] (-) TimerEvent: {}
+[5.136883] (-) TimerEvent: {}
+[5.237587] (-) TimerEvent: {}
+[5.338266] (-) TimerEvent: {}
+[5.439030] (-) TimerEvent: {}
+[5.539685] (-) TimerEvent: {}
+[5.640298] (-) TimerEvent: {}
+[5.741081] (-) TimerEvent: {}
+[5.841794] (-) TimerEvent: {}
+[5.942361] (-) TimerEvent: {}
+[6.043216] (-) TimerEvent: {}
+[6.143815] (-) TimerEvent: {}
+[6.244537] (-) TimerEvent: {}
+[6.345217] (-) TimerEvent: {}
+[6.446061] (-) TimerEvent: {}
+[6.546730] (-) TimerEvent: {}
+[6.647670] (-) TimerEvent: {}
+[6.748315] (-) TimerEvent: {}
+[6.848831] (-) TimerEvent: {}
+[6.949373] (-) TimerEvent: {}
+[7.050121] (-) TimerEvent: {}
+[7.151011] (-) TimerEvent: {}
+[7.251816] (-) TimerEvent: {}
+[7.352819] (-) TimerEvent: {}
+[7.453375] (-) TimerEvent: {}
+[7.554021] (-) TimerEvent: {}
+[7.654746] (-) TimerEvent: {}
+[7.755927] (-) TimerEvent: {}
+[7.856552] (-) TimerEvent: {}
+[7.957099] (-) TimerEvent: {}
+[8.057760] (-) TimerEvent: {}
+[8.159032] (-) TimerEvent: {}
+[8.259705] (-) TimerEvent: {}
+[8.360952] (-) TimerEvent: {}
+[8.461712] (-) TimerEvent: {}
+[8.562798] (-) TimerEvent: {}
+[8.663452] (-) TimerEvent: {}
+[8.764140] (-) TimerEvent: {}
+[8.864716] (-) TimerEvent: {}
+[8.965785] (-) TimerEvent: {}
+[9.066516] (-) TimerEvent: {}
+[9.167829] (-) TimerEvent: {}
+[9.268978] (-) TimerEvent: {}
+[9.369645] (-) TimerEvent: {}
+[9.470461] (-) TimerEvent: {}
+[9.571388] (-) TimerEvent: {}
+[9.672312] (-) TimerEvent: {}
+[9.772879] (-) TimerEvent: {}
+[9.873850] (-) TimerEvent: {}
+[9.974984] (-) TimerEvent: {}
+[10.075933] (-) TimerEvent: {}
+[10.176476] (-) TimerEvent: {}
+[10.277456] (-) TimerEvent: {}
+[10.377992] (-) TimerEvent: {}
+[10.428983] (px4_msgs) JobEnded: {'identifier': 'px4_msgs', 'rc': 2}
+[10.478328] (-) TimerEvent: {}
+[10.578840] (-) TimerEvent: {}
+[10.679468] (-) TimerEvent: {}
+[10.780225] (-) TimerEvent: {}
+[10.880840] (-) TimerEvent: {}
+[10.981540] (-) TimerEvent: {}
+[11.082453] (-) TimerEvent: {}
+[11.183111] (-) TimerEvent: {}
+[11.283753] (-) TimerEvent: {}
+[11.384509] (-) TimerEvent: {}
+[11.485205] (-) TimerEvent: {}
+[11.585893] (-) TimerEvent: {}
+[11.686639] (-) TimerEvent: {}
+[11.787497] (-) TimerEvent: {}
+[11.888344] (-) TimerEvent: {}
+[11.989091] (-) TimerEvent: {}
+[12.090041] (-) TimerEvent: {}
+[12.190609] (-) TimerEvent: {}
+[12.291680] (-) TimerEvent: {}
+[12.392335] (-) TimerEvent: {}
+[12.492905] (-) TimerEvent: {}
+[12.593568] (-) TimerEvent: {}
+[12.694376] (-) TimerEvent: {}
+[12.795099] (-) TimerEvent: {}
+[12.895910] (-) TimerEvent: {}
+[12.996862] (-) TimerEvent: {}
+[13.097767] (-) TimerEvent: {}
+[13.198554] (-) TimerEvent: {}
+[13.299350] (-) TimerEvent: {}
+[13.400101] (-) TimerEvent: {}
+[13.500998] (-) TimerEvent: {}
+[13.601670] (-) TimerEvent: {}
+[13.702393] (-) TimerEvent: {}
+[13.803303] (-) TimerEvent: {}
+[13.904046] (-) TimerEvent: {}
+[14.004900] (-) TimerEvent: {}
+[14.105769] (-) TimerEvent: {}
+[14.206428] (-) TimerEvent: {}
+[14.307081] (-) TimerEvent: {}
+[14.407767] (-) TimerEvent: {}
+[14.508396] (-) TimerEvent: {}
+[14.512137] (obstacle_avoidance) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX static library libObstacleAvoidance.a\x1b[0m\n'}
+[14.559020] (obstacle_avoidance) StdoutLine: {'line': b'[100%] Built target ObstacleAvoidance\n'}
+[14.575770] (obstacle_avoidance) CommandEnded: {'returncode': 0}
+[14.608654] (-) TimerEvent: {}
+[14.623197] (obstacle_avoidance) JobProgress: {'identifier': 'obstacle_avoidance', 'progress': 'install'}
+[14.625299] (obstacle_avoidance) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/obstacle_avoidance'], 'cwd': '/home/fourdds/ros2_ws/build/obstacle_avoidance', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/parameters/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/obstacle_avoidance'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/parameters:/opt/ros/humble')]), 'shell': False}
+[14.633815] (obstacle_avoidance) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.634371] (obstacle_avoidance) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[14.634905] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/environment/library_path.sh\n'}
+[14.635146] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/environment/library_path.dsv\n'}
+[14.635828] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/include/obstacle_avoidance/ObstacleAvoidance.hpp\n'}
+[14.636300] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/ament_index/resource_index/package_run_dependencies/obstacle_avoidance\n'}
+[14.636686] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/ament_index/resource_index/parent_prefix_path/obstacle_avoidance\n'}
+[14.637247] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/environment/ament_prefix_path.sh\n'}
+[14.637895] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/environment/ament_prefix_path.dsv\n'}
+[14.638042] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/environment/path.sh\n'}
+[14.638131] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/environment/path.dsv\n'}
+[14.638213] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/local_setup.bash\n'}
+[14.638372] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/local_setup.sh\n'}
+[14.638466] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/local_setup.zsh\n'}
+[14.638548] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/local_setup.dsv\n'}
+[14.638629] (obstacle_avoidance) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.dsv\n'}
+[14.650531] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/ament_index/resource_index/packages/obstacle_avoidance\n'}
+[14.651121] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[14.651516] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[14.652037] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/cmake/obstacle_avoidanceConfig.cmake\n'}
+[14.652278] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/cmake/obstacle_avoidanceConfig-version.cmake\n'}
+[14.652631] (obstacle_avoidance) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/obstacle_avoidance/share/obstacle_avoidance/package.xml\n'}
+[14.652797] (obstacle_avoidance) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/obstacle_avoidance/lib/libObstacleAvoidance.a\n'}
+[14.656775] (obstacle_avoidance) CommandEnded: {'returncode': 0}
+[14.708980] (-) TimerEvent: {}
+[14.730482] (obstacle_avoidance) JobEnded: {'identifier': 'obstacle_avoidance', 'rc': 0}
+[14.809197] (-) TimerEvent: {}
+[14.909987] (-) TimerEvent: {}
+[15.010540] (-) TimerEvent: {}
+[15.111113] (-) TimerEvent: {}
+[15.153086] (target_detection) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX static library libTargetDetection.a\x1b[0m\n'}
+[15.197676] (target_detection) StdoutLine: {'line': b'[100%] Built target TargetDetection\n'}
+[15.211310] (-) TimerEvent: {}
+[15.227443] (target_detection) CommandEnded: {'returncode': 0}
+[15.275001] (target_detection) JobProgress: {'identifier': 'target_detection', 'progress': 'install'}
+[15.275660] (target_detection) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/target_detection'], 'cwd': '/home/fourdds/ros2_ws/build/target_detection', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/target_detection'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[15.287878] (target_detection) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.288868] (target_detection) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[15.289808] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/environment/library_path.sh\n'}
+[15.290534] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/environment/library_path.dsv\n'}
+[15.291611] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/include/target_detection/TargetDetection.hpp\n'}
+[15.292209] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/ament_index/resource_index/package_run_dependencies/target_detection\n'}
+[15.292791] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/ament_index/resource_index/parent_prefix_path/target_detection\n'}
+[15.293346] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/environment/ament_prefix_path.sh\n'}
+[15.293935] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/environment/ament_prefix_path.dsv\n'}
+[15.294673] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/environment/path.sh\n'}
+[15.295363] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/environment/path.dsv\n'}
+[15.296182] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/local_setup.bash\n'}
+[15.296497] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/local_setup.sh\n'}
+[15.297076] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/local_setup.zsh\n'}
+[15.297342] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/local_setup.dsv\n'}
+[15.297453] (target_detection) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.dsv\n'}
+[15.311512] (-) TimerEvent: {}
+[15.314548] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/ament_index/resource_index/packages/target_detection\n'}
+[15.315072] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[15.315461] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[15.316003] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/cmake/target_detectionConfig.cmake\n'}
+[15.316136] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/cmake/target_detectionConfig-version.cmake\n'}
+[15.316231] (target_detection) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/target_detection/share/target_detection/package.xml\n'}
+[15.316316] (target_detection) StdoutLine: {'line': b'-- Installing: /home/fourdds/ros2_ws/install/target_detection/lib/libTargetDetection.a\n'}
+[15.319861] (target_detection) CommandEnded: {'returncode': 0}
+[15.390604] (target_detection) JobEnded: {'identifier': 'target_detection', 'rc': 0}
+[15.411672] (-) TimerEvent: {}
+[15.512328] (-) TimerEvent: {}
+[15.612944] (-) TimerEvent: {}
+[15.713565] (-) TimerEvent: {}
+[15.814235] (-) TimerEvent: {}
+[15.914896] (-) TimerEvent: {}
+[16.015714] (-) TimerEvent: {}
+[16.116433] (-) TimerEvent: {}
+[16.217615] (-) TimerEvent: {}
+[16.318322] (-) TimerEvent: {}
+[16.418904] (-) TimerEvent: {}
+[16.519450] (-) TimerEvent: {}
+[16.620101] (-) TimerEvent: {}
+[16.720821] (-) TimerEvent: {}
+[16.821356] (-) TimerEvent: {}
+[16.921867] (-) TimerEvent: {}
+[17.022419] (-) TimerEvent: {}
+[17.123151] (-) TimerEvent: {}
+[17.223728] (-) TimerEvent: {}
+[17.324292] (-) TimerEvent: {}
+[17.425196] (-) TimerEvent: {}
+[17.525864] (-) TimerEvent: {}
+[17.626567] (-) TimerEvent: {}
+[17.727250] (-) TimerEvent: {}
+[17.828236] (-) TimerEvent: {}
+[17.928993] (-) TimerEvent: {}
+[18.029679] (-) TimerEvent: {}
+[18.130273] (-) TimerEvent: {}
+[18.230919] (-) TimerEvent: {}
+[18.331533] (-) TimerEvent: {}
+[18.432242] (-) TimerEvent: {}
+[18.532774] (-) TimerEvent: {}
+[18.633430] (-) TimerEvent: {}
+[18.734121] (-) TimerEvent: {}
+[18.834742] (-) TimerEvent: {}
+[18.935304] (-) TimerEvent: {}
+[19.036002] (-) TimerEvent: {}
+[19.136752] (-) TimerEvent: {}
+[19.237274] (-) TimerEvent: {}
+[19.338126] (-) TimerEvent: {}
+[19.438862] (-) TimerEvent: {}
+[19.539662] (-) TimerEvent: {}
+[19.640176] (-) TimerEvent: {}
+[19.740768] (-) TimerEvent: {}
+[19.841500] (-) TimerEvent: {}
+[19.942062] (-) TimerEvent: {}
+[20.042600] (-) TimerEvent: {}
+[20.143420] (-) TimerEvent: {}
+[20.244417] (-) TimerEvent: {}
+[20.345144] (-) TimerEvent: {}
+[20.445667] (-) TimerEvent: {}
+[20.546338] (-) TimerEvent: {}
+[20.647108] (-) TimerEvent: {}
+[20.747791] (-) TimerEvent: {}
+[20.848402] (-) TimerEvent: {}
+[20.914464] (base_station) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable BaseStation\x1b[0m\n'}
+[20.948540] (-) TimerEvent: {}
+[21.049393] (-) TimerEvent: {}
+[21.150058] (-) TimerEvent: {}
+[21.213664] (base_station) StdoutLine: {'line': b'[100%] Built target BaseStation\n'}
+[21.228728] (base_station) CommandEnded: {'returncode': 0}
+[21.250252] (-) TimerEvent: {}
+[21.269846] (base_station) JobProgress: {'identifier': 'base_station', 'progress': 'install'}
+[21.271359] (base_station) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/base_station'], 'cwd': '/home/fourdds/ros2_ws/build/base_station', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/base_station'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[21.280009] (base_station) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.280961] (base_station) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[21.281487] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/lib/base_station/BaseStation\n'}
+[21.281948] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/ament_index/resource_index/package_run_dependencies/base_station\n'}
+[21.282366] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/ament_index/resource_index/parent_prefix_path/base_station\n'}
+[21.282693] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/environment/ament_prefix_path.sh\n'}
+[21.283111] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/environment/ament_prefix_path.dsv\n'}
+[21.283504] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/environment/path.sh\n'}
+[21.283824] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/environment/path.dsv\n'}
+[21.284147] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/local_setup.bash\n'}
+[21.284451] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/local_setup.sh\n'}
+[21.284803] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/local_setup.zsh\n'}
+[21.285147] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/local_setup.dsv\n'}
+[21.285404] (base_station) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ros2_ws/install/base_station/share/base_station/package.dsv\n'}
+[21.297398] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/ament_index/resource_index/packages/base_station\n'}
+[21.297816] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/cmake/base_stationConfig.cmake\n'}
+[21.298220] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/cmake/base_stationConfig-version.cmake\n'}
+[21.298709] (base_station) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/base_station/share/base_station/package.xml\n'}
+[21.301892] (base_station) CommandEnded: {'returncode': 0}
+[21.350482] (-) TimerEvent: {}
+[21.375106] (base_station) JobEnded: {'identifier': 'base_station', 'rc': 0}
+[21.450716] (-) TimerEvent: {}
+[21.551259] (-) TimerEvent: {}
+[21.651988] (-) TimerEvent: {}
+[21.752589] (-) TimerEvent: {}
+[21.853160] (-) TimerEvent: {}
+[21.953772] (-) TimerEvent: {}
+[22.054315] (-) TimerEvent: {}
+[22.154866] (-) TimerEvent: {}
+[22.255371] (-) TimerEvent: {}
+[22.356374] (-) TimerEvent: {}
+[22.457059] (-) TimerEvent: {}
+[22.557689] (-) TimerEvent: {}
+[22.658404] (-) TimerEvent: {}
+[22.758938] (-) TimerEvent: {}
+[22.859624] (-) TimerEvent: {}
+[22.960141] (-) TimerEvent: {}
+[23.060805] (-) TimerEvent: {}
+[23.161353] (-) TimerEvent: {}
+[23.261874] (-) TimerEvent: {}
+[23.362366] (-) TimerEvent: {}
+[23.462859] (-) TimerEvent: {}
+[23.563583] (-) TimerEvent: {}
+[23.664201] (-) TimerEvent: {}
+[23.764839] (-) TimerEvent: {}
+[23.865399] (-) TimerEvent: {}
+[23.965908] (-) TimerEvent: {}
+[24.066634] (-) TimerEvent: {}
+[24.167265] (-) TimerEvent: {}
+[24.267931] (-) TimerEvent: {}
+[24.368595] (-) TimerEvent: {}
+[24.469130] (-) TimerEvent: {}
+[24.569787] (-) TimerEvent: {}
+[24.670446] (-) TimerEvent: {}
+[24.771086] (-) TimerEvent: {}
+[24.871632] (-) TimerEvent: {}
+[24.972136] (-) TimerEvent: {}
+[25.072661] (-) TimerEvent: {}
+[25.173194] (-) TimerEvent: {}
+[25.273815] (-) TimerEvent: {}
+[25.374486] (-) TimerEvent: {}
+[25.474982] (-) TimerEvent: {}
+[25.575842] (-) TimerEvent: {}
+[25.676341] (-) TimerEvent: {}
+[25.776862] (-) TimerEvent: {}
+[25.877450] (-) TimerEvent: {}
+[25.978151] (-) TimerEvent: {}
+[26.078825] (-) TimerEvent: {}
+[26.179477] (-) TimerEvent: {}
+[26.280106] (-) TimerEvent: {}
+[26.380630] (-) TimerEvent: {}
+[26.481180] (-) TimerEvent: {}
+[26.581772] (-) TimerEvent: {}
+[26.682416] (-) TimerEvent: {}
+[26.782977] (-) TimerEvent: {}
+[26.883612] (-) TimerEvent: {}
+[26.984120] (-) TimerEvent: {}
+[27.084650] (-) TimerEvent: {}
+[27.185419] (-) TimerEvent: {}
+[27.286153] (-) TimerEvent: {}
+[27.386910] (-) TimerEvent: {}
+[27.487611] (-) TimerEvent: {}
+[27.588346] (-) TimerEvent: {}
+[27.689130] (-) TimerEvent: {}
+[27.789632] (-) TimerEvent: {}
+[27.890168] (-) TimerEvent: {}
+[27.990774] (-) TimerEvent: {}
+[28.091345] (-) TimerEvent: {}
+[28.191850] (-) TimerEvent: {}
+[28.292481] (-) TimerEvent: {}
+[28.393007] (-) TimerEvent: {}
+[28.493483] (-) TimerEvent: {}
+[28.594038] (-) TimerEvent: {}
+[28.694700] (-) TimerEvent: {}
+[28.795414] (-) TimerEvent: {}
+[28.896122] (-) TimerEvent: {}
+[28.996712] (-) TimerEvent: {}
+[29.097392] (-) TimerEvent: {}
+[29.197989] (-) TimerEvent: {}
+[29.298628] (-) TimerEvent: {}
+[29.399246] (-) TimerEvent: {}
+[29.499985] (-) TimerEvent: {}
+[29.600628] (-) TimerEvent: {}
+[29.701358] (-) TimerEvent: {}
+[29.801843] (-) TimerEvent: {}
+[29.902400] (-) TimerEvent: {}
+[30.002882] (-) TimerEvent: {}
+[30.103397] (-) TimerEvent: {}
+[30.204010] (-) TimerEvent: {}
+[30.304605] (-) TimerEvent: {}
+[30.405307] (-) TimerEvent: {}
+[30.505995] (-) TimerEvent: {}
+[30.606762] (-) TimerEvent: {}
+[30.707539] (-) TimerEvent: {}
+[30.808056] (-) TimerEvent: {}
+[30.908721] (-) TimerEvent: {}
+[31.009333] (-) TimerEvent: {}
+[31.109840] (-) TimerEvent: {}
+[31.210439] (-) TimerEvent: {}
+[31.310982] (-) TimerEvent: {}
+[31.411535] (-) TimerEvent: {}
+[31.512202] (-) TimerEvent: {}
+[31.612889] (-) TimerEvent: {}
+[31.713385] (-) TimerEvent: {}
+[31.813857] (-) TimerEvent: {}
+[31.915312] (-) TimerEvent: {}
+[32.015931] (-) TimerEvent: {}
+[32.116559] (-) TimerEvent: {}
+[32.217303] (-) TimerEvent: {}
+[32.318029] (-) TimerEvent: {}
+[32.418751] (-) TimerEvent: {}
+[32.519483] (-) TimerEvent: {}
+[32.620232] (-) TimerEvent: {}
+[32.720940] (-) TimerEvent: {}
+[32.821686] (-) TimerEvent: {}
+[32.922472] (-) TimerEvent: {}
+[33.023232] (-) TimerEvent: {}
+[33.123946] (-) TimerEvent: {}
+[33.224740] (-) TimerEvent: {}
+[33.325257] (-) TimerEvent: {}
+[33.425999] (-) TimerEvent: {}
+[33.526664] (-) TimerEvent: {}
+[33.627172] (-) TimerEvent: {}
+[33.727740] (-) TimerEvent: {}
+[33.828292] (-) TimerEvent: {}
+[33.928997] (-) TimerEvent: {}
+[34.029639] (-) TimerEvent: {}
+[34.130211] (-) TimerEvent: {}
+[34.230840] (-) TimerEvent: {}
+[34.331432] (-) TimerEvent: {}
+[34.431931] (-) TimerEvent: {}
+[34.532375] (-) TimerEvent: {}
+[34.632823] (-) TimerEvent: {}
+[34.733308] (-) TimerEvent: {}
+[34.833779] (-) TimerEvent: {}
+[34.934249] (-) TimerEvent: {}
+[35.034756] (-) TimerEvent: {}
+[35.135311] (-) TimerEvent: {}
+[35.235812] (-) TimerEvent: {}
+[35.336308] (-) TimerEvent: {}
+[35.436741] (-) TimerEvent: {}
+[35.537203] (-) TimerEvent: {}
+[35.637651] (-) TimerEvent: {}
+[35.738276] (-) TimerEvent: {}
+[35.838890] (-) TimerEvent: {}
+[35.939518] (-) TimerEvent: {}
+[36.039999] (-) TimerEvent: {}
+[36.140628] (-) TimerEvent: {}
+[36.241131] (-) TimerEvent: {}
+[36.341876] (-) TimerEvent: {}
+[36.442376] (-) TimerEvent: {}
+[36.542897] (-) TimerEvent: {}
+[36.643511] (-) TimerEvent: {}
+[36.744097] (-) TimerEvent: {}
+[36.844796] (-) TimerEvent: {}
+[36.945445] (-) TimerEvent: {}
+[37.046155] (-) TimerEvent: {}
+[37.146855] (-) TimerEvent: {}
+[37.247433] (-) TimerEvent: {}
+[37.347883] (-) TimerEvent: {}
+[37.448434] (-) TimerEvent: {}
+[37.549124] (-) TimerEvent: {}
+[37.649778] (-) TimerEvent: {}
+[37.750556] (-) TimerEvent: {}
+[37.851191] (-) TimerEvent: {}
+[37.951883] (-) TimerEvent: {}
+[38.052538] (-) TimerEvent: {}
+[38.153278] (-) TimerEvent: {}
+[38.253944] (-) TimerEvent: {}
+[38.354643] (-) TimerEvent: {}
+[38.455264] (-) TimerEvent: {}
+[38.555991] (-) TimerEvent: {}
+[38.656685] (-) TimerEvent: {}
+[38.757375] (-) TimerEvent: {}
+[38.857820] (-) TimerEvent: {}
+[38.958303] (-) TimerEvent: {}
+[39.058955] (-) TimerEvent: {}
+[39.159781] (-) TimerEvent: {}
+[39.260396] (-) TimerEvent: {}
+[39.360982] (-) TimerEvent: {}
+[39.461548] (-) TimerEvent: {}
+[39.562152] (-) TimerEvent: {}
+[39.662683] (-) TimerEvent: {}
+[39.763380] (-) TimerEvent: {}
+[39.825913] (drone) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable Drone\x1b[0m\n'}
+[39.863551] (-) TimerEvent: {}
+[39.964236] (-) TimerEvent: {}
+[40.064752] (-) TimerEvent: {}
+[40.165303] (-) TimerEvent: {}
+[40.266017] (-) TimerEvent: {}
+[40.366484] (-) TimerEvent: {}
+[40.466994] (-) TimerEvent: {}
+[40.567593] (-) TimerEvent: {}
+[40.668102] (-) TimerEvent: {}
+[40.768752] (-) TimerEvent: {}
+[40.869254] (-) TimerEvent: {}
+[40.872261] (drone) StdoutLine: {'line': b'[100%] Built target Drone\n'}
+[40.889355] (drone) CommandEnded: {'returncode': 0}
+[40.931252] (drone) JobProgress: {'identifier': 'drone', 'progress': 'install'}
+[40.931730] (drone) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/drone'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{6e0121d5-ba60-52c4-bf54-1a6e30ffa9c6}'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'DESKTOP-B9M18GO'), ('WSL_INTEROP', '/run/WSL/1128_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '814b7844-bf08-424e-98a6-ffb69094b1d2'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[40.940191] (drone) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[40.941112] (drone) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[40.941596] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/lib/drone/Drone\n'}
+[40.942466] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/package_run_dependencies/drone\n'}
+[40.943330] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/parent_prefix_path/drone\n'}
+[40.944155] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/ament_prefix_path.sh\n'}
+[40.945014] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/ament_prefix_path.dsv\n'}
+[40.945827] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/path.sh\n'}
+[40.946664] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/path.dsv\n'}
+[40.947022] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.bash\n'}
+[40.947517] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.sh\n'}
+[40.947725] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.zsh\n'}
+[40.948091] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.dsv\n'}
+[40.948200] (drone) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ros2_ws/install/drone/share/drone/package.dsv\n'}
+[40.960028] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/packages/drone\n'}
+[40.960508] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/cmake/droneConfig.cmake\n'}
+[40.960735] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/cmake/droneConfig-version.cmake\n'}
+[40.961100] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/package.xml\n'}
+[40.964269] (drone) CommandEnded: {'returncode': 0}
+[40.969592] (-) TimerEvent: {}
+[41.034257] (drone) JobEnded: {'identifier': 'drone', 'rc': 0}
+[41.046737] (px4_ros_com) JobSkipped: {'identifier': 'px4_ros_com'}
+[41.047061] (-) EventReactorShutdown: {}

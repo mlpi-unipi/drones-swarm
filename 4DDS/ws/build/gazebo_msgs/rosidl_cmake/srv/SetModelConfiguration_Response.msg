@@ -1,0 +1,3 @@
+
+bool success                # return true if setting state successful
+string status_message       # comments if available

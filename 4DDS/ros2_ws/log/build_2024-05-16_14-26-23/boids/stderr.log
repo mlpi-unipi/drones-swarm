@@ -1,0 +1,25 @@
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid Swarm::UavNode::cameraSubscriptionCallback(sensor_msgs::msg::CompressedImage_<std::allocator<void> >::ConstSharedPtr)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:329:19:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kstd::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::size() const [with _Tp = cv::DMatch; _Alloc = std::allocator<cv::DMatch>; std::vector<_Tp, _Alloc>::size_type = long unsigned int][m[K’
+  329 |         [01;31m[Kstd::cout << matches.size[m[K << std::endl;
+      |         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:918:7:[m[K [01;36m[Knote: [m[Kdeclared here
+  918 |       [01;36m[Ksize[m[K() const _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:303:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kimg_id[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  303 |     static int [01;35m[Kimg_id[m[K = 0;
+      |                [01;35m[K^~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K At global scope:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:303:16:[m[K [01;35m[Kwarning: [m[K‘[01m[Kimg_id[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:76: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

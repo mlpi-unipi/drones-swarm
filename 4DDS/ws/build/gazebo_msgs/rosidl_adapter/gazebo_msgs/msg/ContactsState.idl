@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gazebo_msgs/msg/ContactsState.msg
+// generated code does not contain a copyright notice
+
+#include "gazebo_msgs/msg/ContactState.idl"
+#include "std_msgs/msg/Header.idl"
+
+module gazebo_msgs {
+  module msg {
+    struct ContactsState {
+      @verbatim (language="comment", text=
+        "stamp")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "array of geom pairs in contact")
+      sequence<gazebo_msgs::msg::ContactState> states;
+    };
+  };
+};

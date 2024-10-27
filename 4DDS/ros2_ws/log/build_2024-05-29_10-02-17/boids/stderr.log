@@ -1,0 +1,38 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid Swarm::UavNode::flockingLogic()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:223:5:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+  223 |     [01;31m[KRCLCPP_INFO[m[K("Sending speed: %f %f", currentSpeed.x_, currentSpeed.y_);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.hpp:3[m[K,
+                 from [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:223:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Sending speed: %f %f")[m[K’, which is of non-class type ‘[01m[Kconst char [21][m[K’
+  223 |     [01;31m[KRCLCPP_INFO[m[K("Sending speed: %f %f", currentSpeed.x_, currentSpeed.y_);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:223:5:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("Sending speed: %f %f")[m[K’, which is of non-class type ‘[01m[Kconst char [21][m[K’
+  223 |     [01;31m[KRCLCPP_INFO[m[K("Sending speed: %f %f", currentSpeed.x_, currentSpeed.y_);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/swarm_spawner.dir/build.make:76: CMakeFiles/swarm_spawner.dir/src/uav_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:620: CMakeFiles/swarm_spawner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

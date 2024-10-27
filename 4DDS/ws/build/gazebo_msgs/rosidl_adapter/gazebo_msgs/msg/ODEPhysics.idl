@@ -1,0 +1,50 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gazebo_msgs/msg/ODEPhysics.msg
+// generated code does not contain a copyright notice
+
+
+module gazebo_msgs {
+  module msg {
+    struct ODEPhysics {
+      @verbatim (language="comment", text=
+        "enable auto disabling of bodies, default false")
+      boolean auto_disable_bodies;
+
+      @verbatim (language="comment", text=
+        "preconditioning inner iterations when uisng projected Gauss Seidel")
+      uint32 sor_pgs_precon_iters;
+
+      @verbatim (language="comment", text=
+        "inner iterations when uisng projected Gauss Seidel")
+      uint32 sor_pgs_iters;
+
+      @verbatim (language="comment", text=
+        "relaxation parameter when using projected Gauss Seidel, 1 = no relaxation")
+      double sor_pgs_w;
+
+      @verbatim (language="comment", text=
+        "rms error tolerance before stopping inner iterations")
+      double sor_pgs_rms_error_tol;
+
+      @verbatim (language="comment", text=
+        "contact \"dead-band\" width")
+      double contact_surface_layer;
+
+      @verbatim (language="comment", text=
+        "contact maximum correction velocity")
+      double contact_max_correcting_vel;
+
+      @verbatim (language="comment", text=
+        "global constraint force mixing")
+      double cfm;
+
+      @verbatim (language="comment", text=
+        "global error reduction parameter")
+      double erp;
+
+      @verbatim (language="comment", text=
+        "maximum contact joints between two geoms")
+      uint32 max_contacts;
+    };
+  };
+};

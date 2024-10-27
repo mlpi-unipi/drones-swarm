@@ -1,0 +1,17 @@
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::sendVelocity(const Vector2d&, float)[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:404:43:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdouble (*)(const char*) noexcept[m[K’ to ‘[01m[Kfloat[m[K’ in initialization
+  404 | y = std::array<float, 3>{1,[01;31m[Knan[m[K,nan};
+      |                            [01;31m[K^~~[m[K
+      |                            [01;31m[K|[m[K
+      |                            [01;31m[Kdouble (*)(const char*) noexcept[m[K
+
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:404:47:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kdouble (*)(const char*) noexcept[m[K’ to ‘[01m[Kfloat[m[K’ in initialization
+  404 | y = std::array<float, 3>{1,nan,[01;31m[Knan[m[K};
+      |                                [01;31m[K^~~[m[K
+      |                                [01;31m[K|[m[K
+      |                                [01;31m[Kdouble (*)(const char*) noexcept[m[K
+
+gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

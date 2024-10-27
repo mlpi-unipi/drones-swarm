@@ -1,0 +1,141 @@
+[0.000000] (-) TimerEvent: {}
+[0.000305] (-) JobUnselected: {'identifier': 'base_station'}
+[0.000553] (-) JobUnselected: {'identifier': 'boids'}
+[0.000583] (-) JobUnselected: {'identifier': 'fdds_messages'}
+[0.000591] (-) JobUnselected: {'identifier': 'flocking'}
+[0.000598] (-) JobUnselected: {'identifier': 'iris-logger'}
+[0.000604] (-) JobUnselected: {'identifier': 'logging'}
+[0.000610] (-) JobUnselected: {'identifier': 'obstacle_avoidance'}
+[0.000617] (-) JobUnselected: {'identifier': 'parameters'}
+[0.000623] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000629] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.000635] (-) JobUnselected: {'identifier': 'stigmergy'}
+[0.000642] (-) JobUnselected: {'identifier': 'stigmergy_map'}
+[0.000648] (-) JobUnselected: {'identifier': 'target_detection'}
+[0.000673] (drone) JobQueued: {'identifier': 'drone', 'dependencies': OrderedDict()}
+[0.000684] (drone) JobStarted: {'identifier': 'drone'}
+[0.005114] (drone) JobProgress: {'identifier': 'drone', 'progress': 'cmake'}
+[0.005368] (drone) JobProgress: {'identifier': 'drone', 'progress': 'build'}
+[0.006045] (drone) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/drone', '--', '-j24', '-l24'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/fourdds/ros2_ws/install/uuv_boids/lib:/home/fourdds/ros2_ws/install/target_detection/lib:/home/fourdds/ros2_ws/install/stigmergy/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/obstacle_avoidance/lib:/home/fourdds/ros2_ws/install/parameters/lib:/home/fourdds/ros2_ws/install/fdds_messages/lib:/home/fourdds/ws/install/image_geometry/lib:/home/fourdds/ws/install/gazebo_plugins/lib:/home/fourdds/ws/install/gazebo_ros/lib:/home/fourdds/ws/install/gazebo_msgs/lib:/home/fourdds/ws/install/cv_bridge/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/fourdds/ros2_ws/install:/home/fourdds/ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'PC-UNIVERSITA'), ('WSL_INTEROP', '/run/WSL/349_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('COM_OBL_RC_ACT', '1'), ('WT_SESSION', '43c32559-a135-4993-bf3d-f566024fc4a5'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/opencv_tests:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/fourdds/ros2_ws/install/uuv_boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/stigmergy/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_ros_com/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/boids/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ros2_ws/install/fdds_messages/local/lib/python3.10/dist-packages:/home/fourdds/ws/build/opencv_tests:/home/fourdds/ws/install/opencv_tests/lib/python3.10/site-packages:/home/fourdds/ws/install/image_geometry/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_ros/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/gazebo_msgs/local/lib/python3.10/dist-packages:/home/fourdds/ws/install/cv_bridge/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/fourdds/ros2_ws/install/uuv_boids:/home/fourdds/ros2_ws/install/target_detection:/home/fourdds/ros2_ws/install/stigmergy:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/iris-logger:/home/fourdds/ros2_ws/install/boids:/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/obstacle_avoidance:/home/fourdds/ros2_ws/install/logging:/home/fourdds/ros2_ws/install/parameters:/home/fourdds/ros2_ws/install/fdds_messages:/home/fourdds/ros2_ws/install/base_station:/home/fourdds/ws/install/vision_opencv:/home/fourdds/ws/install/image_geometry:/home/fourdds/ws/install/gazebo_ros_pkgs:/home/fourdds/ws/install/gazebo_plugins:/home/fourdds/ws/install/gazebo_ros:/home/fourdds/ws/install/gazebo_msgs:/home/fourdds/ws/install/gazebo_dev:/home/fourdds/ws/install/cv_bridge:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.029227] (drone) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Drone\x1b[0m\n'}
+[0.040713] (drone) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o\x1b[0m\n'}
+[0.041176] (drone) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/main.cpp.o\x1b[0m\n'}
+[0.100044] (-) TimerEvent: {}
+[0.200409] (-) TimerEvent: {}
+[0.300724] (-) TimerEvent: {}
+[0.400997] (-) TimerEvent: {}
+[0.501275] (-) TimerEvent: {}
+[0.601537] (-) TimerEvent: {}
+[0.701802] (-) TimerEvent: {}
+[0.802051] (-) TimerEvent: {}
+[0.902312] (-) TimerEvent: {}
+[1.002581] (-) TimerEvent: {}
+[1.102911] (-) TimerEvent: {}
+[1.203310] (-) TimerEvent: {}
+[1.303585] (-) TimerEvent: {}
+[1.403859] (-) TimerEvent: {}
+[1.504118] (-) TimerEvent: {}
+[1.604391] (-) TimerEvent: {}
+[1.704665] (-) TimerEvent: {}
+[1.804945] (-) TimerEvent: {}
+[1.905237] (-) TimerEvent: {}
+[2.005506] (-) TimerEvent: {}
+[2.105784] (-) TimerEvent: {}
+[2.206070] (-) TimerEvent: {}
+[2.247855] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid fdds::Drone::flockingLogic()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.248007] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:181:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((fdds::Drone*)this)->fdds::Drone::yawRadians\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Rotation2D<float>::Scalar\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.248046] (drone) StderrLine: {'line': b'  181 |     Eigen::Rotation2Df rotation_matrix{\x1b[01;35m\x1b[KyawRadians\x1b[m\x1b[K};\n'}
+[2.248074] (drone) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.306188] (-) TimerEvent: {}
+[2.406470] (-) TimerEvent: {}
+[2.506738] (-) TimerEvent: {}
+[2.607013] (-) TimerEvent: {}
+[2.666005] (drone) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:164\x1b[m\x1b[K,\n'}
+[2.666139] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[2.666171] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3\x1b[m\x1b[K,\n'}
+[2.666196] (drone) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1\x1b[m\x1b[K:\n'}
+[2.666219] (drone) StderrLine: {'line': b'/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<double, 2, 1>; Src = Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>, const Eigen::Matrix<float, 2, 1>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, const Eigen::Matrix<float, 2, 1> > >; Func = Eigen::internal::sub_assign_op<double, float>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.666245] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:858:27:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment(Dst&, const Src&, const Func&, typename Eigen::internal::enable_if<(! Eigen::internal::evaluator_assume_aliasing<Src>::value), void*>::type) [with Dst = Eigen::Matrix<double, 2, 1>; Src = Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>, const Eigen::Matrix<float, 2, 1>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, const Eigen::Matrix<float, 2, 1> > >; Func = Eigen::internal::sub_assign_op<double, float>; typename Eigen::internal::enable_if<(! Eigen::internal::evaluator_assume_aliasing<Src>::value), void*>::type = void*; typename Eigen::internal::evaluator_traits<SrcXprType>::Shape = Eigen::DenseShape]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.666280] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:164:18:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KDerived& Eigen::MatrixBase<Derived>::operator-=(const Eigen::MatrixBase<OtherDerived>&) [with OtherDerived = Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>, const Eigen::Matrix<float, 2, 1>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, const Eigen::Matrix<float, 2, 1> > >; Derived = Eigen::Matrix<double, 2, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.666306] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:184:40:\x1b[m\x1b[K   required from here\n'}
+[2.666328] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:851:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: YOU_MIXED_DIFFERENT_NUMERIC_TYPES__YOU_NEED_TO_USE_THE_CAST_METHOD_OF_MATRIXBASE_TO_CAST_NUMERIC_TYPES_EXPLICITLY\n'}
+[2.666351] (drone) StderrLine: {'line': b'  851 |   EIGEN_STATIC_ASSERT(\x1b[01;31m\x1b[K(Eigen::internal::has_ReturnType<ScalarBinaryOpTraits<LHS, RHS,BINOP> >::value)\x1b[m\x1b[K, \\\n'}
+[2.666373] (drone) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[2.666395] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.666421] (drone) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[2.666443] (drone) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[2.666466] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:888:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_CHECK_BINARY_COMPATIBILIY\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.666490] (drone) StderrLine: {'line': b'  888 |   \x1b[01;36m\x1b[KEIGEN_CHECK_BINARY_COMPATIBILIY\x1b[m\x1b[K(Func,typename ActualDstTypeCleaned::Scalar,typename Src::Scalar);\n'}
+[2.666512] (drone) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.668089] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:851:96:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<double, float, Eigen::internal::sub_assign_op<double, float> > >::value\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[2.668212] (drone) StderrLine: {'line': b'  851 |   EIGEN_STATIC_ASSERT(\x1b[01;36m\x1b[K(Eigen::internal::has_ReturnType<ScalarBinaryOpTraits<LHS, RHS,BINOP> >::value)\x1b[m\x1b[K, \\\n'}
+[2.668267] (drone) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[2.668296] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.668324] (drone) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[2.668348] (drone) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[2.668373] (drone) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:888:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_CHECK_BINARY_COMPATIBILIY\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.668399] (drone) StderrLine: {'line': b'  888 |   \x1b[01;36m\x1b[KEIGEN_CHECK_BINARY_COMPATIBILIY\x1b[m\x1b[K(Func,typename ActualDstTypeCleaned::Scalar,typename Src::Scalar);\n'}
+[2.668421] (drone) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.707115] (-) TimerEvent: {}
+[2.807379] (-) TimerEvent: {}
+[2.907655] (-) TimerEvent: {}
+[3.007923] (-) TimerEvent: {}
+[3.108187] (-) TimerEvent: {}
+[3.208465] (-) TimerEvent: {}
+[3.308808] (-) TimerEvent: {}
+[3.409104] (-) TimerEvent: {}
+[3.509425] (-) TimerEvent: {}
+[3.609697] (-) TimerEvent: {}
+[3.709967] (-) TimerEvent: {}
+[3.810252] (-) TimerEvent: {}
+[3.910571] (-) TimerEvent: {}
+[4.010848] (-) TimerEvent: {}
+[4.111143] (-) TimerEvent: {}
+[4.211416] (-) TimerEvent: {}
+[4.311708] (-) TimerEvent: {}
+[4.412004] (-) TimerEvent: {}
+[4.512270] (-) TimerEvent: {}
+[4.612541] (-) TimerEvent: {}
+[4.712806] (-) TimerEvent: {}
+[4.813094] (-) TimerEvent: {}
+[4.913357] (-) TimerEvent: {}
+[5.013625] (-) TimerEvent: {}
+[5.113942] (-) TimerEvent: {}
+[5.214224] (-) TimerEvent: {}
+[5.314495] (-) TimerEvent: {}
+[5.414759] (-) TimerEvent: {}
+[5.515055] (-) TimerEvent: {}
+[5.615396] (-) TimerEvent: {}
+[5.715672] (-) TimerEvent: {}
+[5.815931] (-) TimerEvent: {}
+[5.916369] (-) TimerEvent: {}
+[6.016639] (-) TimerEvent: {}
+[6.116926] (-) TimerEvent: {}
+[6.217218] (-) TimerEvent: {}
+[6.317541] (-) TimerEvent: {}
+[6.417834] (-) TimerEvent: {}
+[6.518139] (-) TimerEvent: {}
+[6.618475] (-) TimerEvent: {}
+[6.718756] (-) TimerEvent: {}
+[6.775098] (drone) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1\n'}
+[6.775230] (drone) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[6.818865] (-) TimerEvent: {}
+[6.919141] (-) TimerEvent: {}
+[7.019385] (-) TimerEvent: {}
+[7.119676] (-) TimerEvent: {}
+[7.219937] (-) TimerEvent: {}
+[7.320197] (-) TimerEvent: {}
+[7.420455] (-) TimerEvent: {}
+[7.520759] (-) TimerEvent: {}
+[7.621092] (-) TimerEvent: {}
+[7.721376] (-) TimerEvent: {}
+[7.821700] (-) TimerEvent: {}
+[7.922035] (-) TimerEvent: {}
+[8.022287] (-) TimerEvent: {}
+[8.122550] (-) TimerEvent: {}
+[8.222842] (-) TimerEvent: {}
+[8.281098] (drone) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2\n'}
+[8.281383] (drone) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[8.282436] (drone) CommandEnded: {'returncode': 2}
+[8.302262] (drone) JobEnded: {'identifier': 'drone', 'rc': 2}
+[8.312595] (-) EventReactorShutdown: {}

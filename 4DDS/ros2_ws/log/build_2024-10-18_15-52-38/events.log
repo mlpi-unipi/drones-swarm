@@ -1,0 +1,296 @@
+[0.000000] (-) TimerEvent: {}
+[0.001246] (-) JobUnselected: {'identifier': 'analysis'}
+[0.001645] (-) JobUnselected: {'identifier': 'base_station'}
+[0.001962] (-) JobUnselected: {'identifier': 'fdds_messages'}
+[0.002104] (-) JobUnselected: {'identifier': 'obstacle_avoidance'}
+[0.002201] (-) JobUnselected: {'identifier': 'parameters'}
+[0.002294] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.002387] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.002486] (-) JobUnselected: {'identifier': 'stigmergy'}
+[0.002577] (-) JobUnselected: {'identifier': 'stigmergy_map'}
+[0.002624] (-) JobUnselected: {'identifier': 'target_detection'}
+[0.002678] (drone) JobQueued: {'identifier': 'drone', 'dependencies': OrderedDict()}
+[0.002735] (drone) JobStarted: {'identifier': 'drone'}
+[0.009909] (drone) JobProgress: {'identifier': 'drone', 'progress': 'cmake'}
+[0.010826] (drone) JobProgress: {'identifier': 'drone', 'progress': 'build'}
+[0.011753] (drone) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fourdds/ros2_ws/build/drone', '--', '-j16', '-l16'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'FEDE-LAPTOP'), ('WSL_INTEROP', '/run/WSL/381_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.057087] (drone) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target Drone\x1b[0m\n'}
+[0.083793] (drone) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/Drone.dir/src/Drone.cpp.o\x1b[0m\n'}
+[0.098738] (-) TimerEvent: {}
+[0.199297] (-) TimerEvent: {}
+[0.299845] (-) TimerEvent: {}
+[0.400404] (-) TimerEvent: {}
+[0.500932] (-) TimerEvent: {}
+[0.601411] (-) TimerEvent: {}
+[0.701884] (-) TimerEvent: {}
+[0.802377] (-) TimerEvent: {}
+[0.902931] (-) TimerEvent: {}
+[1.003498] (-) TimerEvent: {}
+[1.103946] (-) TimerEvent: {}
+[1.204456] (-) TimerEvent: {}
+[1.305079] (-) TimerEvent: {}
+[1.405633] (-) TimerEvent: {}
+[1.506179] (-) TimerEvent: {}
+[1.606718] (-) TimerEvent: {}
+[1.707338] (-) TimerEvent: {}
+[1.807980] (-) TimerEvent: {}
+[1.908459] (-) TimerEvent: {}
+[2.009003] (-) TimerEvent: {}
+[2.109593] (-) TimerEvent: {}
+[2.210100] (-) TimerEvent: {}
+[2.310625] (-) TimerEvent: {}
+[2.411174] (-) TimerEvent: {}
+[2.511815] (-) TimerEvent: {}
+[2.612502] (-) TimerEvent: {}
+[2.713147] (-) TimerEvent: {}
+[2.813786] (-) TimerEvent: {}
+[2.914410] (-) TimerEvent: {}
+[3.015019] (-) TimerEvent: {}
+[3.115596] (-) TimerEvent: {}
+[3.216248] (-) TimerEvent: {}
+[3.316847] (-) TimerEvent: {}
+[3.417413] (-) TimerEvent: {}
+[3.518079] (-) TimerEvent: {}
+[3.618746] (-) TimerEvent: {}
+[3.719346] (-) TimerEvent: {}
+[3.819925] (-) TimerEvent: {}
+[3.920375] (-) TimerEvent: {}
+[4.021023] (-) TimerEvent: {}
+[4.121678] (-) TimerEvent: {}
+[4.222379] (-) TimerEvent: {}
+[4.322989] (-) TimerEvent: {}
+[4.423728] (-) TimerEvent: {}
+[4.524254] (-) TimerEvent: {}
+[4.624712] (-) TimerEvent: {}
+[4.725218] (-) TimerEvent: {}
+[4.825750] (-) TimerEvent: {}
+[4.926284] (-) TimerEvent: {}
+[5.026904] (-) TimerEvent: {}
+[5.127416] (-) TimerEvent: {}
+[5.227946] (-) TimerEvent: {}
+[5.328509] (-) TimerEvent: {}
+[5.429076] (-) TimerEvent: {}
+[5.529490] (-) TimerEvent: {}
+[5.630042] (-) TimerEvent: {}
+[5.730643] (-) TimerEvent: {}
+[5.831172] (-) TimerEvent: {}
+[5.931682] (-) TimerEvent: {}
+[6.032201] (-) TimerEvent: {}
+[6.132807] (-) TimerEvent: {}
+[6.233334] (-) TimerEvent: {}
+[6.333854] (-) TimerEvent: {}
+[6.434363] (-) TimerEvent: {}
+[6.534941] (-) TimerEvent: {}
+[6.635556] (-) TimerEvent: {}
+[6.736125] (-) TimerEvent: {}
+[6.836631] (-) TimerEvent: {}
+[6.937087] (-) TimerEvent: {}
+[7.037705] (-) TimerEvent: {}
+[7.138236] (-) TimerEvent: {}
+[7.238764] (-) TimerEvent: {}
+[7.339321] (-) TimerEvent: {}
+[7.439846] (-) TimerEvent: {}
+[7.540805] (-) TimerEvent: {}
+[7.641314] (-) TimerEvent: {}
+[7.741825] (-) TimerEvent: {}
+[7.842332] (-) TimerEvent: {}
+[7.943294] (-) TimerEvent: {}
+[8.043859] (-) TimerEvent: {}
+[8.144590] (-) TimerEvent: {}
+[8.245182] (-) TimerEvent: {}
+[8.345903] (-) TimerEvent: {}
+[8.446414] (-) TimerEvent: {}
+[8.546819] (-) TimerEvent: {}
+[8.647252] (-) TimerEvent: {}
+[8.747760] (-) TimerEvent: {}
+[8.848382] (-) TimerEvent: {}
+[8.949006] (-) TimerEvent: {}
+[9.049443] (-) TimerEvent: {}
+[9.149961] (-) TimerEvent: {}
+[9.250694] (-) TimerEvent: {}
+[9.351226] (-) TimerEvent: {}
+[9.451798] (-) TimerEvent: {}
+[9.552446] (-) TimerEvent: {}
+[9.653023] (-) TimerEvent: {}
+[9.753547] (-) TimerEvent: {}
+[9.853966] (-) TimerEvent: {}
+[9.954440] (-) TimerEvent: {}
+[10.055117] (-) TimerEvent: {}
+[10.155727] (-) TimerEvent: {}
+[10.256415] (-) TimerEvent: {}
+[10.357391] (-) TimerEvent: {}
+[10.459454] (-) TimerEvent: {}
+[10.561579] (-) TimerEvent: {}
+[10.663905] (-) TimerEvent: {}
+[10.765717] (-) TimerEvent: {}
+[10.867367] (-) TimerEvent: {}
+[10.968566] (-) TimerEvent: {}
+[11.070152] (-) TimerEvent: {}
+[11.171723] (-) TimerEvent: {}
+[11.273384] (-) TimerEvent: {}
+[11.374058] (-) TimerEvent: {}
+[11.475449] (-) TimerEvent: {}
+[11.577064] (-) TimerEvent: {}
+[11.678830] (-) TimerEvent: {}
+[11.780575] (-) TimerEvent: {}
+[11.882233] (-) TimerEvent: {}
+[11.983606] (-) TimerEvent: {}
+[12.085566] (-) TimerEvent: {}
+[12.187136] (-) TimerEvent: {}
+[12.288307] (-) TimerEvent: {}
+[12.389985] (-) TimerEvent: {}
+[12.491223] (-) TimerEvent: {}
+[12.592923] (-) TimerEvent: {}
+[12.693588] (-) TimerEvent: {}
+[12.794102] (-) TimerEvent: {}
+[12.895520] (-) TimerEvent: {}
+[12.996593] (-) TimerEvent: {}
+[13.098319] (-) TimerEvent: {}
+[13.199396] (-) TimerEvent: {}
+[13.301103] (-) TimerEvent: {}
+[13.402780] (-) TimerEvent: {}
+[13.504005] (-) TimerEvent: {}
+[13.605757] (-) TimerEvent: {}
+[13.707473] (-) TimerEvent: {}
+[13.808492] (-) TimerEvent: {}
+[13.910202] (-) TimerEvent: {}
+[14.011182] (-) TimerEvent: {}
+[14.112781] (-) TimerEvent: {}
+[14.213982] (-) TimerEvent: {}
+[14.314490] (-) TimerEvent: {}
+[14.415017] (-) TimerEvent: {}
+[14.515549] (-) TimerEvent: {}
+[14.616070] (-) TimerEvent: {}
+[14.716726] (-) TimerEvent: {}
+[14.817223] (-) TimerEvent: {}
+[14.918069] (-) TimerEvent: {}
+[15.018733] (-) TimerEvent: {}
+[15.119241] (-) TimerEvent: {}
+[15.219785] (-) TimerEvent: {}
+[15.320348] (-) TimerEvent: {}
+[15.420841] (-) TimerEvent: {}
+[15.521519] (-) TimerEvent: {}
+[15.622026] (-) TimerEvent: {}
+[15.722568] (-) TimerEvent: {}
+[15.823253] (-) TimerEvent: {}
+[15.923710] (-) TimerEvent: {}
+[16.024167] (-) TimerEvent: {}
+[16.124687] (-) TimerEvent: {}
+[16.225247] (-) TimerEvent: {}
+[16.326107] (-) TimerEvent: {}
+[16.426587] (-) TimerEvent: {}
+[16.527037] (-) TimerEvent: {}
+[16.627680] (-) TimerEvent: {}
+[16.728211] (-) TimerEvent: {}
+[16.828712] (-) TimerEvent: {}
+[16.929353] (-) TimerEvent: {}
+[17.029979] (-) TimerEvent: {}
+[17.130676] (-) TimerEvent: {}
+[17.231317] (-) TimerEvent: {}
+[17.331995] (-) TimerEvent: {}
+[17.432621] (-) TimerEvent: {}
+[17.533112] (-) TimerEvent: {}
+[17.633534] (-) TimerEvent: {}
+[17.733960] (-) TimerEvent: {}
+[17.834605] (-) TimerEvent: {}
+[17.935057] (-) TimerEvent: {}
+[18.035618] (-) TimerEvent: {}
+[18.136235] (-) TimerEvent: {}
+[18.236744] (-) TimerEvent: {}
+[18.337317] (-) TimerEvent: {}
+[18.437849] (-) TimerEvent: {}
+[18.538429] (-) TimerEvent: {}
+[18.639063] (-) TimerEvent: {}
+[18.739603] (-) TimerEvent: {}
+[18.840115] (-) TimerEvent: {}
+[18.940569] (-) TimerEvent: {}
+[19.041084] (-) TimerEvent: {}
+[19.141581] (-) TimerEvent: {}
+[19.242099] (-) TimerEvent: {}
+[19.342660] (-) TimerEvent: {}
+[19.443423] (-) TimerEvent: {}
+[19.543961] (-) TimerEvent: {}
+[19.644521] (-) TimerEvent: {}
+[19.744977] (-) TimerEvent: {}
+[19.845530] (-) TimerEvent: {}
+[19.946127] (-) TimerEvent: {}
+[20.046782] (-) TimerEvent: {}
+[20.147426] (-) TimerEvent: {}
+[20.247894] (-) TimerEvent: {}
+[20.348453] (-) TimerEvent: {}
+[20.449100] (-) TimerEvent: {}
+[20.549740] (-) TimerEvent: {}
+[20.650350] (-) TimerEvent: {}
+[20.750904] (-) TimerEvent: {}
+[20.851448] (-) TimerEvent: {}
+[20.952398] (-) TimerEvent: {}
+[21.053132] (-) TimerEvent: {}
+[21.153777] (-) TimerEvent: {}
+[21.254297] (-) TimerEvent: {}
+[21.354757] (-) TimerEvent: {}
+[21.455379] (-) TimerEvent: {}
+[21.555963] (-) TimerEvent: {}
+[21.656321] (-) TimerEvent: {}
+[21.756945] (-) TimerEvent: {}
+[21.857510] (-) TimerEvent: {}
+[21.958108] (-) TimerEvent: {}
+[22.058787] (-) TimerEvent: {}
+[22.159354] (-) TimerEvent: {}
+[22.259981] (-) TimerEvent: {}
+[22.360457] (-) TimerEvent: {}
+[22.461102] (-) TimerEvent: {}
+[22.561932] (-) TimerEvent: {}
+[22.662540] (-) TimerEvent: {}
+[22.763163] (-) TimerEvent: {}
+[22.863708] (-) TimerEvent: {}
+[22.964212] (-) TimerEvent: {}
+[23.064724] (-) TimerEvent: {}
+[23.165239] (-) TimerEvent: {}
+[23.265785] (-) TimerEvent: {}
+[23.366453] (-) TimerEvent: {}
+[23.467140] (-) TimerEvent: {}
+[23.567746] (-) TimerEvent: {}
+[23.668411] (-) TimerEvent: {}
+[23.768896] (-) TimerEvent: {}
+[23.869377] (-) TimerEvent: {}
+[23.969830] (-) TimerEvent: {}
+[24.070399] (-) TimerEvent: {}
+[24.171018] (-) TimerEvent: {}
+[24.271533] (-) TimerEvent: {}
+[24.372076] (-) TimerEvent: {}
+[24.472544] (-) TimerEvent: {}
+[24.573071] (-) TimerEvent: {}
+[24.673459] (-) TimerEvent: {}
+[24.774140] (-) TimerEvent: {}
+[24.790364] (drone) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable Drone\x1b[0m\n'}
+[24.874299] (-) TimerEvent: {}
+[24.974815] (-) TimerEvent: {}
+[25.075399] (-) TimerEvent: {}
+[25.176086] (-) TimerEvent: {}
+[25.276628] (-) TimerEvent: {}
+[25.346831] (drone) StdoutLine: {'line': b'[100%] Built target Drone\n'}
+[25.358328] (drone) CommandEnded: {'returncode': 0}
+[25.376731] (-) TimerEvent: {}
+[25.389767] (drone) JobProgress: {'identifier': 'drone', 'progress': 'install'}
+[25.398589] (drone) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fourdds/ros2_ws/build/drone'], 'cwd': '/home/fourdds/ros2_ws/build/drone', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/fourdds'), ('USER', 'fourdds'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/fourdds'), ('OLDPWD', '/home/fourdds'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', '4DDS'), ('DEBUGINFOD_URLS', ''), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'fourdds'), ('NAME', 'FEDE-LAPTOP'), ('WSL_INTEROP', '/run/WSL/381_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/fourdds/.cargo/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/nvim-linux64/bin:/home/fourdds/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/c/Users/fedec/AppData/Local/Programs/Microsoft VS Code/bin'), ('COM_OBL_RC_ACT', '1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('UXRCE_DDS_SYNCT', '0'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/fourdds/ros2_ws/build/drone'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', ''), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[25.405400] (drone) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[25.405824] (drone) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[25.406207] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/lib/drone/Drone\n'}
+[25.406509] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/package_run_dependencies/drone\n'}
+[25.406774] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/parent_prefix_path/drone\n'}
+[25.407047] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/ament_prefix_path.sh\n'}
+[25.407306] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/ament_prefix_path.dsv\n'}
+[25.407913] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/path.sh\n'}
+[25.407994] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/environment/path.dsv\n'}
+[25.408044] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.bash\n'}
+[25.408090] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.sh\n'}
+[25.408136] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.zsh\n'}
+[25.408184] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/local_setup.dsv\n'}
+[25.408229] (drone) StdoutLine: {'line': b'-- Symlinking: /home/fourdds/ros2_ws/install/drone/share/drone/package.dsv\n'}
+[25.415870] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/ament_index/resource_index/packages/drone\n'}
+[25.416321] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/cmake/droneConfig.cmake\n'}
+[25.416470] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/cmake/droneConfig-version.cmake\n'}
+[25.416522] (drone) StdoutLine: {'line': b'-- Up-to-date symlink: /home/fourdds/ros2_ws/install/drone/share/drone/package.xml\n'}
+[25.420446] (drone) CommandEnded: {'returncode': 0}
+[25.473815] (drone) JobEnded: {'identifier': 'drone', 'rc': 0}
+[25.475949] (-) EventReactorShutdown: {}

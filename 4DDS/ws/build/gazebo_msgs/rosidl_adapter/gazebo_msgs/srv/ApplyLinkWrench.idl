@@ -1,0 +1,61 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/ApplyLinkWrench.srv
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Duration.idl"
+#include "builtin_interfaces/msg/Time.idl"
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Wrench.idl"
+
+module gazebo_msgs {
+  module srv {
+    @verbatim (language="comment", text=
+      "Apply Wrench to Gazebo Link." "\n"
+      "via the callback mechanism" "\n"
+      "all Gazebo operations are made in world frame")
+    struct ApplyLinkWrench_Request {
+      @verbatim (language="comment", text=
+        "Gazebo link to apply wrench (linear force and torque)" "\n"
+        "wrench is applied in the gazebo world by default" "\n"
+        "link names are prefixed by model name, e.g. pr2::base_link")
+      string link_name;
+
+      @verbatim (language="comment", text=
+        "wrench is defined in the reference frame of this entity" "\n"
+        "use inertial frame if left empty" "\n"
+        "frame names are links prefixed by model name, e.g. pr2::base_link")
+      string reference_frame;
+
+      @verbatim (language="comment", text=
+        "wrench is defined at this location in the reference frame")
+      geometry_msgs::msg::Point reference_point;
+
+      @verbatim (language="comment", text=
+        "wrench applied to the origin of the link")
+      geometry_msgs::msg::Wrench wrench;
+
+      @verbatim (language="comment", text=
+        "(optional) wrench application start time (seconds)" "\n"
+        "if start_time is not specified, or" "\n"
+        "start_time < current time, start as soon as possible")
+      builtin_interfaces::msg::Time start_time;
+
+      @verbatim (language="comment", text=
+        "optional duration of wrench application time (seconds)" "\n"
+        "if duration < 0, apply wrench continuously without end" "\n"
+        "if duration = 0, do nothing" "\n"
+        "if duration < step size, apply wrench" "\n"
+        "for one step size")
+      builtin_interfaces::msg::Duration duration;
+    };
+    struct ApplyLinkWrench_Response {
+      @verbatim (language="comment", text=
+        "return true if set wrench successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

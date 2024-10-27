@@ -1,0 +1,32 @@
+[0.006s] Invoking command in '/home/fourdds/ros2_ws/build/drone': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j24 -l24
+[0.029s] [35m[1mConsolidate compiler generated dependencies of target Drone[0m
+[0.040s] [ 33%] [32mBuilding CXX object CMakeFiles/Drone.dir/src/main.cpp.o[0m
+[2.694s] In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:33[m[K,
+[2.694s]                  from [01m[K/usr/include/c++/11/bits/allocator.h:46[m[K,
+[2.694s]                  from [01m[K/usr/include/c++/11/memory:64[m[K,
+[2.695s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[2.695s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:3[m[K,
+[2.695s]                  from [01m[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:1[m[K:
+[2.695s] /usr/include/c++/11/ext/new_allocator.h: In instantiation of ‘[01m[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = fdds::Drone; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone][m[K’:
+[2.695s] [01m[K/usr/include/c++/11/bits/alloc_traits.h:516:17:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<_Tp1> >::construct(std::allocator_traits<std::allocator<_Tp1> >::allocator_type&, _Up*, _Args&& ...) [with _Up = fdds::Drone; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone; std::allocator_traits<std::allocator<_Tp1> >::allocator_type = std::allocator<fdds::Drone>][m[K’
+[2.695s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:519:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone; _Alloc = std::allocator<fdds::Drone>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[2.695s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:650:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = fdds::Drone; _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[2.695s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1342:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[2.695s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:409:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}; _Tp = fdds::Drone][m[K’
+[2.695s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:862:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = fdds::Drone; _Alloc = std::allocator<fdds::Drone>; _Args = {int&, fdds::Parameters&}][m[K’
+[2.695s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:878:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = fdds::Drone; _Args = {int&, fdds::Parameters&}][m[K’
+[2.695s] [01m[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:27:50:[m[K   required from here
+[2.695s] [01m[K/usr/include/c++/11/ext/new_allocator.h:162:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kfdds::Drone::Drone(int&, fdds::Parameters&)[m[K’
+[2.695s]   162 |         { [01;31m[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)[m[K; }
+[2.695s]       |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.695s] In file included from [01m[K/home/fourdds/ros2_ws/src/drone/src/main.cpp:1[m[K:
+[2.695s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:43:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kfdds::Drone::Drone(int, const Options&)[m[K’
+[2.695s]    43 |         [01;36m[KDrone[m[K(const int id,
+[2.695s]       |         [01;36m[K^~~~~[m[K
+[2.695s] [01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:44:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kfdds::Parameters[m[K’ to ‘[01m[Kconst Options&[m[K’
+[2.695s]    44 |                 [01;36m[Kconst Options& options_[m[K) : Node("UAV_" + std::to_string(id)),              // initialize ROS2 Node
+[2.695s]       |                 [01;36m[K~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[4.014s] gmake[2]: *** [CMakeFiles/Drone.dir/build.make:90: CMakeFiles/Drone.dir/src/main.cpp.o] Error 1
+[4.014s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+[4.014s] gmake: *** [Makefile:146: all] Error 2
+[4.015s] Invoked command in '/home/fourdds/ros2_ws/build/drone' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/fourdds/ws/install/opencv_tests:/opt/ros/humble /usr/bin/cmake --build /home/fourdds/ros2_ws/build/drone -- -j24 -l24

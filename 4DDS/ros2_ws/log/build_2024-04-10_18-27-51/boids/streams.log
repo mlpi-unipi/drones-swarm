@@ -1,0 +1,19 @@
+[0.007s] Invoking command in '/home/fourdds/ros2_ws/build/boids': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24
+[0.027s] [35m[1mConsolidate compiler generated dependencies of target uavs_spawner[0m
+[0.034s] [ 40%] Built target frame_transforms
+[0.036s] [ 60%] [32mBuilding CXX object CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o[0m
+[0.036s] [ 80%] [32mBuilding CXX object CMakeFiles/uavs_spawner.dir/src/main.cpp.o[0m
+[1.707s] [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:[m[K In member function ‘[01m[Kvoid uav_node::attitude_subscription_callback(std::shared_ptr<const px4_msgs::msg::VehicleAttitude_<std::allocator<void> > >)[m[K’:
+[1.707s] [01m[K/home/fourdds/ros2_ws/src/boids/src/uav_node.cpp:173:92:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.708s]   173 | void uav_node::attitude_subscription_callback([01;35m[Kconst std::shared_ptr<const VehicleAttitude> msg[m[K)
+[1.708s]       |                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[8.422s] [100%] [32m[1mLinking CXX executable uavs_spawner[0m
+[8.470s] /usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/main.cpp.o: in function `geo::gps_to_ecef(double, double, double, double*, double*)':
+[8.474s] main.cpp:(.text+0x0): multiple definition of `geo::gps_to_ecef(double, double, double, double*, double*)'; CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x69): first defined here
+[8.475s] /usr/bin/ld: CMakeFiles/uavs_spawner.dir/src/main.cpp.o: in function `geo::ecef_to_gps(double, double, double, double*, double*)':
+[8.475s] main.cpp:(.text+0x14a): multiple definition of `geo::ecef_to_gps(double, double, double, double*, double*)'; CMakeFiles/uavs_spawner.dir/src/uav_node.cpp.o:uav_node.cpp:(.text+0x1b3): first defined here
+[8.804s] collect2: error: ld returned 1 exit status
+[8.805s] gmake[2]: *** [CMakeFiles/uavs_spawner.dir/build.make:175: uavs_spawner] Error 1
+[8.805s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/uavs_spawner.dir/all] Error 2
+[8.805s] gmake: *** [Makefile:146: all] Error 2
+[8.807s] Invoked command in '/home/fourdds/ros2_ws/build/boids' returned '2': CMAKE_PREFIX_PATH=/home/fourdds/ros2_ws/install/px4_msgs:/home/fourdds/ros2_ws/install/px4_ros_com:/home/fourdds/ros2_ws/install/boids:/opt/ros/humble LD_LIBRARY_PATH=/home/fourdds/ros2_ws/install/px4_msgs/lib:/home/fourdds/ros2_ws/install/px4_ros_com/lib:/home/fourdds/ros2_ws/install/boids/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/fourdds/ros2_ws/build/boids -- -j24 -l24

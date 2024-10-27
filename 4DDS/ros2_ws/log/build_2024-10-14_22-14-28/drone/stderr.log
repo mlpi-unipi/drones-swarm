@@ -1,0 +1,17 @@
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:399:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid fdds::Drone::sendGotoDepth(const Vector2d&)[m[K’
+  399 | void [01;31m[Kfdds[m[K::Drone::sendGotoDepth(const Eigen::Vector2d& location)
+      |      [01;31m[K^~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:399:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid fdds::Drone::sendGotoDepth(const Vector2d&)[m[K’
+In file included from [01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:1[m[K:
+[01m[K/home/fourdds/ros2_ws/src/drone/include/drone/Drone.hpp:34:11:[m[K [01;36m[Knote: [m[K‘[01m[Kclass fdds::Drone[m[K’ defined here
+   34 |     class [01;36m[KDrone[m[K : public rclcpp::Node
+      |           [01;36m[K^~~~~[m[K
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:[m[K In member function ‘[01m[Kvoid fdds::Drone::requestDepth()[m[K’:
+[01m[K/home/fourdds/ros2_ws/src/drone/src/Drone.cpp:482:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsendGotoDepth[m[K’ was not declared in this scope; did you mean ‘[01m[KsendGoto[m[K’?
+  482 |     [01;31m[KsendGotoDepth[m[K(odometryPositionMetres);
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[KsendGoto[m[K
+gmake[2]: *** [CMakeFiles/Drone.dir/build.make:76: CMakeFiles/Drone.dir/src/Drone.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/Drone.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

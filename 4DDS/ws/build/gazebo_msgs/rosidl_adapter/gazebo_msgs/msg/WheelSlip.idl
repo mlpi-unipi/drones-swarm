@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gazebo_msgs/msg/WheelSlip.msg
+// generated code does not contain a copyright notice
+
+
+module gazebo_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "This is a message that holds data to describe the wheel slip for a set of wheels." "\n"
+      "" "\n"
+      "The wheel slip is defined by" "\n"
+      " * the lateral slip of the wheel, as an angle from the direction of travel (radians), and" "\n"
+      " * the longitudinal slip of the wheel, as a percentage of the current wheel's speed" "\n"
+      "" "\n"
+      "Each wheel is uniquely identified by its name." "\n"
+      "" "\n"
+      "This message consists of multiple arrays." "\n"
+      "All arrays in this message should be the same size." "\n"
+      "This is the only way to uniquely associate the wheel name with the correct slip values.")
+    struct WheelSlip {
+      sequence<string> name;
+
+      sequence<double> lateral_slip;
+
+      sequence<double> longitudinal_slip;
+    };
+  };
+};

@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/fourdds/ros2_ws/build/analysis/setup.py", line 5, in <module>
+    setup(
+  File "/home/fourdds/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 103, in setup
+    return distutils.core.setup(**attrs)
+  File "/home/fourdds/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 171, in setup
+    ok = dist.parse_command_line()
+  File "/home/fourdds/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 476, in parse_command_line
+    args = self._parse_command_opts(parser, args)
+  File "/home/fourdds/.local/lib/python3.10/site-packages/setuptools/dist.py", line 870, in _parse_command_opts
+    nargs = _Distribution._parse_command_opts(self, parser, args)
+  File "/home/fourdds/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 535, in _parse_command_opts
+    cmd_class = self.get_command_class(command)
+  File "/home/fourdds/.local/lib/python3.10/site-packages/setuptools/dist.py", line 713, in get_command_class
+    eps = metadata.entry_points(group='distutils.commands', name=command)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 1021, in entry_points
+    return SelectableGroups.load(eps).select(**params)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 459, in load
+    ordered = sorted(eps, key=by_group)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 1019, in <genexpr>
+    dist.entry_points for dist in unique(distributions())
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 631, in entry_points
+    return EntryPoints._from_text_for(self.read_text('entry_points.txt'), self)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 381, in _from_text_for
+    return cls(ep._for(dist) for ep in cls._from_text(text))
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 381, in <genexpr>
+    return cls(ep._for(dist) for ep in cls._from_text(text))
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 190, in _for
+    def _for(self, dist):
+KeyboardInterrupt

@@ -1,0 +1,86 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/ManualControlSetpoint.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    module ManualControlSetpoint_Constants {
+      const uint8 SOURCE_UNKNOWN = 0;
+      @verbatim (language="comment", text=
+        "radio control (input_rc)")
+      const uint8 SOURCE_RC = 1;
+      @verbatim (language="comment", text=
+        "mavlink instance 0")
+      const uint8 SOURCE_MAVLINK_0 = 2;
+      @verbatim (language="comment", text=
+        "mavlink instance 1")
+      const uint8 SOURCE_MAVLINK_1 = 3;
+      @verbatim (language="comment", text=
+        "mavlink instance 2")
+      const uint8 SOURCE_MAVLINK_2 = 4;
+      @verbatim (language="comment", text=
+        "mavlink instance 3")
+      const uint8 SOURCE_MAVLINK_3 = 5;
+      @verbatim (language="comment", text=
+        "mavlink instance 4")
+      const uint8 SOURCE_MAVLINK_4 = 6;
+      @verbatim (language="comment", text=
+        "mavlink instance 5")
+      const uint8 SOURCE_MAVLINK_5 = 7;
+    };
+    struct ManualControlSetpoint {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "the timestamp of the raw data (microseconds)")
+      uint64 timestamp_sample;
+
+      boolean valid;
+
+      uint8 data_source;
+
+      @verbatim (language="comment", text=
+        "Any of the channels may not be available and be set to NaN" "\n"
+        "to indicate that it does not contain valid data." "\n"
+        "Stick positions [-1,1]" "\n"
+        "on a common RC mode 1/2/3/4 remote/joystick the stick deflection: -1 is down/left, 1 is up/right" "\n"
+        "Note: QGC sends throttle/z in range [0,1000] - [0,1]. The MAVLink input conversion [0,1] to [-1,1] is at the moment kept backwards compatible." "\n"
+        "Positive values are generally used for:" "\n"
+        "move right,   positive roll rotation,  right side down")
+      float roll;
+
+      @verbatim (language="comment", text=
+        "move forward, negative pitch rotation, nose down")
+      float pitch;
+
+      @verbatim (language="comment", text=
+        "positive yaw rotation,   clockwise when seen top down")
+      float yaw;
+
+      @verbatim (language="comment", text=
+        "move up,      positive thrust,         -1 is minimum available 0% or -100% +1 is 100% thrust")
+      float throttle;
+
+      @verbatim (language="comment", text=
+        "position of flaps switch/knob/lever [-1, 1]")
+      float flaps;
+
+      float aux1;
+
+      float aux2;
+
+      float aux3;
+
+      float aux4;
+
+      float aux5;
+
+      float aux6;
+
+      boolean sticks_moving;
+    };
+  };
+};

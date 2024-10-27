@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from gazebo_msgs/msg/LinkState.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Twist.idl"
+
+module gazebo_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Deprecated, kept for ROS 1 bridge." "\n"
+      "Use EntityState" "\n"
+      "@todo: FIXME: sets pose and twist of a link.  All children link poses/twists of the URDF tree are not updated accordingly, but should be.")
+    struct LinkState {
+      @verbatim (language="comment", text=
+        "link name, link_names are in gazebo scoped name notation,")
+      @unit (value="model_name::body_name")
+      string link_name;
+
+      @verbatim (language="comment", text=
+        "desired pose in reference frame")
+      geometry_msgs::msg::Pose pose;
+
+      @verbatim (language="comment", text=
+        "desired twist in reference frame")
+      geometry_msgs::msg::Twist twist;
+
+      @verbatim (language="comment", text=
+        "set pose/twist relative to the frame of this link/body" "\n"
+        "leave empty or \"world\" or \"map\" defaults to world-frame")
+      string reference_frame;
+    };
+  };
+};

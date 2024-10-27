@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from gazebo_msgs/srv/SetLightProperties.srv
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/ColorRGBA.idl"
+
+module gazebo_msgs {
+  module srv {
+    struct SetLightProperties_Request {
+      @verbatim (language="comment", text=
+        "name of Gazebo Light")
+      string light_name;
+
+      @verbatim (language="comment", text=
+        "diffuse color as red, green, blue, alpha")
+      std_msgs::msg::ColorRGBA diffuse;
+
+      double attenuation_constant;
+
+      double attenuation_linear;
+
+      double attenuation_quadratic;
+    };
+    struct SetLightProperties_Response {
+      @verbatim (language="comment", text=
+        "return true if get successful")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "comments if available")
+      string status_message;
+    };
+  };
+};

@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from px4_msgs/msg/VehicleOpticalFlowVel.msg
+// generated code does not contain a copyright notice
+
+
+module px4_msgs {
+  module msg {
+    typedef float float__2[2];
+    typedef float float__3[3];
+    struct VehicleOpticalFlowVel {
+      @verbatim (language="comment", text=
+        "time since system start (microseconds)")
+      uint64 timestamp;
+
+      @verbatim (language="comment", text=
+        "the timestamp of the raw data (microseconds)")
+      uint64 timestamp_sample;
+
+      @verbatim (language="comment", text=
+        "velocity obtained from gyro-compensated and distance-scaled optical flow raw measurements in body frame(m/s)")
+      float__2 vel_body;
+
+      @verbatim (language="comment", text=
+        "same as vel_body but in local frame (m/s)")
+      float__2 vel_ne;
+
+      @verbatim (language="comment", text=
+        "integrated optical flow measurement (rad/s)")
+      float__2 flow_rate_uncompensated;
+
+      @verbatim (language="comment", text=
+        "integrated optical flow measurement compensated for angular motion (rad/s)")
+      float__2 flow_rate_compensated;
+
+      @verbatim (language="comment", text=
+        "gyro measurement synchronized with flow measurements (rad/s)")
+      float__3 gyro_rate;
+
+      float__3 gyro_bias;
+
+      float__3 ref_gyro;
+    };
+  };
+};
