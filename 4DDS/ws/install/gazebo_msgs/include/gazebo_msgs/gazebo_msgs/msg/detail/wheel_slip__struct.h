@@ -1,1 +1,0 @@
-/home/fourdds/ws/build/gazebo_msgs/rosidl_generator_c/gazebo_msgs/msg/detail/wheel_slip__struct.h

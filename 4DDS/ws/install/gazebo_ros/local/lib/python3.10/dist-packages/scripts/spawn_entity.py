@@ -1,1 +1,0 @@
-/home/fourdds/ws/src/gazebo_ros_pkgs/gazebo_ros/scripts/spawn_entity.py

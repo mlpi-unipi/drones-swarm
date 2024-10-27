@@ -1,1 +1,0 @@
-/home/fourdds/ws/build/gazebo_msgs/rosidl_cmake/srv/GetEntityState_Response.msg

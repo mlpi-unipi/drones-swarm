@@ -1,1 +1,0 @@
-/home/fourdds/ros2_ws/src/px4_ros_com/test/pipeline_io_test.py

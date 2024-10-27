@@ -1,1 +1,0 @@
-/home/fourdds/ros2_ws/src/px4_msgs/msg/MagWorkerData.msg

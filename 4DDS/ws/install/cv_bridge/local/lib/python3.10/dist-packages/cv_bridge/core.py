@@ -1,1 +1,0 @@
-/home/fourdds/ws/src/vision_opencv/cv_bridge/python/cv_bridge/core.py

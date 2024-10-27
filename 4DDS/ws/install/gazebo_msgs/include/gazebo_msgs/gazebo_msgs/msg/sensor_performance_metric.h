@@ -1,1 +1,0 @@
-/home/fourdds/ws/build/gazebo_msgs/rosidl_generator_c/gazebo_msgs/msg/sensor_performance_metric.h
